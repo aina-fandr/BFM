@@ -1,0 +1,2 @@
+﻿Paquet;Noeud;Fonction;Topics entree;Topics sortie;Action ou service;Interface materielle;Etat sur defaut;Tests;Responsable;Statut
+Non applicable — aucun paquet trouvé;Aucun nœud ROS 2 fourni;Aucune interface ROS 2 confirmée sur l'AGV bancaire;Aucun topic entrant documenté;Aucun topic sortant documenté;Aucune action ou aucun service documenté;Plateforme ROS 2/AGV non identifiée;À spécifier uniquement après confirmation par l'intégrateur;Aucun test ROS 2 fourni;Intégrateur AGV / équipe robotique;Sources examinées : aucun package.xml, nœud, launch ou interface ROS 2 disponible

@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Plan 2D conceptuel du robot AGV BFM V2</title>
+  <desc id="desc">Vues de dessus, de face et de côté avec dimensions extérieures provisoires et quatre compartiments.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto-start-reverse">
+      <path d="M0,0 L9,4.5 L0,9 Z" fill="#176b87"/>
+    </marker>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0V20" fill="none" stroke="#edf2f5" stroke-width="1"/>
+    </pattern>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #14324a; }
+      .view { font: 700 19px Arial, sans-serif; fill: #176b87; letter-spacing: 1px; }
+      .label { font: 15px Arial, sans-serif; fill: #20313d; }
+      .small { font: 12px Arial, sans-serif; fill: #5d6e79; }
+      .bold { font: 700 14px Arial, sans-serif; fill: #14324a; }
+      .outline { fill: #e7eef3; stroke: #14324a; stroke-width: 3; }
+      .frame { fill: none; stroke: #486174; stroke-width: 8; }
+      .divider { fill: none; stroke: #6a7d89; stroke-width: 5; }
+      .tray { fill: #f5f8fa; stroke: #176b87; stroke-width: 2; }
+      .wheel { fill: #26313c; stroke: #14324a; stroke-width: 2; }
+      .caster { fill: #8797a3; stroke: #14324a; stroke-width: 2; }
+      .dimension { fill: none; stroke: #176b87; stroke-width: 1.8; marker-start: url(#arrow); marker-end: url(#arrow); }
+      .extension { stroke: #7a8c96; stroke-width: 1.2; }
+      .centerline { stroke: #82949e; stroke-width: 1.2; stroke-dasharray: 8 6; }
+      .warning { font: 700 15px Arial, sans-serif; fill: #9c3e2e; }
+    </style>
+  </defs>
+  <rect width="1600" height="1000" fill="#fff"/>
+  <rect x="20" y="20" width="1560" height="960" rx="8" fill="url(#grid)" stroke="#d7e1e6"/>
+  <text x="60" y="68" class="title">AGV BANCAIRE BFM V2 — PLAN 2D CONCEPTUEL</text>
+  <text x="60" y="96" class="small">Unités : mm • échelle graphique commune aux vues • orientation de référence uniquement</text>
+  <text x="60" y="126" class="warning">AVANT-PROJET — cotes à relever/valider ; ce dessin n'est pas un plan de fabrication.</text>
+
+  <!-- Top view -->
+  <g aria-label="Vue de dessus">
+    <text x="100" y="176" class="view">01 · VUE DE DESSUS</text>
+    <text x="100" y="198" class="small">Coffre 1000 × 500 dans un châssis 1100 × 700</text>
+    <rect x="125" y="220" width="363" height="231" rx="8" class="outline"/>
+    <rect x="141.5" y="253" width="330" height="165" fill="#dbe5ed" stroke="#14324a" stroke-width="3"/>
+    <line x1="306.5" y1="253" x2="306.5" y2="418" class="divider"/>
+    <line x1="141.5" y1="335.5" x2="471.5" y2="335.5" class="divider"/>
+    <rect x="149" y="260" width="150" height="68" rx="4" class="tray"/>
+    <rect x="314" y="260" width="150" height="68" rx="4" class="tray"/>
+    <rect x="149" y="343" width="150" height="68" rx="4" class="tray"/>
+    <rect x="314" y="343" width="150" height="68" rx="4" class="tray"/>
+    <text x="224" y="300" text-anchor="middle" class="bold">S1</text>
+    <text x="389" y="300" text-anchor="middle" class="bold">S2</text>
+    <text x="224" y="383" text-anchor="middle" class="bold">S3</text>
+    <text x="389" y="383" text-anchor="middle" class="bold">S4</text>
+    <ellipse cx="141.5" cy="335.5" rx="22" ry="12" class="caster"/>
+    <ellipse cx="471.5" cy="335.5" rx="22" ry="12" class="caster"/>
+    <ellipse cx="306.5" cy="236" rx="36" ry="12" class="wheel"/>
+    <ellipse cx="306.5" cy="435" rx="36" ry="12" class="wheel"/>
+    <line x1="125" y1="500" x2="488" y2="500" class="dimension"/>
+    <line x1="125" y1="452" x2="125" y2="510" class="extension"/>
+    <line x1="488" y1="452" x2="488" y2="510" class="extension"/>
+    <text x="306.5" y="523" text-anchor="middle" class="label">1100 · châssis</text>
+    <line x1="526" y1="220" x2="526" y2="451" class="dimension"/>
+    <line x1="495" y1="220" x2="538" y2="220" class="extension"/>
+    <line x1="495" y1="451" x2="538" y2="451" class="extension"/>
+    <text x="545" y="336" class="label" transform="rotate(90 545 336)">700 · châssis</text>
+    <path d="M500 417 L500 447" stroke="#d18a1c" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="498" y="466" text-anchor="end" class="small">AVANT · tiroirs</text>
+    <text x="100" y="558" class="small">Roues : 2 motrices + 2 orientables, implantation à confirmer.</text>
+  </g>
+
+  <!-- Front view -->
+  <g aria-label="Vue de face">
+    <text x="690" y="176" class="view">02 · VUE DE FACE</text>
+    <text x="690" y="198" class="small">Accès aux quatre tiroirs indépendants</text>
+    <rect x="694" y="631" width="363" height="99" rx="7" class="outline"/>
+    <rect x="714.5" y="384" width="330" height="247.5" class="frame"/>
+    <line x1="879.5" y1="384" x2="879.5" y2="631.5" class="divider"/>
+    <line x1="714.5" y1="507.75" x2="1044.5" y2="507.75" class="divider"/>
+    <rect x="723" y="392" width="148" height="106" rx="3" class="tray"/>
+    <rect x="888" y="392" width="148" height="106" rx="3" class="tray"/>
+    <rect x="723" y="516" width="148" height="106" rx="3" class="tray"/>
+    <rect x="888" y="516" width="148" height="106" rx="3" class="tray"/>
+    <text x="797" y="452" text-anchor="middle" class="bold">S1 · haut gauche</text>
+    <text x="962" y="452" text-anchor="middle" class="bold">S2 · haut droit</text>
+    <text x="797" y="576" text-anchor="middle" class="bold">S3 · bas gauche</text>
+    <text x="962" y="576" text-anchor="middle" class="bold">S4 · bas droit</text>
+    <rect x="835" y="376" width="44" height="8" rx="4" fill="#d18a1c"/>
+    <circle cx="857" cy="370" r="6" fill="#cc4f4f" stroke="#8e2923" stroke-width="2"/>
+    <circle cx="875.5" cy="680" r="25" class="wheel"/>
+    <circle cx="718" cy="680" r="16" class="caster"/>
+    <circle cx="1033" cy="680" r="16" class="caster"/>
+    <line x1="694" y1="752" x2="1057" y2="752" class="dimension"/>
+    <line x1="694" y1="730" x2="694" y2="762" class="extension"/>
+    <line x1="1057" y1="730" x2="1057" y2="762" class="extension"/>
+    <text x="875.5" y="775" text-anchor="middle" class="label">1100 · largeur châssis</text>
+    <line x1="714.5" y1="800" x2="1044.5" y2="800" class="dimension"/>
+    <line x1="714.5" y1="631" x2="714.5" y2="810" class="extension"/>
+    <line x1="1044.5" y1="631" x2="1044.5" y2="810" class="extension"/>
+    <text x="879.5" y="823" text-anchor="middle" class="label">1000 · coffre</text>
+    <line x1="1082" y1="368" x2="1082" y2="730" class="dimension"/>
+    <line x1="1060" y1="368" x2="1093" y2="368" class="extension"/>
+    <line x1="1060" y1="730" x2="1093" y2="730" class="extension"/>
+    <text x="1101" y="545" class="label" transform="rotate(90 1101 545)">1120 H totale visée</text>
+    <line x1="1070" y1="384" x2="1070" y2="631.5" class="dimension"/>
+    <text x="1088" y="510" class="small" transform="rotate(90 1088 510)">750 coffre</text>
+  </g>
+
+  <!-- Side view -->
+  <g aria-label="Vue de côté">
+    <text x="1195" y="176" class="view">03 · VUE DE CÔTÉ</text>
+    <text x="1195" y="198" class="small">Profil droit — avant à gauche</text>
+    <rect x="1198" y="631" width="231" height="99" rx="7" class="outline"/>
+    <rect x="1231" y="384" width="165" height="247.5" class="outline"/>
+    <line x1="1214" y1="631" x2="1413" y2="631" stroke="#d18a1c" stroke-width="5"/>
+    <rect x="1342" y="415" width="42" height="61" rx="3" fill="#31a4e7" stroke="#14324a" stroke-width="2"/>
+    <circle cx="1221" cy="680" r="23" class="wheel"/>
+    <circle cx="1406" cy="680" r="23" class="wheel"/>
+    <circle cx="1313.5" cy="680" r="15" class="caster"/>
+    <line x1="1198" y1="752" x2="1429" y2="752" class="dimension"/>
+    <line x1="1198" y1="730" x2="1198" y2="762" class="extension"/>
+    <line x1="1429" y1="730" x2="1429" y2="762" class="extension"/>
+    <text x="1313.5" y="775" text-anchor="middle" class="label">700 · profondeur châssis</text>
+    <line x1="1454" y1="384" x2="1454" y2="631.5" class="dimension"/>
+    <text x="1472" y="510" class="small" transform="rotate(90 1472 510)">500 coffre</text>
+    <text x="1195" y="810" class="small">Écran / commandes : emplacement indicatif.</text>
+    <text x="1195" y="832" class="small">Pare-chocs et détection : à concevoir.</text>
+  </g>
+
+  <line x1="60" y1="865" x2="1540" y2="865" stroke="#d7e1e6" stroke-width="2"/>
+  <text x="60" y="900" class="label">Enveloppe retenue pour étude : 1100 × 700 × 1120 mm (H totale hypothétique).</text>
+  <text x="60" y="930" class="small">Les dimensions intérieures de casiers, épaisseurs, jeux, glissières, roues et fixations restent à calculer après mesure des sacs et du site.</text>
+  <text x="60" y="955" class="small">Charge nominale visée : 40 kg / compartiment, 160 kg total — capacité non validée.</text>
+</svg>

@@ -1,0 +1,2568 @@
+{
+  "title": "Pièces individuelles et étapes d’assemblage du robot AGV",
+  "units": "metres",
+  "part_count": 202,
+  "stage_count": 12,
+  "parts": [
+    {
+      "id": "piece_001",
+      "name": "plaque_superieure_chassis",
+      "assembly": "chassis",
+      "file": "pieces/001_plaque_superieure_chassis.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        1.02,
+        0.62,
+        0.018
+      ]
+    },
+    {
+      "id": "piece_002",
+      "name": "longeron_gauche",
+      "assembly": "chassis",
+      "file": "pieces/002_longeron_gauche.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        1.03,
+        0.055,
+        0.075
+      ]
+    },
+    {
+      "id": "piece_003",
+      "name": "longeron_droite",
+      "assembly": "chassis",
+      "file": "pieces/003_longeron_droite.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        1.03,
+        0.055,
+        0.075
+      ]
+    },
+    {
+      "id": "piece_004",
+      "name": "traverse_chassis_1",
+      "assembly": "chassis",
+      "file": "pieces/004_traverse_chassis_1.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.055,
+        0.58,
+        0.075
+      ]
+    },
+    {
+      "id": "piece_005",
+      "name": "traverse_chassis_2",
+      "assembly": "chassis",
+      "file": "pieces/005_traverse_chassis_2.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.055,
+        0.58,
+        0.075
+      ]
+    },
+    {
+      "id": "piece_006",
+      "name": "traverse_chassis_3",
+      "assembly": "chassis",
+      "file": "pieces/006_traverse_chassis_3.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.055,
+        0.58,
+        0.075
+      ]
+    },
+    {
+      "id": "piece_007",
+      "name": "traverse_chassis_4",
+      "assembly": "chassis",
+      "file": "pieces/007_traverse_chassis_4.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.055,
+        0.58,
+        0.075
+      ]
+    },
+    {
+      "id": "piece_008",
+      "name": "moteur_reducteur_gauche",
+      "assembly": "roues",
+      "file": "pieces/008_moteur_reducteur_gauche.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.16,
+        0.12,
+        0.12
+      ]
+    },
+    {
+      "id": "piece_009",
+      "name": "roue_motrice_gauche",
+      "assembly": "roues",
+      "file": "pieces/009_roue_motrice_gauche.glb",
+      "mesh": "tire",
+      "size_m": [
+        0.22,
+        0.075,
+        0.22
+      ]
+    },
+    {
+      "id": "piece_010",
+      "name": "moyeu_moteur_gauche",
+      "assembly": "roues",
+      "file": "pieces/010_moyeu_moteur_gauche.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.105,
+        0.078,
+        0.105
+      ]
+    },
+    {
+      "id": "piece_011",
+      "name": "ecrou_roue_gauche_1",
+      "assembly": "roues",
+      "file": "pieces/011_ecrou_roue_gauche_1.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_012",
+      "name": "ecrou_roue_gauche_2",
+      "assembly": "roues",
+      "file": "pieces/012_ecrou_roue_gauche_2.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_013",
+      "name": "ecrou_roue_gauche_3",
+      "assembly": "roues",
+      "file": "pieces/013_ecrou_roue_gauche_3.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_014",
+      "name": "ecrou_roue_gauche_4",
+      "assembly": "roues",
+      "file": "pieces/014_ecrou_roue_gauche_4.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_015",
+      "name": "ecrou_roue_gauche_5",
+      "assembly": "roues",
+      "file": "pieces/015_ecrou_roue_gauche_5.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_016",
+      "name": "ecrou_roue_gauche_6",
+      "assembly": "roues",
+      "file": "pieces/016_ecrou_roue_gauche_6.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_017",
+      "name": "moteur_reducteur_droite",
+      "assembly": "roues",
+      "file": "pieces/017_moteur_reducteur_droite.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.16,
+        0.12,
+        0.12
+      ]
+    },
+    {
+      "id": "piece_018",
+      "name": "roue_motrice_droite",
+      "assembly": "roues",
+      "file": "pieces/018_roue_motrice_droite.glb",
+      "mesh": "tire",
+      "size_m": [
+        0.22,
+        0.075,
+        0.22
+      ]
+    },
+    {
+      "id": "piece_019",
+      "name": "moyeu_moteur_droite",
+      "assembly": "roues",
+      "file": "pieces/019_moyeu_moteur_droite.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.105,
+        0.078,
+        0.105
+      ]
+    },
+    {
+      "id": "piece_020",
+      "name": "ecrou_roue_droite_1",
+      "assembly": "roues",
+      "file": "pieces/020_ecrou_roue_droite_1.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_021",
+      "name": "ecrou_roue_droite_2",
+      "assembly": "roues",
+      "file": "pieces/021_ecrou_roue_droite_2.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_022",
+      "name": "ecrou_roue_droite_3",
+      "assembly": "roues",
+      "file": "pieces/022_ecrou_roue_droite_3.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_023",
+      "name": "ecrou_roue_droite_4",
+      "assembly": "roues",
+      "file": "pieces/023_ecrou_roue_droite_4.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_024",
+      "name": "ecrou_roue_droite_5",
+      "assembly": "roues",
+      "file": "pieces/024_ecrou_roue_droite_5.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_025",
+      "name": "ecrou_roue_droite_6",
+      "assembly": "roues",
+      "file": "pieces/025_ecrou_roue_droite_6.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_026",
+      "name": "support_roulette_avant",
+      "assembly": "roues",
+      "file": "pieces/026_support_roulette_avant.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.105,
+        0.105,
+        0.08
+      ]
+    },
+    {
+      "id": "piece_027",
+      "name": "roulette_pivotante_avant",
+      "assembly": "roues",
+      "file": "pieces/027_roulette_pivotante_avant.glb",
+      "mesh": "tire",
+      "size_m": [
+        0.14,
+        0.06,
+        0.14
+      ]
+    },
+    {
+      "id": "piece_028",
+      "name": "axe_roulette_avant",
+      "assembly": "roues",
+      "file": "pieces/028_axe_roulette_avant.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.05,
+        0.07,
+        0.05
+      ]
+    },
+    {
+      "id": "piece_029",
+      "name": "fourche_roulette_avant_gauche",
+      "assembly": "roues",
+      "file": "pieces/029_fourche_roulette_avant_gauche.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.075,
+        0.012,
+        0.075
+      ]
+    },
+    {
+      "id": "piece_030",
+      "name": "vis_axe_roulette_avant_gauche",
+      "assembly": "roues",
+      "file": "pieces/030_vis_axe_roulette_avant_gauche.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.018,
+        0.012,
+        0.018
+      ]
+    },
+    {
+      "id": "piece_031",
+      "name": "fourche_roulette_avant_droite",
+      "assembly": "roues",
+      "file": "pieces/031_fourche_roulette_avant_droite.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.075,
+        0.012,
+        0.075
+      ]
+    },
+    {
+      "id": "piece_032",
+      "name": "vis_axe_roulette_avant_droite",
+      "assembly": "roues",
+      "file": "pieces/032_vis_axe_roulette_avant_droite.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.018,
+        0.012,
+        0.018
+      ]
+    },
+    {
+      "id": "piece_033",
+      "name": "support_roulette_arriere",
+      "assembly": "roues",
+      "file": "pieces/033_support_roulette_arriere.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.105,
+        0.105,
+        0.08
+      ]
+    },
+    {
+      "id": "piece_034",
+      "name": "roulette_pivotante_arriere",
+      "assembly": "roues",
+      "file": "pieces/034_roulette_pivotante_arriere.glb",
+      "mesh": "tire",
+      "size_m": [
+        0.14,
+        0.06,
+        0.14
+      ]
+    },
+    {
+      "id": "piece_035",
+      "name": "axe_roulette_arriere",
+      "assembly": "roues",
+      "file": "pieces/035_axe_roulette_arriere.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.05,
+        0.07,
+        0.05
+      ]
+    },
+    {
+      "id": "piece_036",
+      "name": "fourche_roulette_arriere_gauche",
+      "assembly": "roues",
+      "file": "pieces/036_fourche_roulette_arriere_gauche.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.075,
+        0.012,
+        0.075
+      ]
+    },
+    {
+      "id": "piece_037",
+      "name": "vis_axe_roulette_arriere_gauche",
+      "assembly": "roues",
+      "file": "pieces/037_vis_axe_roulette_arriere_gauche.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.018,
+        0.012,
+        0.018
+      ]
+    },
+    {
+      "id": "piece_038",
+      "name": "fourche_roulette_arriere_droite",
+      "assembly": "roues",
+      "file": "pieces/038_fourche_roulette_arriere_droite.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.075,
+        0.012,
+        0.075
+      ]
+    },
+    {
+      "id": "piece_039",
+      "name": "vis_axe_roulette_arriere_droite",
+      "assembly": "roues",
+      "file": "pieces/039_vis_axe_roulette_arriere_droite.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.018,
+        0.012,
+        0.018
+      ]
+    },
+    {
+      "id": "piece_040",
+      "name": "pare_chocs_avant",
+      "assembly": "chassis",
+      "file": "pieces/040_pare_chocs_avant.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.9600000000000001,
+        0.035,
+        0.075
+      ]
+    },
+    {
+      "id": "piece_041",
+      "name": "pare_chocs_arriere",
+      "assembly": "chassis",
+      "file": "pieces/041_pare_chocs_arriere.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.9600000000000001,
+        0.035,
+        0.075
+      ]
+    },
+    {
+      "id": "piece_042",
+      "name": "support_batterie",
+      "assembly": "batterie",
+      "file": "pieces/042_support_batterie.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.43,
+        0.31,
+        0.025
+      ]
+    },
+    {
+      "id": "piece_043",
+      "name": "batterie_format_a_definir",
+      "assembly": "batterie",
+      "file": "pieces/043_batterie_format_a_definir.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.36,
+        0.25,
+        0.07
+      ]
+    },
+    {
+      "id": "piece_044",
+      "name": "coffret_controleur_hypothese",
+      "assembly": "commandes",
+      "file": "pieces/044_coffret_controleur_hypothese.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.17,
+        0.16,
+        0.075
+      ]
+    },
+    {
+      "id": "piece_045",
+      "name": "support_coffret_controleur",
+      "assembly": "commandes",
+      "file": "pieces/045_support_coffret_controleur.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.2,
+        0.19,
+        0.018
+      ]
+    },
+    {
+      "id": "piece_046",
+      "name": "fond_coffre",
+      "assembly": "coffre",
+      "file": "pieces/046_fond_coffre.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.96,
+        0.46,
+        0.02
+      ]
+    },
+    {
+      "id": "piece_047",
+      "name": "paroi_arriere",
+      "assembly": "coffre",
+      "file": "pieces/047_paroi_arriere.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        1.0,
+        0.02,
+        0.75
+      ]
+    },
+    {
+      "id": "piece_048",
+      "name": "paroi_laterale_-0.49",
+      "assembly": "coffre",
+      "file": "pieces/048_paroi_laterale_-0_49.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.02,
+        0.46,
+        0.75
+      ]
+    },
+    {
+      "id": "piece_049",
+      "name": "paroi_laterale_0.49",
+      "assembly": "coffre",
+      "file": "pieces/049_paroi_laterale_0_49.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.02,
+        0.46,
+        0.75
+      ]
+    },
+    {
+      "id": "piece_050",
+      "name": "toit_coffre",
+      "assembly": "toit",
+      "file": "pieces/050_toit_coffre.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        1.0,
+        0.5,
+        0.02
+      ]
+    },
+    {
+      "id": "piece_051",
+      "name": "separateur_horizontal",
+      "assembly": "separateurs",
+      "file": "pieces/051_separateur_horizontal.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.96,
+        0.46,
+        0.02
+      ]
+    },
+    {
+      "id": "piece_052",
+      "name": "separateur_vertical",
+      "assembly": "separateurs",
+      "file": "pieces/052_separateur_vertical.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.02,
+        0.46,
+        0.71
+      ]
+    },
+    {
+      "id": "piece_053",
+      "name": "montant_face_-0.49",
+      "assembly": "coffre",
+      "file": "pieces/053_montant_face_-0_49.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.02,
+        0.02,
+        0.75
+      ]
+    },
+    {
+      "id": "piece_054",
+      "name": "montant_face_0.00",
+      "assembly": "coffre",
+      "file": "pieces/054_montant_face_0_00.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.02,
+        0.02,
+        0.75
+      ]
+    },
+    {
+      "id": "piece_055",
+      "name": "montant_face_0.49",
+      "assembly": "coffre",
+      "file": "pieces/055_montant_face_0_49.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.02,
+        0.02,
+        0.75
+      ]
+    },
+    {
+      "id": "piece_056",
+      "name": "traverse_face_0.33",
+      "assembly": "coffre",
+      "file": "pieces/056_traverse_face_0_33.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.96,
+        0.02,
+        0.02
+      ]
+    },
+    {
+      "id": "piece_057",
+      "name": "traverse_face_0.70",
+      "assembly": "coffre",
+      "file": "pieces/057_traverse_face_0_70.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.96,
+        0.02,
+        0.02
+      ]
+    },
+    {
+      "id": "piece_058",
+      "name": "traverse_face_1.06",
+      "assembly": "coffre",
+      "file": "pieces/058_traverse_face_1_06.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.96,
+        0.02,
+        0.02
+      ]
+    },
+    {
+      "id": "piece_059",
+      "name": "S1_fond_tiroir",
+      "assembly": "tiroir_S1",
+      "file": "pieces/059_s1_fond_tiroir.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.45999999999999996,
+        0.42,
+        0.014
+      ]
+    },
+    {
+      "id": "piece_060",
+      "name": "S1_flanc_gauche",
+      "assembly": "tiroir_S1",
+      "file": "pieces/060_s1_flanc_gauche.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.44,
+        0.2904
+      ]
+    },
+    {
+      "id": "piece_061",
+      "name": "S1_glissiere_fixe_gauche",
+      "assembly": "glissieres",
+      "file": "pieces/061_s1_glissiere_fixe_gauche.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.018,
+        0.34,
+        0.024
+      ]
+    },
+    {
+      "id": "piece_062",
+      "name": "S1_glissiere_mobile_gauche",
+      "assembly": "tiroir_S1",
+      "file": "pieces/062_s1_glissiere_mobile_gauche.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.32,
+        0.018
+      ]
+    },
+    {
+      "id": "piece_063",
+      "name": "S1_flanc_droite",
+      "assembly": "tiroir_S1",
+      "file": "pieces/063_s1_flanc_droite.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.44,
+        0.2904
+      ]
+    },
+    {
+      "id": "piece_064",
+      "name": "S1_glissiere_fixe_droite",
+      "assembly": "glissieres",
+      "file": "pieces/064_s1_glissiere_fixe_droite.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.018,
+        0.34,
+        0.024
+      ]
+    },
+    {
+      "id": "piece_065",
+      "name": "S1_glissiere_mobile_droite",
+      "assembly": "tiroir_S1",
+      "file": "pieces/065_s1_glissiere_mobile_droite.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.32,
+        0.018
+      ]
+    },
+    {
+      "id": "piece_066",
+      "name": "S1_fond_arriere",
+      "assembly": "tiroir_S1",
+      "file": "pieces/066_s1_fond_arriere.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.44999999999999996,
+        0.014,
+        0.2904
+      ]
+    },
+    {
+      "id": "piece_067",
+      "name": "S1_joint_peripherique",
+      "assembly": "tiroir_S1",
+      "file": "pieces/067_s1_joint_peripherique.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.474,
+        0.006,
+        0.33699999999999997
+      ]
+    },
+    {
+      "id": "piece_068",
+      "name": "S1_facade",
+      "assembly": "tiroir_S1",
+      "file": "pieces/068_s1_facade.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.45999999999999996,
+        0.016,
+        0.32999999999999996
+      ]
+    },
+    {
+      "id": "piece_069",
+      "name": "S1_poignee",
+      "assembly": "tiroir_S1",
+      "file": "pieces/069_s1_poignee.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.13,
+        0.022,
+        0.025
+      ]
+    },
+    {
+      "id": "piece_070",
+      "name": "S1_support_poignee_-1",
+      "assembly": "tiroir_S1",
+      "file": "pieces/070_s1_support_poignee_-1.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.013,
+        0.024
+      ]
+    },
+    {
+      "id": "piece_071",
+      "name": "S1_support_poignee_1",
+      "assembly": "tiroir_S1",
+      "file": "pieces/071_s1_support_poignee_1.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.013,
+        0.024
+      ]
+    },
+    {
+      "id": "piece_072",
+      "name": "S1_plaque_identification",
+      "assembly": "tiroir_S1",
+      "file": "pieces/072_s1_plaque_identification.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.078,
+        0.004,
+        0.045
+      ]
+    },
+    {
+      "id": "piece_073",
+      "name": "S1_marquage_0_a",
+      "assembly": "tiroir_S1",
+      "file": "pieces/073_s1_marquage_0_a.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.013,
+        0.002,
+        0.0022
+      ]
+    },
+    {
+      "id": "piece_074",
+      "name": "S1_marquage_0_f",
+      "assembly": "tiroir_S1",
+      "file": "pieces/074_s1_marquage_0_f.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.0022,
+        0.002,
+        0.013
+      ]
+    },
+    {
+      "id": "piece_075",
+      "name": "S1_marquage_0_g",
+      "assembly": "tiroir_S1",
+      "file": "pieces/075_s1_marquage_0_g.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.013,
+        0.002,
+        0.0022
+      ]
+    },
+    {
+      "id": "piece_076",
+      "name": "S1_marquage_0_c",
+      "assembly": "tiroir_S1",
+      "file": "pieces/076_s1_marquage_0_c.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.0022,
+        0.002,
+        0.013
+      ]
+    },
+    {
+      "id": "piece_077",
+      "name": "S1_marquage_0_d",
+      "assembly": "tiroir_S1",
+      "file": "pieces/077_s1_marquage_0_d.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.013,
+        0.002,
+        0.0022
+      ]
+    },
+    {
+      "id": "piece_078",
+      "name": "S1_marquage_1_b",
+      "assembly": "tiroir_S1",
+      "file": "pieces/078_s1_marquage_1_b.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.0022,
+        0.002,
+        0.013
+      ]
+    },
+    {
+      "id": "piece_079",
+      "name": "S1_marquage_1_c",
+      "assembly": "tiroir_S1",
+      "file": "pieces/079_s1_marquage_1_c.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.0022,
+        0.002,
+        0.013
+      ]
+    },
+    {
+      "id": "piece_080",
+      "name": "S1_loquet",
+      "assembly": "tiroir_S1",
+      "file": "pieces/080_s1_loquet.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.032,
+        0.018,
+        0.032
+      ]
+    },
+    {
+      "id": "piece_081",
+      "name": "S1_actionneur_corps",
+      "assembly": "tiroir_S1",
+      "file": "pieces/081_s1_actionneur_corps.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.045,
+        0.2,
+        0.045
+      ]
+    },
+    {
+      "id": "piece_082",
+      "name": "S1_actionneur_tige",
+      "assembly": "tiroir_S1",
+      "file": "pieces/082_s1_actionneur_tige.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.018,
+        0.11,
+        0.018
+      ]
+    },
+    {
+      "id": "piece_083",
+      "name": "S1_butée_-0.429",
+      "assembly": "tiroir_S1",
+      "file": "pieces/083_s1_butee_-0_429.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.025,
+        0.035,
+        0.045
+      ]
+    },
+    {
+      "id": "piece_084",
+      "name": "S1_butée_-0.071",
+      "assembly": "tiroir_S1",
+      "file": "pieces/084_s1_butee_-0_071.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.025,
+        0.035,
+        0.045
+      ]
+    },
+    {
+      "id": "piece_085",
+      "name": "S1_vis_face_-1_-1",
+      "assembly": "tiroir_S1",
+      "file": "pieces/085_s1_vis_face_-1_-1.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_086",
+      "name": "S1_vis_face_-1_1",
+      "assembly": "tiroir_S1",
+      "file": "pieces/086_s1_vis_face_-1_1.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_087",
+      "name": "S1_vis_face_1_-1",
+      "assembly": "tiroir_S1",
+      "file": "pieces/087_s1_vis_face_1_-1.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_088",
+      "name": "S1_vis_face_1_1",
+      "assembly": "tiroir_S1",
+      "file": "pieces/088_s1_vis_face_1_1.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_089",
+      "name": "S2_fond_tiroir",
+      "assembly": "tiroir_S2",
+      "file": "pieces/089_s2_fond_tiroir.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.45999999999999996,
+        0.42,
+        0.014
+      ]
+    },
+    {
+      "id": "piece_090",
+      "name": "S2_flanc_gauche",
+      "assembly": "tiroir_S2",
+      "file": "pieces/090_s2_flanc_gauche.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.44,
+        0.2904
+      ]
+    },
+    {
+      "id": "piece_091",
+      "name": "S2_glissiere_fixe_gauche",
+      "assembly": "glissieres",
+      "file": "pieces/091_s2_glissiere_fixe_gauche.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.018,
+        0.34,
+        0.024
+      ]
+    },
+    {
+      "id": "piece_092",
+      "name": "S2_glissiere_mobile_gauche",
+      "assembly": "tiroir_S2",
+      "file": "pieces/092_s2_glissiere_mobile_gauche.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.32,
+        0.018
+      ]
+    },
+    {
+      "id": "piece_093",
+      "name": "S2_flanc_droite",
+      "assembly": "tiroir_S2",
+      "file": "pieces/093_s2_flanc_droite.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.44,
+        0.2904
+      ]
+    },
+    {
+      "id": "piece_094",
+      "name": "S2_glissiere_fixe_droite",
+      "assembly": "glissieres",
+      "file": "pieces/094_s2_glissiere_fixe_droite.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.018,
+        0.34,
+        0.024
+      ]
+    },
+    {
+      "id": "piece_095",
+      "name": "S2_glissiere_mobile_droite",
+      "assembly": "tiroir_S2",
+      "file": "pieces/095_s2_glissiere_mobile_droite.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.32,
+        0.018
+      ]
+    },
+    {
+      "id": "piece_096",
+      "name": "S2_fond_arriere",
+      "assembly": "tiroir_S2",
+      "file": "pieces/096_s2_fond_arriere.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.44999999999999996,
+        0.014,
+        0.2904
+      ]
+    },
+    {
+      "id": "piece_097",
+      "name": "S2_joint_peripherique",
+      "assembly": "tiroir_S2",
+      "file": "pieces/097_s2_joint_peripherique.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.474,
+        0.006,
+        0.33699999999999997
+      ]
+    },
+    {
+      "id": "piece_098",
+      "name": "S2_facade",
+      "assembly": "tiroir_S2",
+      "file": "pieces/098_s2_facade.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.45999999999999996,
+        0.016,
+        0.32999999999999996
+      ]
+    },
+    {
+      "id": "piece_099",
+      "name": "S2_poignee",
+      "assembly": "tiroir_S2",
+      "file": "pieces/099_s2_poignee.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.13,
+        0.022,
+        0.025
+      ]
+    },
+    {
+      "id": "piece_100",
+      "name": "S2_support_poignee_-1",
+      "assembly": "tiroir_S2",
+      "file": "pieces/100_s2_support_poignee_-1.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.013,
+        0.024
+      ]
+    },
+    {
+      "id": "piece_101",
+      "name": "S2_support_poignee_1",
+      "assembly": "tiroir_S2",
+      "file": "pieces/101_s2_support_poignee_1.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.013,
+        0.024
+      ]
+    },
+    {
+      "id": "piece_102",
+      "name": "S2_plaque_identification",
+      "assembly": "tiroir_S2",
+      "file": "pieces/102_s2_plaque_identification.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.078,
+        0.004,
+        0.045
+      ]
+    },
+    {
+      "id": "piece_103",
+      "name": "S2_marquage_0_a",
+      "assembly": "tiroir_S2",
+      "file": "pieces/103_s2_marquage_0_a.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.013,
+        0.002,
+        0.0022
+      ]
+    },
+    {
+      "id": "piece_104",
+      "name": "S2_marquage_0_f",
+      "assembly": "tiroir_S2",
+      "file": "pieces/104_s2_marquage_0_f.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.0022,
+        0.002,
+        0.013
+      ]
+    },
+    {
+      "id": "piece_105",
+      "name": "S2_marquage_0_g",
+      "assembly": "tiroir_S2",
+      "file": "pieces/105_s2_marquage_0_g.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.013,
+        0.002,
+        0.0022
+      ]
+    },
+    {
+      "id": "piece_106",
+      "name": "S2_marquage_0_c",
+      "assembly": "tiroir_S2",
+      "file": "pieces/106_s2_marquage_0_c.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.0022,
+        0.002,
+        0.013
+      ]
+    },
+    {
+      "id": "piece_107",
+      "name": "S2_marquage_0_d",
+      "assembly": "tiroir_S2",
+      "file": "pieces/107_s2_marquage_0_d.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.013,
+        0.002,
+        0.0022
+      ]
+    },
+    {
+      "id": "piece_108",
+      "name": "S2_marquage_1_a",
+      "assembly": "tiroir_S2",
+      "file": "pieces/108_s2_marquage_1_a.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.013,
+        0.002,
+        0.0022
+      ]
+    },
+    {
+      "id": "piece_109",
+      "name": "S2_marquage_1_b",
+      "assembly": "tiroir_S2",
+      "file": "pieces/109_s2_marquage_1_b.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.0022,
+        0.002,
+        0.013
+      ]
+    },
+    {
+      "id": "piece_110",
+      "name": "S2_marquage_1_g",
+      "assembly": "tiroir_S2",
+      "file": "pieces/110_s2_marquage_1_g.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.013,
+        0.002,
+        0.0022
+      ]
+    },
+    {
+      "id": "piece_111",
+      "name": "S2_marquage_1_e",
+      "assembly": "tiroir_S2",
+      "file": "pieces/111_s2_marquage_1_e.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.0022,
+        0.002,
+        0.013
+      ]
+    },
+    {
+      "id": "piece_112",
+      "name": "S2_marquage_1_d",
+      "assembly": "tiroir_S2",
+      "file": "pieces/112_s2_marquage_1_d.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.013,
+        0.002,
+        0.0022
+      ]
+    },
+    {
+      "id": "piece_113",
+      "name": "S2_loquet",
+      "assembly": "tiroir_S2",
+      "file": "pieces/113_s2_loquet.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.032,
+        0.018,
+        0.032
+      ]
+    },
+    {
+      "id": "piece_114",
+      "name": "S2_actionneur_corps",
+      "assembly": "tiroir_S2",
+      "file": "pieces/114_s2_actionneur_corps.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.045,
+        0.2,
+        0.045
+      ]
+    },
+    {
+      "id": "piece_115",
+      "name": "S2_actionneur_tige",
+      "assembly": "tiroir_S2",
+      "file": "pieces/115_s2_actionneur_tige.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.018,
+        0.11,
+        0.018
+      ]
+    },
+    {
+      "id": "piece_116",
+      "name": "S2_butée_0.071",
+      "assembly": "tiroir_S2",
+      "file": "pieces/116_s2_butee_0_071.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.025,
+        0.035,
+        0.045
+      ]
+    },
+    {
+      "id": "piece_117",
+      "name": "S2_butée_0.429",
+      "assembly": "tiroir_S2",
+      "file": "pieces/117_s2_butee_0_429.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.025,
+        0.035,
+        0.045
+      ]
+    },
+    {
+      "id": "piece_118",
+      "name": "S2_vis_face_-1_-1",
+      "assembly": "tiroir_S2",
+      "file": "pieces/118_s2_vis_face_-1_-1.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_119",
+      "name": "S2_vis_face_-1_1",
+      "assembly": "tiroir_S2",
+      "file": "pieces/119_s2_vis_face_-1_1.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_120",
+      "name": "S2_vis_face_1_-1",
+      "assembly": "tiroir_S2",
+      "file": "pieces/120_s2_vis_face_1_-1.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_121",
+      "name": "S2_vis_face_1_1",
+      "assembly": "tiroir_S2",
+      "file": "pieces/121_s2_vis_face_1_1.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_122",
+      "name": "S3_fond_tiroir",
+      "assembly": "tiroir_S3",
+      "file": "pieces/122_s3_fond_tiroir.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.45999999999999996,
+        0.42,
+        0.014
+      ]
+    },
+    {
+      "id": "piece_123",
+      "name": "S3_flanc_gauche",
+      "assembly": "tiroir_S3",
+      "file": "pieces/123_s3_flanc_gauche.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.44,
+        0.2904
+      ]
+    },
+    {
+      "id": "piece_124",
+      "name": "S3_glissiere_fixe_gauche",
+      "assembly": "glissieres",
+      "file": "pieces/124_s3_glissiere_fixe_gauche.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.018,
+        0.34,
+        0.024
+      ]
+    },
+    {
+      "id": "piece_125",
+      "name": "S3_glissiere_mobile_gauche",
+      "assembly": "tiroir_S3",
+      "file": "pieces/125_s3_glissiere_mobile_gauche.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.32,
+        0.018
+      ]
+    },
+    {
+      "id": "piece_126",
+      "name": "S3_flanc_droite",
+      "assembly": "tiroir_S3",
+      "file": "pieces/126_s3_flanc_droite.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.44,
+        0.2904
+      ]
+    },
+    {
+      "id": "piece_127",
+      "name": "S3_glissiere_fixe_droite",
+      "assembly": "glissieres",
+      "file": "pieces/127_s3_glissiere_fixe_droite.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.018,
+        0.34,
+        0.024
+      ]
+    },
+    {
+      "id": "piece_128",
+      "name": "S3_glissiere_mobile_droite",
+      "assembly": "tiroir_S3",
+      "file": "pieces/128_s3_glissiere_mobile_droite.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.32,
+        0.018
+      ]
+    },
+    {
+      "id": "piece_129",
+      "name": "S3_fond_arriere",
+      "assembly": "tiroir_S3",
+      "file": "pieces/129_s3_fond_arriere.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.44999999999999996,
+        0.014,
+        0.2904
+      ]
+    },
+    {
+      "id": "piece_130",
+      "name": "S3_joint_peripherique",
+      "assembly": "tiroir_S3",
+      "file": "pieces/130_s3_joint_peripherique.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.474,
+        0.006,
+        0.33699999999999997
+      ]
+    },
+    {
+      "id": "piece_131",
+      "name": "S3_facade",
+      "assembly": "tiroir_S3",
+      "file": "pieces/131_s3_facade.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.45999999999999996,
+        0.016,
+        0.32999999999999996
+      ]
+    },
+    {
+      "id": "piece_132",
+      "name": "S3_poignee",
+      "assembly": "tiroir_S3",
+      "file": "pieces/132_s3_poignee.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.13,
+        0.022,
+        0.025
+      ]
+    },
+    {
+      "id": "piece_133",
+      "name": "S3_support_poignee_-1",
+      "assembly": "tiroir_S3",
+      "file": "pieces/133_s3_support_poignee_-1.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.013,
+        0.024
+      ]
+    },
+    {
+      "id": "piece_134",
+      "name": "S3_support_poignee_1",
+      "assembly": "tiroir_S3",
+      "file": "pieces/134_s3_support_poignee_1.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.013,
+        0.024
+      ]
+    },
+    {
+      "id": "piece_135",
+      "name": "S3_plaque_identification",
+      "assembly": "tiroir_S3",
+      "file": "pieces/135_s3_plaque_identification.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.078,
+        0.004,
+        0.045
+      ]
+    },
+    {
+      "id": "piece_136",
+      "name": "S3_marquage_0_a",
+      "assembly": "tiroir_S3",
+      "file": "pieces/136_s3_marquage_0_a.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.013,
+        0.002,
+        0.0022
+      ]
+    },
+    {
+      "id": "piece_137",
+      "name": "S3_marquage_0_f",
+      "assembly": "tiroir_S3",
+      "file": "pieces/137_s3_marquage_0_f.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.0022,
+        0.002,
+        0.013
+      ]
+    },
+    {
+      "id": "piece_138",
+      "name": "S3_marquage_0_g",
+      "assembly": "tiroir_S3",
+      "file": "pieces/138_s3_marquage_0_g.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.013,
+        0.002,
+        0.0022
+      ]
+    },
+    {
+      "id": "piece_139",
+      "name": "S3_marquage_0_c",
+      "assembly": "tiroir_S3",
+      "file": "pieces/139_s3_marquage_0_c.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.0022,
+        0.002,
+        0.013
+      ]
+    },
+    {
+      "id": "piece_140",
+      "name": "S3_marquage_0_d",
+      "assembly": "tiroir_S3",
+      "file": "pieces/140_s3_marquage_0_d.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.013,
+        0.002,
+        0.0022
+      ]
+    },
+    {
+      "id": "piece_141",
+      "name": "S3_marquage_1_a",
+      "assembly": "tiroir_S3",
+      "file": "pieces/141_s3_marquage_1_a.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.013,
+        0.002,
+        0.0022
+      ]
+    },
+    {
+      "id": "piece_142",
+      "name": "S3_marquage_1_b",
+      "assembly": "tiroir_S3",
+      "file": "pieces/142_s3_marquage_1_b.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.0022,
+        0.002,
+        0.013
+      ]
+    },
+    {
+      "id": "piece_143",
+      "name": "S3_marquage_1_g",
+      "assembly": "tiroir_S3",
+      "file": "pieces/143_s3_marquage_1_g.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.013,
+        0.002,
+        0.0022
+      ]
+    },
+    {
+      "id": "piece_144",
+      "name": "S3_marquage_1_c",
+      "assembly": "tiroir_S3",
+      "file": "pieces/144_s3_marquage_1_c.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.0022,
+        0.002,
+        0.013
+      ]
+    },
+    {
+      "id": "piece_145",
+      "name": "S3_marquage_1_d",
+      "assembly": "tiroir_S3",
+      "file": "pieces/145_s3_marquage_1_d.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.013,
+        0.002,
+        0.0022
+      ]
+    },
+    {
+      "id": "piece_146",
+      "name": "S3_loquet",
+      "assembly": "tiroir_S3",
+      "file": "pieces/146_s3_loquet.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.032,
+        0.018,
+        0.032
+      ]
+    },
+    {
+      "id": "piece_147",
+      "name": "S3_actionneur_corps",
+      "assembly": "tiroir_S3",
+      "file": "pieces/147_s3_actionneur_corps.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.045,
+        0.2,
+        0.045
+      ]
+    },
+    {
+      "id": "piece_148",
+      "name": "S3_actionneur_tige",
+      "assembly": "tiroir_S3",
+      "file": "pieces/148_s3_actionneur_tige.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.018,
+        0.11,
+        0.018
+      ]
+    },
+    {
+      "id": "piece_149",
+      "name": "S3_butée_-0.429",
+      "assembly": "tiroir_S3",
+      "file": "pieces/149_s3_butee_-0_429.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.025,
+        0.035,
+        0.045
+      ]
+    },
+    {
+      "id": "piece_150",
+      "name": "S3_butée_-0.071",
+      "assembly": "tiroir_S3",
+      "file": "pieces/150_s3_butee_-0_071.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.025,
+        0.035,
+        0.045
+      ]
+    },
+    {
+      "id": "piece_151",
+      "name": "S3_vis_face_-1_-1",
+      "assembly": "tiroir_S3",
+      "file": "pieces/151_s3_vis_face_-1_-1.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_152",
+      "name": "S3_vis_face_-1_1",
+      "assembly": "tiroir_S3",
+      "file": "pieces/152_s3_vis_face_-1_1.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_153",
+      "name": "S3_vis_face_1_-1",
+      "assembly": "tiroir_S3",
+      "file": "pieces/153_s3_vis_face_1_-1.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_154",
+      "name": "S3_vis_face_1_1",
+      "assembly": "tiroir_S3",
+      "file": "pieces/154_s3_vis_face_1_1.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_155",
+      "name": "S4_fond_tiroir",
+      "assembly": "tiroir_S4",
+      "file": "pieces/155_s4_fond_tiroir.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.45999999999999996,
+        0.42,
+        0.014
+      ]
+    },
+    {
+      "id": "piece_156",
+      "name": "S4_flanc_gauche",
+      "assembly": "tiroir_S4",
+      "file": "pieces/156_s4_flanc_gauche.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.44,
+        0.2904
+      ]
+    },
+    {
+      "id": "piece_157",
+      "name": "S4_glissiere_fixe_gauche",
+      "assembly": "glissieres",
+      "file": "pieces/157_s4_glissiere_fixe_gauche.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.018,
+        0.34,
+        0.024
+      ]
+    },
+    {
+      "id": "piece_158",
+      "name": "S4_glissiere_mobile_gauche",
+      "assembly": "tiroir_S4",
+      "file": "pieces/158_s4_glissiere_mobile_gauche.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.32,
+        0.018
+      ]
+    },
+    {
+      "id": "piece_159",
+      "name": "S4_flanc_droite",
+      "assembly": "tiroir_S4",
+      "file": "pieces/159_s4_flanc_droite.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.44,
+        0.2904
+      ]
+    },
+    {
+      "id": "piece_160",
+      "name": "S4_glissiere_fixe_droite",
+      "assembly": "glissieres",
+      "file": "pieces/160_s4_glissiere_fixe_droite.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.018,
+        0.34,
+        0.024
+      ]
+    },
+    {
+      "id": "piece_161",
+      "name": "S4_glissiere_mobile_droite",
+      "assembly": "tiroir_S4",
+      "file": "pieces/161_s4_glissiere_mobile_droite.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.32,
+        0.018
+      ]
+    },
+    {
+      "id": "piece_162",
+      "name": "S4_fond_arriere",
+      "assembly": "tiroir_S4",
+      "file": "pieces/162_s4_fond_arriere.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.44999999999999996,
+        0.014,
+        0.2904
+      ]
+    },
+    {
+      "id": "piece_163",
+      "name": "S4_joint_peripherique",
+      "assembly": "tiroir_S4",
+      "file": "pieces/163_s4_joint_peripherique.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.474,
+        0.006,
+        0.33699999999999997
+      ]
+    },
+    {
+      "id": "piece_164",
+      "name": "S4_facade",
+      "assembly": "tiroir_S4",
+      "file": "pieces/164_s4_facade.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.45999999999999996,
+        0.016,
+        0.32999999999999996
+      ]
+    },
+    {
+      "id": "piece_165",
+      "name": "S4_poignee",
+      "assembly": "tiroir_S4",
+      "file": "pieces/165_s4_poignee.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.13,
+        0.022,
+        0.025
+      ]
+    },
+    {
+      "id": "piece_166",
+      "name": "S4_support_poignee_-1",
+      "assembly": "tiroir_S4",
+      "file": "pieces/166_s4_support_poignee_-1.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.013,
+        0.024
+      ]
+    },
+    {
+      "id": "piece_167",
+      "name": "S4_support_poignee_1",
+      "assembly": "tiroir_S4",
+      "file": "pieces/167_s4_support_poignee_1.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.014,
+        0.013,
+        0.024
+      ]
+    },
+    {
+      "id": "piece_168",
+      "name": "S4_plaque_identification",
+      "assembly": "tiroir_S4",
+      "file": "pieces/168_s4_plaque_identification.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.078,
+        0.004,
+        0.045
+      ]
+    },
+    {
+      "id": "piece_169",
+      "name": "S4_marquage_0_a",
+      "assembly": "tiroir_S4",
+      "file": "pieces/169_s4_marquage_0_a.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.013,
+        0.002,
+        0.0022
+      ]
+    },
+    {
+      "id": "piece_170",
+      "name": "S4_marquage_0_f",
+      "assembly": "tiroir_S4",
+      "file": "pieces/170_s4_marquage_0_f.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.0022,
+        0.002,
+        0.013
+      ]
+    },
+    {
+      "id": "piece_171",
+      "name": "S4_marquage_0_g",
+      "assembly": "tiroir_S4",
+      "file": "pieces/171_s4_marquage_0_g.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.013,
+        0.002,
+        0.0022
+      ]
+    },
+    {
+      "id": "piece_172",
+      "name": "S4_marquage_0_c",
+      "assembly": "tiroir_S4",
+      "file": "pieces/172_s4_marquage_0_c.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.0022,
+        0.002,
+        0.013
+      ]
+    },
+    {
+      "id": "piece_173",
+      "name": "S4_marquage_0_d",
+      "assembly": "tiroir_S4",
+      "file": "pieces/173_s4_marquage_0_d.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.013,
+        0.002,
+        0.0022
+      ]
+    },
+    {
+      "id": "piece_174",
+      "name": "S4_marquage_1_f",
+      "assembly": "tiroir_S4",
+      "file": "pieces/174_s4_marquage_1_f.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.0022,
+        0.002,
+        0.013
+      ]
+    },
+    {
+      "id": "piece_175",
+      "name": "S4_marquage_1_g",
+      "assembly": "tiroir_S4",
+      "file": "pieces/175_s4_marquage_1_g.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.013,
+        0.002,
+        0.0022
+      ]
+    },
+    {
+      "id": "piece_176",
+      "name": "S4_marquage_1_b",
+      "assembly": "tiroir_S4",
+      "file": "pieces/176_s4_marquage_1_b.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.0022,
+        0.002,
+        0.013
+      ]
+    },
+    {
+      "id": "piece_177",
+      "name": "S4_marquage_1_c",
+      "assembly": "tiroir_S4",
+      "file": "pieces/177_s4_marquage_1_c.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.0022,
+        0.002,
+        0.013
+      ]
+    },
+    {
+      "id": "piece_178",
+      "name": "S4_loquet",
+      "assembly": "tiroir_S4",
+      "file": "pieces/178_s4_loquet.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.032,
+        0.018,
+        0.032
+      ]
+    },
+    {
+      "id": "piece_179",
+      "name": "S4_actionneur_corps",
+      "assembly": "tiroir_S4",
+      "file": "pieces/179_s4_actionneur_corps.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.045,
+        0.2,
+        0.045
+      ]
+    },
+    {
+      "id": "piece_180",
+      "name": "S4_actionneur_tige",
+      "assembly": "tiroir_S4",
+      "file": "pieces/180_s4_actionneur_tige.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.018,
+        0.11,
+        0.018
+      ]
+    },
+    {
+      "id": "piece_181",
+      "name": "S4_butée_0.071",
+      "assembly": "tiroir_S4",
+      "file": "pieces/181_s4_butee_0_071.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.025,
+        0.035,
+        0.045
+      ]
+    },
+    {
+      "id": "piece_182",
+      "name": "S4_butée_0.429",
+      "assembly": "tiroir_S4",
+      "file": "pieces/182_s4_butee_0_429.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.025,
+        0.035,
+        0.045
+      ]
+    },
+    {
+      "id": "piece_183",
+      "name": "S4_vis_face_-1_-1",
+      "assembly": "tiroir_S4",
+      "file": "pieces/183_s4_vis_face_-1_-1.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_184",
+      "name": "S4_vis_face_-1_1",
+      "assembly": "tiroir_S4",
+      "file": "pieces/184_s4_vis_face_-1_1.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_185",
+      "name": "S4_vis_face_1_-1",
+      "assembly": "tiroir_S4",
+      "file": "pieces/185_s4_vis_face_1_-1.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_186",
+      "name": "S4_vis_face_1_1",
+      "assembly": "tiroir_S4",
+      "file": "pieces/186_s4_vis_face_1_1.glb",
+      "mesh": "cylinder",
+      "size_m": [
+        0.012,
+        0.008,
+        0.012
+      ]
+    },
+    {
+      "id": "piece_187",
+      "name": "grille_ventilation_fond",
+      "assembly": "coffre",
+      "file": "pieces/187_grille_ventilation_fond.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.008,
+        0.19,
+        0.2
+      ]
+    },
+    {
+      "id": "piece_188",
+      "name": "ailette_grille_ventilation_1",
+      "assembly": "coffre",
+      "file": "pieces/188_ailette_grille_ventilation_1.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.004,
+        0.155,
+        0.006
+      ]
+    },
+    {
+      "id": "piece_189",
+      "name": "ailette_grille_ventilation_2",
+      "assembly": "coffre",
+      "file": "pieces/189_ailette_grille_ventilation_2.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.004,
+        0.155,
+        0.006
+      ]
+    },
+    {
+      "id": "piece_190",
+      "name": "ailette_grille_ventilation_3",
+      "assembly": "coffre",
+      "file": "pieces/190_ailette_grille_ventilation_3.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.004,
+        0.155,
+        0.006
+      ]
+    },
+    {
+      "id": "piece_191",
+      "name": "ailette_grille_ventilation_4",
+      "assembly": "coffre",
+      "file": "pieces/191_ailette_grille_ventilation_4.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.004,
+        0.155,
+        0.006
+      ]
+    },
+    {
+      "id": "piece_192",
+      "name": "ailette_grille_ventilation_5",
+      "assembly": "coffre",
+      "file": "pieces/192_ailette_grille_ventilation_5.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.004,
+        0.155,
+        0.006
+      ]
+    },
+    {
+      "id": "piece_193",
+      "name": "ailette_grille_ventilation_6",
+      "assembly": "coffre",
+      "file": "pieces/193_ailette_grille_ventilation_6.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.004,
+        0.155,
+        0.006
+      ]
+    },
+    {
+      "id": "piece_194",
+      "name": "ailette_grille_ventilation_7",
+      "assembly": "coffre",
+      "file": "pieces/194_ailette_grille_ventilation_7.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.004,
+        0.155,
+        0.006
+      ]
+    },
+    {
+      "id": "piece_195",
+      "name": "support_afficheur",
+      "assembly": "commandes",
+      "file": "pieces/195_support_afficheur.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.018,
+        0.22,
+        0.14
+      ]
+    },
+    {
+      "id": "piece_196",
+      "name": "ecran_commande",
+      "assembly": "commandes",
+      "file": "pieces/196_ecran_commande.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.006,
+        0.17,
+        0.095
+      ]
+    },
+    {
+      "id": "piece_197",
+      "name": "ecran_indicateur_1",
+      "assembly": "commandes",
+      "file": "pieces/197_ecran_indicateur_1.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.003,
+        0.058,
+        0.004
+      ]
+    },
+    {
+      "id": "piece_198",
+      "name": "ecran_indicateur_2",
+      "assembly": "commandes",
+      "file": "pieces/198_ecran_indicateur_2.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.003,
+        0.058,
+        0.004
+      ]
+    },
+    {
+      "id": "piece_199",
+      "name": "ecran_indicateur_3",
+      "assembly": "commandes",
+      "file": "pieces/199_ecran_indicateur_3.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.003,
+        0.058,
+        0.004
+      ]
+    },
+    {
+      "id": "piece_200",
+      "name": "support_arret_urgence",
+      "assembly": "commandes",
+      "file": "pieces/200_support_arret_urgence.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.075,
+        0.075,
+        0.02
+      ]
+    },
+    {
+      "id": "piece_201",
+      "name": "arret_urgence_rouge",
+      "assembly": "commandes",
+      "file": "pieces/201_arret_urgence_rouge.glb",
+      "mesh": "cylinder_z",
+      "size_m": [
+        0.05,
+        0.05,
+        0.035
+      ]
+    },
+    {
+      "id": "piece_202",
+      "name": "capteur_emplacement_avant",
+      "assembly": "commandes",
+      "file": "pieces/202_capteur_emplacement_avant.glb",
+      "mesh": "rounded_box",
+      "size_m": [
+        0.06,
+        0.025,
+        0.035
+      ]
+    }
+  ],
+  "subassemblies": [
+    {
+      "id": "roue_motrice_assemblee",
+      "title": "Roue motrice assemblée",
+      "file": "sous_ensembles/roue_motrice_assemblee.glb",
+      "component_count": 9
+    },
+    {
+      "id": "roue_motrice_eclatee",
+      "title": "Roue motrice éclatée",
+      "file": "sous_ensembles/roue_motrice_eclatee.glb",
+      "component_count": 9
+    }
+  ],
+  "assembly_steps": [
+    {
+      "step": 1,
+      "id": "01_chassis",
+      "title": "Poser et assembler le châssis",
+      "assemblies": [
+        "chassis"
+      ],
+      "file": "assemblage/etape_01_chassis.glb",
+      "object_count": 9
+    },
+    {
+      "step": 2,
+      "id": "02_roues",
+      "title": "Installer les roues et les roulettes",
+      "assemblies": [
+        "roues"
+      ],
+      "file": "assemblage/etape_02_roues.glb",
+      "object_count": 41
+    },
+    {
+      "step": 3,
+      "id": "03_batterie",
+      "title": "Installer la batterie et son support",
+      "assemblies": [
+        "batterie"
+      ],
+      "file": "assemblage/etape_03_batterie.glb",
+      "object_count": 43
+    },
+    {
+      "step": 4,
+      "id": "04_coffre",
+      "title": "Monter le coffre principal",
+      "assemblies": [
+        "coffre"
+      ],
+      "file": "assemblage/etape_04_coffre.glb",
+      "object_count": 61
+    },
+    {
+      "step": 5,
+      "id": "05_separateurs",
+      "title": "Ajouter les séparateurs des compartiments",
+      "assemblies": [
+        "separateurs"
+      ],
+      "file": "assemblage/etape_05_separateurs.glb",
+      "object_count": 63
+    },
+    {
+      "step": 6,
+      "id": "06_glissieres",
+      "title": "Installer les glissières des tiroirs",
+      "assemblies": [
+        "glissieres"
+      ],
+      "file": "assemblage/etape_06_glissieres.glb",
+      "object_count": 71
+    },
+    {
+      "step": 7,
+      "id": "07_tiroir_S1",
+      "title": "Assembler et poser le tiroir S1",
+      "assemblies": [
+        "tiroir_S1"
+      ],
+      "file": "assemblage/etape_07_tiroir_S1.glb",
+      "object_count": 99
+    },
+    {
+      "step": 8,
+      "id": "08_tiroir_S2",
+      "title": "Assembler et poser le tiroir S2",
+      "assemblies": [
+        "tiroir_S2"
+      ],
+      "file": "assemblage/etape_08_tiroir_S2.glb",
+      "object_count": 130
+    },
+    {
+      "step": 9,
+      "id": "09_tiroir_S3",
+      "title": "Assembler et poser le tiroir S3",
+      "assemblies": [
+        "tiroir_S3"
+      ],
+      "file": "assemblage/etape_09_tiroir_S3.glb",
+      "object_count": 161
+    },
+    {
+      "step": 10,
+      "id": "10_tiroir_S4",
+      "title": "Assembler et poser le tiroir S4",
+      "assemblies": [
+        "tiroir_S4"
+      ],
+      "file": "assemblage/etape_10_tiroir_S4.glb",
+      "object_count": 191
+    },
+    {
+      "step": 11,
+      "id": "11_commandes",
+      "title": "Installer les commandes et les composants électroniques",
+      "assemblies": [
+        "commandes"
+      ],
+      "file": "assemblage/etape_11_commandes.glb",
+      "object_count": 201
+    },
+    {
+      "step": 12,
+      "id": "12_toit",
+      "title": "Fermer le coffre avec le toit",
+      "assemblies": [
+        "toit"
+      ],
+      "file": "assemblage/etape_12_toit.glb",
+      "object_count": 202
+    }
+  ]
+}

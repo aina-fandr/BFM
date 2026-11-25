@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atlas mécanique du robot AGV BFM V2</title>
+  <style>
+    :root {
+      --navy: #14324a;
+      --blue: #176b87;
+      --teal: #16877d;
+      --ink: #20313d;
+      --muted: #5d6e79;
+      --line: #d7e1e6;
+      --pale: #edf5f7;
+      --amber: #fff3dc;
+      --red: #fbe9e7;
+    }
+    @page { size: A4 landscape; margin: 12mm 13mm 14mm; }
+    * { box-sizing: border-box; }
+    body { margin: 0; color: var(--ink); font: 9pt/1.35 Arial, sans-serif; background: #e8eef1; }
+    .page {
+      position: relative;
+      width: 271mm;
+      min-height: 184mm;
+      margin: 10mm auto;
+      padding: 0;
+      background: #fff;
+      page-break-after: always;
+      break-after: page;
+    }
+    .page:last-child { page-break-after: auto; break-after: auto; }
+    h1 { margin: 0 0 3mm; color: var(--navy); font-size: 26pt; line-height: 1.1; }
+    h2 { margin: 0 0 3mm; color: var(--navy); font-size: 18pt; }
+    h3 { margin: 0 0 1.5mm; color: var(--blue); font-size: 11pt; }
+    p { margin: 0 0 2mm; }
+    ul, ol { margin: 1mm 0 2mm; padding-left: 5mm; }
+    li { margin: .7mm 0; }
+    .eyebrow { margin-bottom: 2mm; color: var(--teal); font-weight: bold; letter-spacing: 1.4px; text-transform: uppercase; }
+    .sub { margin-bottom: 3mm; color: var(--muted); font-size: 11pt; }
+    .warning, .note {
+      padding: 2.5mm 3mm;
+      border-left: 4px solid;
+      break-inside: avoid;
+    }
+    .warning { background: var(--red); border-color: #ba4137; }
+    .note { background: var(--amber); border-color: #d18a1c; }
+    .warning strong { color: #8d2923; }
+    .note strong { color: #85530c; }
+    .visual-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4mm;
+      margin: 3mm 0;
+    }
+    .visual-pair figure { margin: 0; }
+    .visual-pair img {
+      display: block;
+      width: 100%;
+      height: 102mm;
+      object-fit: contain;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: #edf2f5;
+    }
+    .visual-pair figcaption { margin-top: 1mm; color: var(--muted); font-weight: bold; text-align: center; }
+    .plan {
+      display: block;
+      width: 100%;
+      height: 150mm;
+      object-fit: contain;
+      border: 1px solid var(--line);
+    }
+    .row { display: grid; grid-template-columns: 1.55fr 1fr; gap: 5mm; align-items: start; }
+    .row-detail { display: grid; grid-template-columns: 1.18fr 1fr; gap: 5mm; align-items: start; }
+    .exploded, .detail {
+      width: 100%;
+      height: 126mm;
+      object-fit: contain;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: #edf2f5;
+    }
+    .detail { height: 112mm; }
+    .card { padding: 3mm; border: 1px solid var(--line); border-radius: 4px; break-inside: avoid; }
+    .cards3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; }
+    .cards2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 3mm; }
+    table { width: 100%; margin: 1mm 0 2mm; border-collapse: collapse; font-size: 8.3pt; }
+    th, td { padding: 1.5mm 1.8mm; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { background: var(--pale); color: var(--navy); }
+    .tag { color: var(--teal); font-weight: bold; }
+    .small { color: var(--muted); font-size: 8pt; }
+    .step {
+      display: grid;
+      grid-template-columns: 9mm 1fr;
+      gap: 2mm;
+      margin: 1.5mm 0;
+      padding: 2mm;
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      break-inside: avoid;
+    }
+    .num {
+      display: grid;
+      place-items: center;
+      width: 8mm;
+      height: 8mm;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      font-weight: bold;
+    }
+    .footer {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      padding-top: 2mm;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 7.5pt;
+    }
+    @media print {
+      body { background: #fff; }
+      .page { width: auto; min-height: 0; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+  <section class="page">
+    <p class="eyebrow">BFM V2 • Dossier visuel de conception</p>
+    <h1>Atlas mécanique du robot AGV</h1>
+    <p class="sub">Assemblage général, plans 2D et décomposition des pièces — du détail au robot complet.</p>
+    <div class="visual-pair">
+      <figure><img src="images/agv_bfm_v2_assemble.png" alt="Rendu 3D assemblé du robot AGV"><figcaption>Robot assemblé</figcaption></figure>
+      <figure><img src="images/agv_bfm_v2_eclate.png" alt="Rendu 3D éclaté du robot AGV"><figcaption>Assemblage éclaté</figcaption></figure>
+    </div>
+    <div class="cards3">
+      <div class="card"><h3>Enveloppe étudiée</h3><p>Châssis : <b>1100 × 700 mm</b><br>Coffre : <b>1000 × 500 × 750 mm</b><br>Hauteur totale visée : <b>1120 mm</b></p></div>
+      <div class="card"><h3>Compartiments</h3><p>Disposition <b>2 × 2</b> : S1/S2 en haut, S3/S4 en bas.<br>Charge visée : 40 kg par tiroir, 160 kg total.</p></div>
+      <div class="card"><h3>Portée</h3><p>Modèle conceptuel à pièces nommées pour visualiser le montage. Mesurer les sacs, les accès et le poste de dépôt avant de figer les plans.</p></div>
+    </div>
+    <div class="warning"><strong>Avant-projet :</strong> détails visuels illustratifs ; cotes, masses, charges, composants et sécurité à valider avant fabrication.</div>
+    <div class="footer"><span>AGV BFM V2 • Atlas mécanique conceptuel</span><span>01 / 05</span></div>
+  </section>
+
+  <section class="page">
+    <p class="eyebrow">01 • Mise en plan</p>
+    <h2>Vues orthogonales et dimensions de référence</h2>
+    <p>Les vues de dessus, de face et de côté fixent l'orientation et l'enveloppe actuellement retenues. Les dimensions internes ne sont pas encore des dimensions de fabrication.</p>
+    <img class="plan" src="plan_2d_robot_agv_bfm_v2.svg" alt="Plan 2D coté du robot AGV, vues de dessus, face et côté">
+    <div class="footer"><span>Échelle graphique commune • unités en mm • toutes les cotes sont provisoires</span><span>02 / 05</span></div>
+  </section>
+
+  <section class="page">
+    <p class="eyebrow">02 • Éclaté général</p>
+    <h2>Assemblages principaux, séparés pour lecture</h2>
+    <div class="row">
+      <img class="exploded" src="images/agv_bfm_v2_eclate.png" alt="Vue 3D éclatée des sous-ensembles du robot">
+      <div>
+        <div class="card">
+          <h3>Lecture des sous-ensembles</h3>
+          <table>
+            <thead><tr><th>Rep.</th><th>Sous-ensemble</th><th>Contenu représenté</th></tr></thead>
+            <tbody>
+              <tr><td>A</td><td>Châssis</td><td>Longerons, traverses, plateau/supports et pare-chocs.</td></tr>
+              <tr><td>B</td><td>Roulement</td><td>2 roues motrices, 2 roulettes orientables, supports et motoréducteurs indicatifs.</td></tr>
+              <tr><td>C</td><td>Énergie/commande</td><td>Emplacements de batterie, contrôleur, écran et arrêt d'urgence.</td></tr>
+              <tr><td>D</td><td>Coffre</td><td>Fond, parois, traverses de façade, toit et cloisons.</td></tr>
+              <tr><td>E</td><td>Tiroirs S1–S4</td><td>Plateaux, façades, poignées, loquets, butées et fixations figuratives.</td></tr>
+              <tr><td>F</td><td>Guidage/action</td><td>Glissières et actionneurs représentés à titre d'encombrement.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note"><strong>Pour inspecter :</strong> ouvrir <code>robot_agv_eclate.glb</code> dans un logiciel 3D compatible glTF. Les groupes et pièces portent des noms pour faciliter la sélection et le masquage.</div>
+        <p class="small">Le décalage de la vue éclatée est graphique : il ne représente pas les courses réelles d'assemblage ni les jeux mécaniques.</p>
+      </div>
+    </div>
+    <div class="footer"><span>Les détails de fixations et les références fournisseur ne sont pas spécifiés.</span><span>03 / 05</span></div>
+  </section>
+
+  <section class="page">
+    <p class="eyebrow">03 • Pièce et module</p>
+    <h2>Zoom sur un tiroir indépendant — S1</h2>
+    <div class="row-detail">
+      <img class="detail" src="images/agv_bfm_v2_detail_tiroir_S1.png" alt="Vue 3D éclatée du tiroir S1 et de ses composants">
+      <div>
+        <div class="card">
+          <h3>Du plus petit au sous-ensemble</h3>
+          <ol>
+            <li><b>Fixations génériques :</b> vis/têtes, rondelles, axes — diamètre, filetage et matière à définir par calcul.</li>
+            <li><b>Petites pièces :</b> poignée, loquet, butée, supports et protections — formes indicatives.</li>
+            <li><b>Guidage :</b> paire de glissières par tiroir ; capacité en extension et facteur de sécurité à calculer pour le cas chargé.</li>
+            <li><b>Actionnement :</b> enveloppe d'actionneur illustrée ; technologie, course, effort et vitesse non définis.</li>
+            <li><b>Tiroir :</b> fond, flancs, dos et façade assemblés ; retenir un sac sans coincement ni chute.</li>
+            <li><b>Casier :</b> tiroir + guides + verrou, montés dans le coffre.</li>
+          </ol>
+        </div>
+        <div class="note"><strong>Volume intérieur visé :</strong> environ 460 × 440 × 300 mm par casier. À confirmer avec les sacs pleins. La charge de 40 kg est un objectif, pas une capacité validée.</div>
+      </div>
+    </div>
+    <div class="cards3" style="margin-top:3mm">
+      <div class="card"><h3>Pièces de tôlerie</h3><p>Fond, joues, dos, façade et cloisons. Épaisseur, matériau, pliage et assemblage à dimensionner.</p></div>
+      <div class="card"><h3>Pièces d'achat</h3><p>Glissières, roues, motoréducteurs, actionneurs, verrous et capteurs : références locales à rechercher.</p></div>
+      <div class="card"><h3>Contrôles de montage</h3><p>Parallélisme des rails, butées mécaniques, retenue du tiroir, verrouillage détecté et absence de point de pincement.</p></div>
+    </div>
+    <div class="footer"><span>Pièces du tiroir dessinées à titre de conception, pas de fabrication.</span><span>04 / 05</span></div>
+  </section>
+
+  <section class="page">
+    <p class="eyebrow">04 • Ordre d'assemblage</p>
+    <h2>Progression recommandée : pièces → modules → robot</h2>
+    <div class="row">
+      <div>
+        <div class="step"><div class="num">1</div><div><b>Préparer les petites pièces et supports.</b><br>Valider la visserie, les platines, butées et interfaces après choix des matériaux et composants.</div></div>
+        <div class="step"><div class="num">2</div><div><b>Assembler le train roulant.</b><br>Monter les deux roues motrices, les deux roulettes orientables et les motoréducteurs sur leurs supports ; vérifier l'alignement.</div></div>
+        <div class="step"><div class="num">3</div><div><b>Construire et contrôler le châssis.</b><br>Assembler longerons/traverses et platine ; mesurer diagonales, planéité et points de fixation. Faire valider les soudures/liaisons.</div></div>
+        <div class="step"><div class="num">4</div><div><b>Installer énergie et commandes.</b><br>Fixer les supports de batterie/contrôleur et l'arrêt d'urgence ; câblage et protections selon le schéma électrique validé.</div></div>
+        <div class="step"><div class="num">5</div><div><b>Monter le coffre et les cloisons.</b><br>Poser fond, côtés, dos, séparateurs et toit ; vérifier les quatre ouvertures et l'accès de maintenance.</div></div>
+        <div class="step"><div class="num">6</div><div><b>Monter chaque casier indépendamment.</b><br>Assembler tiroir, glissières, actionneur, butée et verrou ; contrôler S1 à S4 séparément, sans charge puis avec charge d'essai inerte.</div></div>
+        <div class="step"><div class="num">7</div><div><b>Intégrer et vérifier le robot complet.</b><br>Contrôler le centrage des masses, la stabilité, le freinage, l'interverrouillage traction/tiroir et l'interface de station.</div></div>
+      </div>
+      <div>
+        <div class="card">
+          <h3>Avant de figer les plans d'atelier</h3>
+          <ul>
+            <li>Mesurer les sacs et le bâtiment, puis actualiser l'enveloppe.</li>
+            <li>Calculer masse à vide, centre de gravité, structure, roues et freinage.</li>
+            <li>Dimensionner les glissières pour 40 kg en extension, plus le poids du tiroir et les sollicitations.</li>
+            <li>Étudier la stabilité avec un tiroir haut sorti ; n'autoriser qu'un seul tiroir à la fois.</li>
+            <li>Valider capteurs, anti-pincement, arrêt sûr et récupération après panne.</li>
+            <li>Faire approuver analyse de risques et essais par l'encadrement.</li>
+          </ul>
+        </div>
+        <div class="warning" style="margin-top:3mm"><strong>Ne pas fabriquer sur la seule base de cet atlas.</strong> Les cotes intérieures, épaisseurs, jeux, matériaux, attaches, puissances, vitesses et capacités de charge ne sont pas calculés. Aucun essai avec des fonds ou des sacs réels n'est décrit ici.</div>
+        <p class="small" style="margin-top:3mm">Modèles 3D fournis : <code>modeles/robot_agv.glb</code> (assemblé) et <code>modeles/robot_agv_eclate.glb</code> (éclaté). Les vues PNG et ce PDF sont des illustrations du même avant-projet.</p>
+      </div>
+    </div>
+    <div class="footer"><span>Document de conception pour revue universitaire • révisions requises après mesures et calculs</span><span>05 / 05</span></div>
+  </section>
+</body>
+</html>

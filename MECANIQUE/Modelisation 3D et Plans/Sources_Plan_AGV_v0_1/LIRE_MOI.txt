@@ -1,0 +1,41 @@
+AGV BANCAIRE - AVANT-PROJET 2D V0.1
+Date : 20 octobre 2026
+
+Contenu
+- plan_01.svg : niveau de départ, échelle 1:50 en A3 paysage.
+- plan_02.svg : rez-de-chaussée, échelle 1:100 en A3 paysage.
+- plan_03.svg : hypothèses et repères, sans échelle.
+- geometrie_AGV_v0_1.json : coordonnées, rectangles de sols, murs, mobilier,
+  itinéraires, zones de tri et résultats des contrôles géométriques.
+- build_agv_plans.py : générateur Python (ReportLab et polices DejaVu Sans).
+
+Conventions
+Toutes les coordonnées du JSON sont en mètres. X est orienté vers l’est,
+Y vers le nord, Z vers le haut. Origine à l’angle intérieur sud-ouest de
+la salle de collecte. L’ascenseur A est au même X/Y aux deux niveaux.
+L’altitude du niveau de départ est seulement proposée à +3 m.
+D = dimension issue du descriptif utilisateur, non relevée sur site.
+H = hypothèse géométrique de conception. Les cotes des pièces sont utiles,
+entre faces intérieures. Les portes sont cotées en largeur libre. Les
+distances de déplacement sont interprétées d’axe à axe, sauf le dernier
+segment de 10 m qui va de l’axe du virage à la porte P1.
+
+Hypothèses majeures
+La première rotation dans la salle de collecte est à droite pour rejoindre
+l’ouest en étant initialement orienté au sud. Les trois catégories sont
+provisoirement implantées dans le dépôt 3. Le dépôt 1 est un repli à autoriser.
+La cabine possède une porte au sud et permet un demi-tour avant la sortie.
+Les virages RDC 5 et 6 comportent des zones élargies à 1,80 x 1,80 m.
+
+Validation
+Les contrôles testent une enveloppe orientée 1,30 x 0,90 m, construite autour
+d’un châssis d’essai 1,10 x 0,70 m avec une marge de 0,10 m sur chaque face.
+Pas de translation <= 0,025 m ; pas angulaire <= 2 degrés.
+Test SAT pour les collisions, inclusion du sol échantillonnée à 0,05 m.
+Toutes les portes sont considérées ouvertes. Le JSON donne les résultats.
+Ce contrôle de principe ne valide pas le freinage, les masses et la stabilité,
+la présence humaine, la localisation ni le mécanisme de transfert des sacs.
+
+Les dessins SVG sont modifiables dans un éditeur vectoriel. Imprimer le PDF
+à 100 % sur papier A3 pour respecter les échelles nominales ; une impression
+« adapter à la page » les modifie. Utiliser les barres d’échelle après export.

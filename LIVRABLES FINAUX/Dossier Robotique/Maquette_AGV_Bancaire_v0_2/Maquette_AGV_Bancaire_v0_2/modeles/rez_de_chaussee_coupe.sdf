@@ -1,0 +1,1438 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sdf version="1.9">
+  <world name="banque_agv_RDC_coupe">
+    <physics name="physics" type="ignored">
+      <max_step_size>.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+    </physics>
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics" />
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands" />
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster" />
+    <gui fullscreen="0">
+      <plugin filename="MinimalScene" name="3D View">
+        <gz-gui>
+          <title>Maquette AGV bancaire</title>
+          <property type="bool" key="showTitleBar">false</property>
+          <property type="string" key="state">docked</property>
+        </gz-gui>
+        <engine>ogre2</engine>
+        <scene>scene</scene>
+        <ambient_light>.6 .6 .6</ambient_light>
+        <background_color>.94 .96 .98</background_color>
+        <camera_pose>24 -18.3 27.3 0 .713 2.266</camera_pose>
+      </plugin>
+      <plugin filename="GzSceneManager" name="Scene Manager" />
+      <plugin filename="EntityTree" name="Entity tree" />
+    </gui>
+    <gravity>0 0 -9.81</gravity>
+    <scene>
+      <ambient>.6 .6 .6 1</ambient>
+      <background>.94 .96 .98 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <light name="soleil" type="directional">
+      <pose>0 0 20 0 0 0</pose>
+      <diffuse>.9 .9 .9 1</diffuse>
+      <specular>.2 .2 .2 1</specular>
+      <direction>-.4 .3 -1</direction>
+      <cast_shadows>true</cast_shadows>
+    </light>
+    <model name="maquette_RDC">
+      <static>true</static>
+      <link name="structure_RDC">
+        <visual name="RDC_dalle_01">
+          <pose>-5.120000 -0.200000 -0.060000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>1.2 0.2 0.12</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.9294117647058824 0.9490196078431372 0.9647058823529412 1</ambient>
+            <diffuse>0.9294117647058824 0.9490196078431372 0.9647058823529412 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_dalle_01_collision">
+          <pose>-5.120000 -0.200000 -0.060000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>1.2 0.2 0.12</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_dalle_02">
+          <pose>-4.220000 -1.200000 -0.060000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>4.0 1.8 0.12</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.9294117647058824 0.9490196078431372 0.9647058823529412 1</ambient>
+            <diffuse>0.9294117647058824 0.9490196078431372 0.9647058823529412 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_dalle_02_collision">
+          <pose>-4.220000 -1.200000 -0.060000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>4.0 1.8 0.12</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_dalle_03">
+          <pose>-3.120000 1.800000 -0.060000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>1.5 4.2 0.12</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.9294117647058824 0.9490196078431372 0.9647058823529412 1</ambient>
+            <diffuse>0.9294117647058824 0.9490196078431372 0.9647058823529412 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_dalle_03_collision">
+          <pose>-3.120000 1.800000 -0.060000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>1.5 4.2 0.12</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_dalle_04">
+          <pose>1.430000 4.800000 -0.060000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>10.9 1.8 0.12</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.9294117647058824 0.9490196078431372 0.9647058823529412 1</ambient>
+            <diffuse>0.9294117647058824 0.9490196078431372 0.9647058823529412 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_dalle_04_collision">
+          <pose>1.430000 4.800000 -0.060000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>10.9 1.8 0.12</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_dalle_05">
+          <pose>8.380000 8.420000 -0.060000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>3.0 10.24 0.12</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.9294117647058824 0.9490196078431372 0.9647058823529412 1</ambient>
+            <diffuse>0.9294117647058824 0.9490196078431372 0.9647058823529412 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_dalle_05_collision">
+          <pose>8.380000 8.420000 -0.060000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>3.0 10.24 0.12</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_dalle_06">
+          <pose>12.000000 4.800000 -0.060000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>4.0 3.0 0.12</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.9294117647058824 0.9490196078431372 0.9647058823529412 1</ambient>
+            <diffuse>0.9294117647058824 0.9490196078431372 0.9647058823529412 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_dalle_06_collision">
+          <pose>12.000000 4.800000 -0.060000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>4.0 3.0 0.12</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_dalle_07">
+          <pose>12.000000 7.920000 -0.060000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>4.0 3.0 0.12</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.9294117647058824 0.9490196078431372 0.9647058823529412 1</ambient>
+            <diffuse>0.9294117647058824 0.9490196078431372 0.9647058823529412 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_dalle_07_collision">
+          <pose>12.000000 7.920000 -0.060000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>4.0 3.0 0.12</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_dalle_08">
+          <pose>12.000000 11.540000 -0.060000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>4.0 4.0 0.12</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.9294117647058824 0.9490196078431372 0.9647058823529412 1</ambient>
+            <diffuse>0.9294117647058824 0.9490196078431372 0.9647058823529412 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_dalle_08_collision">
+          <pose>12.000000 11.540000 -0.060000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>4.0 4.0 0.12</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_dalle_09">
+          <pose>9.940000 4.800000 -0.060000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 1.2 0.12</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.9294117647058824 0.9490196078431372 0.9647058823529412 1</ambient>
+            <diffuse>0.9294117647058824 0.9490196078431372 0.9647058823529412 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_dalle_09_collision">
+          <pose>9.940000 4.800000 -0.060000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 1.2 0.12</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_dalle_10">
+          <pose>9.940000 7.920000 -0.060000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 1.2 0.12</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.9294117647058824 0.9490196078431372 0.9647058823529412 1</ambient>
+            <diffuse>0.9294117647058824 0.9490196078431372 0.9647058823529412 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_dalle_10_collision">
+          <pose>9.940000 7.920000 -0.060000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 1.2 0.12</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_dalle_11">
+          <pose>9.940000 11.540000 -0.060000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 1.2 0.12</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.9294117647058824 0.9490196078431372 0.9647058823529412 1</ambient>
+            <diffuse>0.9294117647058824 0.9490196078431372 0.9647058823529412 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_dalle_11_collision">
+          <pose>9.940000 11.540000 -0.060000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 1.2 0.12</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_00">
+          <pose>-6.295000 1.000000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 2.5 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_00_collision">
+          <pose>-6.295000 1.000000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 2.5 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_01">
+          <pose>-3.945000 1.000000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 2.5 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_01_collision">
+          <pose>-3.945000 1.000000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 2.5 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_02">
+          <pose>-5.120000 2.175000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>2.2 0.15 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_02_collision">
+          <pose>-5.120000 2.175000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>2.2 0.15 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_03">
+          <pose>-5.970000 -0.175000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.5 0.15 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_03_collision">
+          <pose>-5.970000 -0.175000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.5 0.15 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_04">
+          <pose>-4.270000 -0.175000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.5 0.15 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_04_collision">
+          <pose>-4.270000 -0.175000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.5 0.15 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_05">
+          <pose>-6.295000 -1.275000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 1.95 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_05_collision">
+          <pose>-6.295000 -1.275000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 1.95 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_06">
+          <pose>-4.145000 -2.175000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>4.15 0.15 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_06_collision">
+          <pose>-4.145000 -2.175000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>4.15 0.15 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_07">
+          <pose>-2.145000 -1.200000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 1.8 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_07_collision">
+          <pose>-2.145000 -1.200000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 1.8 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_08">
+          <pose>-5.970000 -0.225000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.5 0.15 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_08_collision">
+          <pose>-5.970000 -0.225000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.5 0.15 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_09">
+          <pose>-4.195000 -0.225000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.65 0.15 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_09_collision">
+          <pose>-4.195000 -0.225000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.65 0.15 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_10">
+          <pose>-2.295000 -0.225000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 0.15 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_10_collision">
+          <pose>-2.295000 -0.225000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 0.15 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_11">
+          <pose>-3.945000 1.800000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 4.2 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_11_collision">
+          <pose>-3.945000 1.800000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 4.2 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_12">
+          <pose>-2.295000 1.800000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 4.2 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_12_collision">
+          <pose>-2.295000 1.800000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 4.2 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_13">
+          <pose>-4.095000 4.875000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 1.95 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_13_collision">
+          <pose>-4.095000 4.875000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 1.95 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_14">
+          <pose>1.430000 5.775000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>10.9 0.15 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_14_collision">
+          <pose>1.430000 5.775000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>10.9 0.15 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_15">
+          <pose>2.330000 3.825000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>9.1 0.15 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_15_collision">
+          <pose>2.330000 3.825000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>9.1 0.15 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_16">
+          <pose>6.805000 3.750000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 0.9 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_16_collision">
+          <pose>6.805000 3.750000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 0.9 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_17">
+          <pose>6.805000 9.545000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 8.29 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_17_collision">
+          <pose>6.805000 9.545000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 8.29 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_18">
+          <pose>10.515000 3.225000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>7.27 0.15 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_18_collision">
+          <pose>10.515000 3.225000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>7.27 0.15 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_19">
+          <pose>10.515000 13.615000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>7.27 0.15 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_19_collision">
+          <pose>10.515000 13.615000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>7.27 0.15 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_20">
+          <pose>14.075000 8.420000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 10.24 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_20_collision">
+          <pose>14.075000 8.420000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 10.24 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_21">
+          <pose>9.940000 3.750000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 0.9 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_21_collision">
+          <pose>9.940000 3.750000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 0.9 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_22">
+          <pose>9.940000 6.360000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 1.92 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_22_collision">
+          <pose>9.940000 6.360000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 1.92 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_23">
+          <pose>9.940000 9.730000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 2.42 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_23_collision">
+          <pose>9.940000 9.730000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 2.42 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_24">
+          <pose>9.940000 12.840000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 1.4 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_24_collision">
+          <pose>9.940000 12.840000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 1.4 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_25">
+          <pose>12.000000 6.360000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>4.0 0.12 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_25_collision">
+          <pose>12.000000 6.360000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>4.0 0.12 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_mur_26">
+          <pose>12.000000 9.480000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>4.0 0.12 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.807843137254902 0.8509803921568627 0.8941176470588236 1</ambient>
+            <diffuse>0.807843137254902 0.8509803921568627 0.8941176470588236 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_mur_26_collision">
+          <pose>12.000000 9.480000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>4.0 0.12 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_parcours_00">
+          <pose>-5.120000 -0.100000 0.018000 0.000000 0.000000 -1.570796</pose>
+          <geometry>
+            <box>
+              <size>2.2 0.055 0.018</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.12941176470588237 0.4196078431372549 0.8666666666666667 1</ambient>
+            <diffuse>0.12941176470588237 0.4196078431372549 0.8666666666666667 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_parcours_01">
+          <pose>-4.120000 -1.200000 0.018000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>2.0 0.055 0.018</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.12941176470588237 0.4196078431372549 0.8666666666666667 1</ambient>
+            <diffuse>0.12941176470588237 0.4196078431372549 0.8666666666666667 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_parcours_02">
+          <pose>-3.120000 1.800000 0.018000 0.000000 0.000000 1.570796</pose>
+          <geometry>
+            <box>
+              <size>6.0 0.055 0.018</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.12941176470588237 0.4196078431372549 0.8666666666666667 1</ambient>
+            <diffuse>0.12941176470588237 0.4196078431372549 0.8666666666666667 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_parcours_03">
+          <pose>1.880000 4.800000 0.018000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>10.0 0.055 0.018</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.12941176470588237 0.4196078431372549 0.8666666666666667 1</ambient>
+            <diffuse>0.12941176470588237 0.4196078431372549 0.8666666666666667 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_parcours_04">
+          <pose>7.840000 4.800000 0.018000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>1.92 0.055 0.018</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.12941176470588237 0.4196078431372549 0.8666666666666667 1</ambient>
+            <diffuse>0.12941176470588237 0.4196078431372549 0.8666666666666667 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_parcours_05">
+          <pose>8.800000 8.170000 0.018000 0.000000 0.000000 1.570796</pose>
+          <geometry>
+            <box>
+              <size>6.74 0.055 0.018</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.12941176470588237 0.4196078431372549 0.8666666666666667 1</ambient>
+            <diffuse>0.12941176470588237 0.4196078431372549 0.8666666666666667 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_parcours_06">
+          <pose>9.825000 11.540000 0.018000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>2.05 0.055 0.018</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.12941176470588237 0.4196078431372549 0.8666666666666667 1</ambient>
+            <diffuse>0.12941176470588237 0.4196078431372549 0.8666666666666667 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_parcours_07">
+          <pose>10.850000 11.745000 0.018000 0.000000 0.000000 1.570796</pose>
+          <geometry>
+            <box>
+              <size>0.41 0.055 0.018</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.12941176470588237 0.4196078431372549 0.8666666666666667 1</ambient>
+            <diffuse>0.12941176470588237 0.4196078431372549 0.8666666666666667 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_ascenseur_montant_-5.745">
+          <pose>-5.732500 -0.175000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.025 0.15 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_ascenseur_montant_-4.52">
+          <pose>-4.507500 -0.175000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.025 0.15 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_ascenseur_rail">
+          <pose>-5.120000 -0.175000 0.017500 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>1.2 0.15 0.035</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_ascenseur_vantail_ouvert_0">
+          <pose>-6.040000 -0.175000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.6 0.036 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_ascenseur_vantail_ouvert_1">
+          <pose>-4.200000 -0.175000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.6 0.036 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_cabine_plancher">
+          <pose>-5.120000 1.000000 -0.045000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>2.2 2.2 0.09</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.8392156862745098 0.807843137254902 0.9098039215686274 1</ambient>
+            <diffuse>0.8392156862745098 0.807843137254902 0.9098039215686274 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_cabine_plancher_collision">
+          <pose>-5.120000 1.000000 -0.045000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>2.2 2.2 0.09</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_cabine_paroi_0">
+          <pose>-6.180000 1.000000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.04 2.16 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.615686274509804 0.5490196078431373 0.7725490196078432 1</ambient>
+            <diffuse>0.615686274509804 0.5490196078431373 0.7725490196078432 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_cabine_paroi_0_collision">
+          <pose>-6.180000 1.000000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.04 2.16 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_cabine_paroi_1">
+          <pose>-4.060000 1.000000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.04 2.16 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.615686274509804 0.5490196078431373 0.7725490196078432 1</ambient>
+            <diffuse>0.615686274509804 0.5490196078431373 0.7725490196078432 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_cabine_paroi_1_collision">
+          <pose>-4.060000 1.000000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.04 2.16 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_cabine_paroi_2">
+          <pose>-5.120000 2.060000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>2.08 0.04 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.615686274509804 0.5490196078431373 0.7725490196078432 1</ambient>
+            <diffuse>0.615686274509804 0.5490196078431373 0.7725490196078432 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_cabine_paroi_2_collision">
+          <pose>-5.120000 2.060000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>2.08 0.04 0.85</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_P1_entree_hall_montant_4.175">
+          <pose>6.805000 4.187500 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 0.025 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_P1_entree_hall_montant_5.4">
+          <pose>6.805000 5.412500 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 0.025 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_P1_entree_hall_rail">
+          <pose>6.805000 4.800000 0.017500 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.15 1.2 0.035</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_P1_entree_hall_vantail_ouvert_0">
+          <pose>6.805000 3.880000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.036 0.6 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_P1_entree_hall_vantail_ouvert_1">
+          <pose>6.805000 5.720000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.036 0.6 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_depot_1_montant_4.175">
+          <pose>9.940000 4.187500 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 0.025 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_depot_1_montant_5.3999999999999995">
+          <pose>9.940000 5.412500 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 0.025 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_depot_1_rail">
+          <pose>9.940000 4.800000 0.017500 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 1.2 0.035</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_depot_1_vantail_ouvert_0">
+          <pose>9.940000 3.880000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.036 0.6 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_depot_1_vantail_ouvert_1">
+          <pose>9.940000 5.720000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.036 0.6 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_depot_2_montant_7.295">
+          <pose>9.940000 7.307500 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 0.025 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_depot_2_montant_8.52">
+          <pose>9.940000 8.532500 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 0.025 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_depot_2_rail">
+          <pose>9.940000 7.920000 0.017500 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 1.2 0.035</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_depot_2_vantail_ouvert_0">
+          <pose>9.940000 7.000000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.036 0.6 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_depot_2_vantail_ouvert_1">
+          <pose>9.940000 8.840000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.036 0.6 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_depot_3_montant_10.915">
+          <pose>9.940000 10.927500 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 0.025 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_depot_3_montant_12.139999999999999">
+          <pose>9.940000 12.152500 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 0.025 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_depot_3_rail">
+          <pose>9.940000 11.540000 0.017500 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.12 1.2 0.035</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_depot_3_vantail_ouvert_0">
+          <pose>9.940000 10.620000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.036 0.6 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_depot_3_vantail_ouvert_1">
+          <pose>9.940000 12.460000 0.425000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.036 0.6 0.85</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</ambient>
+            <diffuse>0.15294117647058825 0.6196078431372549 0.5529411764705883 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_reception_C1_base">
+          <pose>10.850000 13.015000 0.225000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>1.0 0.75 0.45</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.3411764705882353 0.7215686274509804 0.5607843137254902 1</ambient>
+            <diffuse>0.3411764705882353 0.7215686274509804 0.5607843137254902 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_reception_C1_base_collision">
+          <pose>10.850000 13.015000 0.225000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>1.0 0.75 0.45</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_reception_C1_plateau">
+          <pose>10.850000 13.015000 0.470000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.92 0.67 0.04</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.8627450980392157 0.9019607843137255 0.9254901960784314 1</ambient>
+            <diffuse>0.8627450980392157 0.9019607843137255 0.9254901960784314 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_reception_C1_plateau_collision">
+          <pose>10.850000 13.015000 0.470000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.92 0.67 0.04</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_reception_C2_base">
+          <pose>12.000000 13.015000 0.225000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>1.0 0.75 0.45</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.3607843137254902 0.5686274509803921 0.8705882352941177 1</ambient>
+            <diffuse>0.3607843137254902 0.5686274509803921 0.8705882352941177 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_reception_C2_base_collision">
+          <pose>12.000000 13.015000 0.225000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>1.0 0.75 0.45</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_reception_C2_plateau">
+          <pose>12.000000 13.015000 0.470000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.92 0.67 0.04</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.8627450980392157 0.9019607843137255 0.9254901960784314 1</ambient>
+            <diffuse>0.8627450980392157 0.9019607843137255 0.9254901960784314 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_reception_C2_plateau_collision">
+          <pose>12.000000 13.015000 0.470000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.92 0.67 0.04</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_reception_C3_base">
+          <pose>13.150000 13.015000 0.225000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.99 0.75 0.45</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.6745098039215687 0.5019607843137255 0.792156862745098 1</ambient>
+            <diffuse>0.6745098039215687 0.5019607843137255 0.792156862745098 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_reception_C3_base_collision">
+          <pose>13.150000 13.015000 0.225000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.99 0.75 0.45</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_reception_C3_plateau">
+          <pose>13.150000 13.015000 0.470000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.91 0.67 0.04</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.8627450980392157 0.9019607843137255 0.9254901960784314 1</ambient>
+            <diffuse>0.8627450980392157 0.9019607843137255 0.9254901960784314 1</diffuse>
+          </material>
+        </visual>
+        <collision name="RDC_reception_C3_plateau_collision">
+          <pose>13.150000 13.015000 0.470000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>0.91 0.67 0.04</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="RDC_retour_attente_0">
+          <pose>10.475000 11.540000 0.018000 0.000000 0.000000 3.141593</pose>
+          <geometry>
+            <box>
+              <size>5.35 0.055 0.018</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.5607843137254902 0.396078431372549 0.7333333333333333 1</ambient>
+            <diffuse>0.5607843137254902 0.396078431372549 0.7333333333333333 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_retour_attente_1">
+          <pose>7.800000 10.970000 0.018000 0.000000 0.000000 -1.570796</pose>
+          <geometry>
+            <box>
+              <size>1.14 0.055 0.018</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.5607843137254902 0.396078431372549 0.7333333333333333 1</ambient>
+            <diffuse>0.5607843137254902 0.396078431372549 0.7333333333333333 1</diffuse>
+          </material>
+        </visual>
+        <visual name="RDC_emplacement_attente">
+          <pose>7.800000 10.400000 0.006000 0.000000 0.000000 0.000000</pose>
+          <geometry>
+            <box>
+              <size>1.0 1.4 0.008</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.8745098039215686 0.8196078431372549 0.9254901960784314 1</ambient>
+            <diffuse>0.8745098039215686 0.8196078431372549 0.9254901960784314 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>

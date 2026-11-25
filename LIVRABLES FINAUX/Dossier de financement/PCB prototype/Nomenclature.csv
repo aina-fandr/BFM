@@ -1,0 +1,24 @@
+Rep?re;D?signation;R?seaux par broche
+J1;Entr?e PNP 1;IN1, RET_CAPT
+R1;2.7k / 0.5W;IN1, LED1
+U1;LTV-817C;LED1, RET_CAPT, GND_LOG, S1
+R5;10k;S1, 3V3
+J5;Sortie logique 1;S1, GND_LOG, 3V3
+J2;Entr?e PNP 2;IN2, RET_CAPT
+R2;2.7k / 0.5W;IN2, LED2
+U2;LTV-817C;LED2, RET_CAPT, GND_LOG, S2
+R6;10k;S2, 3V3
+J6;Sortie logique 2;S2, GND_LOG, 3V3
+J3;Entr?e PNP 3;IN3, RET_CAPT
+R3;2.7k / 0.5W;IN3, LED3
+U3;LTV-817C;LED3, RET_CAPT, GND_LOG, S3
+R7;10k;S3, 3V3
+J7;Sortie logique 3;S3, GND_LOG, 3V3
+J4;Entr?e PNP 4;IN4, RET_CAPT
+R4;2.7k / 0.5W;IN4, LED4
+U4;LTV-817C;LED4, RET_CAPT, GND_LOG, S4
+R8;10k;S4, 3V3
+J8;Sortie logique 4;S4, GND_LOG, 3V3
+J9;5V r?gul? externe;5V, GND_LOG
+J10;Harnais NUCLEO;5V, GND_LOG, 3V3, CAN_TX, CAN_RX
+J11;Harnais module CAN isol? externe;5V, GND_LOG, 3V3, CAN_TX, CAN_RX

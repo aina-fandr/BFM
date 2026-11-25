@@ -1,0 +1,756 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f4f3ef">
+  <meta name="description" content="Dossier visuel et interactif du projet AGV bancaire BFM V4 : modèles 3D, cotes issues de la CAO, composants, cycle et documents.">
+  <title>BFM V4 — Le projet AGV en images</title>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f4f3ef;
+      --white: #fff;
+      --ink: #17252d;
+      --muted: #647178;
+      --line: #dce1dd;
+      --orange: #e89028;
+      --orange-soft: #fff1db;
+      --green: #277769;
+      --navy: #183541;
+      --shadow: 0 18px 55px #18354112;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      scroll-behavior: smooth;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-size: 15px; line-height: 1.55; }
+    a { color: inherit; }
+    button, input, select { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, model-viewer:focus-visible { outline: 3px solid #e8902875; outline-offset: 3px; }
+    img { display: block; max-width: 100%; }
+    .wrap { width: min(1240px, calc(100% - 48px)); margin-inline: auto; }
+    .topbar { height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border-bottom: 1px solid #17252d18; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-size: 14px; font-weight: 900; letter-spacing: .12em; }
+    .brand-mark { width: 27px; height: 27px; display: grid; place-items: center; border: 2px solid var(--ink); border-radius: 50%; }
+    .brand-mark::after { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--orange); }
+    .brand small { display: block; color: var(--muted); font-size: 8px; line-height: 1; letter-spacing: .28em; }
+    .nav { display: flex; flex-wrap: wrap; gap: clamp(12px, 2vw, 26px); }
+    .nav a { color: #47545a; font-size: 11px; font-weight: 650; text-decoration: none; }
+    .nav a:hover, .doc-link:hover { color: var(--orange); }
+    .pill-link, .button { display: inline-flex; min-height: 42px; align-items: center; justify-content: center; gap: 9px; padding: 9px 16px; border: 1px solid var(--ink); border-radius: 999px; background: var(--ink); color: white; font-size: 11px; font-weight: 800; text-decoration: none; cursor: pointer; transition: transform .18s, background .18s; }
+    .pill-link:hover, .button:hover { transform: translateY(-2px); background: #2b414a; }
+    .button.orange { border-color: var(--orange); background: var(--orange); color: #1c282c; }
+    .button.light { border-color: #bac3c0; background: transparent; color: var(--ink); }
+    .button.small { min-height: 34px; padding: 7px 12px; font-size: 10px; }
+    .eyebrow { margin: 0 0 12px; color: #b66b13; font-size: 10px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase; }
+    .hero { display: grid; grid-template-columns: .82fr 1.18fr; gap: 38px; min-height: 630px; align-items: center; padding-block: 35px 52px; }
+    h1 { max-width: 600px; margin: 0; font-size: clamp(45px, 6.1vw, 74px); line-height: .96; letter-spacing: -.065em; }
+    .hero-copy { max-width: 470px; margin: 21px 0 23px; color: #4e5b61; font-size: 15px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 9px; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 32px; color: var(--muted); font-size: 9px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .hero-meta span::before { content: ""; display: inline-block; width: 6px; height: 6px; margin: 0 7px 1px 0; border-radius: 50%; background: var(--orange); }
+    .hero-scene { position: relative; min-width: 0; height: 530px; overflow: hidden; border: 1px solid #e1e4df; border-radius: 18px; background: radial-gradient(ellipse at 50% 42%, #fff 0%, #f7f8f5 54%, #e8eeea 100%); box-shadow: var(--shadow); }
+    .hero-scene::before, .mini-scene::before { position: absolute; z-index: 0; inset: 0; background-image: linear-gradient(#18354108 1px, transparent 1px), linear-gradient(90deg, #18354108 1px, transparent 1px); background-size: 34px 34px; content: ""; mask-image: linear-gradient(transparent, #000 20%, #000 80%, transparent); }
+    .hero-scene model-viewer { position: absolute; z-index: 1; inset: 0; width: 100%; height: 100%; --poster-color: transparent; background: transparent; }
+    model-viewer[hidden] { display: none !important; }
+    .hero-poster { position: absolute; z-index: 2; inset: 4% 5%; width: 90%; height: 90%; object-fit: contain; mix-blend-mode: multiply; pointer-events: none; animation: float 6.5s ease-in-out infinite; transition: opacity .5s; }
+    .hero-poster.is-hidden, .mini-poster.is-hidden { opacity: 0; }
+    .hero-label, .model-chip { position: absolute; z-index: 3; display: flex; align-items: center; gap: 8px; padding: 8px 11px; border: 1px solid #e1e5e0; border-radius: 999px; background: #ffffffeb; color: #38474d; font-size: 9px; font-weight: 850; letter-spacing: .07em; text-transform: uppercase; }
+    .hero-label { top: 16px; right: 16px; }
+    .model-chip { top: 16px; left: 16px; }
+    .live-dot { width: 7px; height: 7px; border-radius: 50%; background: #28a17b; box-shadow: 0 0 0 4px #28a17b1c; }
+    .hero-controls { position: absolute; z-index: 4; right: 16px; bottom: 15px; left: 16px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 9px; }
+    .control-group { display: flex; flex-wrap: wrap; gap: 6px; }
+    .model-switch, .rotation-toggle { min-height: 34px; padding: 7px 11px; border: 1px solid #d5dcd8; border-radius: 999px; background: #fff; color: #27383f; font-size: 10px; font-weight: 800; cursor: pointer; }
+    .model-switch[aria-pressed="true"], .rotation-toggle[aria-pressed="true"] { border-color: var(--ink); background: var(--ink); color: white; }
+    .hero-status { position: absolute; z-index: 3; bottom: 67px; left: 19px; max-width: 58%; color: #506067; font-size: 10px; font-weight: 700; }
+    .metrics-strip { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0 0 78px; overflow: hidden; border: 1px solid #e2e4df; border-radius: 14px; background: #ffffffc9; }
+    .metric { min-height: 96px; padding: 17px 20px; border-right: 1px solid #e7e9e5; }
+    .metric:last-child { border: 0; }
+    .metric strong { display: block; color: var(--ink); font-size: clamp(20px, 2.4vw, 29px); line-height: 1.08; letter-spacing: -.04em; }
+    .metric span { display: block; margin-top: 7px; color: var(--muted); font-size: 9px; font-weight: 750; letter-spacing: .07em; text-transform: uppercase; }
+    .section { margin-bottom: 86px; scroll-margin-top: 25px; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 28px; margin-bottom: 24px; }
+    .section-head h2 { max-width: 670px; margin: 0; font-size: clamp(30px, 4.1vw, 49px); line-height: 1; letter-spacing: -.055em; }
+    .section-head > p { max-width: 420px; margin: 0; color: var(--muted); font-size: 12px; }
+    .read-path { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .path-card { min-height: 154px; padding: 19px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    .path-card .number { color: var(--orange); font-size: 10px; font-weight: 900; letter-spacing: .12em; }
+    .path-card h3 { margin: 18px 0 5px; font-size: 17px; letter-spacing: -.025em; }
+    .path-card p { margin: 0; color: var(--muted); font-size: 11px; }
+    .gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; }
+    .model-card { position: relative; min-width: 0; overflow: hidden; border: 1px solid #dfe4df; border-radius: 14px; background: #fff; box-shadow: 0 10px 32px #18354108; }
+    .mini-scene { position: relative; height: 250px; overflow: hidden; background: radial-gradient(ellipse at 50% 42%, #fff 0%, #f5f7f4 57%, #e9efeb 100%); }
+    .mini-scene model-viewer { position: absolute; z-index: 1; inset: 0; width: 100%; height: 100%; --poster-color: transparent; background: transparent; }
+    .mini-poster { position: absolute; z-index: 2; inset: 7%; width: 86%; height: 86%; object-fit: contain; mix-blend-mode: multiply; pointer-events: none; animation: float 5.8s ease-in-out infinite; transition: opacity .45s; }
+    .model-card:nth-child(3n + 2) .mini-poster { animation-delay: -1.7s; }
+    .model-card:nth-child(3n) .mini-poster { animation-delay: -3.1s; }
+    .component-tag { position: absolute; z-index: 2; top: 12px; left: 12px; padding: 6px 9px; border: 1px solid #e5e8e4; border-radius: 999px; background: #fffffff0; color: #4f5c61; font-size: 9px; font-weight: 900; letter-spacing: .08em; }
+    .mini-toggle { position: absolute; z-index: 4; right: 12px; bottom: 12px; min-height: 31px; padding: 6px 10px; border: 1px solid #d5dcd8; border-radius: 999px; background: #fffffff2; color: #263b43; font-size: 9px; font-weight: 850; cursor: pointer; }
+    .mini-toggle[aria-pressed="true"] { border-color: var(--ink); background: var(--ink); color: #fff; }
+    .model-card-body { padding: 14px 16px 16px; }
+    .model-card-body h3 { margin: 0; font-size: 16px; letter-spacing: -.02em; }
+    .model-card-body p { min-height: 36px; margin: 5px 0 12px; color: var(--muted); font-size: 10px; }
+    .dim-tag { display: inline-flex; align-items: center; gap: 6px; padding: 6px 9px; border-radius: 6px; background: #eef4f1; color: #256c5f; font-size: 9px; font-weight: 850; }
+    .model-card-footer { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-top: 12px; color: #778187; font-size: 9px; }
+    .drag-hint { display: inline-flex; align-items: center; gap: 5px; }
+    .dimension-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 22px; align-items: stretch; }
+    .dimension-copy { display: flex; flex-direction: column; justify-content: space-between; padding: 8px 0; }
+    .dimension-copy h3 { margin: 0 0 11px; font-size: 23px; line-height: 1.08; letter-spacing: -.04em; }
+    .dimension-copy p { margin: 0; color: var(--muted); font-size: 12px; }
+    .measure-list { display: grid; gap: 10px; margin: 24px 0 18px; }
+    .measure-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line); }
+    .measure-row span { color: #69757a; font-size: 10px; }
+    .measure-row strong { text-align: right; font-size: 13px; }
+    .source-note { padding: 12px 14px; border-left: 3px solid var(--green); border-radius: 0 8px 8px 0; background: #eaf3ef; color: #38554d; font-size: 10px; }
+    .plan-frame { overflow: hidden; border: 1px solid #dce2dd; border-radius: 15px; background: #fff; box-shadow: var(--shadow); }
+    .plan-frame img { width: 100%; height: auto; }
+    .plan-caption { display: flex; justify-content: space-between; gap: 12px; padding: 11px 15px; color: var(--muted); font-size: 9px; }
+    .dark-section { padding: 42px; border-radius: 17px; background: var(--navy); color: white; }
+    .dark-section .eyebrow { color: #ffba59; }
+    .dark-section .section-head > p { color: #c1ccce; }
+    .workflow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .step-card { min-height: 200px; padding: 18px; border: 1px solid #ffffff27; border-radius: 11px; background: #ffffff08; }
+    .step-card .num { color: #ffc062; font-size: 10px; font-weight: 900; letter-spacing: .1em; }
+    .step-icon { display: grid; width: 40px; height: 40px; margin: 18px 0 13px; place-items: center; border-radius: 12px; background: #ffffff12; color: #ffb84f; font-size: 21px; }
+    .step-card h3 { margin: 0 0 6px; font-size: 15px; }
+    .step-card p { margin: 0; color: #c0cbcd; font-size: 10px; }
+    .concept-note { margin: 16px 0 0; padding: 12px 14px; border: 1px solid #ffbd5b55; border-radius: 8px; color: #f9e3bf; font-size: 10px; }
+    .subsystem-layout { display: grid; grid-template-columns: .9fr 1.1fr; gap: 24px; align-items: center; }
+    .electronics-scene { position: relative; min-height: 340px; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+    .electronics-scene model-viewer { position: absolute; inset: 0; width: 100%; height: 100%; --poster-color: transparent; background: transparent; }
+    .electronics-scene img { position: absolute; z-index: 2; inset: 5%; width: 90%; height: 90%; object-fit: contain; pointer-events: none; mix-blend-mode: multiply; animation: float 6.2s ease-in-out infinite; transition: opacity .45s; }
+    .electronics-scene img.is-hidden { opacity: 0; }
+    .electronics-toggle { position: absolute; z-index: 4; right: 13px; bottom: 13px; }
+    .electronics-copy h3 { margin: 0 0 9px; font-size: 24px; letter-spacing: -.04em; }
+    .electronics-copy > p { margin: 0 0 16px; color: var(--muted); font-size: 11px; }
+    .electro-list { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+    .electro-list li { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 10px; }
+    .electro-list span { color: var(--muted); }
+    .electro-list strong { text-align: right; }
+    .software-flow { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; align-items: center; gap: 10px; margin-top: 20px; }
+    .software-node { min-height: 105px; padding: 13px; border: 1px solid var(--line); border-radius: 9px; background: #fff; }
+    .software-node b { display: block; font-size: 11px; }
+    .software-node span { display: block; margin-top: 7px; color: var(--muted); font-size: 9px; }
+    .software-arrow { color: var(--orange); font-size: 19px; font-weight: 900; }
+    .software-node.inactive { border-style: dashed; background: #f6f7f4; }
+    .warning { margin-top: 17px; padding: 14px 16px; border-left: 3px solid var(--orange); border-radius: 0 8px 8px 0; background: var(--orange-soft); color: #5b492f; font-size: 10px; }
+    .warning strong { color: #352a1a; }
+    details { border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+    summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 17px 19px; cursor: pointer; font-size: 13px; font-weight: 850; list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; color: var(--orange); font-size: 20px; }
+    details[open] summary::after { content: "−"; }
+    .details-body { padding: 0 18px 18px; }
+    .search-tools { display: flex; flex-wrap: wrap; gap: 9px; margin: 0 0 12px; }
+    .search-tools input, .search-tools select { min-height: 40px; padding: 8px 11px; border: 1px solid var(--line); border-radius: 7px; background: #fff; font-size: 11px; }
+    .search-tools input { flex: 1; min-width: 200px; }
+    .bom-count { align-self: center; color: var(--muted); font-size: 10px; }
+    .table-wrap { max-height: 430px; overflow: auto; border: 1px solid var(--line); border-radius: 8px; }
+    table { width: 100%; min-width: 780px; border-collapse: collapse; font-size: 10px; }
+    th, td { padding: 9px 10px; border-bottom: 1px solid #edf0ed; text-align: left; vertical-align: top; }
+    th { position: sticky; z-index: 1; top: 0; background: #eef2ef; color: #48565b; font-size: 9px; text-transform: uppercase; letter-spacing: .07em; }
+    td:first-child { white-space: nowrap; color: #a46316; font-weight: 850; }
+    td:last-child { color: #67737a; }
+    .assembly-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+    .assembly-link { min-width: 0; min-height: 90px; padding: 11px; border: 1px solid var(--line); border-radius: 9px; background: #fff; text-decoration: none; transition: transform .18s, border-color .18s; }
+    .assembly-link:hover { transform: translateY(-3px); border-color: var(--orange); }
+    .assembly-link b { display: block; color: #a46316; font-size: 9px; }
+    .assembly-link strong { display: block; margin-top: 5px; font-size: 10px; line-height: 1.25; }
+    .assembly-link span { display: block; margin-top: 6px; color: var(--muted); font-size: 8px; }
+    .docs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+    .doc-card { display: flex; min-height: 162px; flex-direction: column; padding: 15px; border: 1px solid var(--line); border-radius: 10px; background: #fff; }
+    .doc-type { color: #a56317; font-size: 8px; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+    .doc-card h3 { margin: 9px 0 5px; font-size: 13px; line-height: 1.2; }
+    .doc-card p { margin: 0 0 13px; color: var(--muted); font-size: 9px; }
+    .doc-link { margin-top: auto; padding-top: 5px; font-size: 9px; font-weight: 850; text-underline-offset: 3px; }
+    .deployment { display: grid; grid-template-columns: .8fr 1.2fr; gap: 25px; align-items: center; padding: 26px; border: 1px solid var(--line); border-radius: 13px; background: #fff; }
+    .deployment h2 { margin: 0; font-size: 22px; line-height: 1.1; letter-spacing: -.04em; }
+    .deployment p { margin: 8px 0 0; color: var(--muted); font-size: 10px; }
+    .deploy-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .deploy-steps div { color: #58656a; font-size: 9px; }
+    .deploy-steps b { display: block; margin-bottom: 6px; color: var(--orange); font-size: 12px; }
+    code { padding: 2px 4px; border-radius: 3px; background: #eef1ed; font-size: .95em; }
+    footer { margin-top: 64px; padding: 20px 0 28px; border-top: 1px solid var(--line); color: var(--muted); font-size: 9px; }
+    .footer-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+    @media (max-width: 920px) {
+      .hero { grid-template-columns: 1fr; gap: 22px; padding-top: 44px; }
+      .hero-scene { height: min(68vw, 540px); min-height: 370px; }
+      .metrics-strip { grid-template-columns: repeat(2, 1fr); }
+      .metric:nth-child(2) { border-right: 0; }
+      .metric:nth-child(-n + 2) { border-bottom: 1px solid #e7e9e5; }
+      .dimension-layout, .subsystem-layout, .deployment { grid-template-columns: 1fr; }
+      .dimension-copy { gap: 12px; }
+      .assembly-grid { grid-template-columns: repeat(4, 1fr); }
+      .dark-section { padding: 30px; }
+      .workflow { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 650px) {
+      .wrap { width: min(100% - 28px, 1240px); }
+      .topbar { height: 62px; }
+      .nav { display: none; }
+      .topbar > .pill-link { min-height: 34px; padding: 7px 11px; font-size: 9px; }
+      .hero { min-height: 0; padding-block: 38px 28px; }
+      h1 { font-size: clamp(43px, 13vw, 64px); }
+      .hero-copy { font-size: 13px; }
+      .hero-scene { height: 390px; min-height: 0; border-radius: 13px; }
+      .hero-label { top: 57px; right: 10px; max-width: 52%; font-size: 8px; }
+      .model-chip { top: 10px; left: 10px; font-size: 8px; }
+      .hero-controls { right: 9px; bottom: 9px; left: 9px; }
+      .control-group { gap: 4px; }
+      .model-switch, .rotation-toggle { min-height: 32px; padding: 6px 9px; font-size: 9px; }
+      .hero-status { bottom: 52px; left: 12px; max-width: 60%; font-size: 9px; }
+      .metrics-strip { margin-bottom: 56px; }
+      .metric { min-height: 80px; padding: 14px 12px; }
+      .metric strong { font-size: 21px; }
+      .metric span { font-size: 8px; }
+      .section { margin-bottom: 59px; }
+      .section-head { display: block; }
+      .section-head > p { margin-top: 10px; }
+      .read-path, .gallery, .docs-grid { grid-template-columns: 1fr; }
+      .path-card { min-height: 0; }
+      .path-card h3 { margin-top: 9px; }
+      .mini-scene { height: 240px; }
+      .dimension-copy { gap: 10px; }
+      .plan-caption { display: block; }
+      .plan-caption span { display: block; margin-top: 4px; }
+      .dark-section { padding: 24px 16px; }
+      .workflow { grid-template-columns: 1fr 1fr; gap: 7px; }
+      .step-card { min-height: 185px; padding: 12px; }
+      .step-card h3 { font-size: 13px; }
+      .step-card p { font-size: 9px; }
+      .electronics-scene { min-height: 290px; }
+      .electronics-scene model-viewer { height: 290px; }
+      .software-flow { grid-template-columns: 1fr; }
+      .software-arrow { transform: rotate(90deg); text-align: center; line-height: 1; }
+      .assembly-grid { grid-template-columns: repeat(2, 1fr); }
+      .deployment { padding: 19px 15px; }
+      .deploy-steps { grid-template-columns: 1fr; }
+      .deploy-steps div { display: grid; grid-template-columns: 30px 1fr; gap: 6px; }
+      .deploy-steps b { margin: 0; }
+      .doc-card { min-height: 145px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <a class="brand" href="#accueil" aria-label="BFM V4, accueil"><span class="brand-mark" aria-hidden="true"></span><span>BFM<small>AGV · V4</small></span></a>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#comprendre">Le projet</a><a href="#objets">Objets 3D</a><a href="#cotes">Dimensions</a><a href="#cycle">Cycle</a><a href="#technique">Technique</a><a href="#documents">Documents</a>
+      </nav>
+      <a class="pill-link" href="#documents">Dossier technique <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="accueil">
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <p class="eyebrow">Dossier visuel · révision BFM_V4 · 18 novembre 2026</p>
+          <h1 id="hero-title">Le projet AGV, en un coup d’œil.</h1>
+          <p class="hero-copy">Un véhicule mobile conceptuel pour transporter des sacs dans une agence bancaire. Explore le robot et ses sous-ensembles en 3D, comprends son parcours et retrouve les cotes, pièces et documents à la même adresse.</p>
+          <div class="actions"><a class="button orange" href="#objets">Explorer les modèles 3D <span aria-hidden="true">↓</span></a><a class="button light" href="#cotes">Voir les mesures</a></div>
+          <div class="hero-meta"><span>Prototype de conception</span><span>4 casiers</span><span>Modèles source BFM_V4</span></div>
+        </div>
+        <div class="hero-scene" aria-label="Rendu du robot BFM V4 et visionneuse 3D à activer">
+          <span class="model-chip"><i class="live-dot" aria-hidden="true"></i><span id="model-state" aria-live="polite">Rendu illustré</span></span>
+          <span id="hero-label" class="hero-label">A13 · assemblage complet</span>
+          <model-viewer id="hero-model" data-src="assets/models/A13_ROBOT_COMPLET.glb" poster="assets/images/robot-v4.jpg" alt="Modèle 3D interactif du robot BFM V4 A13 ; glisser pour le tourner, pincer pour zoomer" scale="0.001 0.001 0.001" camera-controls camera-orbit="auto auto auto" shadow-intensity="0.8" exposure="1.05" environment-image="neutral" interaction-prompt="auto" loading="eager" reveal="auto" hidden>
+            <button slot="ar-button" class="button small">Voir en réalité augmentée</button>
+          </model-viewer>
+          <img class="hero-poster" src="assets/images/robot-v4.jpg" alt="Rendu 3D colorisé du robot BFM V4, avec quatre casiers, châssis roulant et motorisation.">
+          <div class="hero-status" id="model-caption" aria-live="polite">A13 · robot complet · modèle CAO en millimètres.</div>
+          <div class="hero-controls">
+            <div class="control-group" role="group" aria-label="Choisir le modèle 3D principal">
+              <button class="model-switch" type="button" data-main-model="robot" aria-pressed="true">Robot</button>
+              <button class="model-switch" type="button" data-main-model="station" aria-pressed="false">+ station</button>
+              <button class="model-switch" type="button" data-main-model="eclate" aria-pressed="false">Éclaté</button>
+              <button id="hero-3d-toggle" class="rotation-toggle" type="button" aria-pressed="false">◉ Manipuler en 3D</button>
+              <button id="rotation-toggle" class="rotation-toggle" type="button" aria-pressed="false" aria-label="Le modèle est en cours de chargement" disabled hidden>Chargement…</button>
+            </div>
+            <a id="download-main-model" class="button small orange" href="assets/models/A13_ROBOT_COMPLET.glb" download>Télécharger le GLB ↓</a>
+          </div>
+        </div>
+      </section>
+
+      <div class="metrics-strip" aria-label="Repères rapides du projet">
+        <div class="metric"><strong>1 112 × 768 × 1 070</strong><span>Enveloppe maximale A13 · mm</span></div>
+        <div class="metric"><strong>4 casiers</strong><span>Organisation CAO · 2 × 2</span></div>
+        <div class="metric"><strong>15 assemblages</strong><span>Exports 3D BFM_V4</span></div>
+        <div class="metric"><strong>Concept</strong><span>Non validé pour fabrication</span></div>
+      </div>
+
+      <section class="section" id="comprendre">
+        <div class="section-head">
+          <div><p class="eyebrow">Commencer par l’essentiel</p><h2>Trois idées pour comprendre le projet.</h2></div>
+          <p>Cette page est un guide visuel : les chiffres sont accompagnés de leur source et les hypothèses restent distinguées des mesures du modèle.</p>
+        </div>
+        <div class="read-path">
+          <article class="path-card"><span class="number">01 · LE ROBOT</span><h3>Un châssis mobile, un coffre.</h3><p>Deux roues motrices sont prévues avec des roues porteuses. Le coffre regroupe quatre casiers accessibles séparément.</p></article>
+          <article class="path-card"><span class="number">02 · LA MISSION</span><h3>Transporter, puis remettre.</h3><p>Le scénario prévoit un départ en collecte, un trajet interne et une remise à une station fixe. Le cycle reste conceptuel.</p></article>
+          <article class="path-card"><span class="number">03 · L’ÉTAT RÉEL</span><h3>Une maquette, pas un AGV prêt.</h3><p>Les modèles 3D décrivent une proposition mécanique. Aucune commande réelle, charge utile certifiée ni validation de sécurité n’est fournie.</p></article>
+        </div>
+      </section>
+
+      <section class="section" id="objets">
+        <div class="section-head">
+          <div><p class="eyebrow">Tourner, zoomer, explorer</p><h2>Les principaux objets, en 3D.</h2></div>
+          <p>Les rendus détaillés flottent sur la page. Le code couleur sert à distinguer les sous-ensembles, pas à définir leur matériau. Sélectionne « Manipuler en 3D » pour tourner le GLB d’origine.</p>
+        </div>
+        <div class="gallery">
+          <article class="model-card">
+            <div class="mini-scene"><span class="component-tag">A03 · CHÂSSIS</span><model-viewer data-src="assets/models/assemblies/A03_CHASSIS.glb" poster="assets/images/chassis-v4.jpg" alt="Châssis 3D BFM V4" scale="0.001 0.001 0.001" camera-controls shadow-intensity="0.7" exposure="1.05" environment-image="neutral" loading="lazy" hidden></model-viewer><img class="mini-poster" src="assets/images/chassis-v4.jpg" alt="Rendu colorisé du châssis BFM V4."><button class="mini-toggle" type="button" data-model-src="assets/models/assemblies/A03_CHASSIS.glb" aria-pressed="false">◉ Manipuler en 3D</button></div>
+            <div class="model-card-body"><h3>Châssis porteur</h3><p>Traverses et platines de base avant fixation du coffre.</p><span class="dim-tag">Enveloppe GLB · 1 050 × 639 × 106 mm</span><div class="model-card-footer"><span class="drag-hint">↔ Manipulable en 3D</span><span>BFM_V4</span></div></div>
+          </article>
+          <article class="model-card">
+            <div class="mini-scene"><span class="component-tag">A01 · ROUE</span><model-viewer data-src="assets/models/assemblies/A01_ROUE_ASSEMBLEE.glb" poster="assets/images/roue-v4.jpg" alt="Roue motrice assemblée en 3D" scale="0.001 0.001 0.001" camera-controls shadow-intensity="0.7" exposure="1.05" environment-image="neutral" loading="lazy" hidden></model-viewer><img class="mini-poster" src="assets/images/roue-v4.jpg" alt="Rendu 3D colorisé de la roue motrice assemblée."><button class="mini-toggle" type="button" data-model-src="assets/models/assemblies/A01_ROUE_ASSEMBLEE.glb" aria-pressed="false">◉ Manipuler en 3D</button></div>
+            <div class="model-card-body"><h3>Roue motrice assemblée</h3><p>Bandage, jante, moyeu, axe et éléments de liaison.</p><span class="dim-tag">Bandage proposé · Ø200 × 44 mm</span><div class="model-card-footer"><span class="drag-hint">↔ Manipulable en 3D</span><span>A01</span></div></div>
+          </article>
+          <article class="model-card">
+            <div class="mini-scene"><span class="component-tag">A04 · MOTORISATION</span><model-viewer data-src="assets/models/assemblies/A04_MOTORISATION.glb" poster="assets/images/motorisation-v4.jpg" alt="Deux motoréducteurs implantés dans l'assemblage 3D" scale="0.001 0.001 0.001" camera-controls shadow-intensity="0.7" exposure="1.05" environment-image="neutral" loading="lazy" hidden></model-viewer><img class="mini-poster" src="assets/images/motorisation-v4.jpg" alt="Rendu 3D de deux motoréducteurs BFM V4."><button class="mini-toggle" type="button" data-model-src="assets/models/assemblies/A04_MOTORISATION.glb" aria-pressed="false">◉ Manipuler en 3D</button></div>
+            <div class="model-card-body"><h3>Motorisation gauche / droite</h3><p>Deux positions opposées ; l’orientation d’arbre est corrigée dans le lot V4.</p><span class="dim-tag">Moteur indiqué · 237 × 172,5 × 104 mm</span><div class="model-card-footer"><span class="drag-hint">↔ Manipulable en 3D</span><span>A04</span></div></div>
+          </article>
+          <article class="model-card">
+            <div class="mini-scene"><span class="component-tag">A07 · COFFRE</span><model-viewer data-src="assets/models/assemblies/A07_COFFRE_2X2.glb" poster="assets/images/coffre-v4.jpg" alt="Coffre à quatre compartiments en 3D" scale="0.001 0.001 0.001" camera-controls shadow-intensity="0.7" exposure="1.05" environment-image="neutral" loading="lazy" hidden></model-viewer><img class="mini-poster" src="assets/images/coffre-v4.jpg" alt="Rendu du coffre montrant les quatre portes de casier."><button class="mini-toggle" type="button" data-model-src="assets/models/assemblies/A07_COFFRE_2X2.glb" aria-pressed="false">◉ Manipuler en 3D</button></div>
+            <div class="model-card-body"><h3>Coffre à quatre casiers</h3><p>Implantation 2 × 2 ; portes et jeux restent à détailler.</p><span class="dim-tag">Enveloppe GLB · 1 007,5 × 501 × 749 mm</span><div class="model-card-footer"><span class="drag-hint">↔ Manipulable en 3D</span><span>A07</span></div></div>
+          </article>
+          <article class="model-card">
+            <div class="mini-scene"><span class="component-tag">A08 · TIROIRS</span><model-viewer data-src="assets/models/assemblies/A08_QUATRE_TIROIRS.glb" poster="assets/images/tiroirs-v4.jpg" alt="Quatre tiroirs assemblés en 3D" scale="0.001 0.001 0.001" camera-controls shadow-intensity="0.7" exposure="1.05" environment-image="neutral" loading="lazy" hidden></model-viewer><img class="mini-poster" src="assets/images/tiroirs-v4.jpg" alt="Rendu CAO des quatre tiroirs assemblés."><button class="mini-toggle" type="button" data-model-src="assets/models/assemblies/A08_QUATRE_TIROIRS.glb" aria-pressed="false">◉ Manipuler en 3D</button></div>
+            <div class="model-card-body"><h3>Quatre plateaux coulissants</h3><p>Supports, rails et retenues proposés pour un accès individuel.</p><span class="dim-tag">Enveloppe GLB · 899 × 494 × 495 mm</span><div class="model-card-footer"><span class="drag-hint">↔ Manipulable en 3D</span><span>A08</span></div></div>
+          </article>
+          <article class="model-card">
+            <div class="mini-scene"><span class="component-tag">A12 · STATION</span><model-viewer data-src="assets/models/assemblies/A12_STATION_DEPOT.glb" poster="assets/images/station-v4.jpg" alt="Ébauche 3D de la station fixe de dépôt" scale="0.001 0.001 0.001" camera-controls shadow-intensity="0.7" exposure="1.05" environment-image="neutral" loading="lazy" hidden></model-viewer><img class="mini-poster" src="assets/images/station-v4.jpg" alt="Rendu de l’ébauche de station de dépôt BFM V4."><button class="mini-toggle" type="button" data-model-src="assets/models/assemblies/A12_STATION_DEPOT.glb" aria-pressed="false">◉ Manipuler en 3D</button></div>
+            <div class="model-card-body"><h3>Station fixe de dépôt</h3><p>Ébauche géométrique de réception et d’élévation du plateau.</p><span class="dim-tag">Enveloppe GLB · 610 × 500 × 1 050 mm</span><div class="model-card-footer"><span class="drag-hint">↔ Manipulable en 3D</span><span>A12</span></div></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="cotes">
+        <div class="section-head">
+          <div><p class="eyebrow">Cotes relues sur les modèles source</p><h2>Des mesures, avec leur mode d’emploi.</h2></div>
+          <p>Le gabarit montre les trois enveloppes du robot. Les rectangles indiquent les bornes exactes de l’export 3D ; ils ne décrivent pas chaque tôle, porte, roue ou jeu mécanique.</p>
+        </div>
+        <div class="dimension-layout">
+          <div class="dimension-copy">
+            <div><h3>Ce que mesure la CAO — et ce qu’elle ne garantit pas.</h3><p>Les valeurs A13 sont calculées entre les coordonnées minimale et maximale des sommets du modèle complet, sans arrondi de fabrication. Le coffre et la station sont mesurés séparément sur leurs exports d’assemblage.</p></div>
+            <div class="measure-list">
+              <div class="measure-row"><span>Robot complet · A13</span><strong>1 112 × 767,5 × 1 070 mm</strong></div>
+              <div class="measure-row"><span>Coffre seul · A07</span><strong>1 007,5 × 501 × 749 mm</strong></div>
+              <div class="measure-row"><span>Station · A12</span><strong>610 × 500 × 1 050 mm</strong></div>
+              <div class="measure-row"><span>Bandage moteur · nomenclature</span><strong>Ø200 × 44 mm</strong></div>
+            </div>
+            <div class="source-note"><strong>À ne pas confondre :</strong> les 40 kg par casier sont une capacité envisagée dans le concept, pas une charge validée. Les cotes de bâtiment et les dégagements doivent être mesurés sur place.</div>
+          </div>
+          <figure class="plan-frame">
+            <a href="assets/plans/enveloppe-mesuree-v4.svg" target="_blank" rel="noopener" aria-label="Ouvrir le gabarit coté en grand">
+              <img src="assets/plans/enveloppe-mesuree-v4.svg" alt="Gabarit coté en vues de dessus, face et profil ; dimensions globales exactes du modèle A13, en millimètres">
+            </a>
+            <figcaption class="plan-caption"><span>Gabarit d’encombrement · proportions issues du GLB A13</span><span>Ouvrir le SVG vectoriel ↗</span></figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section dark-section" id="cycle">
+        <div class="section-head">
+          <div><p class="eyebrow">Le scénario de mission</p><h2>Quatre étapes, de la collecte au dépôt.</h2></div>
+          <p>Le déroulement explique l’intention du projet. Les actions de transfert ne sont pas exécutées par cette page ni par le robot CAO.</p>
+        </div>
+        <div class="workflow">
+          <article class="step-card"><span class="num">01 · CHARGER</span><span class="step-icon" aria-hidden="true">▦</span><h3>Placer le sac</h3><p>Un opérateur choisit un compartiment libre parmi S1 à S4 et vérifie que le sac rentre.</p></article>
+          <article class="step-card"><span class="num">02 · TRANSPORTER</span><span class="step-icon" aria-hidden="true">↗</span><h3>Suivre le parcours</h3><p>Le scénario prévoit une mission interne avec destination et passage par l’ascenseur.</p></article>
+          <article class="step-card"><span class="num">03 · S’ARRIMER</span><span class="step-icon" aria-hidden="true">⌖</span><h3>Rejoindre la station</h3><p>Le robot s’immobilise face à un poste fixe ; alignement et détection restent à concevoir.</p></article>
+          <article class="step-card"><span class="num">04 · REMETTRE</span><span class="step-icon" aria-hidden="true">⇢</span><h3>Transférer puis fermer</h3><p>Une extraction guidée et un retour verrouillé sont des fonctions proposées, à valider en sécurité.</p></article>
+        </div>
+        <p class="concept-note"><strong>Cycle d’étude seulement :</strong> le trajet, l’ascenseur, l’extraction des tiroirs, le transfert et la station ne sont ni interconnectés ni pilotés par cette page. Aucun sac réel ne doit être déplacé par ce concept sans conception, essais et validation.</p>
+      </section>
+
+      <section class="section" id="technique">
+        <div class="section-head">
+          <div><p class="eyebrow">À l’intérieur du concept</p><h2>Mécanique, électronique, logiciel.</h2></div>
+          <p>Une vue par sous-système pour comprendre les grandes fonctions sans confondre enveloppes CAO, composants choisis et équipement réellement installé.</p>
+        </div>
+        <div class="subsystem-layout">
+          <div class="electronics-scene">
+            <model-viewer id="electronics-model" data-src="assets/models/assemblies/A11_ELECTRONIQUE.glb" poster="assets/images/electronique-v4.jpg" alt="Vue 3D de l’implantation conceptuelle des équipements électroniques" scale="0.001 0.001 0.001" camera-controls shadow-intensity="0.7" exposure="1.05" environment-image="neutral" loading="lazy" hidden></model-viewer>
+            <img id="electronics-poster" src="assets/images/electronique-v4.jpg" alt="Rendu de l’implantation électronique proposée dans le châssis BFM V4.">
+            <button class="button small orange electronics-toggle" type="button" aria-pressed="false">◉ Manipuler en 3D</button>
+          </div>
+          <div class="electronics-copy">
+            <p class="eyebrow">02 · Électronique — volumes réservés</p>
+            <h3>Énergie, commande et détection.</h3>
+            <p>Les modèles E01–E07 donnent des emplacements préliminaires. Ils ne constituent pas une sélection de composants compatibles, un schéma électrique ou un système de sécurité validé.</p>
+            <ul class="electro-list">
+              <li><span>Batterie · enveloppe indicative</span><strong>310 × 210 × 140 mm</strong></li>
+              <li><span>Contrôleur · enveloppe indicative</span><strong>160 × 120 × 42 mm</strong></li>
+              <li><span>Driver moteur · enveloppe indicative</span><strong>130 × 85 × 45 mm</strong></li>
+              <li><span>Scanner lidar · volume proposé</span><strong>Ø104 × 62 mm</strong></li>
+              <li><span>Arrêt d’urgence · volume proposé</span><strong>Ø46 × 32 mm</strong></li>
+            </ul>
+          </div>
+        </div>
+        <div class="software-flow" aria-label="Architecture logicielle et état de connexion">
+          <div class="software-node"><b>Interface web</b><span>Présentation des missions, de l’état et de la scène de démonstration.</span></div>
+          <span class="software-arrow" aria-hidden="true">→</span>
+          <div class="software-node"><b>État local simulé</b><span>Valeurs et interactions de démonstration dans le navigateur.</span></div>
+          <span class="software-arrow" aria-hidden="true">⇢</span>
+          <div class="software-node inactive"><b>Robot / backend réel</b><span>Non connecté · aucune télémétrie ni commande réelle.</span></div>
+        </div>
+        <div class="warning"><strong>Avant toute fabrication ou intégration :</strong> mesurer les sacs, les portes, les couloirs et l’ascenseur ; choisir les vrais composants ; dimensionner le châssis, les roues, les freins, les actionneurs et les verrouillages ; analyser les risques et réaliser des essais supervisés.</div>
+      </section>
+
+      <section class="section" id="pieces">
+        <div class="section-head">
+          <div><p class="eyebrow">Nomenclature issue du lot V4</p><h2>Les 52 références, quand on en a besoin.</h2></div>
+          <p>La liste détaillée est volontairement repliée pour garder une lecture rapide. Recherche par pièce, fonction ou famille une fois ouverte.</p>
+        </div>
+        <details id="bom-details">
+          <summary>Nomenclature complète · 8 familles · 52 références</summary>
+          <div class="details-body">
+            <div class="search-tools">
+              <label class="sr-only" for="part-search">Rechercher une référence</label><input id="part-search" type="search" placeholder="Rechercher une référence, une fonction ou une cote…">
+              <label class="sr-only" for="family-filter">Filtrer par famille</label><select id="family-filter"><option value="">Toutes les familles</option></select>
+              <span class="bom-count" id="bom-count" aria-live="polite">Chargement…</span>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Réf.</th><th>Famille</th><th>Pièce</th><th>Dimensions indicatives</th><th>Fonction</th><th>Statut / réserve</th></tr></thead>
+                <tbody id="bom-body"><tr><td colspan="6">Chargement de la nomenclature BFM_V4…</td></tr></tbody>
+              </table>
+            </div>
+            <p class="warning"><strong>Lecture du statut :</strong> plusieurs pièces restent schématiques ; les mentions de charge et de matériau ne valent pas choix d’achat ni validation de tenue mécanique.</p>
+          </div>
+        </details>
+      </section>
+
+      <section class="section" id="assemblages">
+        <div class="section-head">
+          <div><p class="eyebrow">Bibliothèque du modèle 3D</p><h2>Les 15 modèles 3D du dossier.</h2></div>
+          <p>Chaque lien télécharge un export GLB BFM_V4 modifié le 18 novembre 2026. La date n’indique pas une validation de conception.</p>
+        </div>
+        <div class="assembly-grid" id="assembly-grid"></div>
+      </section>
+
+      <section class="section" id="documents">
+        <div class="section-head">
+          <div><p class="eyebrow">Références intégrées au dossier</p><h2>Les fichiers utiles, au même endroit.</h2></div>
+          <p>Les fichiers ci-dessous sont copiés dans ce dossier autonome. Les GLB source, les rendus et le présent index ne dépendent pas des dossiers voisins du projet.</p>
+        </div>
+        <div class="docs-grid">
+          <article class="doc-card"><span class="doc-type">CAO · BFM_V4 · données</span><h3>Nomenclature et rapport</h3><p>Les 52 références, les instances d’assemblage et le statut de correction cinématique du lot.</p><a class="doc-link" href="assets/documents/NOMENCLATURE_PIECES.csv" download>Nomenclature des pièces ↗</a><a class="doc-link" href="assets/documents/NOMENCLATURE_ASSEMBLAGES.csv" download>Nomenclature des assemblages ↗</a><a class="doc-link" href="assets/documents/validation_mecanique.json" download>Rapport JSON ↗</a></article>
+          <article class="doc-card"><span class="doc-type">Guide technique · V4</span><h3>Comprendre le robot et ses chiffres</h3><p>Mesures des GLB, repères mécaniques, volumes électroniques et limites avant fabrication.</p><a class="doc-link" href="assets/documents/GUIDE_TECHNIQUE_V4.md">Lire le guide technique BFM_V4 ↗</a><a class="doc-link" href="assets/documents/LIMITES_CAO_BFM_V4.md">Lire les limites du lot CAO ↗</a><a class="doc-link" href="assets/documents/Exigences_initiales.md">Exigences initiales ↗</a></article>
+          <article class="doc-card"><span class="doc-type">Document antérieur · brouillon</span><h3>Avant-projet mécanique précédent</h3><p>Hypothèses de conception antérieures aux exports BFM_V4 ; ses dimensions ne remplacent pas les mesures A13.</p><a class="doc-link" href="assets/documents/Avant_projet_mecanique.md">Ouvrir le brouillon mécanique ↗</a></article>
+          <article class="doc-card"><span class="doc-type">Plan de site · antérieur</span><h3>Plan bancaire deux niveaux</h3><p>Plan V0.1 pour comprendre le trajet envisagé ; les dimensions du bâtiment et les accès sont à relever sur place.</p><a class="doc-link" href="assets/documents/Plan_batiment_V0.1.pdf">Ouvrir le plan du bâtiment ↗</a></article>
+          <article class="doc-card"><span class="doc-type">Motorisation · fabricant</span><h3>F6B250-24GU-30S / réducteur</h3><p>Documentation fabricant fournie au projet ; vérifier les caractéristiques et interfaces avant tout choix final.</p><a class="doc-link" href="assets/documents/Fiche_moteur_F6B250.pdf">Fiche technique PDF ↗</a><a class="doc-link" href="assets/documents/Moteur_F6B250.step" download>Modèle fabricant STEP ↗</a></article>
+          <article class="doc-card"><span class="doc-type">Plan 2D · BFM_V4</span><h3>Gabarit de dimensions</h3><p>Vues vectorielles des trois enveloppes du robot, générées à partir des bornes mesurées du GLB A13.</p><a class="doc-link" href="assets/plans/enveloppe-mesuree-v4.svg" download>Gabarit coté SVG ↗</a></article>
+          <article class="doc-card"><span class="doc-type">Site web · GitHub Pages</span><h3>Déploiement sans build</h3><p>Page statique autonome. Modèles, images et documents sont regroupés dans ce dossier ; la visionneuse 3D est chargée par CDN.</p><a class="doc-link" href="README.md">Instructions de déploiement ↗</a></article>
+        </div>
+      </section>
+
+      <section class="section deployment" aria-labelledby="deploy-title">
+        <div><p class="eyebrow">Prêt pour GitHub</p><h2 id="deploy-title">Un dossier propre, une page d’entrée : index.html.</h2><p>Tu peux envoyer tout le dossier <code>BFM_V4_GITHUB</code> dans un dépôt GitHub, ou copier son contenu à la racine d’un dépôt dédié.</p></div>
+        <div class="deploy-steps"><div><b>01</b>Conserver ensemble <code>index.html</code> et le dossier <code>assets/</code>.</div><div><b>02</b>Activer Pages sur la branche et le dossier contenant <code>index.html</code>.</div><div><b>03</b>Ouvrir l’URL GitHub Pages ; les GLB se chargent dans la page.</div></div>
+      </section>
+    </main>
+    <footer><div class="footer-row"><span>BFM V4 · dossier de présentation du concept AGV bancaire</span><span>Mesures CAO ≠ validation de fabrication · Aucun robot réel connecté</span></div></footer>
+  </div>
+
+  <script>
+    const models = {
+      robot: { src: "assets/models/A13_ROBOT_COMPLET.glb", poster: "assets/images/robot-v4.jpg", label: "A13 · robot complet", caption: "A13 · robot complet · modèle CAO en millimètres." },
+      station: { src: "assets/models/A14_ROBOT_ET_STATION.glb", poster: "assets/images/robot-station-v4.jpg", label: "A14 · robot + station", caption: "A14 · robot et station fixe · implantation conceptuelle." },
+      eclate: { src: "assets/models/A15_VUE_ECLATEE_GLOBALE.glb", poster: "assets/images/eclate-v4.jpg", label: "A15 · assemblage éclaté", caption: "A15 · vue éclatée · hauteur géométrique déployée différente du robot fermé." }
+    };
+    const heroViewer = document.getElementById("hero-model");
+    const heroPoster = document.querySelector(".hero-poster");
+    const modelState = document.getElementById("model-state");
+    const modelCaption = document.getElementById("model-caption");
+    const heroLabel = document.getElementById("hero-label");
+    const hero3dToggle = document.getElementById("hero-3d-toggle");
+    const rotationButton = document.getElementById("rotation-toggle");
+    const downloadMain = document.getElementById("download-main-model");
+    let activeModel = "robot";
+    let currentHeroSrc = "";
+    let hero3dActive = false;
+    let rotationFrame = 0;
+    let rotationActive = false;
+    let theta = 0;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function setRotation(active) {
+      rotationActive = Boolean(active && heroViewer.loaded);
+      cancelAnimationFrame(rotationFrame);
+      rotationButton.disabled = !heroViewer.loaded;
+      rotationButton.setAttribute("aria-pressed", String(rotationActive));
+      rotationButton.textContent = rotationActive ? "Ⅱ Pause" : "▶ Tourner";
+      rotationButton.setAttribute("aria-label", rotationActive ? "Mettre en pause la rotation" : "Lancer la rotation du modèle");
+      if (!rotationActive) return;
+      const orbit = heroViewer.getCameraOrbit();
+      theta = orbit.theta;
+      const animate = () => {
+        if (!rotationActive) return;
+        theta += 0.0036;
+        heroViewer.cameraOrbit = `${theta}rad ${orbit.phi}rad ${orbit.radius}m`;
+        heroViewer.jumpCameraToGoal();
+        rotationFrame = requestAnimationFrame(animate);
+      };
+      rotationFrame = requestAnimationFrame(animate);
+    }
+
+    function loadHeroModel(key) {
+      const item = models[key];
+      if (!item) return;
+      activeModel = key;
+      setRotation(false);
+      heroPoster.src = item.poster;
+      heroPoster.classList.remove("is-hidden");
+      heroViewer.poster = item.poster;
+      heroViewer.alt = `${item.label}, modèle 3D interactif`;
+      modelCaption.textContent = item.caption;
+      heroLabel.textContent = item.label;
+      if (hero3dActive) {
+        heroViewer.hidden = false;
+        rotationButton.hidden = false;
+        rotationButton.disabled = true;
+        modelState.textContent = "Chargement GLB…";
+        currentHeroSrc = item.src;
+        heroViewer.src = item.src;
+        heroViewer.cameraOrbit = "auto auto auto";
+        heroViewer.cameraTarget = "auto auto auto";
+      } else {
+        heroViewer.hidden = true;
+        rotationButton.hidden = true;
+        modelState.textContent = "Rendu illustré";
+      }
+      downloadMain.href = item.src;
+      downloadMain.download = item.src.split("/").pop();
+      document.querySelectorAll("[data-main-model]").forEach((button) => {
+        button.setAttribute("aria-pressed", String(button.dataset.mainModel === key));
+      });
+    }
+
+    function setHero3d(active) {
+      hero3dActive = active;
+      hero3dToggle.setAttribute("aria-pressed", String(active));
+      hero3dToggle.textContent = active ? "Rendu illustré" : "◉ Manipuler en 3D";
+      if (!active) {
+        setRotation(false);
+        heroViewer.hidden = true;
+        rotationButton.hidden = true;
+        heroPoster.classList.remove("is-hidden");
+        modelState.textContent = "Rendu illustré";
+        return;
+      }
+      const item = models[activeModel];
+      heroViewer.hidden = false;
+      rotationButton.hidden = false;
+      if (currentHeroSrc !== item.src) {
+        loadHeroModel(activeModel);
+      } else if (heroViewer.loaded) {
+        heroPoster.classList.add("is-hidden");
+        modelState.textContent = "GLB chargé";
+        setRotation(!reducedMotion);
+      } else {
+        heroViewer.src = item.src;
+        modelState.textContent = "Chargement GLB…";
+      }
+    }
+
+    document.querySelectorAll("[data-main-model]").forEach((button) => {
+      button.addEventListener("click", () => loadHeroModel(button.dataset.mainModel));
+    });
+    hero3dToggle.addEventListener("click", () => setHero3d(!hero3dActive));
+    rotationButton.addEventListener("click", () => setRotation(!rotationActive));
+    heroViewer.addEventListener("load", () => {
+      if (!hero3dActive) return;
+      heroPoster.classList.add("is-hidden");
+      const item = models[activeModel];
+      modelState.textContent = "GLB chargé";
+      setRotation(!reducedMotion);
+    });
+    heroViewer.addEventListener("error", () => {
+      hero3dActive = false;
+      currentHeroSrc = "";
+      heroViewer.hidden = true;
+      heroViewer.removeAttribute("src");
+      heroPoster.classList.remove("is-hidden");
+      modelState.textContent = "GLB indisponible · aperçu affiché";
+      modelCaption.textContent = "Le rendu reste visible. Vérifie que le dossier assets/models est conservé au déploiement.";
+      setRotation(false);
+      rotationButton.disabled = true;
+      rotationButton.hidden = true;
+      hero3dToggle.setAttribute("aria-pressed", "false");
+      hero3dToggle.textContent = "◉ Réessayer la 3D";
+    });
+    heroViewer.addEventListener("pointerdown", () => {
+      if (rotationActive) setRotation(false);
+    });
+
+    function bindInlineViewer(button, viewer, poster, source) {
+      let currentSource = "";
+      viewer.addEventListener("load", () => {
+        if (!viewer.hidden) poster.classList.add("is-hidden");
+      });
+      viewer.addEventListener("error", () => {
+        currentSource = "";
+        viewer.hidden = true;
+        viewer.removeAttribute("src");
+        poster.classList.remove("is-hidden");
+        button.setAttribute("aria-pressed", "false");
+        button.textContent = "◉ Réessayer la 3D";
+      });
+      button.addEventListener("click", () => {
+        const active = button.getAttribute("aria-pressed") !== "true";
+        button.setAttribute("aria-pressed", String(active));
+        viewer.hidden = !active;
+        poster.classList.remove("is-hidden");
+        button.textContent = active ? "Rendu illustré" : "◉ Manipuler en 3D";
+        if (active && currentSource !== source) {
+          currentSource = source;
+          viewer.src = source;
+        } else if (active && viewer.loaded) {
+          poster.classList.add("is-hidden");
+        }
+      });
+    }
+
+    document.querySelectorAll(".mini-toggle").forEach((button) => {
+      const scene = button.closest(".mini-scene");
+      bindInlineViewer(button, scene.querySelector("model-viewer"), scene.querySelector("img"), button.dataset.modelSrc);
+    });
+    bindInlineViewer(
+      document.querySelector(".electronics-toggle"),
+      document.getElementById("electronics-model"),
+      document.getElementById("electronics-poster"),
+      "assets/models/assemblies/A11_ELECTRONIQUE.glb"
+    );
+
+    const assemblyData = [
+      ["A01_ROUE_ASSEMBLEE", "Roue motrice assemblée", "17:10"],
+      ["A02_ROUE_ECLATEE", "Roue motrice éclatée", "17:10"],
+      ["A03_CHASSIS", "Châssis", "17:10"],
+      ["A04_MOTORISATION", "Motorisation", "17:11"],
+      ["A05_ROUES_MOTRICES", "Roues motrices", "17:11"],
+      ["A06_ROULETTES", "Roues porteuses", "17:11"],
+      ["A07_COFFRE_2X2", "Coffre 2 × 2", "17:11"],
+      ["A08_QUATRE_TIROIRS", "Quatre tiroirs", "17:11"],
+      ["A09_MECANISMES_EXTRACTION", "Mécanismes d’extraction", "17:11"],
+      ["A10_BASE_ROULANTE", "Base roulante", "17:11"],
+      ["A11_ELECTRONIQUE", "Implantation électronique", "17:12"],
+      ["A12_STATION_DEPOT", "Station de dépôt", "17:12"],
+      ["A13_ROBOT_COMPLET", "Robot complet", "17:12"],
+      ["A14_ROBOT_ET_STATION", "Robot et station", "17:12"],
+      ["A15_VUE_ECLATEE_GLOBALE", "Vue éclatée globale", "17:13"]
+    ];
+    const assemblyGrid = document.getElementById("assembly-grid");
+    const rootModelFiles = new Set(["A13_ROBOT_COMPLET", "A14_ROBOT_ET_STATION", "A15_VUE_ECLATEE_GLOBALE"]);
+    assemblyData.forEach(([file, label, time]) => {
+      const link = document.createElement("a");
+      link.className = "assembly-link";
+      link.href = `assets/models/${rootModelFiles.has(file) ? "" : "assemblies/"}${file}.glb`;
+      link.download = `${file}.glb`;
+      const code = document.createElement("b");
+      code.textContent = file.replaceAll("_", " ");
+      const name = document.createElement("strong");
+      name.textContent = label;
+      const date = document.createElement("span");
+      date.textContent = `18/11/2026 · ${time} · GLB ↓`;
+      link.append(code, name, date);
+      assemblyGrid.append(link);
+    });
+
+    function parseCsvLine(line) {
+      const fields = [];
+      let value = "";
+      let quoted = false;
+      for (let i = 0; i < line.length; i += 1) {
+        const char = line[i];
+        if (char === '"' && line[i + 1] === '"' && quoted) { value += '"'; i += 1; }
+        else if (char === '"') quoted = !quoted;
+        else if (char === ";" && !quoted) { fields.push(value.trim()); value = ""; }
+        else value += char;
+      }
+      fields.push(value.trim());
+      return fields;
+    }
+
+    const familyLabels = {
+      "01_ROUES": "Roues",
+      "02_MOTORISATION": "Motorisation",
+      "03_CHASSIS": "Châssis",
+      "04_SUSPENSION": "Suspension",
+      "05_COFFRE_2X2": "Coffre 2 × 2",
+      "06_TIROIRS": "Tiroirs",
+      "07_DECHARGEMENT": "Déchargement",
+      "08_ELECTRONIQUE": "Électronique"
+    };
+    const partSearch = document.getElementById("part-search");
+    const familyFilter = document.getElementById("family-filter");
+    const bomBody = document.getElementById("bom-body");
+    const bomCount = document.getElementById("bom-count");
+    let parts = [];
+
+    function renderParts() {
+      const query = partSearch.value.trim().toLocaleLowerCase("fr");
+      const family = familyFilter.value;
+      const filtered = parts.filter((part) => {
+        const text = part.join(" ").toLocaleLowerCase("fr");
+        return (!query || text.includes(query)) && (!family || part[1] === family);
+      });
+      bomBody.replaceChildren();
+      filtered.forEach((part) => {
+        const row = document.createElement("tr");
+        [part[0], familyLabels[part[1]] || part[1], part[2], part[4], part[5], part[6]].forEach((value) => {
+          const cell = document.createElement("td");
+          cell.textContent = value || "—";
+          row.append(cell);
+        });
+        bomBody.append(row);
+      });
+      if (!filtered.length) {
+        const row = document.createElement("tr");
+        const cell = document.createElement("td");
+        cell.colSpan = 6;
+        cell.textContent = "Aucune référence ne correspond à cette recherche.";
+        row.append(cell);
+        bomBody.append(row);
+      }
+      bomCount.textContent = `${filtered.length} / ${parts.length} références`;
+    }
+
+    fetch("assets/documents/NOMENCLATURE_PIECES.csv")
+      .then((response) => {
+        if (!response.ok) throw new Error(`Impossible de charger la nomenclature (${response.status}).`);
+        return response.text();
+      })
+      .then((csv) => {
+        parts = csv.replace(/^\uFEFF/, "").split(/\r?\n/).filter(Boolean).slice(1).map(parseCsvLine);
+        Object.entries(familyLabels).forEach(([value, label]) => {
+          const option = document.createElement("option");
+          option.value = value;
+          option.textContent = label;
+          familyFilter.append(option);
+        });
+        renderParts();
+      })
+      .catch((error) => {
+        bomCount.textContent = "Nomenclature indisponible";
+        bomBody.replaceChildren();
+        const row = document.createElement("tr");
+        const cell = document.createElement("td");
+        cell.colSpan = 6;
+        cell.textContent = `${error.message} Vérifie que assets/documents/NOMENCLATURE_PIECES.csv est présent.`;
+        row.append(cell);
+        bomBody.append(row);
+      });
+
+    partSearch.addEventListener("input", renderParts);
+    familyFilter.addEventListener("change", renderParts);
+  </script>
+</body>
+</html>

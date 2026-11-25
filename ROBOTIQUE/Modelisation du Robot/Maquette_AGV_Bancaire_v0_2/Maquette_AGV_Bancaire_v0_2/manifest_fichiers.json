@@ -1,0 +1,1205 @@
+{
+  "project": "Maquette AGV bancaire V0.2",
+  "files": [
+    {
+      "path": "Apercu_Maquette_AGV_3D.png",
+      "bytes": 125965,
+      "sha256": "cd48630ce3ecf7f736776b954d84c59d9d6b16b77823da5421b40833a1692f76"
+    },
+    {
+      "path": "LIRE_MOI.md",
+      "bytes": 8589,
+      "sha256": "226b13142b10d82ab2c83a2bfcc5ae912dc5c923bf16cf69d159013825455c3a"
+    },
+    {
+      "path": "Maquette_AGV_Batiment_3D.html",
+      "bytes": 868136,
+      "sha256": "ba8fe3b72fa8a557e1f10b0a0ef94dd1a1cd68c171ae9fb249da9501f0848aa8"
+    },
+    {
+      "path": "data/geometrie_plan_retenu.json",
+      "bytes": 14793,
+      "sha256": "15536ea9a4bcdde12eba1594144575f0c790a0913a9a255d5487f494fe330dc7"
+    },
+    {
+      "path": "data/parametres_3d.json",
+      "bytes": 899,
+      "sha256": "d3271a36b8e0c2bac80553c60dfadd97b4253636bd4dfe332aceb4d5038f103b"
+    },
+    {
+      "path": "data/scene_3d.json",
+      "bytes": 168160,
+      "sha256": "1b216b3e6793e1aa61504713543efaa600849d22f3a5fac6af4805589e2da261"
+    },
+    {
+      "path": "generer_maquette.py",
+      "bytes": 50915,
+      "sha256": "be8781604371ed9f41d3816aca3037730aafe7d8b26d13c34ce76d568fe44300"
+    },
+    {
+      "path": "lancer_gazebo.sh",
+      "bytes": 572,
+      "sha256": "64044f3bebb19f14c9a6734bc7254b63a4205a67fc67d709d519173fe440911a"
+    },
+    {
+      "path": "modeles/batiment_complet.glb",
+      "bytes": 284448,
+      "sha256": "1c95236758fe340a59bbe9027ca94e800ca512cef5e6c19070bd81673ffeaf55"
+    },
+    {
+      "path": "modeles/batiment_complet.sdf",
+      "bytes": 273469,
+      "sha256": "0bde5f0c323db098b1c2b33ae52b086f5d57d17e5aad067582accda00dda1bea"
+    },
+    {
+      "path": "modeles/niveau_depart.glb",
+      "bytes": 261708,
+      "sha256": "bd47cc492d609373c4e1a72ec3ed305c329fbd1e958028822eb2efee41ad0a1b"
+    },
+    {
+      "path": "modeles/niveau_depart.sdf",
+      "bytes": 214383,
+      "sha256": "4842b0ea77b21e135eec39da70ea07e2be272a2f32a93078ae71c8edd538cab3"
+    },
+    {
+      "path": "modeles/niveau_depart_coupe.sdf",
+      "bytes": 211325,
+      "sha256": "28366959ab6a1e7236695f6afc8973b9819b27c1c71cef97359a4f9726243197"
+    },
+    {
+      "path": "modeles/rez_de_chaussee.glb",
+      "bytes": 26340,
+      "sha256": "81d1e72213bfb3dc7f30badeffce7ede25cb9b1839b8665ace374fa360c674e7"
+    },
+    {
+      "path": "modeles/rez_de_chaussee.sdf",
+      "bytes": 60647,
+      "sha256": "7f61f92b47d9c807ebbc65d57c0c171e9a25ec2610bdcdfdd088ebb033c29fbf"
+    },
+    {
+      "path": "modeles/rez_de_chaussee_coupe.sdf",
+      "bytes": 56818,
+      "sha256": "bee3b99a3282cf57b5aa7b68de9b44a0c8b8a64f36896de9f8726315b7e1566c"
+    },
+    {
+      "path": "modeles/robot_agv.glb",
+      "bytes": 239740,
+      "sha256": "3adfcf2bbcd3acf8ce9270c9313c0432fb37499633e500c5477a6db60a5a6742"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 25,
+      "sha256": "b33aa44f85c8328d9c34d37fe5ed9e1073c11fd2a11ac302d887167b2e0a3ba7"
+    },
+    {
+      "path": "validation_glTF.json",
+      "bytes": 761,
+      "sha256": "9cd4221e2cd2627954c7172cc7c0327d1feca880cf7c53410d0f8ca36f396700"
+    },
+    {
+      "path": "verification_affichage.json",
+      "bytes": 1326,
+      "sha256": "f798948e89752b7daf1580b0f1cd10372845bf4e768be95c06f1551f9b79d94e"
+    },
+    {
+      "path": "verification_maquette.json",
+      "bytes": 1527,
+      "sha256": "9011637de947704e53e12b945dc5cd44d6721548be03ab8c7173d50b98a03163"
+    },
+    {
+      "path": "visualiseur_template.html",
+      "bytes": 17234,
+      "sha256": "4440cb0a8f82539a3c7d1ffb4b3677a31e0fa294ab4079e7142740806f4ccd0e"
+    },
+    {
+      "path": "modeles/robot_agv_eclate.glb",
+      "bytes": 241028,
+      "sha256": "c214887714fda7adb1c7ae0df574c96e07d2e574b229fdca469cf2c30afac8a0"
+    },
+    {
+      "path": "modeles/catalogue_robot.json",
+      "bytes": 57535,
+      "sha256": "06aa7b1499bbf7c3bb7f42660ac8917524b4eb8f758ac6ed66bec0412c85f7ea"
+    },
+    {
+      "path": "modeles/pieces/001_plaque_superieure_chassis.glb",
+      "bytes": 11412,
+      "sha256": "ca63a23dfb97f660157f788f4df1d77587587af0ac08661635ec4c4df8f8832f"
+    },
+    {
+      "path": "modeles/pieces/002_longeron_gauche.glb",
+      "bytes": 11404,
+      "sha256": "9683c500103cf1c7a8c8b63b6bb5ce06214f53058e8b430c2b35ef3f91407c56"
+    },
+    {
+      "path": "modeles/pieces/003_longeron_droite.glb",
+      "bytes": 11404,
+      "sha256": "c03352bea7710b98bb86a6f06fb55862e7d50717a5d2006b7fd85f809b94e875"
+    },
+    {
+      "path": "modeles/pieces/004_traverse_chassis_1.glb",
+      "bytes": 11408,
+      "sha256": "c858b2406bd311eadb5677ebd08a528d9c1e6be7718e726402cdf2bbe6a1ac48"
+    },
+    {
+      "path": "modeles/pieces/005_traverse_chassis_2.glb",
+      "bytes": 11408,
+      "sha256": "65b241b9e4d9a213bd3f64350c60b81a99bbd0151e700bb1c9e1ab7732d12baf"
+    },
+    {
+      "path": "modeles/pieces/006_traverse_chassis_3.glb",
+      "bytes": 11408,
+      "sha256": "3266a62477aca5d2acbcfb4233100918b69dff1d4c149a06ea930df4502057ee"
+    },
+    {
+      "path": "modeles/pieces/007_traverse_chassis_4.glb",
+      "bytes": 11408,
+      "sha256": "162b1b272646e54fc6936d0b78a0d732a54fad97e416ac7401e88046424ed08d"
+    },
+    {
+      "path": "modeles/pieces/008_moteur_reducteur_gauche.glb",
+      "bytes": 11408,
+      "sha256": "bc32099ea8cb20e46090543a9047e9c29ea633aa3e6268982e947ebe9e5929b7"
+    },
+    {
+      "path": "modeles/pieces/009_roue_motrice_gauche.glb",
+      "bytes": 151580,
+      "sha256": "efeea037162299919fc65d9e450474f9464bc3612cfaaff6b9f470c874d16f93"
+    },
+    {
+      "path": "modeles/pieces/010_moyeu_moteur_gauche.glb",
+      "bytes": 14428,
+      "sha256": "beec7119412d8b158ed30db0db80566f85da45c1e981624bec995a214bf44a55"
+    },
+    {
+      "path": "modeles/pieces/011_ecrou_roue_gauche_1.glb",
+      "bytes": 14432,
+      "sha256": "9bfc4c290ec701123785428d0351562893ffac199577118db709d5f1e93d9e08"
+    },
+    {
+      "path": "modeles/pieces/012_ecrou_roue_gauche_2.glb",
+      "bytes": 14432,
+      "sha256": "abac5d96e85bc2a9460d206e9358ef7d988942f249daf15508b69ea054cb11c7"
+    },
+    {
+      "path": "modeles/pieces/013_ecrou_roue_gauche_3.glb",
+      "bytes": 14432,
+      "sha256": "25a76d3fb3a493894c5aa99da30b99511f153a04c9f300223816c5a51be551aa"
+    },
+    {
+      "path": "modeles/pieces/014_ecrou_roue_gauche_4.glb",
+      "bytes": 14432,
+      "sha256": "3ac4fa852ed8d73b6dde5472bb456d6f875e97e446f8197fbc798b6a33e86dea"
+    },
+    {
+      "path": "modeles/pieces/015_ecrou_roue_gauche_5.glb",
+      "bytes": 14432,
+      "sha256": "7f3e7325a64abe610bb1f044c24b4eebe687d521a83d981ef5b9c9ace7d770b0"
+    },
+    {
+      "path": "modeles/pieces/016_ecrou_roue_gauche_6.glb",
+      "bytes": 14432,
+      "sha256": "9e92b9d967b686a302568a8340327729b0fb7488b670efedfe11873a647687c7"
+    },
+    {
+      "path": "modeles/pieces/017_moteur_reducteur_droite.glb",
+      "bytes": 11408,
+      "sha256": "7393f5f033c4bb518cf6373fdc5d2d4dfb2f4edefa1b740d7593bf228e555f8b"
+    },
+    {
+      "path": "modeles/pieces/018_roue_motrice_droite.glb",
+      "bytes": 151580,
+      "sha256": "776a816d3d3ba202599f0355e682d280757ff06186b0d82b6920eb4307b668dd"
+    },
+    {
+      "path": "modeles/pieces/019_moyeu_moteur_droite.glb",
+      "bytes": 14428,
+      "sha256": "8c96a275f58dc531249e774e4cf666d7b2dd1f72abad54ebe857e97134b79390"
+    },
+    {
+      "path": "modeles/pieces/020_ecrou_roue_droite_1.glb",
+      "bytes": 14432,
+      "sha256": "bb5964f84a9a60cddbcbb1b4de67c0031d8af6fa25c119c541e5d0e12375bb9a"
+    },
+    {
+      "path": "modeles/pieces/021_ecrou_roue_droite_2.glb",
+      "bytes": 14432,
+      "sha256": "79d22aaa89453492f872ce64fd83bd22e1d4e93b1cf3151057def9fc34b1a33a"
+    },
+    {
+      "path": "modeles/pieces/022_ecrou_roue_droite_3.glb",
+      "bytes": 14432,
+      "sha256": "15f8a3ddfc1e173aa15e2e6bcbc4aa5fd65ae18e064c8fdb33eeae481f35cd16"
+    },
+    {
+      "path": "modeles/pieces/023_ecrou_roue_droite_4.glb",
+      "bytes": 14432,
+      "sha256": "9cddc9940c7540f3a2dd77d02b01368be14ed0bbec87f14f3fac6b68526b4f33"
+    },
+    {
+      "path": "modeles/pieces/024_ecrou_roue_droite_5.glb",
+      "bytes": 14432,
+      "sha256": "cf84641b1f7f3928ef88f1447e48370e1c6fe05b243c945d2cd008d65089bb6c"
+    },
+    {
+      "path": "modeles/pieces/025_ecrou_roue_droite_6.glb",
+      "bytes": 14432,
+      "sha256": "86bcefc178b26515fd30346b1534290bf8f4b4ebf4c81fc0846641a7072a193f"
+    },
+    {
+      "path": "modeles/pieces/026_support_roulette_avant.glb",
+      "bytes": 11408,
+      "sha256": "621d608d15cd3178037153e3dd56413771dcd251e1f55b0d6955c3fe36f6f551"
+    },
+    {
+      "path": "modeles/pieces/027_roulette_pivotante_avant.glb",
+      "bytes": 151584,
+      "sha256": "046805d4827fc40e90230b4be77cd7e7ace844843af911645974284086bfaefc"
+    },
+    {
+      "path": "modeles/pieces/028_axe_roulette_avant.glb",
+      "bytes": 14424,
+      "sha256": "52f7c40ff9f3250390a79c8514eb800b8951c20bdd341b78c492eade04ae949b"
+    },
+    {
+      "path": "modeles/pieces/029_fourche_roulette_avant_gauche.glb",
+      "bytes": 11416,
+      "sha256": "2c689bdfae05b5bea6b2ed73f884eceebd416965feebde8cb6c8edaa40c83bd4"
+    },
+    {
+      "path": "modeles/pieces/030_vis_axe_roulette_avant_gauche.glb",
+      "bytes": 14440,
+      "sha256": "e4f017b44fea6c15813d02872d8a7093efd1dce74da8d877f1c076952b9264de"
+    },
+    {
+      "path": "modeles/pieces/031_fourche_roulette_avant_droite.glb",
+      "bytes": 11416,
+      "sha256": "d254b8330e7beb188389f40c02ab5d00d89cd920d9d029de29fbb51ba7634a60"
+    },
+    {
+      "path": "modeles/pieces/032_vis_axe_roulette_avant_droite.glb",
+      "bytes": 14440,
+      "sha256": "8a283c1c75da95895228c6d8cfb3af9f15f2a3bc70c0c7f0178f6fff190e8936"
+    },
+    {
+      "path": "modeles/pieces/033_support_roulette_arriere.glb",
+      "bytes": 11412,
+      "sha256": "15f7a3aaf0a0a871c5162e823b2326f4155f83562dad99cc28b3157ed035f3d6"
+    },
+    {
+      "path": "modeles/pieces/034_roulette_pivotante_arriere.glb",
+      "bytes": 151588,
+      "sha256": "174312b9165ca4a533ab8010344b672d9fae082d0d3b22864318f38085d873c4"
+    },
+    {
+      "path": "modeles/pieces/035_axe_roulette_arriere.glb",
+      "bytes": 14428,
+      "sha256": "57bae9714e5903c361d36605c7916a2abe3fbfba0a0eaad5efff66578fac869a"
+    },
+    {
+      "path": "modeles/pieces/036_fourche_roulette_arriere_gauche.glb",
+      "bytes": 11420,
+      "sha256": "5dee9540d262808ca88c1752541eb764f3a437b25af0cd77ce160ed8e4995d74"
+    },
+    {
+      "path": "modeles/pieces/037_vis_axe_roulette_arriere_gauche.glb",
+      "bytes": 14440,
+      "sha256": "3f1027e633f6d846b5291553bd5de3f932646888c926d053d02b3a06b62df903"
+    },
+    {
+      "path": "modeles/pieces/038_fourche_roulette_arriere_droite.glb",
+      "bytes": 11420,
+      "sha256": "88e62f3024c55e05e40a434db4097c94e1b98d0df2d57f4ff39ffbe5df625baf"
+    },
+    {
+      "path": "modeles/pieces/039_vis_axe_roulette_arriere_droite.glb",
+      "bytes": 14440,
+      "sha256": "6291c34cd8944010c96ea38c73a0f2fe6c747715de841a0941136a1d988580da"
+    },
+    {
+      "path": "modeles/pieces/040_pare_chocs_avant.glb",
+      "bytes": 11420,
+      "sha256": "fe3c6f3de4ae8454e44c7204ac8f0aa1b9d950dceb6498b484da86eea3c1e394"
+    },
+    {
+      "path": "modeles/pieces/041_pare_chocs_arriere.glb",
+      "bytes": 11424,
+      "sha256": "f07f8e6d1800c629d8577f47f29803019aa0c39eca0fb4c61af0bf9fdde94e7a"
+    },
+    {
+      "path": "modeles/pieces/042_support_batterie.glb",
+      "bytes": 11408,
+      "sha256": "a31d9818a4cef3fe65f10f0363a19a821af6386096fddcc89ab1edfb58905746"
+    },
+    {
+      "path": "modeles/pieces/043_batterie_format_a_definir.glb",
+      "bytes": 11412,
+      "sha256": "71c7c7a48a8a05051d9fcb118d3ee3736ccf93c2020435a855c2e31b6dcb9bc5"
+    },
+    {
+      "path": "modeles/pieces/044_coffret_controleur_hypothese.glb",
+      "bytes": 11420,
+      "sha256": "2a6e038449aadf3d5e875ad8e00dbe8d5340b0076a9fda9898918cd49e9ba5c2"
+    },
+    {
+      "path": "modeles/pieces/045_support_coffret_controleur.glb",
+      "bytes": 11420,
+      "sha256": "4ccab2a00e98b639165c9d7b4cd7a93ee1dc55935cefd9016e190dd8392a07a8"
+    },
+    {
+      "path": "modeles/pieces/046_fond_coffre.glb",
+      "bytes": 11396,
+      "sha256": "a2853e8cea859d8fa92b9793b367371abb3c9d14e79bae60c95c0f1f5bdda885"
+    },
+    {
+      "path": "modeles/pieces/047_paroi_arriere.glb",
+      "bytes": 11396,
+      "sha256": "33771e82e85d1e541a4e94dd1097a69b97f25451e88858029995c0eb45d4e63b"
+    },
+    {
+      "path": "modeles/pieces/048_paroi_laterale_-0_49.glb",
+      "bytes": 11404,
+      "sha256": "11c37f59aee5c12e2d561c2b1ab2248bd4bd78441df0201996589f624349318e"
+    },
+    {
+      "path": "modeles/pieces/049_paroi_laterale_0_49.glb",
+      "bytes": 11404,
+      "sha256": "7141f6c1aa6422fc6772ef7df74bb73b6024ae90eb655be0e82382032147297d"
+    },
+    {
+      "path": "modeles/pieces/050_toit_coffre.glb",
+      "bytes": 11388,
+      "sha256": "faa5ad79bf5da750b4ed526d2593f6e058f377ce6ed60a02c3594f6e38c3c341"
+    },
+    {
+      "path": "modeles/pieces/051_separateur_horizontal.glb",
+      "bytes": 11416,
+      "sha256": "e11dc0e3cb14f9ff50ec5ae656a7b5b5243fd25242e51b3f6e778fd9ea1288a8"
+    },
+    {
+      "path": "modeles/pieces/052_separateur_vertical.glb",
+      "bytes": 11412,
+      "sha256": "ec2d79f5c7ede91ccaf39a83415676e192828be01263b02fa12e58f754c28955"
+    },
+    {
+      "path": "modeles/pieces/053_montant_face_-0_49.glb",
+      "bytes": 11404,
+      "sha256": "a014725e66f250dd2ac8abd461e91698923befc700a84fb9f0a654e38d23a347"
+    },
+    {
+      "path": "modeles/pieces/054_montant_face_0_00.glb",
+      "bytes": 11400,
+      "sha256": "ff5c92c976d51ef6586b8ccbadafc11752779074e13d9bd28c52ca89e2f652c6"
+    },
+    {
+      "path": "modeles/pieces/055_montant_face_0_49.glb",
+      "bytes": 11400,
+      "sha256": "4f880d5ee89ed69f1401fff719cb147a2b10d3e42aaeb7d836b2b3c599a0ff96"
+    },
+    {
+      "path": "modeles/pieces/056_traverse_face_0_33.glb",
+      "bytes": 11404,
+      "sha256": "a54a1b775938b4fc5044c380770d44d1e9482353f72163e341018b37968dba58"
+    },
+    {
+      "path": "modeles/pieces/057_traverse_face_0_70.glb",
+      "bytes": 11404,
+      "sha256": "03263834adabeb81b748422787ad377e9a691ba4425d004a362c5a2c4ef9b685"
+    },
+    {
+      "path": "modeles/pieces/058_traverse_face_1_06.glb",
+      "bytes": 11404,
+      "sha256": "33e98b27e11e698f37e330b70de9cc8f17b7c9baecbb644aa2f30d0baca65c38"
+    },
+    {
+      "path": "modeles/pieces/059_s1_fond_tiroir.glb",
+      "bytes": 11420,
+      "sha256": "abfd6b43f5865ddda94e661a9f7d928fa698d5fed6d785e5adaba5ab14b2113d"
+    },
+    {
+      "path": "modeles/pieces/060_s1_flanc_gauche.glb",
+      "bytes": 11408,
+      "sha256": "6088ad89466770ac0762d8c010b6adfee71fdc3426315a365b9b215afac32d36"
+    },
+    {
+      "path": "modeles/pieces/061_s1_glissiere_fixe_gauche.glb",
+      "bytes": 11420,
+      "sha256": "52779c630244026826c5c5a6ec9d80972b6cb2a489dac1bf1a10e40ee86110d1"
+    },
+    {
+      "path": "modeles/pieces/062_s1_glissiere_mobile_gauche.glb",
+      "bytes": 11420,
+      "sha256": "7edf2d8da1dc6debf5c0c37663ba5a79c79f23585788b250b71c1c5047be1df8"
+    },
+    {
+      "path": "modeles/pieces/063_s1_flanc_droite.glb",
+      "bytes": 11408,
+      "sha256": "b522a7e334194490ea34627d6103d6acfac82c7ac00392e46cb24597dcce1b63"
+    },
+    {
+      "path": "modeles/pieces/064_s1_glissiere_fixe_droite.glb",
+      "bytes": 11420,
+      "sha256": "3c984be5e0cee24b11a65c77072d2f5360787efc8bdb5f578ff18e18d93e3350"
+    },
+    {
+      "path": "modeles/pieces/065_s1_glissiere_mobile_droite.glb",
+      "bytes": 11420,
+      "sha256": "b0123a6c678fecbb8d1d82bc42f890136d5667069671db729c67ec5b9ddc0944"
+    },
+    {
+      "path": "modeles/pieces/066_s1_fond_arriere.glb",
+      "bytes": 11424,
+      "sha256": "ca0743e07468e8a20730ad2513ade1d88ac598069246031826339ca57816fdb2"
+    },
+    {
+      "path": "modeles/pieces/067_s1_joint_peripherique.glb",
+      "bytes": 11432,
+      "sha256": "29d4f44be5cbbf1b3317abe0befa92da8039665ef4ca327dee5ef1251c824f33"
+    },
+    {
+      "path": "modeles/pieces/068_s1_facade.glb",
+      "bytes": 11428,
+      "sha256": "c36269c964f035f1f8fac44f09f625a8a42cf94a6f59e6e367360632703da762"
+    },
+    {
+      "path": "modeles/pieces/069_s1_poignee.glb",
+      "bytes": 11404,
+      "sha256": "730eb01e393ee83cbf91dc388d88ce1db56303bd310f747ff7c8bb36fd168e7a"
+    },
+    {
+      "path": "modeles/pieces/070_s1_support_poignee_-1.glb",
+      "bytes": 11416,
+      "sha256": "2c3633a532f358861adb61de79a2d614b5a85ca6796e2c8db65b088ca3ae4d00"
+    },
+    {
+      "path": "modeles/pieces/071_s1_support_poignee_1.glb",
+      "bytes": 11416,
+      "sha256": "80964e9f60cd99593f91019b9c811b5bce1cdbcae772b63515d327f574db283b"
+    },
+    {
+      "path": "modeles/pieces/072_s1_plaque_identification.glb",
+      "bytes": 11420,
+      "sha256": "4d0237a04a426b8835b1ed46fd6bffcdbf16125d7b9a3ad906f9aab2f896fc28"
+    },
+    {
+      "path": "modeles/pieces/073_s1_marquage_0_a.glb",
+      "bytes": 11408,
+      "sha256": "76b750e63b1ddeac3e56ce8af963047eb8ae7c2d528c4149bcd798ebf8380019"
+    },
+    {
+      "path": "modeles/pieces/074_s1_marquage_0_f.glb",
+      "bytes": 11408,
+      "sha256": "801c6d4add7c7c7a700ec65c131eb6bd4dec2d9503f43e708ea0e9545447f52c"
+    },
+    {
+      "path": "modeles/pieces/075_s1_marquage_0_g.glb",
+      "bytes": 11408,
+      "sha256": "ae0fd48f0af029a64b4004d3d3f705da0b71da02acfce29b0a0d51905d8c36f0"
+    },
+    {
+      "path": "modeles/pieces/076_s1_marquage_0_c.glb",
+      "bytes": 11408,
+      "sha256": "30a44b64a3068d54e6e82b319cdcc10e36740af3ff055de49e9561e00b0d2b84"
+    },
+    {
+      "path": "modeles/pieces/077_s1_marquage_0_d.glb",
+      "bytes": 11408,
+      "sha256": "8e2b1b678a1b59baf7a4a03300238fef6b9b56576bdfdfe5bbd869ad393a31c8"
+    },
+    {
+      "path": "modeles/pieces/078_s1_marquage_1_b.glb",
+      "bytes": 11408,
+      "sha256": "fed4bf40b2c640100417002c2a88dbb6e6999f225feb3159acd61d67da75b36b"
+    },
+    {
+      "path": "modeles/pieces/079_s1_marquage_1_c.glb",
+      "bytes": 11408,
+      "sha256": "7f1baf793736c290fa9b7ab3278090659d9ca13655dc3dac06b4cd537fea31d1"
+    },
+    {
+      "path": "modeles/pieces/080_s1_loquet.glb",
+      "bytes": 11404,
+      "sha256": "3a394e1abfb36318935164c04f9e89188787ee095ae96ae6f93da5947adc3aa8"
+    },
+    {
+      "path": "modeles/pieces/081_s1_actionneur_corps.glb",
+      "bytes": 11412,
+      "sha256": "532ff86becb7ea1298002e7126025184d80fb44d7feba58b0248a90c79be953a"
+    },
+    {
+      "path": "modeles/pieces/082_s1_actionneur_tige.glb",
+      "bytes": 11412,
+      "sha256": "3983a24addd6661264c37b623d1a4aa238006b14a73184ec00b91e2b3536ff0c"
+    },
+    {
+      "path": "modeles/pieces/083_s1_butee_-0_429.glb",
+      "bytes": 11412,
+      "sha256": "81fc815015428955d597ad308a8e9f1d929443f68985985e9c9138cff608fd78"
+    },
+    {
+      "path": "modeles/pieces/084_s1_butee_-0_071.glb",
+      "bytes": 11412,
+      "sha256": "ea8d35feba957e6d1dd443f5f7ade6f4a206f5ce47322e14d1a802b8b42b32d3"
+    },
+    {
+      "path": "modeles/pieces/085_s1_vis_face_-1_-1.glb",
+      "bytes": 14436,
+      "sha256": "7dcc575a96c40f02259309c484df9d6124ab093a65cd91fb793b71cf5064a16f"
+    },
+    {
+      "path": "modeles/pieces/086_s1_vis_face_-1_1.glb",
+      "bytes": 14436,
+      "sha256": "5fc96da802270073d2e3aecd17e14e34bd59fe067045b480efd742f07019c4d8"
+    },
+    {
+      "path": "modeles/pieces/087_s1_vis_face_1_-1.glb",
+      "bytes": 14436,
+      "sha256": "73986e6a72936fa595e4f2761626a00dcedc758826715ac5af090bd8879142a3"
+    },
+    {
+      "path": "modeles/pieces/088_s1_vis_face_1_1.glb",
+      "bytes": 14432,
+      "sha256": "fc8575d3e06567ca01a6449bd5c16e2cc2e84ca9ed1eafef6ab3b5e842346388"
+    },
+    {
+      "path": "modeles/pieces/089_s2_fond_tiroir.glb",
+      "bytes": 11420,
+      "sha256": "c6d6f42d22f43807e4156266bdef3e008c2b56a92f756f304a447ccb55363824"
+    },
+    {
+      "path": "modeles/pieces/090_s2_flanc_gauche.glb",
+      "bytes": 11408,
+      "sha256": "0a037d4d938b999c0000b92da866f76d13d38254178ef533450aa681843e324d"
+    },
+    {
+      "path": "modeles/pieces/091_s2_glissiere_fixe_gauche.glb",
+      "bytes": 11420,
+      "sha256": "93ac7fc4a9716a5dddec82324fe0936ac4d601cec3f8d3b554780f9128c0fea4"
+    },
+    {
+      "path": "modeles/pieces/092_s2_glissiere_mobile_gauche.glb",
+      "bytes": 11420,
+      "sha256": "807ef890f7d92b71c6bdc6c196e4ecb9161f103ccc1a43c7d018dbfd1845d6e8"
+    },
+    {
+      "path": "modeles/pieces/093_s2_flanc_droite.glb",
+      "bytes": 11408,
+      "sha256": "94923901ae63f6d2ee533763b140b4936444e3d7fd462ccc7a7de1a0f9f945c6"
+    },
+    {
+      "path": "modeles/pieces/094_s2_glissiere_fixe_droite.glb",
+      "bytes": 11420,
+      "sha256": "83d25494db70876f10da9194123fb49edd3873215f639010ec806309c596737d"
+    },
+    {
+      "path": "modeles/pieces/095_s2_glissiere_mobile_droite.glb",
+      "bytes": 11420,
+      "sha256": "2fac658e6f7f9bf125790632b7770d9d874c9b52c4c4be5f218fc6055b3a09c9"
+    },
+    {
+      "path": "modeles/pieces/096_s2_fond_arriere.glb",
+      "bytes": 11424,
+      "sha256": "6b524caa6b5f97c76fb4f0862f5b7bc58af0339395fe9c02bd6a999378109c9d"
+    },
+    {
+      "path": "modeles/pieces/097_s2_joint_peripherique.glb",
+      "bytes": 11432,
+      "sha256": "a5fa57ffabfca3186b27e8349933c0adbd30df0cb7d13c889d165a891f0ecbb8"
+    },
+    {
+      "path": "modeles/pieces/098_s2_facade.glb",
+      "bytes": 11428,
+      "sha256": "16f8526337d767c0445c5c1689a2c31be29185493b32b7167be84cf927a97441"
+    },
+    {
+      "path": "modeles/pieces/099_s2_poignee.glb",
+      "bytes": 11404,
+      "sha256": "763e1c721170b07746a786b4b9b186077a0cbb18fdbea7812e291b73cd261a7e"
+    },
+    {
+      "path": "modeles/pieces/100_s2_support_poignee_-1.glb",
+      "bytes": 11416,
+      "sha256": "b7b0061bbb3b485c4f8d71cb20585358cab8bb2bddd67805637b5d8756ff7d7d"
+    },
+    {
+      "path": "modeles/pieces/101_s2_support_poignee_1.glb",
+      "bytes": 11416,
+      "sha256": "8887493b824b3523be210745dd9323f0a9887dbee00c1afcd31d8fa412f99826"
+    },
+    {
+      "path": "modeles/pieces/102_s2_plaque_identification.glb",
+      "bytes": 11420,
+      "sha256": "1d99f7df9f2d9cbc7ad2ad43beeb56f9cb9ed689a6b32f01ec70ac3934a96e85"
+    },
+    {
+      "path": "modeles/pieces/103_s2_marquage_0_a.glb",
+      "bytes": 11408,
+      "sha256": "bae0523cbed30d0c35bd5dba338dd06ee01bc4043c70f9511d99da25b3e785a3"
+    },
+    {
+      "path": "modeles/pieces/104_s2_marquage_0_f.glb",
+      "bytes": 11408,
+      "sha256": "8d4bbf84f3addc3ba51cd6b864562d66b32d0fbfc8c9d906e5af141b93f239b6"
+    },
+    {
+      "path": "modeles/pieces/105_s2_marquage_0_g.glb",
+      "bytes": 11408,
+      "sha256": "cc7c2b64d961b1aa12296bb1d67032e06b1f934c9792e8c329f7e7e9cb638a1b"
+    },
+    {
+      "path": "modeles/pieces/106_s2_marquage_0_c.glb",
+      "bytes": 11408,
+      "sha256": "997e8aaa63ef7fbbdebf971a659dcf7d4bdf6ae7bbb06cf1d787727f6f02d508"
+    },
+    {
+      "path": "modeles/pieces/107_s2_marquage_0_d.glb",
+      "bytes": 11408,
+      "sha256": "050bcdd4b72f493d826a7249d3836ef2ab87bc9aa6df2ce454dcee92b1b726b9"
+    },
+    {
+      "path": "modeles/pieces/108_s2_marquage_1_a.glb",
+      "bytes": 11408,
+      "sha256": "5fe6eb32cad79b6d5f8df0ea6daea5cc3aa689dcb3d8ca9b2c1b3c46efd6753d"
+    },
+    {
+      "path": "modeles/pieces/109_s2_marquage_1_b.glb",
+      "bytes": 11408,
+      "sha256": "b0fc8aa60d99cc975fa658705d54fea40c67bd445f9f8c8896597d3127fb9f38"
+    },
+    {
+      "path": "modeles/pieces/110_s2_marquage_1_g.glb",
+      "bytes": 11408,
+      "sha256": "9b0d1dda11c2688e171bac769345d2ea778dfa024b724e7cb236533d57f4c3f0"
+    },
+    {
+      "path": "modeles/pieces/111_s2_marquage_1_e.glb",
+      "bytes": 11408,
+      "sha256": "92a97f93e3382fb1d7581f40bce377f134ca88028752b5543ff4dda8a6ff0142"
+    },
+    {
+      "path": "modeles/pieces/112_s2_marquage_1_d.glb",
+      "bytes": 11408,
+      "sha256": "19fcd63acd9704b87ba970add0eaebcb3f8d18d1e10174f931c414136a42e34e"
+    },
+    {
+      "path": "modeles/pieces/113_s2_loquet.glb",
+      "bytes": 11404,
+      "sha256": "90b79bdbad314ebd2097cc2333e1898b6f5b53c512f727fd05e69a5cb92b42ab"
+    },
+    {
+      "path": "modeles/pieces/114_s2_actionneur_corps.glb",
+      "bytes": 11412,
+      "sha256": "1c88024ab24f8bbc789339a049b8b4b90671767fe116641ccdf57a2b30f2be0d"
+    },
+    {
+      "path": "modeles/pieces/115_s2_actionneur_tige.glb",
+      "bytes": 11412,
+      "sha256": "f2758323b0796fef6820a78111a1d643bb1f8605413229f7d88c8dd6ce6e6815"
+    },
+    {
+      "path": "modeles/pieces/116_s2_butee_0_071.glb",
+      "bytes": 11412,
+      "sha256": "20506984bab80c596f852c07c0e08dbfbff180033ee195214f231ce5dcecbb3b"
+    },
+    {
+      "path": "modeles/pieces/117_s2_butee_0_429.glb",
+      "bytes": 11412,
+      "sha256": "20230c843c62c4359912fb99b1ae522d2dd41ed563eaec5dc38b6cf18f001c89"
+    },
+    {
+      "path": "modeles/pieces/118_s2_vis_face_-1_-1.glb",
+      "bytes": 14436,
+      "sha256": "56bd0f446229807296fd5e9e54380ec372bb7398fbe9d1165ca9f22f91d64af5"
+    },
+    {
+      "path": "modeles/pieces/119_s2_vis_face_-1_1.glb",
+      "bytes": 14436,
+      "sha256": "72260bf8adb495619dcec44a5bc8d2b070157e5c21e92f483c8c5d29158977f0"
+    },
+    {
+      "path": "modeles/pieces/120_s2_vis_face_1_-1.glb",
+      "bytes": 14436,
+      "sha256": "06b24452731a6949d2227b29c3b88b3ddcd30082f75d4e01a9b162c7da8c6580"
+    },
+    {
+      "path": "modeles/pieces/121_s2_vis_face_1_1.glb",
+      "bytes": 14432,
+      "sha256": "4e798a68596a517ab9b6640b1a34e013a4cb8a2455467318812d96ab325dac5b"
+    },
+    {
+      "path": "modeles/pieces/122_s3_fond_tiroir.glb",
+      "bytes": 11420,
+      "sha256": "6ec452a6eb4de2eaf28a025b6b15c01842f6cc7372bfab3be0d82212647c556c"
+    },
+    {
+      "path": "modeles/pieces/123_s3_flanc_gauche.glb",
+      "bytes": 11408,
+      "sha256": "bae1274fe53802dea3b8f74b2d9a39de66661d13da5401b7b676f2cb580a68ac"
+    },
+    {
+      "path": "modeles/pieces/124_s3_glissiere_fixe_gauche.glb",
+      "bytes": 11420,
+      "sha256": "ab5fdde5e9d1a90b803bf734ec8f601860367c5599fd91e63a34a37bde4a63c3"
+    },
+    {
+      "path": "modeles/pieces/125_s3_glissiere_mobile_gauche.glb",
+      "bytes": 11420,
+      "sha256": "ef93a03e362f490ddd601fa2319ed039915a217f48d88e83a2362be436950b7d"
+    },
+    {
+      "path": "modeles/pieces/126_s3_flanc_droite.glb",
+      "bytes": 11408,
+      "sha256": "091a0630a68d110c99673ea832bbb7af14d4f7cfd3a46f7de5c027fe9a017c6d"
+    },
+    {
+      "path": "modeles/pieces/127_s3_glissiere_fixe_droite.glb",
+      "bytes": 11420,
+      "sha256": "68a7ddca5560c2d52841100c30cc092f026cbfd961335292fae1a129452010bf"
+    },
+    {
+      "path": "modeles/pieces/128_s3_glissiere_mobile_droite.glb",
+      "bytes": 11420,
+      "sha256": "58c9ead96cae215569e83ca809ccb71d36d94023308c85c293804da9accf9cb8"
+    },
+    {
+      "path": "modeles/pieces/129_s3_fond_arriere.glb",
+      "bytes": 11424,
+      "sha256": "a6859f10861d942f6d3944c754707fd1276dec51e95bccbba110d7e442075ba8"
+    },
+    {
+      "path": "modeles/pieces/130_s3_joint_peripherique.glb",
+      "bytes": 11432,
+      "sha256": "a6c4c41cb71e59ff435c358080eb89041059d485f751ee523476472bba29a3f0"
+    },
+    {
+      "path": "modeles/pieces/131_s3_facade.glb",
+      "bytes": 11428,
+      "sha256": "e0e35b39c3e9f6219b4c03ef25bacf238b194ca6d43ef49884c50c771db2e1e4"
+    },
+    {
+      "path": "modeles/pieces/132_s3_poignee.glb",
+      "bytes": 11404,
+      "sha256": "67446267cdc1deb5f12fecb03c375bb1badbc7f4af287f80f68d37873bede9bb"
+    },
+    {
+      "path": "modeles/pieces/133_s3_support_poignee_-1.glb",
+      "bytes": 11416,
+      "sha256": "c317a270f43753b33791504d0fb0218f4709a56fe05b7ea2ad740ca34ff25a54"
+    },
+    {
+      "path": "modeles/pieces/134_s3_support_poignee_1.glb",
+      "bytes": 11416,
+      "sha256": "598a45221bcddd2d9036e663d3333bd2464f20d7d256be03006c7195d8ebfb68"
+    },
+    {
+      "path": "modeles/pieces/135_s3_plaque_identification.glb",
+      "bytes": 11420,
+      "sha256": "30b6124317253c67be636dbd629c9baab252950ecb3aa315388e4d79e00b2d0a"
+    },
+    {
+      "path": "modeles/pieces/136_s3_marquage_0_a.glb",
+      "bytes": 11408,
+      "sha256": "2f22fab9668562b9703f5cb05b9edad0cc6c356842400860be82203f33212194"
+    },
+    {
+      "path": "modeles/pieces/137_s3_marquage_0_f.glb",
+      "bytes": 11408,
+      "sha256": "ed1be4f702659ade3a591680d82425df33e638eb68fc8fd4b9f933dde427cdb8"
+    },
+    {
+      "path": "modeles/pieces/138_s3_marquage_0_g.glb",
+      "bytes": 11408,
+      "sha256": "55787acd9ce0cef4302caaebba2ad98338459194d98375a05cb6d2b26c1698c3"
+    },
+    {
+      "path": "modeles/pieces/139_s3_marquage_0_c.glb",
+      "bytes": 11408,
+      "sha256": "a6831b2d6adc54eccb6f3eb29d47b0b5f145525d018368e19bf88b8775e6c027"
+    },
+    {
+      "path": "modeles/pieces/140_s3_marquage_0_d.glb",
+      "bytes": 11408,
+      "sha256": "470b2d2372fb66b44fd2a48c30f04f4cca7570803227542640e4ac2c848f6c80"
+    },
+    {
+      "path": "modeles/pieces/141_s3_marquage_1_a.glb",
+      "bytes": 11408,
+      "sha256": "f916f6b996b9eef031f58ec53cb038e5983370439f81a0de552c2031bb0c6d9f"
+    },
+    {
+      "path": "modeles/pieces/142_s3_marquage_1_b.glb",
+      "bytes": 11408,
+      "sha256": "ef1a5cf12b23cd88c0b1e4ff287ac3cd7f2164b9e7afd55d661b88a9de424525"
+    },
+    {
+      "path": "modeles/pieces/143_s3_marquage_1_g.glb",
+      "bytes": 11408,
+      "sha256": "5819ce032ef29c894f2d514c18031927de4ccd6d79e86b6866ff8842b43759e5"
+    },
+    {
+      "path": "modeles/pieces/144_s3_marquage_1_c.glb",
+      "bytes": 11408,
+      "sha256": "09486b387ae7a3e6a8cbc1a7839f582685dca75e70aeb9fd343a032a0c63e806"
+    },
+    {
+      "path": "modeles/pieces/145_s3_marquage_1_d.glb",
+      "bytes": 11408,
+      "sha256": "b2df866a225c81a394f4370301a9991131a80d31846ec98b7ef26f14244bcacb"
+    },
+    {
+      "path": "modeles/pieces/146_s3_loquet.glb",
+      "bytes": 11404,
+      "sha256": "736cdb3c0fe52e7394333d8fe3d18bdadf5dd04f558ed6f763ed1e5bece8b8a2"
+    },
+    {
+      "path": "modeles/pieces/147_s3_actionneur_corps.glb",
+      "bytes": 11412,
+      "sha256": "d48640a059d8949d5bb0817122028d606d9961c71e51c0c8e45a5c81187d31e5"
+    },
+    {
+      "path": "modeles/pieces/148_s3_actionneur_tige.glb",
+      "bytes": 11412,
+      "sha256": "b5476e5b0335e6bd3cbc14f71c106cc91b82b6b8bd90496b4c89dffd727671b8"
+    },
+    {
+      "path": "modeles/pieces/149_s3_butee_-0_429.glb",
+      "bytes": 11412,
+      "sha256": "fc260cbf5f56842436a92b43b3f9c4a8354dfb25b90820adb1073288cf8868ab"
+    },
+    {
+      "path": "modeles/pieces/150_s3_butee_-0_071.glb",
+      "bytes": 11412,
+      "sha256": "940ad2420b949b4aa6fa891153fbfe20774c777ae8bc05b5268b07bdac3f6e66"
+    },
+    {
+      "path": "modeles/pieces/151_s3_vis_face_-1_-1.glb",
+      "bytes": 14436,
+      "sha256": "67ee62105940aa156b4d4ccfa0f3a2f37eb640761c8bce7aa9b23e745354488e"
+    },
+    {
+      "path": "modeles/pieces/152_s3_vis_face_-1_1.glb",
+      "bytes": 14436,
+      "sha256": "68b6019d11cf1e7754863b2570e27551421e2912f9e4d21f6f93802b4b3fb70c"
+    },
+    {
+      "path": "modeles/pieces/153_s3_vis_face_1_-1.glb",
+      "bytes": 14436,
+      "sha256": "28aaae93dd8feade88b896e1b0f710fe1757880abc2a26a9491544089c3d9115"
+    },
+    {
+      "path": "modeles/pieces/154_s3_vis_face_1_1.glb",
+      "bytes": 14432,
+      "sha256": "d6b1937fd48c1fac965ab31a23cc83ffeeea6f3befe195514d926b5d6f41091b"
+    },
+    {
+      "path": "modeles/pieces/155_s4_fond_tiroir.glb",
+      "bytes": 11420,
+      "sha256": "25c36c4847d35d9c35634f6bdfeeaeb9fcf7a177ebc42413bd0c9f6ac17f57aa"
+    },
+    {
+      "path": "modeles/pieces/156_s4_flanc_gauche.glb",
+      "bytes": 11408,
+      "sha256": "14fecc47f6dc837330e0260193b48a2fdf5bfe283f6a813ec56118d020e41150"
+    },
+    {
+      "path": "modeles/pieces/157_s4_glissiere_fixe_gauche.glb",
+      "bytes": 11420,
+      "sha256": "b2fb66bded68319ccb5aa9ed92bc74c9d7f48e27cff5a88bbd8366f5ce86113a"
+    },
+    {
+      "path": "modeles/pieces/158_s4_glissiere_mobile_gauche.glb",
+      "bytes": 11420,
+      "sha256": "e4309d18eb2304216b583b31cb9939f25f54ad4481b944dec44b7797360ebfc8"
+    },
+    {
+      "path": "modeles/pieces/159_s4_flanc_droite.glb",
+      "bytes": 11408,
+      "sha256": "46820a899b049cf1266f4e77145a05bffa2e7e9b84a6618429eb3259a9a9031d"
+    },
+    {
+      "path": "modeles/pieces/160_s4_glissiere_fixe_droite.glb",
+      "bytes": 11420,
+      "sha256": "714c6a697c5c62bb48b6b3632faa75967896622c45c197f264bb162dbb3c8dc9"
+    },
+    {
+      "path": "modeles/pieces/161_s4_glissiere_mobile_droite.glb",
+      "bytes": 11420,
+      "sha256": "7e0283d3c9fd9617fb35f61d94bd13e30b37ed7f75f5c122cd16de60e18e9479"
+    },
+    {
+      "path": "modeles/pieces/162_s4_fond_arriere.glb",
+      "bytes": 11424,
+      "sha256": "301c9d90bf663db5f891b4901962a3d1252613fa553212063e410e46a0358c7f"
+    },
+    {
+      "path": "modeles/pieces/163_s4_joint_peripherique.glb",
+      "bytes": 11432,
+      "sha256": "7503b551e4233304d21d96d2066afcef0421653c1a555126e0d4a9c0c81b0d33"
+    },
+    {
+      "path": "modeles/pieces/164_s4_facade.glb",
+      "bytes": 11428,
+      "sha256": "896f269be18e4b4ab654d975100257877d58dca1800487eaa5a61ea08f1027d2"
+    },
+    {
+      "path": "modeles/pieces/165_s4_poignee.glb",
+      "bytes": 11404,
+      "sha256": "4f057c3bce3b6ccf86f174fa6b82057416415a04f2a4b9c69803a68db35cab09"
+    },
+    {
+      "path": "modeles/pieces/166_s4_support_poignee_-1.glb",
+      "bytes": 11416,
+      "sha256": "2a402cf79cd207af84078d6a908bf11f0fa77f3e63e78fe5fe6e5a97819de69b"
+    },
+    {
+      "path": "modeles/pieces/167_s4_support_poignee_1.glb",
+      "bytes": 11416,
+      "sha256": "f6f0a26b6d53200bf36c208ab27c96c545a6a84e6a54d31b59c09899a1ca2a9f"
+    },
+    {
+      "path": "modeles/pieces/168_s4_plaque_identification.glb",
+      "bytes": 11420,
+      "sha256": "2a8e23c293634f27d4e0722eb7ce09e4aa6c3646f0ffbabed9168cd9e881d135"
+    },
+    {
+      "path": "modeles/pieces/169_s4_marquage_0_a.glb",
+      "bytes": 11408,
+      "sha256": "3e6e0b8a4f31065ddab27839f5fc36ae77a53c8044e9c87dc98606e84fbe7f02"
+    },
+    {
+      "path": "modeles/pieces/170_s4_marquage_0_f.glb",
+      "bytes": 11408,
+      "sha256": "7b27b6689451bdd5bec4515dfa1c74ceca93298faf29e4d38ca1951948fa5a13"
+    },
+    {
+      "path": "modeles/pieces/171_s4_marquage_0_g.glb",
+      "bytes": 11408,
+      "sha256": "22a6f77deaa5d3e3a8851ef552917795fa0eff515b6269e33238266d3dc74a7f"
+    },
+    {
+      "path": "modeles/pieces/172_s4_marquage_0_c.glb",
+      "bytes": 11408,
+      "sha256": "d42f2f866df7a23074453abde09c90a9cd91087858d561d1aaab73a19e594af5"
+    },
+    {
+      "path": "modeles/pieces/173_s4_marquage_0_d.glb",
+      "bytes": 11408,
+      "sha256": "1e9a33a79791b07506963936a63faac2d4cb8f81419b555e71262de8c13582cc"
+    },
+    {
+      "path": "modeles/pieces/174_s4_marquage_1_f.glb",
+      "bytes": 11408,
+      "sha256": "58b828a6f2830a55af55de3cc4f25af01025bcb8b387d15cf7c78784a9608aeb"
+    },
+    {
+      "path": "modeles/pieces/175_s4_marquage_1_g.glb",
+      "bytes": 11408,
+      "sha256": "5c659667848d7ab52158e47e431a1025fa4a21a6f78c1fbea158acdb4d14dc1b"
+    },
+    {
+      "path": "modeles/pieces/176_s4_marquage_1_b.glb",
+      "bytes": 11408,
+      "sha256": "e919da74cf64f90d213bad2d931a1ed2a544bd42cdc568fd85d3943b2188e37f"
+    },
+    {
+      "path": "modeles/pieces/177_s4_marquage_1_c.glb",
+      "bytes": 11408,
+      "sha256": "3a4ff5a6eea4b1b09396f85d041540c61b1a061e01cb4da65b7e3734a631c8be"
+    },
+    {
+      "path": "modeles/pieces/178_s4_loquet.glb",
+      "bytes": 11404,
+      "sha256": "3154c2047f3028b511f78150fa23e9e5ead7488338d26e76589f47c9cf4400a9"
+    },
+    {
+      "path": "modeles/pieces/179_s4_actionneur_corps.glb",
+      "bytes": 11412,
+      "sha256": "a6d61ef2189c2bdfbd76604488ff8453e5be93f51e35f70b0b41f9c79423132b"
+    },
+    {
+      "path": "modeles/pieces/180_s4_actionneur_tige.glb",
+      "bytes": 11412,
+      "sha256": "dd57907926fb88a872f5696ab2ceeaf3e693c2ba6211e0a3ad2f261467aba4ba"
+    },
+    {
+      "path": "modeles/pieces/181_s4_butee_0_071.glb",
+      "bytes": 11412,
+      "sha256": "c8e798bf427b445ed0d260d70bb7892f4ad6be41de393b35356d9b30c1e55416"
+    },
+    {
+      "path": "modeles/pieces/182_s4_butee_0_429.glb",
+      "bytes": 11412,
+      "sha256": "e36a635e671cc63b9ce4d78037b3cfa23f8e887fe2ad41d4c1ad462d3f0e50dd"
+    },
+    {
+      "path": "modeles/pieces/183_s4_vis_face_-1_-1.glb",
+      "bytes": 14436,
+      "sha256": "547dafb29ca84777fb90cbdca0f7824731e57ff6437cfa9aea93e5dbe80aa83e"
+    },
+    {
+      "path": "modeles/pieces/184_s4_vis_face_-1_1.glb",
+      "bytes": 14436,
+      "sha256": "ae55b4e4c0aff5bcc142b90bea76f0b20c5fb57aa7342689d2380dc78961e2f3"
+    },
+    {
+      "path": "modeles/pieces/185_s4_vis_face_1_-1.glb",
+      "bytes": 14436,
+      "sha256": "59ac536869ea76db3bea064c334f12c23b5c6f61604b51c11e45ef813eccd7a6"
+    },
+    {
+      "path": "modeles/pieces/186_s4_vis_face_1_1.glb",
+      "bytes": 14432,
+      "sha256": "ec9f3e9bce0c7edcacb022cfdd9072aa7ec56128b76dac82a03ce6cb36955c07"
+    },
+    {
+      "path": "modeles/pieces/187_grille_ventilation_fond.glb",
+      "bytes": 11408,
+      "sha256": "2f7335c67504a959341c054419b983039305e02dba6669a19935b445555b31a6"
+    },
+    {
+      "path": "modeles/pieces/188_ailette_grille_ventilation_1.glb",
+      "bytes": 11420,
+      "sha256": "2c6e63030f4914bf1bf3c51387e67a563f0a1b7a0e046c40a6c47b70f892000a"
+    },
+    {
+      "path": "modeles/pieces/189_ailette_grille_ventilation_2.glb",
+      "bytes": 11420,
+      "sha256": "43546a2476fa3b9259c631961f5a308ef7b5ab7fca4f975f67c703471f43bcd7"
+    },
+    {
+      "path": "modeles/pieces/190_ailette_grille_ventilation_3.glb",
+      "bytes": 11420,
+      "sha256": "5ce57dc30152b91702e2879d39bb359336c3a95000f68f473addcfb156a7337c"
+    },
+    {
+      "path": "modeles/pieces/191_ailette_grille_ventilation_4.glb",
+      "bytes": 11420,
+      "sha256": "a0177ed4b8dd6cc39624e9ed33cd4c2c68e1c71ea12fecea26dd55aa39779980"
+    },
+    {
+      "path": "modeles/pieces/192_ailette_grille_ventilation_5.glb",
+      "bytes": 11420,
+      "sha256": "00da7622aa6f107ae70953bfb02d69c7f07c43a72b840c211ea1f69b8cd7c568"
+    },
+    {
+      "path": "modeles/pieces/193_ailette_grille_ventilation_6.glb",
+      "bytes": 11420,
+      "sha256": "b6d2b56bec1ed4c4a3dadb9e954572b36dc93ea195a0782473bfc06841e62453"
+    },
+    {
+      "path": "modeles/pieces/194_ailette_grille_ventilation_7.glb",
+      "bytes": 11420,
+      "sha256": "b2bb42ab8661adf24156ae3820c42fd2d9f17ba22f613d3e70c0cbd7a5b05bcf"
+    },
+    {
+      "path": "modeles/pieces/195_support_afficheur.glb",
+      "bytes": 11412,
+      "sha256": "7a376030615d586284294acd6c3b88773dc0859eb31778c5f38943f8180a69ae"
+    },
+    {
+      "path": "modeles/pieces/196_ecran_commande.glb",
+      "bytes": 11404,
+      "sha256": "dc369a628f5b7673ddaee1995cb9f22c8b792f16deff5eefc957740643e9b1fc"
+    },
+    {
+      "path": "modeles/pieces/197_ecran_indicateur_1.glb",
+      "bytes": 11484,
+      "sha256": "654c13d7559abf184494e8aa1641b389d1815b96526112082bbf6dc70e32c605"
+    },
+    {
+      "path": "modeles/pieces/198_ecran_indicateur_2.glb",
+      "bytes": 11484,
+      "sha256": "6f6be9dd1784bae2af0368b471288a953cfa9ecbf8eef2ad654f5564b9feb4d6"
+    },
+    {
+      "path": "modeles/pieces/199_ecran_indicateur_3.glb",
+      "bytes": 11484,
+      "sha256": "c9f3f9ff0adf9256bc00f32650c74eb65c269ef41f18dc73bebb6f8bd60b54ff"
+    },
+    {
+      "path": "modeles/pieces/200_support_arret_urgence.glb",
+      "bytes": 11416,
+      "sha256": "7a5a49720ae229ed7f248ef1c173f14dc27bfb227dbe2cee1a3379dce1f87ff3"
+    },
+    {
+      "path": "modeles/pieces/201_arret_urgence_rouge.glb",
+      "bytes": 14440,
+      "sha256": "0bb3bc7b69e32879e0ef1749d20ffdfaa475e63996c55830066405b33672b0f8"
+    },
+    {
+      "path": "modeles/pieces/202_capteur_emplacement_avant.glb",
+      "bytes": 11416,
+      "sha256": "6aa1ef5de0de8305d7379e5e8f8cd0c64501009efe34b4c467af2e725580e823"
+    },
+    {
+      "path": "modeles/assemblage/etape_01_chassis.glb",
+      "bytes": 13720,
+      "sha256": "22760b2cde5f6e759a443edc97c936dd22cf3ed10864dac439b9ddf3a762dfc7"
+    },
+    {
+      "path": "modeles/assemblage/etape_02_roues.glb",
+      "bytes": 185136,
+      "sha256": "0849cdb842bbbec717e5c93e4e2114b162b843508badc0c6e583fa240f0ae015"
+    },
+    {
+      "path": "modeles/assemblage/etape_03_batterie.glb",
+      "bytes": 185604,
+      "sha256": "a86236b57222a684fe825cb6f482b08a18333a61a8915e0e9f40e62471470a48"
+    },
+    {
+      "path": "modeles/assemblage/etape_04_coffre.glb",
+      "bytes": 190052,
+      "sha256": "d3df947b18eee8947082b32ad9886bb487e46872b049f1bef66a0520665c3e84"
+    },
+    {
+      "path": "modeles/assemblage/etape_05_separateurs.glb",
+      "bytes": 190548,
+      "sha256": "1daf1b97c9ae45fb505993f4c4b4cc5babd6af5a4cb1724bda3a0c5b5e5e9cbc"
+    },
+    {
+      "path": "modeles/assemblage/etape_06_glissieres.glb",
+      "bytes": 192624,
+      "sha256": "9662ea965d366b8a7d14dae8d67d521de8e64d38c2ef5acc1ecaaed9833532f2"
+    },
+    {
+      "path": "modeles/assemblage/etape_07_tiroir_S1.glb",
+      "bytes": 201288,
+      "sha256": "be13ece35bae528bdd2c0a3717058a1e34a4f8668677a3b5449fa148c14ecb9d"
+    },
+    {
+      "path": "modeles/assemblage/etape_08_tiroir_S2.glb",
+      "bytes": 208676,
+      "sha256": "55efcf08452b59f33efe69015fdf67003b78d26630b78039b54f19b346afbea8"
+    },
+    {
+      "path": "modeles/assemblage/etape_09_tiroir_S3.glb",
+      "bytes": 216232,
+      "sha256": "e530867a3f05c5bb17928b5a2bdbeb41d3a5464576b419695fedea29f066fd7e"
+    },
+    {
+      "path": "modeles/assemblage/etape_10_tiroir_S4.glb",
+      "bytes": 223500,
+      "sha256": "252d8db52ddf521e978df70b14bc66f4deda465a9260f9edda78be4f071e2955"
+    },
+    {
+      "path": "modeles/assemblage/etape_11_commandes.glb",
+      "bytes": 239916,
+      "sha256": "49dd7ee143beb2ab68c97d1c2fa21c0bc18f030e6847f5ff22fd3daaab58bdd5"
+    },
+    {
+      "path": "modeles/assemblage/etape_12_toit.glb",
+      "bytes": 240148,
+      "sha256": "b73c0096a21528bb5867ff20258207c1b670f387ad8403639263d8621a58d5cd"
+    },
+    {
+      "path": "modeles/sous_ensembles/roue_motrice_assemblee.glb",
+      "bytes": 177464,
+      "sha256": "de997381eb4b56d7ee882c61b50ab86cb4046ee74f2e57bc161bf6827b6be67d"
+    },
+    {
+      "path": "modeles/sous_ensembles/roue_motrice_eclatee.glb",
+      "bytes": 177472,
+      "sha256": "b1cb7b7a41ecde2851c44c2649a5c3c064cd19964675deec3942280775e5e104"
+    }
+  ]
+}

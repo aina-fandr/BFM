@@ -1,0 +1,23 @@
+﻿AGV BANCAIRE BFM V4 — CAPTURE DE LA MISSION 3D
+Fichier à ouvrir : Simulation_AGV_capture.html
+Durée : 1 min 45 s. Remise suggérée : MP4 H.264, 1920 × 1080, 30 images/s.
+
+1. Ouvrir le fichier dans Chrome, Edge ou Firefox avec WebGL.
+2. Lancer l’enregistrement de l’écran.
+3. Cliquer sur « Capture plein écran ». La mission repart du début.
+4. Arrêter l’enregistrement après « Mission terminée ». Échap quitte le plein écran.
+   Pendant la capture, Espace met en pause ou reprend. R relance la mission.
+
+00:00–00:08  Présentation du robot et vue éclatée
+00:08–00:28  Déploiement en aile du tapis, prise au sol, relevage guidé, transfert et repli contre le coffre
+00:28–00:46  Trajet de la collecte à l’ascenseur
+00:46–00:57  Descente de la cabine
+00:57–01:13  Trajet vers le dépôt 3
+01:13–01:19  Alignement sur la zone de dépose
+01:19–01:25  Ouverture en aile et déploiement de la pelle
+01:25–01:30  Le poussoir dépose le sac au sol
+01:30–01:35  Repli et fermeture
+01:35–01:42  Retour en zone d’attente
+01:42–01:45  Mission terminée
+
+Vérifier la lecture du MP4 depuis la clé USB sur un autre poste.

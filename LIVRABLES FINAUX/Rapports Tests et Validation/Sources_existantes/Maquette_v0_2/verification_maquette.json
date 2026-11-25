@@ -1,0 +1,62 @@
+{
+  "date": "2026-10-21",
+  "source_plan_sha256": "15536ea9a4bcdde12eba1594144575f0c790a0913a9a255d5487f494fe330dc7",
+  "checks": [
+    {
+      "model": "batiment_complet",
+      "GLB": "PASS",
+      "SDF_XML": "PASS",
+      "objects": 376
+    },
+    {
+      "model": "niveau_depart",
+      "GLB": "PASS",
+      "SDF_XML": "PASS",
+      "objects": 278
+    },
+    {
+      "model": "rez_de_chaussee",
+      "GLB": "PASS",
+      "SDF_XML": "PASS",
+      "objects": 98
+    },
+    {
+      "model": "robot_agv",
+      "GLB": "PASS",
+      "compartment_facades": 4,
+      "objects": 202
+    },
+    {
+      "model": "robot_agv_eclate",
+      "GLB": "PASS",
+      "objects": 202
+    },
+    {
+      "model": "robot_parts",
+      "GLB": "PASS",
+      "files": 202
+    },
+    {
+      "model": "robot_assembly_steps",
+      "GLB": "PASS",
+      "files": 12
+    },
+    {
+      "model": "wheel_subassemblies",
+      "GLB": "PASS",
+      "files": 2
+    }
+  ],
+  "wall_footprints_match_accepted_plan": true,
+  "mesh_normals_and_winding": "PASS",
+  "Gazebo_execution": "NOT_RUN - Gazebo absent de cet environnement",
+  "robot_design_checks": {
+    "compartments": 4,
+    "nominal_payload_kg": 160,
+    "four_drawer_geometry": "PASS"
+  },
+  "limitations": [
+    "Maquette statique, pas de navigation autonome ni de commande d’ascenseur.",
+    "La conception mécanique du robot est un avant-projet : masses, stabilité, pièces, dimensions utiles et essais restent à valider."
+  ]
+}

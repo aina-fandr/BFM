@@ -1,0 +1,11 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 380" role="img" aria-label="Vue de dessus du PCB porteuse AGV">
+<rect width="860" height="380" fill="#edf5f4"/>
+<rect x="28" y="45" width="804" height="285" rx="20" fill="#14564d" stroke="#103a35" stroke-width="4"/>
+<g fill="#edf5f4" stroke="#d8b466" stroke-width="4"><circle cx="54" cy="69" r="8"/><circle cx="806" cy="69" r="8"/><circle cx="54" cy="305" r="8"/><circle cx="806" cy="305" r="8"/></g>
+<g fill="none" stroke="#ffd77c" stroke-width="3" stroke-dasharray="6 4"><path d="M116 151H148M280 151H322M546 151H610M741 151H772M546 250H610M741 250H772"/></g>
+<g fill="#24423f" stroke="#91d0c0" stroke-width="2"><rect x="56" y="128" width="60" height="47" rx="5"/><rect x="148" y="115" width="132" height="73" rx="5"/><rect x="322" y="86" width="224" height="198" rx="8"/><rect x="610" y="115" width="131" height="73" rx="5"/><rect x="610" y="214" width="131" height="73" rx="5"/><rect x="772" y="128" width="42" height="47" rx="5"/><rect x="772" y="227" width="42" height="47" rx="5"/></g>
+<path d="M339 106V264M529 106V264" stroke="#ffd77c" stroke-width="6" stroke-dasharray="4 6"/>
+<rect x="407" y="77" width="54" height="23" rx="3" fill="#c6d4d5"/>
+<g text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="16" fill="white">
+<text x="86" y="157">J1 · 24 V</text><text x="214" y="145">Protection<tspan x="214" dy="23">et DC/DC</tspan></text><text x="434" y="175" font-size="22">NUCLEO-G474RE<tspan x="434" dy="27" font-size="16">Module enfichable</tspan></text><text x="434" y="93" font-size="13" fill="#173044">USB</text><text x="675" y="145">CAN isolé<tspan x="675" dy="23">et terminaison</tspan></text><text x="675" y="244">Adaptation<tspan x="675" dy="23">des entrées</tspan></text><text x="793" y="157">J3</text><text x="793" y="256">J2</text>
+<text x="430" y="26" fill="#173044" font-size="20">BFM V4 · PCB porteuse · vue de dessus</text><text x="430" y="359" fill="#173044">Hors échelle · Pointillés = liaisons fonctionnelles</text></g></svg>

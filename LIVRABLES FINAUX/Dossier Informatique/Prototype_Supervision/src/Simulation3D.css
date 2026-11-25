@@ -1,0 +1,206 @@
+.sim3d-page { display: grid; gap: 11px; width: min(1600px, calc(100% - 48px)); margin: 0 auto; padding: 16px 0 14px; }
+.sim3d-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 52px; }
+.sim3d-title-group { display: flex; align-items: center; gap: 12px; }
+.sim-back-button { display: grid; flex: 0 0 auto; place-items: center; width: 33px; height: 33px; color: #557261; background: #fff; border: 1px solid #e2e9e1; border-radius: 6px; cursor: pointer; }
+.sim3d-title-group .eyebrow { margin-bottom: 3px; font-size: 8px; }
+.sim3d-title-group h1 { margin: 0; font-size: 23px; }
+.sim3d-live { display: flex; align-items: center; gap: 8px; padding: 8px 11px; color: #3e5847; background: #fff; border: 1px solid #e4eae2; border-radius: 6px; font-size: 10px; font-weight: 700; }
+.sim3d-live small { padding-left: 8px; color: #929c94; border-left: 1px solid #e8ece6; font-size: 8px; font-weight: 500; }
+.sim-status-dot, .viewport-dot { width: 7px; height: 7px; border-radius: 50%; background: #84a48a; }
+.sim-status-running { background: #48a86d; box-shadow: 0 0 0 3px #e1f0e5; animation: sim-pulse 1.5s ease-in-out infinite; }
+.sim-status-blocked { background: #ce6548; box-shadow: 0 0 0 3px #f7e4dc; }
+@keyframes sim-pulse { 50% { box-shadow: 0 0 0 6px #e1f0e500; } }
+.sim3d-disclaimer { display: flex; align-items: flex-start; gap: 8px; padding: 8px 10px; color: #6e633d; background: #faf5e9; border: 1px solid #eee5cd; border-radius: 5px; font-size: 9px; line-height: 1.45; }
+.sim3d-disclaimer svg { flex: 0 0 auto; color: #ae8a42; }
+.sim3d-disclaimer strong { color: #5f5129; }
+.sim3d-transport { display: flex; align-items: center; gap: 6px; padding-right: 8px; border-right: 1px solid #edf0eb; }
+.sim-action-button, .sim-icon-button { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 32px; padding: 0 10px; color: #536d5d; background: #f3f6f2; border: 1px solid #e7ece5; border-radius: 5px; font-size: 9px; font-weight: 700; cursor: pointer; }
+.sim-action-play { color: #fff; background: #1f674c; border-color: #1f674c; }
+.sim-action-play:hover { background: #16523b; }
+.sim-action-pause { color: #875533; background: #faf1e8; border-color: #f1e4d5; }
+.sim-action-unloading { color: #356b50; background: #edf5ec; border-color: #dcebdd; cursor: default; }
+.sim-icon-button { width: 32px; padding: 0; color: #738279; background: #fff; }
+.sim-icon-button:hover, .sim-tool-active { color: #286549; background: #eef5ed; }
+.sim-panel-heading { display: flex; align-items: center; justify-content: space-between; gap: 9px; min-height: 36px; padding: 0 11px; color: #536b5b; border-bottom: 1px solid #edf0eb; }
+.sim-panel-heading > span { display: inline-flex; align-items: center; gap: 6px; font-size: 8px; font-weight: 700; letter-spacing: .65px; }
+.sim-panel-heading svg { color: #6b8c74; }
+.sim-panel-heading small { color: #a1aaa2; font-size: 7px; font-weight: 600; letter-spacing: .55px; text-align: right; }
+.sim3d-viewport { position: relative; overflow: hidden; background: #dce6e1; }
+.sim3d-viewport > div:first-child { width: 100%; height: 100%; }
+.viewport-overlay { position: absolute; top: 10px; right: 10px; left: 10px; display: flex; justify-content: space-between; pointer-events: none; }
+.viewport-overlay > span { display: inline-flex; align-items: center; gap: 6px; padding: 5px 7px; color: #e8f2e9; background: #19372bd1; border: 1px solid #a2b9a333; border-radius: 4px; font-size: 7px; font-weight: 700; letter-spacing: .75px; }
+.viewport-overlay svg { width: 12px; height: 12px; }
+.viewport-dot { background: #80d69a; }
+.sim3d-footer { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 7px 14px; padding: 4px 2px 0; color: #98a39a; font-size: 7px; }
+.bank-sim-page { width: min(1660px, calc(100% - 48px)); gap: 10px; padding-top: 14px; }
+.bank-sim-header { min-height: 48px; }
+.bank-sim-header .sim3d-title-group h1 { font-size: 22px; }
+.bank-sim-header .eyebrow { color: #728078; }
+.sim-status-arrived { background: #4b9a69; box-shadow: 0 0 0 3px #e4f1e6; }
+.bank-sim-disclaimer { color: #725b38; background: #fbf6eb; border-color: #efe3ca; }
+.bank-sim-disclaimer svg { color: #b18045; }
+.bank-sim-disclaimer strong { color: #62491f; }
+.bank-sim-toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; min-height: 48px; padding: 6px 8px; background: #fff; border: 1px solid #e5e9e3; border-radius: 7px; }
+.bank-sim-toolbar .sim3d-transport { padding-right: 8px; }
+.bank-sim-destinations { display: flex; align-items: center; gap: 5px; padding: 0 8px; border-right: 1px solid #edf0eb; }
+.bank-sim-destinations > span, .bank-sim-speed > span, .bank-sim-progress > span { color: #89958d; font-size: 7px; font-weight: 700; letter-spacing: .8px; white-space: nowrap; }
+.bank-sim-destinations button { display: inline-flex; align-items: center; gap: 4px; min-height: 28px; padding: 0 7px; color: #718078; background: #f5f7f3; border: 1px solid #e7ece5; border-radius: 4px; font-size: 8px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+.bank-sim-destinations button.destination-active { color: #27654a; background: #eef5eb; border-color: #dbe8d8; }
+.bank-sim-destinations button.destination-active.destination-fallback { color: #91663a; background: #faf2e7; border-color: #efe0c8; }
+.bank-sim-speed { display: flex; align-items: center; gap: 6px; padding: 0 5px; }
+.bank-sim-speed input { width: 55px; height: 3px; accent-color: #40805a; cursor: pointer; }
+.bank-sim-speed strong { color: #526b5c; font-size: 8px; white-space: nowrap; }
+.bank-sim-progress { display: grid; grid-template-columns: auto auto; align-items: center; column-gap: 8px; min-width: 110px; margin-left: auto; }
+.bank-sim-progress strong { color: #47644f; font-size: 8px; }
+.bank-sim-progress > div { grid-column: 1 / -1; height: 3px; overflow: hidden; background: #e9eee8; border-radius: 4px; }
+.bank-sim-progress > div i { display: block; height: 100%; background: #4b9264; transition: width .2s; }
+.bank-sim-grid { display: grid; grid-template-columns: minmax(0, 1.72fr) minmax(310px, .78fr); gap: 10px; align-items: start; }
+.bank-sim-main, .bank-sim-side { display: grid; min-width: 0; gap: 10px; }
+.bank-scene-panel, .bank-route-panel, .bank-sim-info-card, .bank-camera-card { overflow: hidden; background: #fff; border: 1px solid #e5eae3; border-radius: 7px; }
+.bank-3d-viewport { height: clamp(375px, 52vh, 600px); background: #dfe7e1; }
+.bank-3d-viewport > div:first-child, .bank-camera-view > div:first-child { width: 100%; height: 100%; }
+.bank-scene-caption { position: absolute; right: 12px; bottom: 11px; left: 12px; display: flex; align-items: center; gap: 8px; color: #fff; font-size: 7px; font-weight: 700; letter-spacing: .65px; text-shadow: 0 1px 4px #0009; pointer-events: none; }
+.bank-scene-caption i { width: 8px; height: 8px; border: 1px solid #fff; border-radius: 50%; background: #9b8bc0; }
+.bank-scene-legend { display: flex; flex-wrap: wrap; gap: 12px; padding: 9px 11px; }
+.bank-scene-legend span { display: inline-flex; align-items: center; gap: 5px; color: #7b887f; font-size: 7px; }
+.bank-scene-legend i { width: 10px; height: 10px; border-radius: 50%; background: #2878e6; }
+.bank-scene-legend .bank-legend-robot { background: #284238; }
+.bank-scene-legend .bank-legend-lift { background: #9a8dbd; }
+.bank-scene-legend .bank-legend-category { background: #c58c48; }
+.bank-route-panel .sim-panel-heading { min-height: 34px; }
+.bank-route-map-layout { display: grid; grid-template-columns: minmax(250px, .85fr) minmax(170px, 1fr); gap: 10px; padding: 9px; }
+.bank-mini-map { display: block; width: 100%; max-height: 225px; background: #f6f7f4; border: 1px solid #e5eae3; border-radius: 5px; }
+.mini-map-title { fill: #5e7064; font: 700 7px 'DM Sans', sans-serif; letter-spacing: .45px; }
+.mini-map-room-label { fill: #586a5e; font: 700 6px 'DM Sans', sans-serif; text-anchor: middle; }
+.mini-map-dim { fill: #8a968e; font: 5px 'DM Sans', sans-serif; text-anchor: middle; }
+.mini-map-lift { fill: #72648f; font: 700 7px 'DM Sans', sans-serif; text-anchor: middle; }
+.bank-step-list { display: grid; align-content: start; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 5px; }
+.bank-step { display: flex; align-items: center; gap: 6px; min-height: 30px; padding: 4px 6px; color: #8a958d; background: #f8f9f7; border: 1px solid #edf0eb; border-radius: 4px; }
+.bank-step > span { display: grid; flex: 0 0 auto; place-items: center; width: 17px; height: 17px; color: #76837a; background: #edf0ec; border-radius: 50%; font-size: 7px; font-weight: 700; }
+.bank-step small { font-size: 7px; line-height: 1.2; }
+.bank-step.step-complete { color: #4d775c; background: #f2f7f0; }
+.bank-step.step-complete > span { color: #fff; background: #4e8c60; }
+.bank-step.step-current { color: #956639; background: #fbf5e9; border-color: #f0e4d1; }
+.bank-step.step-current > span { color: #fff; background: #c1874b; }
+.bank-sim-info-card { padding-bottom: 8px; }
+.bank-sim-info-card .sim-panel-heading { min-height: 34px; }
+.bank-sim-info-card .sim-panel-heading > span { font-size: 8px; }
+.bank-sim-info-card .sim-panel-heading small { font-size: 6px; }
+.bank-current-location { display: flex; align-items: center; gap: 8px; margin: 10px; padding: 9px; color: #3d6e50; background: #f1f7f0; border-radius: 5px; }
+.bank-current-location > span { display: grid; gap: 3px; }
+.bank-current-location small, .bank-destination-summary > span { color: #8a988d; font-size: 6px; font-weight: 700; letter-spacing: .7px; }
+.bank-current-location strong { color: #45624c; font-size: 9px; }
+.bank-destination-summary { display: grid; gap: 4px; margin: 0 10px 9px; padding: 9px 0; border-bottom: 1px solid #eff1ee; }
+.bank-destination-summary strong { color: #3f5547; font: 600 14px 'Space Grotesk', sans-serif; }
+.bank-destination-summary small { color: #8b968e; font-size: 7px; }
+.bank-capacity-row { display: flex; align-items: center; justify-content: space-between; margin: 0 10px; padding: 6px 0; color: #77847b; border-top: 1px solid #f1f2f0; font-size: 7px; }
+.bank-capacity-row span { display: inline-flex; align-items: center; gap: 6px; }
+.bank-capacity-row svg { color: #718e79; }
+.bank-capacity-row strong { color: #536859; font-size: 8px; }
+.bank-auto-deposit-content { display: grid; gap: 6px; margin: 0 10px; padding: 8px 0 2px; }
+.bank-auto-deposit-content > strong { color: #44634d; font-size: 9px; }
+.bank-auto-deposit-content p { margin: 0; color: #7c8980; font-size: 7px; line-height: 1.5; }
+.bank-auto-deposit-progress { height: 4px; overflow: hidden; background: #e8eee7; border-radius: 4px; }
+.bank-auto-deposit-progress i { display: block; height: 100%; background: #4b9264; transition: width .15s linear; }
+.bank-mechanism-view { position: relative; height: 240px; overflow: hidden; background: #e8eeea; border-bottom: 1px solid #edf0eb; }
+.bank-mechanism-view > div:first-child { width: 100%; height: 100%; }
+.bank-mechanism-axis-label { position: absolute; right: 7px; bottom: 7px; padding: 4px 6px; color: #e9f2ec; background: #21382ed9; border-radius: 3px; font-size: 8px; font-weight: 700; letter-spacing: .45px; pointer-events: none; }
+.bank-mechanism-controls { display: grid; gap: 7px; margin: 0 10px; padding: 9px 0 2px; }
+.bank-mechanism-controls-label { color: #87948b; font-size: 8px; font-weight: 700; letter-spacing: .7px; }
+.bank-compartment-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; }
+.bank-compartment-grid button { display: grid; gap: 3px; justify-items: center; min-height: 39px; padding: 5px 2px; color: #647568; background: #f7f9f6; border: 1px solid #e8ede7; border-radius: 4px; cursor: pointer; }
+.bank-compartment-grid button strong { font-size: 11px; }
+.bank-compartment-grid button small { color: #829087; font-size: 8px; }
+.bank-compartment-grid button.compartment-selected { color: #27654a; background: #eef6ee; border-color: #83b592; box-shadow: inset 0 0 0 1px #83b592; }
+.bank-compartment-grid button.compartment-empty { color: #9c6654; background: #faf3ef; border-color: #efdfd6; }
+.bank-compartment-grid button:disabled { cursor: not-allowed; opacity: .7; }
+.bank-mechanism-actions { display: flex; align-items: center; gap: 6px; }
+.bank-mechanism-actions .sim-action-button { flex: 1; min-height: 32px; font-size: 9px; }
+.bank-mechanism-actions button:disabled { cursor: not-allowed; opacity: .58; }
+.bank-mechanism-stage { display: grid; gap: 4px; padding: 7px; background: #f7f9f6; border: 1px solid #ebefea; border-radius: 4px; }
+.bank-mechanism-stage > div:first-child { display: flex; align-items: baseline; justify-content: space-between; gap: 7px; }
+.bank-mechanism-stage > div:first-child span { color: #8d9990; font-size: 8px; font-weight: 700; white-space: nowrap; }
+.bank-mechanism-stage > div:first-child strong { color: #49624f; font-size: 10px; text-align: right; }
+.bank-mechanism-stage p { margin: 0; color: #7d8981; font-size: 9px; line-height: 1.4; }
+.bank-mechanism-progress { height: 4px; overflow: hidden; background: #e5ebe4; border-radius: 4px; }
+.bank-mechanism-progress i { display: block; height: 100%; background: #398a61; transition: width .05s linear; }
+.bank-mechanism-steps { display: grid; gap: 3px; margin: 0; padding: 0; list-style: none; }
+.bank-mechanism-steps li { display: grid; grid-template-columns: 17px minmax(0, 1fr) auto; align-items: center; gap: 6px; min-height: 23px; padding: 2px 5px; color: #87938a; background: #fafbf9; border: 1px solid #eff2ee; border-radius: 3px; }
+.bank-mechanism-steps li > span { display: grid; place-items: center; width: 17px; height: 17px; color: #738178; background: #edf0ec; border-radius: 50%; font-size: 8px; font-style: normal; font-weight: 700; }
+.bank-mechanism-steps li small { font-size: 8px; }
+.bank-mechanism-steps li em { color: #a0aaa2; font-size: 8px; font-style: normal; }
+.bank-mechanism-steps li.mechanism-step-current { color: #805c37; background: #fcf6eb; border-color: #efe2c9; }
+.bank-mechanism-steps li.mechanism-step-current > span { color: #fff; background: #bd8751; }
+.bank-mechanism-steps li.mechanism-step-done { color: #4d795b; background: #f0f7ef; }
+.bank-mechanism-steps li.mechanism-step-done > span { color: #fff; background: #548b62; }
+.bank-mechanism-readouts { display: grid; grid-template-columns: 1fr 1fr; gap: 0 10px; margin: 0; padding: 5px 0; border-top: 1px solid #edf0eb; }
+.bank-mechanism-readouts > div { display: flex; justify-content: space-between; gap: 4px; padding: 4px 0; border-bottom: 1px solid #f1f3f0; }
+.bank-mechanism-readouts dt { color: #88948b; font-size: 8px; }
+.bank-mechanism-readouts dd { margin: 0; color: #52685a; font-size: 8px; font-weight: 700; text-align: right; }
+.bank-interlock-state { display: grid; gap: 4px; padding: 7px; color: #627568; background: #f5f8f4; border-radius: 4px; }
+.bank-interlock-state span { display: inline-flex; align-items: center; gap: 5px; font-size: 9px; }
+.bank-interlock-state i { width: 6px; height: 6px; border-radius: 50%; background: #76a47a; }
+.bank-interlock-state i.interlock-active { background: #459363; box-shadow: 0 0 0 2px #dfefe1; }
+.bank-interlock-state i.interlock-open { background: #c1844d; box-shadow: 0 0 0 2px #f4e8d7; }
+.bank-interlock-state small { margin-top: 2px; color: #8e9990; font-size: 8px; line-height: 1.4; }
+.bank-package-glyph { color: #7d8d80; font-size: 6px; font-weight: 800; }
+.bank-geometry-card dl { display: grid; gap: 0; margin: 5px 10px 4px; }
+.bank-geometry-card dl > div { display: flex; justify-content: space-between; gap: 8px; padding: 6px 0; border-bottom: 1px solid #f0f2ef; }
+.bank-geometry-card dt { color: #859188; font-size: 7px; }
+.bank-geometry-card dd { margin: 0; color: #54685a; font-size: 7px; font-weight: 700; text-align: right; }
+.bank-validation-note { display: flex; align-items: flex-start; gap: 5px; margin: 8px 10px 1px; padding: 7px; color: #8c6240; background: #fbf5e9; border-radius: 4px; font-size: 7px; line-height: 1.35; }
+.bank-validation-note svg { flex: 0 0 auto; }
+.bank-sensor-row { display: flex; align-items: center; gap: 8px; min-height: 35px; margin: 0 10px; border-bottom: 1px solid #eff1ee; }
+.bank-sensor-row > svg { flex: 0 0 auto; color: #62826e; }
+.bank-sensor-row > span:nth-child(2) { display: grid; gap: 2px; margin-right: auto; }
+.bank-sensor-row strong { color: #58695d; font-size: 7px; }
+.bank-sensor-row small { color: #929c95; font-size: 6px; }
+.bank-sensor-row > i { width: 6px; height: 6px; border-radius: 50%; background: #c6c9c5; }
+.bank-camera-strip { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(180px, .9fr); gap: 9px; }
+.bank-camera-card { min-width: 0; }
+.bank-camera-heading { display: flex; align-items: center; justify-content: space-between; min-height: 29px; padding: 0 8px; border-bottom: 1px solid #eff1ee; color: #617368; }
+.bank-camera-heading > span { display: inline-flex; align-items: center; gap: 5px; font-size: 7px; font-weight: 700; }
+.bank-camera-heading small { color: #98a199; font-size: 5px; font-weight: 700; }
+.bank-camera-view { position: relative; height: 124px; overflow: hidden; background: #dfe7e1; }
+.bank-feed-label { position: absolute; right: 5px; bottom: 5px; max-width: calc(100% - 10px); overflow: hidden; padding: 4px 5px; color: #e5eee6; background: #1e362bd9; border-radius: 3px; font: 6px 'DM Sans', sans-serif; text-overflow: ellipsis; white-space: nowrap; }
+.bank-camera-disclaimer { display: flex; align-items: flex-start; gap: 8px; padding: 12px 10px; color: #7b877f; background: #fff; border: 1px solid #e5eae3; border-radius: 7px; font-size: 7px; line-height: 1.45; }
+.bank-camera-disclaimer svg { flex: 0 0 auto; color: #6d8c75; }
+.bank-camera-disclaimer strong { color: #586b5d; }
+.bank-sim-footer { font-size: 7px; }
+.bank-sim-footer > span { display: inline-flex; align-items: center; gap: 5px; }
+.bank-sim-footer svg { color: #6e8a74; }
+
+@media (max-width: 1000px) {
+  .bank-sim-grid { grid-template-columns: minmax(0, 1fr); }
+  .bank-sim-side { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bank-sim-side > :first-child, .bank-sim-side > :last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 700px) {
+  .bank-sim-page { width: calc(100% - 24px); padding-top: 10px; }
+  .bank-sim-header { align-items: flex-start; }
+  .bank-sim-header .sim3d-title-group h1 { font-size: 18px; }
+  .bank-sim-header .sim3d-live { padding: 7px; font-size: 8px; }
+  .bank-sim-header .sim3d-live small { display: none; }
+  .bank-sim-toolbar { align-items: flex-start; }
+  .bank-sim-destinations { order: 3; width: 100%; flex-wrap: wrap; border: 0; padding: 3px 0; }
+  .bank-sim-destinations > span { width: 100%; }
+  .bank-sim-destinations button { flex: 1; justify-content: center; }
+  .bank-sim-progress { min-width: 78px; }
+  .bank-3d-viewport { height: 360px; }
+  .bank-route-map-layout { grid-template-columns: 1fr; }
+  .bank-mini-map { max-height: 205px; }
+  .bank-sim-side { grid-template-columns: 1fr; }
+  .bank-sim-side > :first-child, .bank-sim-side > :last-child { grid-column: auto; }
+  .bank-camera-strip { grid-template-columns: 1fr 1fr; }
+  .bank-camera-disclaimer { grid-column: 1 / -1; }
+}
+@media (max-width: 440px) {
+  .bank-sim-header { flex-direction: column; }
+  .bank-sim-live { align-self: flex-end; }
+  .bank-sim-toolbar .sim3d-transport { width: 100%; }
+  .bank-sim-speed { margin-right: auto; }
+  .bank-3d-viewport { height: 320px; }
+  .bank-camera-strip { grid-template-columns: 1fr; }
+  .bank-camera-disclaimer { grid-column: auto; }
+  .bank-step-list { grid-template-columns: 1fr 1fr; }
+}

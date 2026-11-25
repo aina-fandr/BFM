@@ -1,0 +1,50 @@
+@startuml
+left to right direction
+
+actor "Opérateur d'exploitation" as Operator
+actor "AGV bancaire" as AGV
+actor "Passerelle robotique\n(future)" as Gateway
+
+rectangle "Prototype de supervision AGV bancaire" {
+  usecase "Consulter l'état simulé\nde l'AGV" as UC_Status
+  usecase "Consulter la file\ndes missions" as UC_Queue
+  usecase "Créer une mission\nde transfert" as UC_Create
+  usecase "Choisir la catégorie\nde sacs C1/C2/C3" as UC_Category
+  usecase "Choisir la destination\n(Dépôt 3 / Dépôt 1)" as UC_Destination
+  usecase "Lancer la prochaine\nmission FIFO" as UC_Start
+  usecase "Suspendre ou reprendre\nune mission simulée" as UC_Pause
+  usecase "Simuler une alerte\nbatterie / connexion" as UC_Alert
+  usecase "Visualiser le site\nsur deux niveaux" as UC_Plan
+  usecase "Simuler le trajet\net l'ascenseur A" as UC_Simulation
+  usecase "Recevoir la télémétrie\net transmettre une mission" as UC_Integration
+}
+
+Operator --> UC_Status
+Operator --> UC_Queue
+Operator --> UC_Create
+Operator --> UC_Start
+Operator --> UC_Pause
+Operator --> UC_Alert
+Operator --> UC_Plan
+Operator --> UC_Simulation
+
+UC_Create ..> UC_Category : <<include>>
+UC_Create ..> UC_Destination : <<include>>
+
+Gateway --> UC_Integration
+AGV --> UC_Integration
+
+note right of UC_Simulation
+Simulation locale uniquement :
+aucune commande n'est envoyée
+à un AGV réel et la géométrie
+n'est pas une validation de sécurité.
+end note
+
+note bottom of UC_Integration
+Passerelle, authentification et interfaces
+réelles à définir après validation du
+modèle d'AGV et de ses capacités.
+end note
+
+@enduml

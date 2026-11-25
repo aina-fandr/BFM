@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guide de procédure conceptuel — AGV BFM V2</title>
+  <style>
+    :root {
+      --navy: #14324a;
+      --blue: #176b87;
+      --teal: #16877d;
+      --ink: #20313d;
+      --muted: #5d6e79;
+      --line: #d7e1e6;
+      --pale: #edf5f7;
+      --green: #e8f4ef;
+      --amber: #fff3dc;
+      --red: #fbe9e7;
+      --white: #fff;
+    }
+    @page {
+      size: A4;
+      margin: 15mm 16mm 17mm;
+      @bottom-left {
+        content: "AGV BFM V2 • GUIDE CONCEPTUEL • NE VAUT PAS AUTORISATION D'EXPLOITATION";
+        color: #647783;
+        font: 8pt Arial, sans-serif;
+      }
+      @bottom-right {
+        content: "Page " counter(page);
+        color: #647783;
+        font: 8pt Arial, sans-serif;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font: 10pt/1.42 Arial, Helvetica, sans-serif;
+      background: #e8eef1;
+    }
+    .sheet {
+      width: 178mm;
+      min-height: 265mm;
+      margin: 12mm auto;
+      padding: 0;
+      background: var(--white);
+      page-break-after: always;
+      break-after: page;
+    }
+    .sheet:last-child { page-break-after: auto; break-after: auto; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { margin-bottom: 5mm; color: var(--navy); font-size: 30pt; line-height: 1.08; }
+    h2 {
+      margin: 0 0 4mm;
+      padding-bottom: 2mm;
+      color: var(--navy);
+      font-size: 19pt;
+      border-bottom: 2px solid var(--teal);
+    }
+    h3 { margin: 4mm 0 1.5mm; color: var(--blue); font-size: 12pt; }
+    p { margin-bottom: 2.5mm; }
+    ul, ol { margin: 1.5mm 0 3mm; padding-left: 6mm; }
+    li { margin: 1mm 0; }
+    strong { color: var(--navy); }
+    .eyebrow {
+      margin: 0 0 4mm;
+      color: var(--teal);
+      font-size: 9pt;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+    .subhead { max-width: 150mm; color: var(--muted); font-size: 15pt; line-height: 1.35; }
+    .meta { margin-top: 9mm; color: var(--muted); font-size: 9pt; }
+    .banner, .note, .stop, .ok {
+      margin: 3mm 0;
+      padding: 3mm 4mm;
+      border-left: 4px solid;
+      border-radius: 2px;
+      break-inside: avoid;
+    }
+    .banner { background: var(--red); border-color: #ba4137; }
+    .note { background: var(--amber); border-color: #d18a1c; }
+    .stop { background: var(--red); border-color: #ba4137; }
+    .ok { background: var(--green); border-color: var(--teal); }
+    .banner b, .stop b { color: #8d2923; }
+    .note b { color: #85530c; }
+    .ok b { color: #176c62; }
+    .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+    .card {
+      padding: 3mm 4mm;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      break-inside: avoid;
+    }
+    .card h3 { margin-top: 0; }
+    .small { color: var(--muted); font-size: 8.5pt; }
+    .tag {
+      display: inline-block;
+      padding: 1mm 2mm;
+      border-radius: 3px;
+      background: var(--pale);
+      color: var(--blue);
+      font-size: 8pt;
+      font-weight: bold;
+    }
+    table {
+      width: 100%;
+      margin: 2mm 0 4mm;
+      border-collapse: collapse;
+      font-size: 9pt;
+      break-inside: avoid;
+    }
+    th, td { padding: 2mm; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { background: var(--pale); color: var(--navy); }
+    .checklist { list-style: none; padding: 0; }
+    .checklist li { position: relative; padding-left: 7mm; margin: 2mm 0; }
+    .checklist li::before {
+      position: absolute;
+      left: 0;
+      content: "□";
+      color: var(--blue);
+      font-size: 14pt;
+      line-height: 1;
+    }
+    .step {
+      margin: 3mm 0;
+      padding: 3mm 4mm;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--blue);
+      border-radius: 3px;
+      break-inside: avoid;
+    }
+    .step-title { margin-bottom: 1.5mm; color: var(--navy); font-size: 11pt; font-weight: bold; }
+    .step p { margin-bottom: 1.5mm; }
+    .action-label { color: var(--blue); font-weight: bold; }
+    .stop-label { color: #9c2e28; font-weight: bold; }
+    .flow {
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      gap: 2mm;
+      margin: 4mm 0;
+    }
+    .flow span {
+      flex: 1;
+      padding: 2.5mm 1.5mm;
+      border: 1px solid #bdd1d9;
+      border-radius: 4px;
+      background: var(--pale);
+      color: var(--navy);
+      font-size: 8pt;
+      font-weight: bold;
+      text-align: center;
+    }
+    .flow i { align-self: center; color: var(--teal); font-style: normal; font-weight: bold; }
+    .compartments {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2mm;
+      width: 84mm;
+      margin: 3mm auto;
+    }
+    .compartments div {
+      padding: 5mm 2mm;
+      border: 2px solid var(--blue);
+      border-radius: 4px;
+      background: var(--pale);
+      color: var(--navy);
+      font-size: 10pt;
+      font-weight: bold;
+      text-align: center;
+    }
+    .legend { margin: 1mm 0 3mm; color: var(--muted); font-size: 8pt; text-align: center; }
+    .signoff { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; margin-top: 7mm; }
+    .signline { padding-top: 8mm; border-bottom: 1px solid var(--muted); color: var(--muted); font-size: 8pt; }
+    .source { margin-top: 4mm; color: var(--muted); font-size: 8pt; }
+    .keep { break-inside: avoid; }
+    @media print {
+      body { background: #fff; }
+      .sheet { width: auto; min-height: 0; margin: 0; }
+      a { color: inherit; text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="sheet">
+      <p class="eyebrow">Avant-projet mécanique • version de travail</p>
+      <h1>Guide de procédure<br>AGV bancaire BFM V2</h1>
+      <p class="subhead">Un déroulement clair, depuis la préparation d'une mission jusqu'au dépôt contrôlé d'un sac dans sa zone C1, C2 ou C3.</p>
+      <div class="banner">
+        <b>Document conceptuel — pas une procédure d'exploitation.</b>
+        Le robot, ses tiroirs, la station élévatrice, les capteurs et les interverrouillages ne sont ni fabriqués ni validés. Ne pas utiliser ce document pour commander un équipement réel ou transporter des fonds.
+      </div>
+      <h2>À quoi sert ce guide ?</h2>
+      <p>Il décrit le comportement visé pour un AGV transportant jusqu'à quatre sacs, dans quatre compartiments indépendants. Il précise, pour chaque phase, qui agit, ce qui doit se produire et quand arrêter le cycle. Il sert à discuter la conception, préparer une maquette et définir les essais à réaliser avec l'encadrement et le responsable du site.</p>
+      <div class="flow" aria-label="Résumé du cycle">
+        <span>Préparer<br>la mission</span><i>›</i>
+        <span>Charger<br>et vérifier</span><i>›</i>
+        <span>Accoster<br>et immobiliser</span><i>›</i>
+        <span>Transférer<br>sans chute</span><i>›</i>
+        <span>Vérifier<br>et verrouiller</span>
+      </div>
+      <h2>Architecture de référence</h2>
+      <div class="grid2">
+        <div class="card">
+          <h3>Quatre compartiments</h3>
+          <div class="compartments">
+            <div>S1 — haut gauche</div><div>S2 — haut droit</div>
+            <div>S3 — bas gauche</div><div>S4 — bas droit</div>
+          </div>
+          <p class="legend">Un sac par compartiment • un seul tiroir ouvert à la fois</p>
+          <p class="small">La catégorie du sac est associée à la mission. Le mécanisme ne reconnaît ni le contenu ni la catégorie.</p>
+        </div>
+        <div class="card">
+          <h3>Station fixe de réception</h3>
+          <ol>
+            <li>Le robot s'immobilise et s'aligne.</li>
+            <li>Le plateau récepteur se règle à la hauteur du tiroir.</li>
+            <li>Un support continu assure le transfert horizontal.</li>
+            <li>La station dirige le sac vers la zone commandée C1, C2 ou C3.</li>
+            <li>Le tiroir revient et se verrouille avant tout déplacement.</li>
+          </ol>
+        </div>
+      </div>
+      <p class="meta"><b>Public visé :</b> étudiants, encadrant de laboratoire et équipe de conception.<br><b>Référence :</b> conception mécanique AGV BFM V2 — valeurs indicatives, à mesurer et recalculer.</p>
+    </section>
+
+    <section class="sheet">
+      <p class="eyebrow">01 • Règles d'emploi du concept</p>
+      <h2>Rôles, repères et règles non négociables</h2>
+      <div class="grid2">
+        <div class="card">
+          <h3>Opérateur habilité</h3>
+          <ul>
+            <li>Prépare la mission et vérifie l'association sac–compartiment–catégorie.</li>
+            <li>Contrôle visuellement la zone, la station et l'état affiché.</li>
+            <li>Ne contourne jamais un verrou, un capteur ou un arrêt.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Superviseur / technicien</h3>
+          <ul>
+            <li>Autorise la mission et confirme le dépôt de destination.</li>
+            <li>Traite les anomalies selon une procédure validée par le laboratoire.</li>
+            <li>Consigne les essais et interdit la reprise après un défaut non résolu.</li>
+          </ul>
+        </div>
+      </div>
+      <h3>Repères à conserver tout au long du cycle</h3>
+      <table>
+        <thead><tr><th>Repère</th><th>Signification</th><th>Règle</th></tr></thead>
+        <tbody>
+          <tr><td><b>S1–S4</b></td><td>Compartiment physique sélectionné</td><td>Vérifier l'étiquette et l'état du casier avant chaque déchargement.</td></tr>
+          <tr><td><b>C1–C3</b></td><td>Catégorie et zone de réception</td><td>La destination doit être confirmée par la mission et le responsable habilité.</td></tr>
+          <tr><td><b>Verrou confirmé</b></td><td>Retour mécanique en position fermée</td><td>Sans confirmation, le robot reste immobilisé.</td></tr>
+          <tr><td><b>Arrêt / défaut</b></td><td>Cycle interrompu ou état incohérent</td><td>Pas de réarmement ni de reprise automatique sans diagnostic autorisé.</td></tr>
+        </tbody>
+      </table>
+      <div class="stop"><b>Priorité absolue : personnes et charge.</b> Aucun essai avec un sac réel ni présence de main dans les parties mobiles. Pendant la conception, utiliser une charge d'essai inerte, progressive et approuvée par l'encadrant, après analyse de risques.</div>
+      <h3>Conditions préalables à toute démonstration</h3>
+      <ul class="checklist">
+        <li>Essai encadré, zone balisée et personnes non impliquées éloignées du mécanisme.</li>
+        <li>Arrêt d'urgence accessible, énergie isolable et consigne de coupure définie.</li>
+        <li>Robot immobilisé sur sol stable ; station de réception mécaniquement fixée.</li>
+        <li>Un seul tiroir autorisé en mouvement ; les trois autres restent fermés.</li>
+        <li>Traction interdite dès le début de l'accostage et jusqu'à la confirmation de fermeture.</li>
+        <li>Catégorie, emplacement de réception et autorisation de la mission vérifiés indépendamment.</li>
+      </ul>
+      <div class="note"><b>Avant validation :</b> les règles de sécurité, le contrôle d'accès, la chaîne de garde et les actions d'urgence doivent être définis avec l'établissement et le responsable du site. Ce guide ne les remplace pas.</div>
+    </section>
+
+    <section class="sheet">
+      <p class="eyebrow">02 • Avant le départ</p>
+      <h2>Préparer, charger et lancer une mission</h2>
+      <div class="step">
+        <div class="step-title">Étape A — Préparer la mission <span class="tag">Opérateur + superviseur</span></div>
+        <p><span class="action-label">Action :</span> sélectionner la destination, la catégorie C1/C2/C3 et le compartiment prévu S1–S4. Comparer ces informations à l'ordre de mission et faire confirmer le dépôt par le superviseur.</p>
+        <p><b>Résultat attendu :</b> une seule destination et une seule catégorie sont clairement associées au sac.</p>
+        <p><span class="stop-label">Arrêter si :</span> l'ordre est incomplet, la catégorie ou la zone de dépôt est ambiguë, ou la destination n'est pas autorisée.</p>
+      </div>
+      <div class="step">
+        <div class="step-title">Étape B — Contrôler le robot et le trajet <span class="tag">Opérateur</span></div>
+        <p><span class="action-label">Action :</span> vérifier l'arrêt d'urgence, l'état de la batterie, les roues, les portes et verrous des casiers, l'absence d'obstacle et la disponibilité du trajet, des portes et de l'ascenseur.</p>
+        <p><b>Résultat attendu :</b> aucun défaut actif ; les dégagements mesurés sont libres ; l'ascenseur et le point de dépôt sont disponibles.</p>
+        <p><span class="stop-label">Arrêter si :</span> un défaut est affiché, une porte/issue est bloquée, le sol ou le seuil est inconnu, ou la réception est occupée.</p>
+      </div>
+      <div class="step">
+        <div class="step-title">Étape C — Charger un sac <span class="tag">Personnel habilité</span></div>
+        <p><span class="action-label">Action :</span> avec le robot immobilisé et le chargement autorisé, placer un sac dans le compartiment assigné. Vérifier son maintien, la fermeture du tiroir et l'indication de présence, si le prototype en dispose.</p>
+        <p><b>Résultat attendu :</b> un seul sac identifié et correctement retenu dans le casier assigné ; le verrou est confirmé fermé.</p>
+        <p><span class="stop-label">Arrêter si :</span> le sac frotte, dépasse, gêne la fermeture, est mal retenu ou si sa masse/dimension excède une limite validée.</p>
+      </div>
+      <div class="note"><b>Charge :</b> 40 kg par tiroir et 160 kg au total sont des objectifs de conception, pas des capacités certifiées. Peser les charges d'essai ; ne jamais déduire une capacité sûre de la seule animation.</div>
+      <div class="step">
+        <div class="step-title">Étape D — Faire le contrôle croisé puis autoriser le départ <span class="tag">Deux personnes habilitées</span></div>
+        <p><span class="action-label">Action :</span> relire à voix haute ou sur une fiche : identification du sac, tiroir S1–S4, catégorie C1–C3 et dépôt. Confirmer que tous les tiroirs sont fermés, que la station n'est pas en cycle et que la voie est libre.</p>
+        <p><b>Résultat attendu :</b> concordance entre la mission et l'état physique ; autorisation de déplacement enregistrée.</p>
+        <p><span class="stop-label">Arrêter si :</span> une donnée diffère ou si l'une des deux personnes ne peut pas confirmer.</p>
+      </div>
+      <h3>Pendant le trajet</h3>
+      <p>Le robot suit uniquement un itinéraire et un comportement de sécurité préalablement validés. L'opérateur surveille les alertes et garde la possibilité d'arrêter la mission. Il ne pousse pas le robot, ne déplace pas une porte ou un obstacle dans sa trajectoire et ne demande jamais un dépôt pendant le déplacement.</p>
+    </section>
+
+    <section class="sheet">
+      <p class="eyebrow">03 • À la station de dépôt</p>
+      <h2>Accoster et préparer le transfert</h2>
+      <div class="ok"><b>À l'arrivée :</b> le déchargement ne commence qu'après immobilisation confirmée, autorisation de mission et contrôle de disponibilité de la station.</div>
+      <div class="step">
+        <div class="step-title">Étape 1 — Arrivée et immobilisation <span class="tag">Robot + opérateur</span></div>
+        <p><span class="action-label">Action :</span> le robot rejoint le repère d'accostage défini. L'opérateur vérifie l'arrêt complet, l'inhibition de traction et l'absence de personne ou d'objet dans la zone de mouvement.</p>
+        <p><b>Résultat attendu :</b> robot immobile, frein/maintien activé et état « prêt à accoster » confirmé.</p>
+        <p><span class="stop-label">Arrêter si :</span> le robot dépasse le repère, bouge encore, perd sa localisation ou si la zone n'est pas libre.</p>
+      </div>
+      <div class="step">
+        <div class="step-title">Étape 2 — Aligner et immobiliser la station <span class="tag">Opérateur + superviseur</span></div>
+        <p><span class="action-label">Action :</span> confirmer le centrage des références du robot et de la station, le contact des appuis et le verrouillage de l'interface. Comparer la position prévue du plateau à la hauteur du tiroir demandé.</p>
+        <p><b>Résultat attendu :</b> aucune fente dangereuse entre les supports ; station fixée et alignement confirmé avant mouvement.</p>
+        <p><span class="stop-label">Arrêter si :</span> l'interface n'est pas centrée, le sol bouge, un appui manque ou les supports ne sont pas continus.</p>
+      </div>
+      <div class="step">
+        <div class="step-title">Étape 3 — Choisir un casier et extraire un tiroir <span class="tag">Commande supervisée</span></div>
+        <p><span class="action-label">Action :</span> vérifier à nouveau S1–S4, le sac attendu et sa catégorie. Commander l'alignement du plateau puis déverrouiller et extraire uniquement le tiroir choisi, lentement et jusqu'à la position surveillée.</p>
+        <p><b>Résultat attendu :</b> tiroir retenu par ses guides et sa butée ; le sac reste stable ; aucun des autres tiroirs ne s'ouvre.</p>
+        <p><span class="stop-label">Arrêter si :</span> la hauteur n'est pas confirmée, le tiroir se met de travers, le sac glisse, le mécanisme force ou un autre verrou change d'état.</p>
+      </div>
+      <div class="note"><b>Position à confirmer :</b> l'animation montre des hauteurs d'environ 0,878 m pour S1/S2 et 0,513 m pour S3/S4, ainsi qu'une course d'extraction d'environ 0,35 m. Ces valeurs sont provisoires et ne sont pas des cotes de fabrication.</div>
+      <h3>Avant le transfert : point d'arrêt obligatoire</h3>
+      <ul class="checklist">
+        <li>Robot et station toujours immobilisés ; traction inhibée.</li>
+        <li>Un seul tiroir extrait ; charge et retenue stables.</li>
+        <li>Plateau récepteur à niveau, aligné et verrouillé.</li>
+        <li>Zone de pincement interdite au personnel ; protections opérationnelles.</li>
+        <li>Zone C1, C2 ou C3 confirmée et libre pour recevoir le sac.</li>
+      </ul>
+    </section>
+
+    <section class="sheet">
+      <p class="eyebrow">04 • Transfert et fin de cycle</p>
+      <h2>Déposer, confirmer, refermer</h2>
+      <div class="step">
+        <div class="step-title">Étape 4 — Transférer et trier sans chute libre <span class="tag">Cycle surveillé</span></div>
+        <p><span class="action-label">Action :</span> activer le transfert guidé seulement après toutes les confirmations précédentes. Le sac passe du tiroir au plateau sur un support continu ; la station le dirige vers la zone correspondant à C1, C2 ou C3.</p>
+        <p><b>Résultat attendu :</b> sac entièrement sur la réception, stable, sans chute, coincement ni déformation anormale. La détection de présence doit confirmer l'arrivée avant le mouvement suivant.</p>
+        <p><span class="stop-label">Arrêter si :</span> le sac n'avance pas, se coince, bascule, arrive dans une mauvaise zone ou si la détection est contradictoire. Ne pas pousser le sac à la main pendant que le mécanisme est alimenté.</p>
+      </div>
+      <div class="step">
+        <div class="step-title">Étape 5 — Rentrer, verrouiller et clôturer <span class="tag">Robot + opérateur</span></div>
+        <p><span class="action-label">Action :</span> après confirmation du sac sur la réception, rentrer le tiroir vide. Contrôler la position de fin de course et le verrouillage ; confirmer que le tiroir est vide et que la station est revenue dans son état sûr.</p>
+        <p><b>Résultat attendu :</b> tiroir complètement fermé et verrou confirmé ; tous les autres casiers fermés ; aucune charge sur le pont de transfert.</p>
+        <p><span class="stop-label">Arrêter si :</span> le tiroir ne rentre pas librement, le verrou n'est pas confirmé, un capteur signale encore un sac ou la station reste engagée.</p>
+      </div>
+      <div class="step">
+        <div class="step-title">Étape 6 — Autoriser le départ et enregistrer <span class="tag">Superviseur</span></div>
+        <p><span class="action-label">Action :</span> vérifier les états fermés/verrouillés, désengager l'interface selon sa procédure validée, consigner le compartiment vidé, la catégorie et la zone de réception, puis autoriser le départ.</p>
+        <p><b>Résultat attendu :</b> aucune commande de traction avant la confirmation de fermeture et l'autorisation du superviseur.</p>
+        <p><span class="stop-label">Arrêter si :</span> l'enregistrement ou l'état physique ne concorde pas ; garder le robot immobilisé.</p>
+      </div>
+      <h3>Logique d'autorisation du mouvement</h3>
+      <div class="flow">
+        <span>Robot<br>immobile</span><i>+</i>
+        <span>Tiroir<br>rentré</span><i>+</i>
+        <span>Verrou<br>confirmé</span><i>+</i>
+        <span>Station<br>dégagée</span><i>→</i>
+        <span>Départ<br>autorisé</span>
+      </div>
+      <div class="stop"><b>Un seul état manquant = pas de départ.</b> En cas de perte d'alimentation, panne de capteur ou défaut de commande, considérer la charge comme non sécurisée jusqu'à inspection par une personne autorisée.</div>
+    </section>
+
+    <section class="sheet">
+      <p class="eyebrow">05 • Incident, arrêt et reprise</p>
+      <h2>Que faire si quelque chose ne va pas ?</h2>
+      <table>
+        <thead><tr><th>Situation observée</th><th>Action immédiate</th><th>Reprise</th></tr></thead>
+        <tbody>
+          <tr><td>Obstacle, personne ou perte de trajectoire</td><td>Arrêter le déplacement ; garder les personnes à distance ; prévenir le superviseur.</td><td>Après libération de la zone et nouvelle autorisation selon la consigne validée.</td></tr>
+          <tr><td>Écart d'alignement robot–station</td><td>Ne pas ouvrir le tiroir. Maintenir l'immobilisation et signaler l'écart.</td><td>Après repositionnement contrôlé et confirmation des références.</td></tr>
+          <tr><td>Tiroir bloqué, bruit ou effort anormal</td><td>Arrêter le cycle ; ne pas tirer/pousser à la main ; empêcher tout départ.</td><td>Technicien habilité seulement, après mise en sécurité et diagnostic.</td></tr>
+          <tr><td>Sac coincé, instable ou détecteur incohérent</td><td>Arrêter le mécanisme et baliser la zone ; ne pas contourner le capteur.</td><td>Après sécurisation de la charge et résolution documentée du défaut.</td></tr>
+          <tr><td>Verrou non confirmé ou perte d'énergie</td><td>Traction interdite ; considérer le tiroir et la charge comme non sécurisés.</td><td>Après isolement/consignation suivant la procédure locale et inspection autorisée.</td></tr>
+          <tr><td>Destination ou catégorie incertaine</td><td>Ne pas transférer. Garder la charge en état stable et prévenir le superviseur.</td><td>Après vérification indépendante de l'ordre de mission.</td></tr>
+        </tbody>
+      </table>
+      <div class="stop"><b>Consigne générale :</b> arrêter, maintenir les personnes à distance, empêcher le déplacement du robot et prévenir le superviseur. Ne jamais neutraliser un arrêt d'urgence, un verrou, une protection ou un capteur pour terminer une mission.</div>
+      <h3>Après un arrêt d'urgence</h3>
+      <ol>
+        <li>Ne pas réarmer immédiatement et ne pas demander au robot de repartir.</li>
+        <li>Vérifier depuis une position sûre si le sac est soutenu, si le tiroir est sorti et si la station est en charge.</li>
+        <li>Faire appliquer la procédure d'isolement des énergies définie par le laboratoire, par une personne habilitée.</li>
+        <li>Consigner l'événement, les voyants et la position des éléments sans entrer dans la zone de pincement.</li>
+        <li>Ne reprendre qu'après diagnostic, remise en état et autorisation formelle du responsable technique.</li>
+      </ol>
+      <div class="note"><b>À définir localement avant tout essai :</b> emplacement des arrêts, méthode d'isolement électrique, supportage d'un tiroir en extension, moyen de récupération d'une charge et contacts d'urgence. Le guide ne peut pas définir ces détails sans connaître le matériel réel.</div>
+    </section>
+
+    <section class="sheet">
+      <p class="eyebrow">06 • Validation avant fabrication</p>
+      <h2>Mesures, décisions et critères de passage</h2>
+      <p>Les dimensions suivantes décrivent une enveloppe de travail pour la maquette. Elles ne constituent ni un plan de fabrication ni une preuve de capacité.</p>
+      <table>
+        <thead><tr><th>Paramètre de travail</th><th>Valeur proposée</th><th>À vérifier avant de figer</th></tr></thead>
+        <tbody>
+          <tr><td>Châssis</td><td>1,10 × 0,70 m</td><td>Largeurs de portes, couloirs, ascenseur, virages et dégagements réels.</td></tr>
+          <tr><td>Coffre extérieur</td><td>1,00 × 0,50 × 0,75 m</td><td>Épaisseur des parois, mécanismes, accès et stabilité.</td></tr>
+          <tr><td>Hauteur totale</td><td>Environ 1,12 m</td><td>Inclure protections, arrêt d'urgence et éléments réellement montés.</td></tr>
+          <tr><td>Compartiment intérieur</td><td>Environ 0,46 × 0,44 × 0,30 m</td><td>Mesurer les sacs pleins, poignées et fermetures ; tester leur insertion.</td></tr>
+          <tr><td>Charge par compartiment</td><td>40 kg visés</td><td>Peser, calculer et tester tiroir, rails, butées, roues, châssis et freinage.</td></tr>
+          <tr><td>Charge totale</td><td>160 kg visés</td><td>Calculer masse totale, centre de gravité et stabilité en déplacement.</td></tr>
+          <tr><td>Course tiroir / réception</td><td>Environ 0,35 m / hauteur réglable</td><td>Mesurer le poste, la continuité d'appui, la course utile et les risques de pincement.</td></tr>
+        </tbody>
+      </table>
+      <h3>Liste de validation à remplir par l'équipe</h3>
+      <ul class="checklist">
+        <li>Sacs pleins mesurés et pesés ; tolérances, maintien et affectation S1–S4 définis.</li>
+        <li>Gabarit de l'AGV essayé sur site, avec portes, seuils, cabine et virages mesurés.</li>
+        <li>Zone libre devant la station mesurée avec le tiroir complètement extrait.</li>
+        <li>Type de transfert choisi et éprouvé avec une charge inerte représentative.</li>
+        <li>Rails, actionneurs, freins, verrous, butées et structure calculés pour les cas réels.</li>
+        <li>Capteurs, détection de sac, anti-pincement, arrêt sûr et interverrouillages définis.</li>
+        <li>Disponibilité locale des composants, coût, maintenance et méthode de remplacement vérifiés.</li>
+        <li>Analyse de risques, essais de charge et procédure d'exploitation approuvés par les responsables.</li>
+      </ul>
+      <div class="banner"><b>Passage à la fabrication :</b> aucun composant porteur, actionneur ou dispositif de sécurité ne doit être dimensionné uniquement à partir des valeurs de cette maquette ou d'une animation. Les calculs, essais et autorisations restent à réaliser.</div>
+      <div class="signoff">
+        <div class="signline">Encadrant / responsable technique — nom, date, validation</div>
+        <div class="signline">Responsable du site — nom, date, validation des règles</div>
+      </div>
+      <p class="source">Document de travail associé à l'avant-projet mécanique AGV BFM V2. Les hauteurs de tiroirs (≈ 0,878 m haut, ≈ 0,513 m bas), la réception (≈ 0,39 m), la course et les dimensions sont des indications de simulation à confirmer sur le modèle réel.</p>
+    </section>
+  </main>
+</body>
+</html>

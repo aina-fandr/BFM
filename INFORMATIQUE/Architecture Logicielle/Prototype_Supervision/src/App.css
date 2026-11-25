@@ -1,0 +1,36 @@
+#root { min-height: 100vh; }
+.app-shell { min-height: 100vh; overflow-x: hidden; background: var(--canvas); }
+.topbar { min-height: 68px; padding: 0 max(4.2vw, 22px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; background: #fff; border-bottom: 1px solid var(--line); }
+.brand { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; }
+.brand-mark { width: 32px; height: 32px; display: grid; place-items: center; color: #fff; background: var(--green); border-radius: 9px 9px 9px 3px; }
+.brand-name { font: 700 19px/1 'Space Grotesk', sans-serif; }
+.brand-dot { color: var(--orange); }
+.brand-divider { width: 1px; height: 23px; margin: 0 3px; background: var(--line); }
+.brand-project { color: #66736c; font-size: 11px; font-weight: 700; letter-spacing: 1.3px; }
+.brand-project span { color: #a2aaa4; font-weight: 500; }
+.view-switch { display: inline-flex; align-items: center; gap: 3px; padding: 3px; background: #f1f4ef; border: 1px solid #e6ebe4; border-radius: 7px; }
+.view-switch button { display: inline-flex; align-items: center; gap: 6px; min-height: 31px; padding: 0 11px; color: #77847b; background: transparent; border: 0; border-radius: 5px; font-size: 10px; font-weight: 600; cursor: pointer; }
+.view-switch button[aria-pressed="true"] { color: #274635; background: #fff; box-shadow: 0 1px 4px #1c352510; }
+.topbar-right { display: flex; align-items: center; gap: 16px; }
+.prototype-label { display: inline-flex; align-items: center; gap: 7px; color: #77827b; font-size: 9px; font-weight: 700; letter-spacing: 1px; white-space: nowrap; }
+.prototype-label span, .status-light { width: 8px; height: 8px; border-radius: 50%; background: #4b9b68; box-shadow: 0 0 0 3px #e5f1e7; }
+.status-light-offline { background: #c05b48 !important; box-shadow: 0 0 0 3px #f8e8e4 !important; }
+.sim-loading { display: grid; min-height: 60vh; place-items: center; color: #6e8173; font-size: 13px; }
+h1, h2, p { margin-top: 0; }
+.page-footer { display: flex; align-items: center; justify-content: space-between; gap: 12px; width: 100%; margin-top: 17px; color: #98a39a; font-size: 8px; }
+.page-footer > span:last-child { display: inline-flex; align-items: center; gap: 5px; }
+.page-footer svg { color: #718879; }
+.bank-app button:focus-visible, .bank-app a:focus-visible, .bank-app select:focus-visible, .bank-sim-page button:focus-visible, .bank-sim-page input:focus-visible { outline: 3px solid #c98944; outline-offset: 3px; }
+
+@media (max-width: 1000px) {
+  .topbar { padding-block: 10px; }
+  .view-switch { order: 3; width: 100%; justify-content: center; }
+}
+@media (max-width: 680px) {
+  .topbar { justify-content: center; }
+  .brand { margin-right: auto; }
+  .topbar-right { display: none; }
+  .view-switch { order: 3; width: 100%; justify-content: center; }
+  .view-switch button { flex: 1; justify-content: center; padding-inline: 5px; font-size: 9px; }
+  .page-footer { gap: 10px; font-size: 7px; }
+}

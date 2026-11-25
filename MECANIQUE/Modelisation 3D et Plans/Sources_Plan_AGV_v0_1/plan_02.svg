@@ -1,0 +1,242 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420mm" height="297mm" viewBox="0 0 1190.5511811023623 841.8897637795277">
+<title>AGV bancaire - avant-projet coté V0.1</title>
+<rect width="100%" height="100%" fill="white"/>
+<rect x="0" y="0.0" width="1190.5511811023623" height="841.8897637795277" fill="#FFFFFF" stroke="none" stroke-width="0.7"/>
+<rect x="24" y="20.0" width="5" height="24" fill="#1764D5" stroke="none" stroke-width="0.7"/>
+<text x="40" y="30.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="10" font-weight="700" fill="#1764D5" text-anchor="start" transform="rotate(0 40 30.0)">AGV BANCAIRE</text>
+<text x="40" y="55.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="700" fill="#172B3B" text-anchor="start" transform="rotate(0 40 55.0)">Rez-de-chaussée - transfert et dépôts</text>
+<text x="40" y="74.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8.5" font-weight="400" fill="#647686" text-anchor="start" transform="rotate(0 40 74.0)">Ascenseur A au même emplacement en plan. Trois zones de tri proposées dans le dépôt 3.</text>
+<text x="1160.5511811023623" y="29.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="10" font-weight="700" fill="#A86413" text-anchor="end" transform="rotate(0 1160.5511811023623 29.0)">AVANT-PROJET  V0.1</text>
+<text x="1160.5511811023623" y="46.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8" font-weight="400" fill="#647686" text-anchor="end" transform="rotate(0 1160.5511811023623 46.0)">20 OCTOBRE 2026</text>
+<text x="1160.5511811023623" y="63.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="7" font-weight="700" fill="#A86413" text-anchor="end" transform="rotate(0 1160.5511811023623 63.0)">DIMENSIONS NON RELEVÉES SUR SITE</text>
+<polyline points="30,88.0 1160.5511811023623,88.0" fill="none" stroke="#E7EDF2" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="30,801.8897637795277 1160.5511811023623,801.8897637795277" fill="none" stroke="#E7EDF2" stroke-width="1" stroke-linejoin="round"/>
+<text x="30" y="818.8897637795277" font-family="DejaVu Sans,Arial,sans-serif" font-size="7" font-weight="400" fill="#647686" text-anchor="start" transform="rotate(0 30 818.8897637795277)">Cotes en mètres | D = donnée fournie | H = hypothèse de conception | Contrôle géométrique de principe</text>
+<text x="1160.5511811023623" y="818.8897637795277" font-family="DejaVu Sans,Arial,sans-serif" font-size="7" font-weight="400" fill="#647686" text-anchor="end" transform="rotate(0 1160.5511811023623 818.8897637795277)">A3 paysage | 1:100 | 02 / 03</text>
+<rect x="173.68503937007873" y="552.3622047244096" width="62.36220472440946" height="62.36220472440946" fill="#F9FBFD" stroke="none" stroke-width="0.7"/>
+<rect x="187.85826771653544" y="614.7244094488191" width="34.015748031496074" height="5.669291338582677" fill="#F9FBFD" stroke="none" stroke-width="0.7"/>
+<rect x="173.68503937007873" y="620.3937007874017" width="113.38582677165354" height="51.0236220472441" fill="#F9FBFD" stroke="none" stroke-width="0.7"/>
+<rect x="240.29921259842519" y="501.3385826771655" width="42.51968503937008" height="119.05511811023624" fill="#F9FBFD" stroke="none" stroke-width="0.7"/>
+<rect x="236.04724409448818" y="450.3149606299214" width="308.9763779527559" height="51.02362204724411" fill="#F9FBFD" stroke="none" stroke-width="0.7"/>
+<rect x="545.0236220472441" y="228.07874015748047" width="85.03937007874019" height="290.26771653543307" fill="#F9FBFD" stroke="none" stroke-width="0.7"/>
+<rect x="633.4645669291339" y="433.3070866141734" width="113.38582677165356" height="85.03937007874016" fill="#F9FBFD" stroke="none" stroke-width="0.7"/>
+<rect x="633.4645669291339" y="344.8661417322836" width="113.38582677165356" height="85.03937007874016" fill="#F9FBFD" stroke="none" stroke-width="0.7"/>
+<rect x="633.4645669291339" y="228.0787401574804" width="113.38582677165356" height="113.38582677165356" fill="#F9FBFD" stroke="none" stroke-width="0.7"/>
+<rect x="630.0629921259842" y="458.81889763779543" width="3.4015748031495847" height="34.015748031496074" fill="#F9FBFD" stroke="none" stroke-width="0.7"/>
+<rect x="630.0629921259842" y="370.37795275590565" width="3.4015748031495847" height="34.015748031496045" fill="#F9FBFD" stroke="none" stroke-width="0.7"/>
+<rect x="630.0629921259842" y="267.76377952755917" width="3.4015748031495847" height="34.015748031496095" fill="#F9FBFD" stroke="none" stroke-width="0.7"/>
+<rect x="169.43307086614172" y="548.1102362204725" width="4.251968503937018" height="70.86614173228347" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="236.04724409448818" y="548.1102362204725" width="4.251968503936993" height="70.86614173228347" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="173.68503937007873" y="548.1102362204726" width="62.36220472440946" height="4.251968503937006" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="173.68503937007873" y="614.724409448819" width="14.173228346456694" height="4.251968503937008" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="221.8740157480315" y="614.724409448819" width="14.173228346456694" height="4.251968503937008" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="169.43307086614172" y="620.3937007874016" width="4.251968503937018" height="55.275590551181104" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="173.68503937007873" y="671.4173228346458" width="117.63779527559058" height="4.251968503937006" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="287.07086614173227" y="620.3937007874017" width="4.251968503937018" height="51.0236220472441" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="173.68503937007873" y="616.1417322834646" width="14.173228346456694" height="4.251968503937008" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="221.8740157480315" y="616.1417322834646" width="18.425196850393686" height="4.251968503937008" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="282.81889763779526" y="616.1417322834646" width="4.251968503937006" height="4.251968503937008" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="236.04724409448818" y="501.3385826771655" width="4.251968503936993" height="119.05511811023624" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="282.81889763779526" y="501.3385826771655" width="4.251968503937006" height="119.05511811023624" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="231.79527559055117" y="446.0629921259844" width="4.251968503937018" height="55.275590551181104" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="236.04724409448818" y="446.0629921259844" width="308.9763779527559" height="4.251968503936993" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="287.07086614173227" y="501.33858267716545" width="257.9527559055118" height="4.251968503937006" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="540.7716535433071" y="492.8346456692915" width="4.251968503936993" height="25.51181102362206" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="540.7716535433071" y="223.82677165354346" width="4.251968503936993" height="234.99212598425197" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="545.0236220472441" y="518.3464566929135" width="206.07874015748035" height="4.251968503937006" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="545.0236220472441" y="223.8267716535434" width="206.07874015748035" height="4.251968503937018" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="746.8503937007874" y="228.07874015748047" width="4.251968503937018" height="290.26771653543307" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="630.0629921259842" y="492.8346456692915" width="3.4015748031495847" height="25.51181102362206" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="630.0629921259842" y="404.3937007874017" width="3.4015748031495847" height="54.425196850393704" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="630.0629921259842" y="301.7795275590553" width="3.4015748031495847" height="68.5984251968504" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="630.0629921259842" y="228.07874015748052" width="3.4015748031495847" height="39.685039370078705" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="633.4645669291339" y="429.90551181102376" width="113.38582677165356" height="3.4015748031496096" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="633.4645669291339" y="341.464566929134" width="113.38582677165356" height="3.4015748031495847" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<rect x="173.68503937007873" y="552.3622047244096" width="62.36220472440946" height="62.36220472440946" fill="#E6E1F5" stroke="#172B3B" stroke-width="0.5"/>
+<text x="204.86614173228344" y="571.6377952755906" font-family="DejaVu Sans,Arial,sans-serif" font-size="7.3" font-weight="700" fill="#7755B7" text-anchor="middle" transform="rotate(0 204.86614173228344 571.6377952755906)">ASC. A</text>
+<text x="204.86614173228344" y="582.976377952756" font-family="DejaVu Sans,Arial,sans-serif" font-size="5.6" font-weight="700" fill="#A86413" text-anchor="middle" transform="rotate(0 204.86614173228344 582.976377952756)">2,20 × 2,20 H</text>
+<circle cx="204.86614173228344" cy="594.3149606299214" r="9.921259842519685" fill="none" stroke="#7755B7" stroke-width="0.65" stroke-dasharray="2 2"/>
+<text x="204.86614173228344" y="597.716535433071" font-family="DejaVu Sans,Arial,sans-serif" font-size="5.4" font-weight="400" fill="#7755B7" text-anchor="middle" transform="rotate(0 204.86614173228344 597.716535433071)">180° H</text>
+<rect x="236.04724409448818" y="620.3937007874017" width="51.02362204724411" height="51.02362204724411" fill="#EDF3FE" stroke="#A8B6C2" stroke-width="0.5" stroke-dasharray="2 2"/>
+<rect x="236.04724409448818" y="450.3149606299214" width="51.02362204724411" height="51.02362204724411" fill="#EDF3FE" stroke="#A8B6C2" stroke-width="0.5" stroke-dasharray="2 2"/>
+<text x="690.1574803149606" y="464.48818897637807" font-family="DejaVu Sans,Arial,sans-serif" font-size="8.4" font-weight="700" fill="#172B3B" text-anchor="middle" transform="rotate(0 690.1574803149606 464.48818897637807)">DÉPÔT 1</text>
+<text x="690.1574803149606" y="477.2440944881891" font-family="DejaVu Sans,Arial,sans-serif" font-size="6.3" font-weight="700" fill="#A86413" text-anchor="middle" transform="rotate(0 690.1574803149606 477.2440944881891)">REPLI AUTORISÉ</text>
+<text x="690.1574803149606" y="488.5826771653545" font-family="DejaVu Sans,Arial,sans-serif" font-size="6.4" font-weight="400" fill="#A86413" text-anchor="middle" transform="rotate(0 690.1574803149606 488.5826771653545)">4 × 3 m · H</text>
+<polyline points="631.7637795275591,492.8346456692915 631.7637795275591,458.81889763779543" fill="none" stroke="#087D68" stroke-width="1.25" stroke-dasharray="3 2" stroke-linejoin="round"/>
+<text x="690.1574803149606" y="376.0472440944883" font-family="DejaVu Sans,Arial,sans-serif" font-size="8.4" font-weight="700" fill="#172B3B" text-anchor="middle" transform="rotate(0 690.1574803149606 376.0472440944883)">DÉPÔT 2</text>
+<text x="690.1574803149606" y="388.8031496062993" font-family="DejaVu Sans,Arial,sans-serif" font-size="6.3" font-weight="700" fill="#A86413" text-anchor="middle" transform="rotate(0 690.1574803149606 388.8031496062993)">RÔLE NON DÉFINI</text>
+<text x="690.1574803149606" y="400.14173228346465" font-family="DejaVu Sans,Arial,sans-serif" font-size="6.4" font-weight="400" fill="#A86413" text-anchor="middle" transform="rotate(0 690.1574803149606 400.14173228346465)">4 × 3 m · H</text>
+<polyline points="631.7637795275591,404.3937007874017 631.7637795275591,370.37795275590565" fill="none" stroke="#087D68" stroke-width="1.25" stroke-dasharray="3 2" stroke-linejoin="round"/>
+<text x="690.1574803149606" y="321.3385826771654" font-family="DejaVu Sans,Arial,sans-serif" font-size="9" font-weight="700" fill="#1764D5" text-anchor="middle" transform="rotate(0 690.1574803149606 321.3385826771654)">DÉPÔT 3</text>
+<text x="690.1574803149606" y="330.976377952756" font-family="DejaVu Sans,Arial,sans-serif" font-size="6.2" font-weight="700" fill="#A86413" text-anchor="middle" transform="rotate(0 690.1574803149606 330.976377952756)">PRIORITAIRE · 4 × 4 m H</text>
+<polyline points="631.7637795275591,301.7795275590553 631.7637795275591,267.7637795275592" fill="none" stroke="#087D68" stroke-width="1.25" stroke-dasharray="3 2" stroke-linejoin="round"/>
+<rect x="643.3858267716536" y="232.33070866141742" width="28.34645669291339" height="21.25984251968504" fill="#DAF1E7" stroke="#27976D" stroke-width="0.7"/>
+<text x="657.5590551181103" y="241.6850393700788" font-family="DejaVu Sans,Arial,sans-serif" font-size="7" font-weight="700" fill="#172B3B" text-anchor="middle" transform="rotate(0 657.5590551181103 241.6850393700788)">C1</text>
+<text x="657.5590551181103" y="250.18897637795283" font-family="DejaVu Sans,Arial,sans-serif" font-size="4.9" font-weight="700" fill="#A86413" text-anchor="middle" transform="rotate(0 657.5590551181103 250.18897637795283)">ZONE H</text>
+<circle cx="657.5590551181103" cy="273.1496062992127" r="3.6850393700787407" fill="#FFFFFF" stroke="#1764D5" stroke-width="0.8"/>
+<rect x="675.9842519685039" y="232.33070866141742" width="28.34645669291339" height="21.25984251968504" fill="#E0EAFB" stroke="#1764D5" stroke-width="0.7"/>
+<text x="690.1574803149606" y="241.6850393700788" font-family="DejaVu Sans,Arial,sans-serif" font-size="7" font-weight="700" fill="#172B3B" text-anchor="middle" transform="rotate(0 690.1574803149606 241.6850393700788)">C2</text>
+<text x="690.1574803149606" y="250.18897637795283" font-family="DejaVu Sans,Arial,sans-serif" font-size="4.9" font-weight="700" fill="#A86413" text-anchor="middle" transform="rotate(0 690.1574803149606 250.18897637795283)">ZONE H</text>
+<circle cx="690.1574803149606" cy="273.1496062992127" r="3.6850393700787407" fill="#FFFFFF" stroke="#1764D5" stroke-width="0.8"/>
+<polyline points="690.1574803149606,273.1496062992127 690.1574803149606,298.6614173228347" fill="none" stroke="#1764D5" stroke-width="0.7" stroke-dasharray="2 2" stroke-linejoin="round"/>
+<rect x="708.724409448819" y="232.33070866141742" width="28.062992125984263" height="21.25984251968504" fill="#EEE3F8" stroke="#7755B7" stroke-width="0.7"/>
+<text x="722.7559055118111" y="241.6850393700788" font-family="DejaVu Sans,Arial,sans-serif" font-size="7" font-weight="700" fill="#172B3B" text-anchor="middle" transform="rotate(0 722.7559055118111 241.6850393700788)">C3</text>
+<text x="722.7559055118111" y="250.18897637795283" font-family="DejaVu Sans,Arial,sans-serif" font-size="4.9" font-weight="700" fill="#A86413" text-anchor="middle" transform="rotate(0 722.7559055118111 250.18897637795283)">ZONE H</text>
+<circle cx="722.7559055118111" cy="273.1496062992127" r="3.6850393700787407" fill="#FFFFFF" stroke="#1764D5" stroke-width="0.8"/>
+<polyline points="722.7559055118111,273.1496062992127 722.7559055118111,298.6614173228347" fill="none" stroke="#1764D5" stroke-width="0.7" stroke-dasharray="2 2" stroke-linejoin="round"/>
+<polyline points="657.5590551181103,298.6614173228347 722.7559055118111,298.6614173228347" fill="none" stroke="#1764D5" stroke-width="0.7" stroke-dasharray="2 2" stroke-linejoin="round"/>
+<rect x="556.9291338582677" y="297.2440944881891" width="28.346456692913414" height="39.685039370078755" fill="#F0EAF8" stroke="#7755B7" stroke-width="0.5" stroke-dasharray="3 2"/>
+<text x="571.1023622047244" y="319.0708661417324" font-family="DejaVu Sans,Arial,sans-serif" font-size="6" font-weight="700" fill="#7755B7" text-anchor="middle" transform="rotate(0 571.1023622047244 319.0708661417324)">ATT.</text>
+<text x="592.3622047244095" y="247.63779527559075" font-family="DejaVu Sans,Arial,sans-serif" font-size="6.7" font-weight="700" fill="#A86413" text-anchor="middle" transform="rotate(0 592.3622047244095 247.63779527559075)">HALL · 3,00 m H</text>
+<text x="273.46456692913387" y="565.1181102362207" font-family="DejaVu Sans,Arial,sans-serif" font-size="6.4" font-weight="700" fill="#647686" text-anchor="middle" transform="rotate(-90 273.46456692913387 565.1181102362207)">COULOIR 1</text>
+<text x="398.18897637795277" y="495.1023622047245" font-family="DejaVu Sans,Arial,sans-serif" font-size="6.8" font-weight="700" fill="#647686" text-anchor="middle" transform="rotate(0 398.18897637795277 495.1023622047245)">COULOIR 2 · LARGEUR 1,80 m H</text>
+<polyline points="204.86614173228344,583.5433070866143 204.86614173228344,645.9055118110238 261.5590551181102,645.9055118110238 261.5590551181102,475.82677165354346 545.0236220472441,475.82677165354346 599.4488188976378,475.82677165354346 599.4488188976378,284.77165354330725 657.5590551181103,284.77165354330725 657.5590551181103,273.1496062992127" fill="none" stroke="#1764D5" stroke-width="2" stroke-linejoin="round"/>
+<polyline points="204.86614173228344,617.8425196850395 204.86614173228344,620.96062992126" fill="none" stroke="#1764D5" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="204.86614173228344,620.96062992126 202.56614173228343,615.96062992126 207.16614173228345,615.96062992126" fill="#1764D5" stroke="none" stroke-width="0.7"/>
+<polyline points="236.04724409448818,645.9055118110238 238.8818897637795,645.9055118110238" fill="none" stroke="#1764D5" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="238.8818897637795,645.9055118110238 233.8818897637795,648.2055118110238 233.8818897637795,643.6055118110237" fill="#1764D5" stroke="none" stroke-width="0.7"/>
+<polyline points="261.5590551181102,552.3622047244096 261.5590551181102,543.8582677165356" fill="none" stroke="#1764D5" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="261.5590551181102,543.8582677165356 263.85905511811023,548.8582677165356 259.2590551181102,548.8582677165356" fill="#1764D5" stroke="none" stroke-width="0.7"/>
+<polyline points="417.46456692913387,475.82677165354346 431.6377952755906,475.82677165354346" fill="none" stroke="#1764D5" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="431.6377952755906,475.82677165354346 426.6377952755906,478.12677165354347 426.6377952755906,473.52677165354345" fill="#1764D5" stroke="none" stroke-width="0.7"/>
+<polyline points="574.9574803149607,475.82677165354346 577.6787401574803,475.82677165354346" fill="none" stroke="#1764D5" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="577.6787401574803,475.82677165354346 572.6787401574803,478.12677165354347 572.6787401574803,473.52677165354345" fill="#1764D5" stroke="none" stroke-width="0.7"/>
+<polyline points="599.4488188976378,370.7464566929135 599.4488188976378,361.19370078740167" fill="none" stroke="#1764D5" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="599.4488188976378,361.19370078740167 601.7488188976378,366.19370078740167 597.1488188976379,366.19370078740167" fill="#1764D5" stroke="none" stroke-width="0.7"/>
+<polyline points="631.4094488188977,284.77165354330725 634.3149606299213,284.77165354330725" fill="none" stroke="#1764D5" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="634.3149606299213,284.77165354330725 629.3149606299213,287.0716535433072 629.3149606299213,282.4716535433073" fill="#1764D5" stroke="none" stroke-width="0.7"/>
+<polyline points="722.7559055118111,284.77165354330725 571.1023622047244,284.77165354330725 571.1023622047244,317.08661417322844" fill="none" stroke="#7755B7" stroke-width="1.2" stroke-dasharray="4 3" stroke-linejoin="round"/>
+<polyline points="639.3464566929134,284.77165354330725 631.7637795275591,284.77165354330725" fill="none" stroke="#7755B7" stroke-width="1.2" stroke-linejoin="round"/>
+<polygon points="631.7637795275591,284.77165354330725 636.7637795275591,282.4716535433073 636.7637795275591,287.0716535433072" fill="#7755B7" stroke="none" stroke-width="0.7"/>
+<polyline points="571.1023622047244,302.5448818897638 571.1023622047244,304.16062992126" fill="none" stroke="#7755B7" stroke-width="1.2" stroke-linejoin="round"/>
+<polygon points="571.1023622047244,304.16062992126 568.8023622047244,299.16062992126 573.4023622047243,299.16062992126" fill="#7755B7" stroke="none" stroke-width="0.7"/>
+<polyline points="599.4488188976378,475.82677165354346 653.3070866141732,475.82677165354346" fill="none" stroke="#A86413" stroke-width="1.1" stroke-dasharray="4 3" stroke-linejoin="round"/>
+<polyline points="629.0708661417323,475.82677165354346 631.7637795275591,475.82677165354346" fill="none" stroke="#A86413" stroke-width="1.1" stroke-linejoin="round"/>
+<polygon points="631.7637795275591,475.82677165354346 626.7637795275591,478.12677165354347 626.7637795275591,473.52677165354345" fill="#A86413" stroke="none" stroke-width="0.7"/>
+<polygon points="561.1811023622047,301.496062992126 561.1811023622047,332.67716535433084 581.0236220472441,332.67716535433084 581.0236220472441,301.496062992126" fill="#D8E9FF" stroke="#7755B7" stroke-width="1.2"/>
+<polyline points="571.1023622047244,310.0000000000001 571.1023622047244,328.42519685039383" fill="none" stroke="#7755B7" stroke-width="1.2" stroke-linejoin="round"/>
+<polygon points="571.1023622047244,328.42519685039383 569.2623622047244,324.42519685039383 572.9423622047244,324.42519685039383" fill="#7755B7" stroke="none" stroke-width="0.7"/>
+<circle cx="204.86614173228344" cy="645.9055118110238" r="8" fill="#FFFFFF" stroke="#1764D5" stroke-width="1.2"/>
+<text x="204.86614173228344" y="648.6055118110237" font-family="DejaVu Sans,Arial,sans-serif" font-size="7.2" font-weight="700" fill="#1764D5" text-anchor="middle" transform="rotate(0 204.86614173228344 648.6055118110237)">4</text>
+<circle cx="261.5590551181102" cy="645.9055118110238" r="8" fill="#FFFFFF" stroke="#1764D5" stroke-width="1.2"/>
+<text x="261.5590551181102" y="648.6055118110237" font-family="DejaVu Sans,Arial,sans-serif" font-size="7.2" font-weight="700" fill="#1764D5" text-anchor="middle" transform="rotate(0 261.5590551181102 648.6055118110237)">5</text>
+<circle cx="261.5590551181102" cy="475.82677165354346" r="8" fill="#FFFFFF" stroke="#1764D5" stroke-width="1.2"/>
+<text x="261.5590551181102" y="478.52677165354345" font-family="DejaVu Sans,Arial,sans-serif" font-size="7.2" font-weight="700" fill="#1764D5" text-anchor="middle" transform="rotate(0 261.5590551181102 478.52677165354345)">6</text>
+<circle cx="545.0236220472441" cy="475.82677165354346" r="8" fill="#FFFFFF" stroke="#1764D5" stroke-width="1.2"/>
+<text x="545.0236220472441" y="478.52677165354345" font-family="DejaVu Sans,Arial,sans-serif" font-size="7.2" font-weight="700" fill="#1764D5" text-anchor="middle" transform="rotate(0 545.0236220472441 478.52677165354345)">7</text>
+<polyline points="187.85826771653544,616.8503937007875 221.8740157480315,616.8503937007875" fill="none" stroke="#087D68" stroke-width="1.25" stroke-dasharray="3 2" stroke-linejoin="round"/>
+<polyline points="542.8976377952756,492.8346456692915 542.8976377952756,458.81889763779543" fill="none" stroke="#087D68" stroke-width="1.25" stroke-dasharray="3 2" stroke-linejoin="round"/>
+<text x="522.9133858267717" y="446.34645669291353" font-family="DejaVu Sans,Arial,sans-serif" font-size="6.3" font-weight="700" fill="#A86413" text-anchor="middle" transform="rotate(0 522.9133858267717 446.34645669291353)">P1 · 1,20 H</text>
+<polyline points="204.86614173228344,645.9055118110238 204.86614173228344,691.5433070866143" fill="none" stroke="#A8B6C2" stroke-width="0.5" stroke-linejoin="round"/>
+<polyline points="261.5590551181102,645.9055118110238 261.5590551181102,691.5433070866143" fill="none" stroke="#A8B6C2" stroke-width="0.5" stroke-linejoin="round"/>
+<polyline points="204.86614173228344,693.5275590551182 261.5590551181102,693.5275590551182" fill="none" stroke="#087D68" stroke-width="0.65" stroke-linejoin="round"/>
+<polyline points="203.30708661417322,695.5118110236222 206.42519685039366,691.5433070866143" fill="none" stroke="#087D68" stroke-width="0.8" stroke-linejoin="round"/>
+<polyline points="260.0,695.5118110236222 263.11811023622045,691.5433070866143" fill="none" stroke="#087D68" stroke-width="0.8" stroke-linejoin="round"/>
+<rect x="209.17519608144684" y="680.5275590551182" width="48.0748046875" height="11" fill="#FFFFFF" stroke="none" stroke-width="0.7"/>
+<text x="233.21259842519683" y="689.5275590551182" font-family="DejaVu Sans,Arial,sans-serif" font-size="7.3" font-weight="700" fill="#087D68" text-anchor="middle" transform="rotate(0 233.21259842519683 689.5275590551182)">2,00 m · D</text>
+<polyline points="240.29921259842519,645.9055118110238 147.88976377952753,645.9055118110238" fill="none" stroke="#A8B6C2" stroke-width="0.5" stroke-linejoin="round"/>
+<polyline points="240.29921259842519,475.82677165354346 147.88976377952753,475.82677165354346" fill="none" stroke="#A8B6C2" stroke-width="0.5" stroke-linejoin="round"/>
+<polyline points="145.9055118110236,645.9055118110238 145.9055118110236,475.82677165354346" fill="none" stroke="#087D68" stroke-width="0.65" stroke-linejoin="round"/>
+<polyline points="143.92125984251965,647.464566929134 147.88976377952753,644.3464566929135" fill="none" stroke="#087D68" stroke-width="0.8" stroke-linejoin="round"/>
+<polyline points="143.92125984251965,477.3858267716537 147.88976377952753,474.26771653543324" fill="none" stroke="#087D68" stroke-width="0.8" stroke-linejoin="round"/>
+<rect x="133.9055118110236" y="513.1821573572836" width="12" height="95.36796875" fill="#FFFFFF" stroke="none" stroke-width="0.7"/>
+<text x="141.9055118110236" y="560.8661417322836" font-family="DejaVu Sans,Arial,sans-serif" font-size="7.3" font-weight="700" fill="#087D68" text-anchor="middle" transform="rotate(-90 141.9055118110236 560.8661417322836)">6,00 m · D - axe à axe</text>
+<polyline points="240.29921259842519,535.3543307086616 240.29921259842519,533.3700787401576" fill="none" stroke="#A8B6C2" stroke-width="0.5" stroke-linejoin="round"/>
+<polyline points="282.81889763779526,535.3543307086616 282.81889763779526,533.3700787401576" fill="none" stroke="#A8B6C2" stroke-width="0.5" stroke-linejoin="round"/>
+<polyline points="240.29921259842519,535.3543307086616 282.81889763779526,535.3543307086616" fill="none" stroke="#087D68" stroke-width="0.65" stroke-linejoin="round"/>
+<polyline points="238.74015748031493,537.3385826771655 241.8582677165354,533.3700787401576" fill="none" stroke="#087D68" stroke-width="0.8" stroke-linejoin="round"/>
+<polyline points="281.25984251968504,537.3385826771655 284.37795275590554,533.3700787401576" fill="none" stroke="#087D68" stroke-width="0.8" stroke-linejoin="round"/>
+<rect x="237.52165277436023" y="522.3543307086616" width="48.0748046875" height="11" fill="#FFFFFF" stroke="none" stroke-width="0.7"/>
+<text x="261.5590551181102" y="531.3543307086616" font-family="DejaVu Sans,Arial,sans-serif" font-size="7.3" font-weight="700" fill="#087D68" text-anchor="middle" transform="rotate(0 261.5590551181102 531.3543307086616)">1,50 m · D</text>
+<polyline points="261.5590551181102,446.06299212598435 261.5590551181102,421.40157480314974" fill="none" stroke="#A8B6C2" stroke-width="0.5" stroke-linejoin="round"/>
+<polyline points="545.0236220472441,446.06299212598435 545.0236220472441,421.40157480314974" fill="none" stroke="#A8B6C2" stroke-width="0.5" stroke-linejoin="round"/>
+<polyline points="261.5590551181102,423.3858267716537 545.0236220472441,423.3858267716537" fill="none" stroke="#087D68" stroke-width="0.65" stroke-linejoin="round"/>
+<polyline points="260.0,425.3700787401576 263.11811023622045,421.40157480314974" fill="none" stroke="#087D68" stroke-width="0.8" stroke-linejoin="round"/>
+<polyline points="543.4645669291339,425.3700787401576 546.5826771653543,421.40157480314974" fill="none" stroke="#087D68" stroke-width="0.8" stroke-linejoin="round"/>
+<rect x="349.21985420767714" y="410.3858267716537" width="108.14296875" height="11" fill="#FFFFFF" stroke="none" stroke-width="0.7"/>
+<text x="403.29133858267716" y="419.3858267716537" font-family="DejaVu Sans,Arial,sans-serif" font-size="7.3" font-weight="700" fill="#087D68" text-anchor="middle" transform="rotate(0 403.29133858267716 419.3858267716537)">10,00 m · D - axe à porte</text>
+<polyline points="545.0236220472441,223.82677165354346 545.0236220472441,203.13385826771662" fill="none" stroke="#A8B6C2" stroke-width="0.5" stroke-linejoin="round"/>
+<polyline points="630.0629921259842,223.82677165354346 630.0629921259842,203.13385826771662" fill="none" stroke="#A8B6C2" stroke-width="0.5" stroke-linejoin="round"/>
+<polyline points="545.0236220472441,205.11811023622056 630.0629921259842,205.11811023622056" fill="none" stroke="#A86413" stroke-width="0.65" stroke-linejoin="round"/>
+<polyline points="543.4645669291339,207.1023622047245 546.5826771653543,203.13385826771662" fill="none" stroke="#A86413" stroke-width="0.8" stroke-linejoin="round"/>
+<polyline points="628.5039370078741,207.1023622047245 631.6220472440946,203.13385826771662" fill="none" stroke="#A86413" stroke-width="0.8" stroke-linejoin="round"/>
+<rect x="563.4809535709893" y="192.11811023622056" width="48.12470703125" height="11" fill="#FFFFFF" stroke="none" stroke-width="0.7"/>
+<text x="587.5433070866143" y="201.11811023622056" font-family="DejaVu Sans,Arial,sans-serif" font-size="7.3" font-weight="700" fill="#A86413" text-anchor="middle" transform="rotate(0 587.5433070866143 201.11811023622056)">3,00 m · H</text>
+<polyline points="633.4645669291339,223.82677165354346 633.4645669291339,203.13385826771662" fill="none" stroke="#A8B6C2" stroke-width="0.5" stroke-linejoin="round"/>
+<polyline points="746.8503937007874,223.82677165354346 746.8503937007874,203.13385826771662" fill="none" stroke="#A8B6C2" stroke-width="0.5" stroke-linejoin="round"/>
+<polyline points="633.4645669291339,205.11811023622056 746.8503937007874,205.11811023622056" fill="none" stroke="#A86413" stroke-width="0.65" stroke-linejoin="round"/>
+<polyline points="631.9055118110236,207.1023622047245 635.0236220472441,203.13385826771662" fill="none" stroke="#A86413" stroke-width="0.8" stroke-linejoin="round"/>
+<polyline points="745.2913385826772,207.1023622047245 748.4094488188977,203.13385826771662" fill="none" stroke="#A86413" stroke-width="0.8" stroke-linejoin="round"/>
+<rect x="666.0951267993356" y="192.11811023622056" width="48.12470703125" height="11" fill="#FFFFFF" stroke="none" stroke-width="0.7"/>
+<text x="690.1574803149606" y="201.11811023622056" font-family="DejaVu Sans,Arial,sans-serif" font-size="7.3" font-weight="700" fill="#A86413" text-anchor="middle" transform="rotate(0 690.1574803149606 201.11811023622056)">4,00 m · H</text>
+<polyline points="751.1023622047244,341.464566929134 775.7637795275591,341.464566929134" fill="none" stroke="#A8B6C2" stroke-width="0.5" stroke-linejoin="round"/>
+<polyline points="751.1023622047244,228.0787401574804 775.7637795275591,228.0787401574804" fill="none" stroke="#A8B6C2" stroke-width="0.5" stroke-linejoin="round"/>
+<polyline points="773.7795275590552,341.464566929134 773.7795275590552,228.0787401574804" fill="none" stroke="#A86413" stroke-width="0.65" stroke-linejoin="round"/>
+<polyline points="771.7952755905512,343.0236220472442 775.7637795275591,339.90551181102376" fill="none" stroke="#A86413" stroke-width="0.8" stroke-linejoin="round"/>
+<polyline points="771.7952755905512,229.63779527559075 775.7637795275591,226.5196850393702" fill="none" stroke="#A86413" stroke-width="0.8" stroke-linejoin="round"/>
+<rect x="761.7795275590552" y="260.7093000276822" width="12" height="48.12470703125" fill="#FFFFFF" stroke="none" stroke-width="0.7"/>
+<text x="769.7795275590552" y="284.77165354330725" font-family="DejaVu Sans,Arial,sans-serif" font-size="7.3" font-weight="700" fill="#A86413" text-anchor="middle" transform="rotate(-90 769.7795275590552 284.77165354330725)">4,00 m · H</text>
+<polyline points="751.1023622047244,429.90551181102376 775.7637795275591,429.90551181102376" fill="none" stroke="#A8B6C2" stroke-width="0.5" stroke-linejoin="round"/>
+<polyline points="751.1023622047244,344.86614173228355 775.7637795275591,344.86614173228355" fill="none" stroke="#A8B6C2" stroke-width="0.5" stroke-linejoin="round"/>
+<polyline points="773.7795275590552,429.90551181102376 773.7795275590552,344.86614173228355" fill="none" stroke="#A86413" stroke-width="0.65" stroke-linejoin="round"/>
+<polyline points="771.7952755905512,431.464566929134 775.7637795275591,428.34645669291353" fill="none" stroke="#A86413" stroke-width="0.8" stroke-linejoin="round"/>
+<polyline points="771.7952755905512,346.42519685039383 775.7637795275591,343.30708661417333" fill="none" stroke="#A86413" stroke-width="0.8" stroke-linejoin="round"/>
+<rect x="761.7795275590552" y="363.32347325602865" width="12" height="48.12470703125" fill="#FFFFFF" stroke="none" stroke-width="0.7"/>
+<text x="769.7795275590552" y="387.3858267716537" font-family="DejaVu Sans,Arial,sans-serif" font-size="7.3" font-weight="700" fill="#A86413" text-anchor="middle" transform="rotate(-90 769.7795275590552 387.3858267716537)">3,00 m · H</text>
+<polyline points="751.1023622047244,518.3464566929135 775.7637795275591,518.3464566929135" fill="none" stroke="#A8B6C2" stroke-width="0.5" stroke-linejoin="round"/>
+<polyline points="751.1023622047244,433.3070866141734 775.7637795275591,433.3070866141734" fill="none" stroke="#A8B6C2" stroke-width="0.5" stroke-linejoin="round"/>
+<polyline points="773.7795275590552,518.3464566929135 773.7795275590552,433.3070866141734" fill="none" stroke="#A86413" stroke-width="0.65" stroke-linejoin="round"/>
+<polyline points="771.7952755905512,519.9055118110238 775.7637795275591,516.7874015748033" fill="none" stroke="#A86413" stroke-width="0.8" stroke-linejoin="round"/>
+<polyline points="771.7952755905512,434.8661417322836 775.7637795275591,431.74803149606316" fill="none" stroke="#A86413" stroke-width="0.8" stroke-linejoin="round"/>
+<rect x="761.7795275590552" y="451.7644181379184" width="12" height="48.12470703125" fill="#FFFFFF" stroke="none" stroke-width="0.7"/>
+<text x="769.7795275590552" y="475.82677165354346" font-family="DejaVu Sans,Arial,sans-serif" font-size="7.3" font-weight="700" fill="#A86413" text-anchor="middle" transform="rotate(-90 769.7795275590552 475.82677165354346)">3,00 m · H</text>
+<polyline points="162.91338582677164,294.4094488188978 162.91338582677164,266.06299212598435" fill="none" stroke="#172B3B" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="162.91338582677164,266.06299212598435 165.21338582677166,271.06299212598435 160.61338582677163,271.06299212598435" fill="#172B3B" stroke="none" stroke-width="0.7"/>
+<text x="162.91338582677164" y="261.24409448818903" font-family="DejaVu Sans,Arial,sans-serif" font-size="8" font-weight="700" fill="#172B3B" text-anchor="middle" transform="rotate(0 162.91338582677164 261.24409448818903)">N</text>
+<polyline points="162.91338582677164,294.4094488188978 179.92125984251967,294.4094488188978" fill="none" stroke="#647686" stroke-width="0.7" stroke-linejoin="round"/>
+<polygon points="179.92125984251967,294.4094488188978 176.92125984251967,295.78944881889777 176.92125984251967,293.0294488188978" fill="#647686" stroke="none" stroke-width="0.7"/>
+<text x="184.17322834645668" y="296.11023622047253" font-family="DejaVu Sans,Arial,sans-serif" font-size="6" font-weight="400" fill="#647686" text-anchor="middle" transform="rotate(0 184.17322834645668 296.11023622047253)">E</text>
+<rect x="162.91338582677164" y="311.984251968504" width="28.34645669291339" height="2.267716535433073" fill="#172B3B" stroke="#172B3B" stroke-width="0.5"/>
+<rect x="191.25984251968504" y="311.984251968504" width="28.34645669291339" height="2.267716535433073" fill="#FFFFFF" stroke="#172B3B" stroke-width="0.5"/>
+<rect x="219.60629921259843" y="311.984251968504" width="28.34645669291339" height="2.267716535433073" fill="#172B3B" stroke="#172B3B" stroke-width="0.5"/>
+<text x="162.91338582677164" y="321.3385826771654" font-family="DejaVu Sans,Arial,sans-serif" font-size="6" font-weight="400" fill="#647686" text-anchor="middle" transform="rotate(0 162.91338582677164 321.3385826771654)">0</text>
+<text x="191.25984251968504" y="321.3385826771654" font-family="DejaVu Sans,Arial,sans-serif" font-size="6" font-weight="400" fill="#647686" text-anchor="middle" transform="rotate(0 191.25984251968504 321.3385826771654)">1</text>
+<text x="219.60629921259843" y="321.3385826771654" font-family="DejaVu Sans,Arial,sans-serif" font-size="6" font-weight="400" fill="#647686" text-anchor="middle" transform="rotate(0 219.60629921259843 321.3385826771654)">2</text>
+<text x="247.95275590551182" y="321.3385826771654" font-family="DejaVu Sans,Arial,sans-serif" font-size="6" font-weight="400" fill="#647686" text-anchor="middle" transform="rotate(0 247.95275590551182 321.3385826771654)">3</text>
+<text x="256.45669291338584" y="321.3385826771654" font-family="DejaVu Sans,Arial,sans-serif" font-size="6" font-weight="400" fill="#647686" text-anchor="middle" transform="rotate(0 256.45669291338584 321.3385826771654)">m</text>
+<text x="47" y="720.8897637795277" font-family="DejaVu Sans,Arial,sans-serif" font-size="8.2" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 47 720.8897637795277)">Lecture : A &gt; 4 : sortie vers le sud ; 4 &gt; 5 : gauche, 2 m ; 5 &gt; 6 : gauche, 6 m ; 6 &gt; 7 : droite, 10 m ; puis accès au dépôt 3, tri et sortie vers l’attente.</text>
+<polyline points="47,760.8897637795277 71,760.8897637795277" fill="none" stroke="#1764D5" stroke-width="2" stroke-linejoin="round"/>
+<text x="79" y="763.8897637795277" font-family="DejaVu Sans,Arial,sans-serif" font-size="7.5" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 79 763.8897637795277)">Mission principale</text>
+<polyline points="207,760.8897637795277 231,760.8897637795277" fill="none" stroke="#7755B7" stroke-width="1.6" stroke-dasharray="4 3" stroke-linejoin="round"/>
+<text x="239" y="763.8897637795277" font-family="DejaVu Sans,Arial,sans-serif" font-size="7.5" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 239 763.8897637795277)">Retour vers attente</text>
+<text x="437" y="763.8897637795277" font-family="DejaVu Sans,Arial,sans-serif" font-size="7.5" font-weight="700" fill="#087D68" text-anchor="start" transform="rotate(0 437 763.8897637795277)">D : fourni</text>
+<text x="515" y="763.8897637795277" font-family="DejaVu Sans,Arial,sans-serif" font-size="7.5" font-weight="700" fill="#A86413" text-anchor="start" transform="rotate(0 515 763.8897637795277)">H : provisoire</text>
+<rect x="925" y="103.0" width="235" height="672.8897637795277" fill="#F5F8FB" stroke="none" stroke-width="0.7"/>
+<text x="940" y="124.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="11" font-weight="700" fill="#172B3B" text-anchor="start" transform="rotate(0 940 124.0)">Hypothèses du rez-de-chaussée</text>
+<text x="940" y="149.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8.6" font-weight="700" fill="#1764D5" text-anchor="start" transform="rotate(0 940 149.0)">Ascenseur à porte unique H</text>
+<text x="940" y="165.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 940 165.0)">Entrée et sortie au sud. Demi-tour dans la cabine</text>
+<text x="940" y="177.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 940 177.0)">avant la sortie au RDC. Cette manœuvre</text>
+<text x="940" y="189.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 940 189.0)">disparaîtrait avec une cabine traversante adaptée.</text>
+<text x="940" y="221.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8.6" font-weight="700" fill="#1764D5" text-anchor="start" transform="rotate(0 940 221.0)">Distances du récit</text>
+<text x="940" y="237.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 940 237.0)">2 m, puis 6 m, puis 10 m. Les distances sont</text>
+<text x="940" y="249.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 940 249.0)">interprétées entre axes de virage, puis jusqu’à la</text>
+<text x="940" y="261.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 940 261.0)">porte P1. Largeur du couloir de 6 m : 1,50 m.</text>
+<text x="940" y="293.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8.6" font-weight="700" fill="#1764D5" text-anchor="start" transform="rotate(0 940 293.0)">Deux virages élargis H</text>
+<text x="940" y="309.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 940 309.0)">Zones de 1,80 × 1,80 m aux repères 5 et 6. Elles</text>
+<text x="940" y="321.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 940 321.0)">facilitent les rotations de l’empreinte d’essai avec</text>
+<text x="940" y="333.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 940 333.0)">sa marge. Leur présence réelle est à vérifier.</text>
+<text x="940" y="365.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8.6" font-weight="700" fill="#1764D5" text-anchor="start" transform="rotate(0 940 365.0)">Dépôt prioritaire : n° 3</text>
+<text x="940" y="381.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 940 381.0)">Trois zones C1 / C2 / C3 dans la même salle :</text>
+<text x="940" y="393.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 940 393.0)">hypothèse de travail. Réceptions et positions</text>
+<text x="940" y="405.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 940 405.0)">d’accostage indicatives, sans mécanisme encore</text>
+<text x="940" y="417.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 940 417.0)">dimensionné.</text>
+<text x="940" y="449.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8.6" font-weight="700" fill="#1764D5" text-anchor="start" transform="rotate(0 940 449.0)">Autres salles</text>
+<text x="940" y="465.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 940 465.0)">Dépôt 1 : solution de repli après autorisation.</text>
+<text x="940" y="477.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 940 477.0)">Dépôt 2 : fonction à préciser. La disposition des</text>
+<text x="940" y="489.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 940 489.0)">trois portes et les dimensions des salles sont</text>
+<text x="940" y="501.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 940 501.0)">entièrement provisoires.</text>
+<text x="940" y="533.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8.6" font-weight="700" fill="#1764D5" text-anchor="start" transform="rotate(0 940 533.0)">Après livraison</text>
+<text x="940" y="549.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 940 549.0)">Sortie du dépôt 3 et attente dans l’emplacement</text>
+<text x="940" y="561.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 940 561.0)">violet. Aucune instruction de retour n’est</text>
+<text x="940" y="573.0" font-family="DejaVu Sans,Arial,sans-serif" font-size="8" font-weight="400" fill="#172B3B" text-anchor="start" transform="rotate(0 940 573.0)">déclenchée automatiquement.</text>
+</svg>

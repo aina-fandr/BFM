@@ -1,0 +1,30 @@
+{
+  "version": "0.2",
+  "date": "2026-10-21",
+  "wall_height_m": 2.4,
+  "door_clear_height_m": 2.1,
+  "slab_thickness_m": 0.12,
+  "floor_elevation_m": 3.0,
+  "cargo_enclosure_m": [
+    1.0,
+    0.5,
+    0.75
+  ],
+  "trial_robot_footprint_m": [
+    1.1,
+    0.7
+  ],
+  "robot_total_height_hypothesis_m": 1.12,
+  "reception_height_hypothesis_m": 0.45,
+  "robot_payload_mass_kg": 160,
+  "robot_compartment_count": 4,
+  "robot_compartment_payload_kg": 40,
+  "robot_compartment_clear_m": [
+    0.46,
+    0.44,
+    0.3
+  ],
+  "robot_drawer_extension_hypothesis_m": 0.35,
+  "stage": "Avant-projet mécanique conceptuel. Quatre tiroirs indépendants, non validés.",
+  "hypotheses": "Dimensions des sacs, structure, roues, tiroirs, stabilité, motorisation et interfaces de transfert à valider. Le modèle montre quatre compartiments à 40 kg nominaux chacun; le déchargement assisté reste un concept."
+}

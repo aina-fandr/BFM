@@ -1,0 +1,96 @@
+{
+  "status": "Concept; positions/interfaces explicites, assemblages STEP composes de solides sans contraintes cinematiques.",
+  "units": "mm",
+  "design_load": {
+    "payload_kg": 160,
+    "empty_robot_target_max_kg": 70,
+    "gross_mass_target_kg": 230,
+    "structural_validation": "NOT_DONE"
+  },
+  "connections": [
+    {
+      "id": "rim_to_hub",
+      "components": [
+        "R02_jante",
+        "R03_moyeu"
+      ],
+      "type": "6x M8x30, ecrous et rondelles",
+      "pattern": "PCD 80 mm, 60 degres",
+      "holes": "D8.5 mm traversants dans la jante et la bride"
+    },
+    {
+      "id": "hub_to_axle",
+      "components": [
+        "R03_moyeu",
+        "R06_arbre",
+        "R08_clavette"
+      ],
+      "type": "arbre D20 avec clavette parallele 6x6x30",
+      "fit": "jeu/serrage a calculer; rainures a valider"
+    },
+    {
+      "id": "axle_support",
+      "components": [
+        "R04_roulement_6204_gabarit_20x47x14",
+        "R09_support_double_paliers_siege_6204"
+      ],
+      "type": "2 roulements 6204, alesages de logement D47",
+      "retention": "montage ajuste provisoire; epaulements/circlips a finaliser"
+    },
+    {
+      "id": "bearing_support_to_frame",
+      "components": [
+        "R09_support_double_paliers_siege_6204",
+        "C01_longeron_gauche_40x40x3",
+        "C02_longeron_droit_40x40x3"
+      ],
+      "type": "soudure du support sur le longeron, cordon a dimensionner"
+    },
+    {
+      "id": "motor_to_plate",
+      "components": [
+        "M01_motor_reducteur_gabarit_128x94x70",
+        "M02_platine_moteur_percee_et_soudable"
+      ],
+      "type": "4x M8, entraxe provisoire 96x50 mm"
+    },
+    {
+      "id": "motor_to_axle",
+      "components": [
+        "M01_motor_reducteur_gabarit_128x94x70",
+        "M03_accouplement_flexible_20x16_gabarit",
+        "R06_arbre_D20_avec_rainure_clavette"
+      ],
+      "type": "accouplement indicatif 20x16 mm; couple et longueur d arbre a verifier"
+    },
+    {
+      "id": "motor_plate_to_crossmember",
+      "components": [
+        "M02_platine_moteur_percee_et_soudable",
+        "C04_traverse_central_40x40x3"
+      ],
+      "type": "soudure; cordons et renforts a dimensionner"
+    },
+    {
+      "id": "deck_to_frame",
+      "components": [
+        "C06_plancher_3mm_perce_6xM6",
+        "C01_longeron_gauche_40x40x3",
+        "C02_longeron_droit_40x40x3",
+        "C04_traverse_central_40x40x3"
+      ],
+      "type": "6x M6, rondelles et ecrous, trous alignes dans la tole et les profils"
+    },
+    {
+      "id": "frame_welds",
+      "components": [
+        "C01_longeron_gauche_40x40x3",
+        "C02_longeron_droit_40x40x3",
+        "C03_traverse_avant_40x40x3",
+        "C04_traverse_central_40x40x3",
+        "C05_traverse_arriere_40x40x3"
+      ],
+      "type": "assemblage soude; cordons et procedure a valider"
+    }
+  ]
+}

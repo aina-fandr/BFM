@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1040" viewBox="0 0 1600 1040" role="img" aria-labelledby="title description">
+  <title id="title">Gabarit coté du robot AGV BFM V4</title>
+  <desc id="description">Trois rectangles d'encombrement aux proportions mesurées sur le modèle A13 : vue de dessus, face et profil. Ces limites de modèle ne sont pas un plan de fabrication.</desc>
+  <defs>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" fill="none" stroke="#e8ece9" stroke-width="1"/>
+    </pattern>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse">
+      <path d="M0 0L8 4L0 8" fill="none" stroke="#287769" stroke-width="1.5"/>
+    </marker>
+    <style>
+      text{font-family:Arial,Helvetica,sans-serif;fill:#17232d}
+      .title{font-size:30px;font-weight:750;letter-spacing:-.4px}
+      .subtitle{font-size:15px;fill:#5f6b72}
+      .badge{font-size:13px;font-weight:750;fill:#754b16}
+      .panel-title{font-size:17px;font-weight:750;letter-spacing:.7px;fill:#287769}
+      .small{font-size:13px;fill:#68757c}
+      .dim{font-size:15px;font-weight:750;fill:#287769}
+      .outline{fill:#fff;stroke:#263b48;stroke-width:3}
+      .detail{fill:#fff8ec;stroke:#d58522;stroke-width:2;stroke-dasharray:7 5}
+      .dimline{stroke:#287769;stroke-width:2;marker-start:url(#arrow);marker-end:url(#arrow)}
+      .extension{stroke:#8da7a2;stroke-width:1.5;stroke-dasharray:4 4}
+    </style>
+  </defs>
+  <rect width="1600" height="1040" fill="#f3f5f2"/>
+  <rect x="28" y="28" width="1544" height="984" rx="14" fill="#fff" stroke="#d9e0dc" stroke-width="2"/>
+  <rect x="29" y="29" width="1542" height="982" rx="14" fill="url(#grid)" opacity=".55"/>
+  <text x="74" y="92" class="title">BFM V4 · GABARIT D’ENCOMBREMENT</text>
+  <text x="74" y="123" class="subtitle">Mesures des bornes géométriques du GLB A13 · axe X = longueur · axe Y = largeur · axe Z = hauteur · toutes cotes en mm</text>
+  <rect x="74" y="147" width="1452" height="48" rx="8" fill="#fff1d9"/>
+  <text x="96" y="177" class="badge">IMPORTANT · Ce dessin montre seulement l’enveloppe maximale du modèle 3D. Ce n’est ni un plan détaillé ni un plan de fabrication.</text>
+
+  <g>
+    <rect x="74" y="224" width="460" height="654" rx="12" fill="#fbfcfa" stroke="#dce3df"/>
+    <text x="102" y="266" class="panel-title">01 · VUE DE DESSUS</text>
+    <text x="102" y="290" class="small">X × Y · empreinte extérieure complète</text>
+    <rect x="102" y="324" width="404" height="278" rx="5" class="outline"/>
+    <text x="304" y="455" class="small" text-anchor="middle">ENVELOPPE A13</text>
+    <line x1="102" y1="643" x2="506" y2="643" class="dimline"/>
+    <line x1="102" y1="608" x2="102" y2="657" class="extension"/>
+    <line x1="506" y1="608" x2="506" y2="657" class="extension"/>
+    <text x="304" y="670" class="dim" text-anchor="middle">1 112 · longueur X</text>
+    <line x1="72" y1="324" x2="72" y2="602" class="dimline"/>
+    <line x1="78" y1="324" x2="98" y2="324" class="extension"/>
+    <line x1="78" y1="602" x2="98" y2="602" class="extension"/>
+    <text x="57" y="463" class="dim" text-anchor="middle" transform="rotate(-90 57 463)">767,5 · largeur Y</text>
+    <text x="102" y="737" class="small">Rectangle à l’échelle relative ;</text>
+    <text x="102" y="759" class="small">aucun détail intérieur n’est coté.</text>
+    <text x="102" y="815" font-size="13" font-weight="700" fill="#263b48">Emprise fermée du modèle</text>
+  </g>
+
+  <g>
+    <rect x="570" y="224" width="460" height="654" rx="12" fill="#fbfcfa" stroke="#dce3df"/>
+    <text x="598" y="266" class="panel-title">02 · FACE DES CASIERS</text>
+    <text x="598" y="290" class="small">Y × Z · façade et hauteur hors tout</text>
+    <rect x="668" y="326" width="264" height="368" rx="5" class="outline"/>
+    <rect x="690" y="385" width="220" height="258" rx="4" class="detail"/>
+    <line x1="800" y1="385" x2="800" y2="643" stroke="#d58522" stroke-width="2" stroke-dasharray="7 5"/>
+    <line x1="690" y1="514" x2="910" y2="514" stroke="#d58522" stroke-width="2" stroke-dasharray="7 5"/>
+    <text x="800" y="510" class="small" text-anchor="middle">2 × 2 casiers</text>
+    <text x="800" y="536" class="small" text-anchor="middle">schéma indicatif</text>
+    <line x1="668" y1="734" x2="932" y2="734" class="dimline"/>
+    <line x1="668" y1="700" x2="668" y2="748" class="extension"/>
+    <line x1="932" y1="700" x2="932" y2="748" class="extension"/>
+    <text x="800" y="761" class="dim" text-anchor="middle">767,5 · largeur Y</text>
+    <line x1="974" y1="326" x2="974" y2="694" class="dimline"/>
+    <line x1="940" y1="326" x2="990" y2="326" class="extension"/>
+    <line x1="940" y1="694" x2="990" y2="694" class="extension"/>
+    <text x="998" y="510" class="dim" text-anchor="middle" transform="rotate(-90 998 510)">1 070 · hauteur Z</text>
+    <text x="598" y="815" class="small">Pointillés : organisation 2 × 2,</text>
+    <text x="598" y="837" class="small">pas les dimensions des portes.</text>
+  </g>
+
+  <g>
+    <rect x="1066" y="224" width="460" height="654" rx="12" fill="#fbfcfa" stroke="#dce3df"/>
+    <text x="1094" y="266" class="panel-title">03 · PROFIL</text>
+    <text x="1094" y="290" class="small">X × Z · longueur et hauteur hors tout</text>
+    <rect x="1106" y="326" width="382" height="368" rx="5" class="outline"/>
+    <text x="1297" y="510" class="small" text-anchor="middle">ENVELOPPE A13</text>
+    <line x1="1106" y1="734" x2="1488" y2="734" class="dimline"/>
+    <line x1="1106" y1="700" x2="1106" y2="748" class="extension"/>
+    <line x1="1488" y1="700" x2="1488" y2="748" class="extension"/>
+    <text x="1297" y="761" class="dim" text-anchor="middle">1 112 · longueur X</text>
+    <line x1="1520" y1="326" x2="1520" y2="694" class="dimline"/>
+    <line x1="1495" y1="326" x2="1535" y2="326" class="extension"/>
+    <line x1="1495" y1="694" x2="1535" y2="694" class="extension"/>
+    <text x="1543" y="510" class="dim" text-anchor="middle" transform="rotate(-90 1543 510)">1 070 · hauteur Z</text>
+    <text x="1094" y="815" class="small">Silhouette rectangulaire = limites</text>
+    <text x="1094" y="837" class="small">mesurées, sans détail de structure.</text>
+  </g>
+
+  <line x1="74" y1="914" x2="1526" y2="914" stroke="#dce3df"/>
+  <text x="74" y="949" class="small">Source : BFM_V4 · A13_ROBOT_COMPLET.glb · fichier modifié le 18/11/2026 à 17:12:32.</text>
+  <text x="74" y="975" class="small">Bornes 3D : X [−525 ; 587] · Y [−382 ; 385,5] · Z [−5 ; 1 065]. Vérifier le site, le sol et les marges avant tout usage.</text>
+</svg>

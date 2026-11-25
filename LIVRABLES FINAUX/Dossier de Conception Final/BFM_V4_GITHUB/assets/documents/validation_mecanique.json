@@ -1,0 +1,52 @@
+{
+  "axis": "Y",
+  "wheel_centers_mm": {
+    "left": [
+      0,
+      -322,
+      105
+    ],
+    "right": [
+      0,
+      322,
+      105
+    ]
+  },
+  "motor_output_centers_mm": {
+    "left": [
+      0,
+      -286,
+      105
+    ],
+    "right": [
+      0,
+      286,
+      105
+    ]
+  },
+  "coupling_centers_mm": {
+    "left": [
+      0,
+      -304,
+      105
+    ],
+    "right": [
+      0,
+      304,
+      105
+    ]
+  },
+  "chain_left": [
+    "M01 output Y-286",
+    "M03 Y-304",
+    "R04 wheel shaft Y-322"
+  ],
+  "chain_right": [
+    "M01_D output Y+286",
+    "M03 Y+304",
+    "R04 wheel shaft Y+322"
+  ],
+  "motor_file": "F6B250-24GU-30S_6GUXXRT.STEP",
+  "rotation_check": "No arbitrary Z-rotation; STEP output-shaft axis aligned with Y",
+  "status": "KINEMATIC_LAYOUT_CORRECTED_NOT_LOAD_VALIDATED"
+}

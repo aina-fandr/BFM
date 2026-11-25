@@ -1,0 +1,39 @@
+[
+  {
+    "model": "batiment_complet",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "model": "niveau_depart",
+    "errors": 0,
+    "warnings": 0,
+    "messages": []
+  },
+  {
+    "model": "rez_de_chaussee",
+    "errors": 0,
+    "warnings": 0,
+    "messages": [
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/accessors/3"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/accessors/4"
+      },
+      {
+        "code": "UNUSED_OBJECT",
+        "message": "This object may be unused.",
+        "severity": 2,
+        "pointer": "/accessors/5"
+      }
+    ]
+  }
+]

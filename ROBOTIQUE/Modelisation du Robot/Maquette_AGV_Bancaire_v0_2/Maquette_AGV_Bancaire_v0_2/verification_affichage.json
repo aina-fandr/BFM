@@ -1,0 +1,72 @@
+{
+  "status": "PASS",
+  "views": [
+    {
+      "mode": "N1",
+      "objects": 92,
+      "drawCalls": 92,
+      "glError": 0,
+      "width": 1222,
+      "height": 650,
+      "wallCut": true,
+      "ready": true,
+      "overflow": false
+    },
+    {
+      "mode": "RDC",
+      "objects": 93,
+      "drawCalls": 93,
+      "glError": 0,
+      "width": 1222,
+      "height": 650,
+      "wallCut": true,
+      "ready": true,
+      "overflow": false
+    },
+    {
+      "mode": "both",
+      "objects": 181,
+      "drawCalls": 181,
+      "glError": 0,
+      "width": 1222,
+      "height": 650,
+      "wallCut": true,
+      "ready": true,
+      "overflow": false
+    },
+    {
+      "mode": "exploded",
+      "objects": 181,
+      "drawCalls": 181,
+      "glError": 0,
+      "width": 1222,
+      "height": 650,
+      "wallCut": true,
+      "ready": true,
+      "overflow": false
+    },
+    {
+      "mode": "exploded",
+      "objects": 190,
+      "drawCalls": 190,
+      "glError": 0,
+      "width": 1222,
+      "height": 650,
+      "wallCut": false,
+      "ready": true
+    },
+    {
+      "mode": "RDC",
+      "objects": 79,
+      "drawCalls": 79,
+      "glError": 0,
+      "width": 334,
+      "height": 390,
+      "wallCut": false,
+      "ready": true,
+      "overflow": false
+    }
+  ],
+  "scriptErrors": [],
+  "externalRequests": 0
+}

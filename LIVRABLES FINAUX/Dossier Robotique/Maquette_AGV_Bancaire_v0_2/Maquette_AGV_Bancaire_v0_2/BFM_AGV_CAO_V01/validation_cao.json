@@ -1,0 +1,16 @@
+{
+  "individual_parts_valid": 26,
+  "wheel_assembly_components": 48,
+  "chassis_assembly_components": 120,
+  "rim_bolts_each_wheel": 6,
+  "motor_mount_bolts_each_wheel": 4,
+  "deck_bolts": 6,
+  "wheel_centres_mm": 515,
+  "outer_width_mm": 570,
+  "gross_mass_target_kg": 230,
+  "empty_mass_cap_kg": 70,
+  "frame_and_deck_geometry_estimate_kg": 19.48,
+  "mass_budget_status": "PROVISIONAL_NOT_MEASURED",
+  "geometry_validation": "PASS",
+  "load_validation": "NOT_DONE"
+}

@@ -1,0 +1,53 @@
+﻿Reference;Famille;Piece;Matiere envisagee;Enveloppe / dimensions conceptuelles;Fonction;Etat
+R01;01_ROUES;Bandage elastomere;caoutchouc;Ø200 ext / Ø154 int / 44 mm;Adherence et roulement;Durete/charge fournisseur a choisir
+R02;01_ROUES;Jante;alu;Ø158 / alésage Ø44 / 40 mm;Support du bandage et connexion moyeu;Concept non valide
+R03;01_ROUES;Moyeu;acier;Ø62 / alésage Ø24 / 64 mm;Connexion de la jante a l axe;Concept non valide
+R04;01_ROUES;Axe;acier;Ø24 / 120 mm;Transmission du couple;Concept non valide
+R05;01_ROUES;Roulement schématique;acier;Ø62 / Ø24 / 18 mm;Guidage en rotation, volume enveloppe;Remplacer par reference fabricant
+R06;01_ROUES;Entretoise;acier;Ø36 / Ø25 / 22 mm;Maintien axial;Concept non valide
+R07;01_ROUES;Rondelle;acier;Ø40 / Ø25 / 3 mm;Appui de fixation;Concept non valide
+M01;02_MOTORISATION;Motoréducteur réel F6B250-24GU-30S;moteur;"237 × 172.5 × 104 mm; arbre de sortie orienté selon Y";Motorisation roue motrice;"STEP fabricant F6B250-24GU-30S/6GU50RT; positionné avec l arbre de sortie coaxial à la roue"
+M01_D;02_MOTORISATION;Motoréducteur droit réel F6B250-24GU-30S;moteur;"237 × 172.5 × 104 mm; arbre de sortie orienté selon Y";Motorisation roue motrice droite;"STEP fabricant F6B250-24GU-30S/6GU50RT; positionné avec l arbre de sortie coaxial à la roue"
+M02;02_MOTORISATION;Bride moteur;acier;136 × 10 × 128 mm;Fixation motorisation au chassis;Perpendiculaire à l axe Y
+M03;02_MOTORISATION;Accouplement axial roue-moteur;acier;Ø46 / Ø24 / 36 mm;Liaison réducteur-moyeu;Arbre de sortie et moyeu à vérifier avec pièces réelles
+M05;02_MOTORISATION;Frein de maintien simplifié;securite;Ø90 / Ø24 / 22 mm;Maintien statique en absence alimentation;Frein certifie et mecanisme reel a choisir
+C01;03_CHASSIS;Longeron longitudinal;acier;"1050 × 40 × 40 mm; tube conceptuel";Element porteur principal;Remplacer par profile creux et assemblage soude
+C02;03_CHASSIS;Traverse;acier;40 × 520 × 40 mm;Rigidification transversale;Concept non valide
+C03;03_CHASSIS;Platine de fond;acier;1040 × 520 × 5 mm;Support équipements bas;Concept non valide
+C04;03_CHASSIS;Platine coffre;acier;1030 × 530 × 8 mm;Support et liaison coffret;Concept non valide
+C05;03_CHASSIS;Renfort diagonal schématique;acier;310 × 35 × 30 mm;Renfort local;Orientation finale a calculer
+C06;03_CHASSIS;Support moteur;acier;190 × 95 × 10 mm;Interface chassis motorisation;Concept non valide
+S01;04_SUSPENSION;Roue libre de support;caoutchouc;Ø80 / 30 mm;Support vertical et roulement;Concept non valide
+S02;04_SUSPENSION;Fourche roulette;acier;70 × 12 × 90 mm;Support roulette;Modélisation volumique simplifiee
+S03;04_SUSPENSION;Pivot vertical;acier;Ø26 / 80 mm;Orientation roue folle;Concept non valide
+S04;04_SUSPENSION;Platines pivot;acier;80 × 80 × 8 mm;Fixation roulette au chassis;Concept non valide
+K01;05_COFFRE_2X2;Panneau dessus;acier;1000 × 500 × 3 mm;Fermeture superieure;Concept non valide
+K02;05_COFFRE_2X2;Panneau latéral;acier;1000 × 3 × 744 mm;Enveloppe laterale;Concept non valide
+K03;05_COFFRE_2X2;Panneau arrière;acier;3 × 494 × 744 mm;Enveloppe arrière;Concept non valide
+K04;05_COFFRE_2X2;Plancher coffre;acier;1000 × 500 × 5 mm;Base coffre;Concept non valide
+K05;05_COFFRE_2X2;Cloison verticale;acier;980 × 3 × 735 mm;Separation gauche/droite;Concept non valide
+K06;05_COFFRE_2X2;Cloison horizontale;acier;980 × 487 × 5 mm;Separation haut/bas;Concept non valide
+K07;05_COFFRE_2X2;Porte frontale casier;acier;4 × 235 × 340 mm;Fermeture indépendante;Charniere / serrure a definir
+K08;05_COFFRE_2X2;Charnière schématique;acier;Ø14 / 50 mm;Axe articulation porte;Concept non valide
+T01;06_TIROIRS;Fond plateau coulissant;acier;860 × 214 × 4 mm;Support sac 40 kg;Conception subordonnée aux dimensions du sac
+T02;06_TIROIRS;Joue latérale du plateau;acier;860 × 4 × 100 mm;Retenue laterale sac;Concept non valide
+T03;06_TIROIRS;Butée avant;acier;4 × 204 × 90 mm;Retenir sac en transport;Concept non valide
+T04;06_TIROIRS;Rail fixe schématique;acier;880 × 16 × 20 mm;Guidage support tiroir;Charge reelle rails a selectionner
+T05;06_TIROIRS;Rail mobile schématique;alu;865 × 12 × 12 mm;Partie coulissante du guidage;Concept non valide
+T06;06_TIROIRS;Verrou de transport;securite;48 × 25 × 28 mm;Retenir tiroir ferme;Schématique non anti-effraction
+T07;06_TIROIRS;Support capteur fin de course;alu;35 × 25 × 3 mm;Support capteur tiroir;Concept non valide
+D01;07_DECHARGEMENT;Vis de translation;acier;Ø18 / 820 mm;Motoriser extraction du plateau;Pas, flambement et guidage a dimensionner
+D02;07_DECHARGEMENT;Ecrou entrainement;alu;45 × 42 × 38 mm;Liaison entre vis et plateau;Filetage non modele
+D03;07_DECHARGEMENT;Moteur extracteur volume;moteur;75 × 58 × 58 mm;Entrainement vis de tiroir;Concept non valide
+D04;07_DECHARGEMENT;Plaque poussoir;acier;5 × 195 × 140 mm;Transfert vers station après arrimage;N est pas un mécanisme de transfert validé
+D05;07_DECHARGEMENT;Guide poussoir;acier;720 × 15 × 15 mm;Guidage translation poussoir;Concept non valide
+D06;07_DECHARGEMENT;Butée d arrimage station;securite;45 × 75 × 90 mm;Appui de centrage a la station;Concept non valide
+D07;07_DECHARGEMENT;Plateau de réception station;acier;500 × 500 × 8 mm;Station externe, accueil sac;Station non embarquee
+D08;07_DECHARGEMENT;Colonne station fixe;acier;65 × 65 × 1050 mm;Guidage élévation station;Station non embarquee
+E01;08_ELECTRONIQUE;Batterie volume enveloppe;electronique;310 × 210 × 140 mm;Masse basse alimentation 24V;Chimie et capacite non fixees
+E02;08_ELECTRONIQUE;Controleur central volume enveloppe;electronique;160 × 120 × 42 mm;Pilotage des mouvements;Concept non valide
+E03;08_ELECTRONIQUE;Driver moteur volume enveloppe;electronique;130 × 85 × 45 mm;Commande propulsion;Concept non valide
+E04;08_ELECTRONIQUE;Scanner lidar volume enveloppe;electronique;Ø104 × 62 mm;Localisation et obstacles;Pas capteur de securite certifie
+E05;08_ELECTRONIQUE;Arrêt d urgence volume;securite;Ø46 × 32 mm;Arret d urgence;Composant certifié à choisir
+E06;08_ELECTRONIQUE;Capteur presence casier volume;electronique;22 × 16 × 12 mm;Detection présence ou position;Concept non valide
+E07;08_ELECTRONIQUE;Ecran interface volume;electronique;8 × 145 × 90 mm;Interface personnel;Concept non valide

@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Maquette 3D · AGV bancaire</title>
+<style>
+:root{color-scheme:light;--ink:#172d42;--muted:#5b7083;--blue:#216bdd;--line:#dce5ee}
+*{box-sizing:border-box}body{margin:0;background:#f1f5f9;color:var(--ink);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+main{max-width:1320px;margin:auto;padding:30px 28px 24px}header{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;flex-wrap:wrap;margin-bottom:20px}
+.eyebrow{font-size:12px;letter-spacing:.1em;color:var(--blue);font-weight:750;margin:0 0 5px}h1{font-size:clamp(23px,4vw,34px);line-height:1.15;letter-spacing:-.025em;margin:0 0 10px}p{margin:0}.muted{color:var(--muted)}.version{font-size:12px;color:#8b5816;border:1px solid #e8d1ad;padding:6px 10px;border-radius:6px;background:#fff9ef}
+.surface{background:white;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 8px 40px #1d3d5a08}
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:15px 18px;border-bottom:1px solid var(--line)}.group{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+button{font:inherit;font-size:13px;line-height:1.2;background:white;border:1px solid #cbd8e4;color:var(--ink);border-radius:7px;padding:10px 12px;min-height:38px;cursor:pointer}
+button:hover{background:#edf4fd}button[aria-pressed=true]{background:var(--blue);border-color:var(--blue);color:white}button:focus-visible,input:focus-visible{outline:3px solid #91b8f7;outline-offset:3px}
+.stage{position:relative;height:min(64vw,650px);min-height:340px;background:linear-gradient(#fbfdff,#edf3f8);isolation:isolate}canvas{display:block;width:100%;height:100%;touch-action:none}#labels{position:absolute;inset:0;pointer-events:none}.hint{position:absolute;left:18px;top:15px;font-size:12px;color:var(--muted);background:#ffffffdf;border-radius:5px;padding:5px 8px;pointer-events:none}.view-note{position:absolute;left:18px;bottom:14px;font-size:12px;color:var(--muted);max-width:80%;background:#ffffffdd;padding:5px 8px;border-radius:5px;pointer-events:none}
+.controls{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:13px 18px;border-top:1px solid var(--line)}label{display:inline-flex;align-items:center;gap:8px;font-size:13px;min-height:32px}input{accent-color:var(--blue);width:16px;height:16px}select{font:inherit;font-size:13px;border:1px solid #cbd8e4;padding:5px;border-radius:5px;background:white;color:var(--ink)}
+.legend{display:flex;gap:18px;flex-wrap:wrap;align-items:center;padding:14px 18px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}.key{display:inline-flex;align-items:center;gap:7px}.swatch{width:18px;height:4px;background:var(--blue);border-radius:2px}.note{margin-top:18px;display:grid;grid-template-columns:1.3fr 1fr;gap:20px;font-size:13px}.note strong{display:block;color:var(--ink);margin-bottom:5px}footer{margin-top:18px;font-size:12px;color:var(--muted)}.error{display:none;position:absolute;inset:60px 20px auto;padding:20px;background:white;border:1px solid #dc9c9c;color:#8d3030;max-width:600px}
+@media(max-width:600px){main{padding:18px 12px}.toolbar,.controls{padding:12px}.stage{min-height:390px}.group{gap:5px}button{font-size:12px;padding:10px;min-height:42px}.hint{left:10px;font-size:11px;max-width:90%}.note{grid-template-columns:1fr;gap:12px}.view-note{left:10px;font-size:11px}.legend{gap:10px}.version{font-size:11px}}
+</style></head><body><main>
+<header><div><p class="eyebrow">PROJET AGV BANCAIRE</p><h1>Le bâtiment, en trois dimensions</h1><p class="muted">Salle de collecte, ascenseur et trois dépôts, à partir du plan 2D retenu.</p></div><span class="version">Maquette V0.2 · hypothèses conservées</span></header>
+<section class="surface" aria-label="Exploration de la maquette du bâtiment">
+<div class="toolbar"><div class="group" role="group" aria-label="Choisir la vue">
+<button type="button" data-mode="N1" aria-pressed="true">Niveau de départ</button>
+<button type="button" data-mode="RDC" aria-pressed="false">Rez-de-chaussée</button>
+<button type="button" data-mode="both" aria-pressed="false">Deux niveaux</button>
+<button type="button" data-mode="exploded" aria-pressed="false">Vue éclatée</button>
+</div><div class="group"><button type="button" id="top">Vue du dessus</button><button type="button" id="reset">Recentrer</button></div></div>
+<div class="stage"><canvas id="scene" tabindex="0" aria-label="Maquette 3D. Glisser pour faire pivoter. Les flèches du clavier font tourner la vue et les touches plus et moins règlent le zoom."></canvas><canvas id="labels" aria-hidden="true"></canvas><div class="hint">Glisser : pivoter · Molette ou pincement : zoomer</div><div id="view-note" class="view-note" aria-live="polite">Niveau de départ · altitude proposée +3,00 m</div><div id="error" class="error" role="alert"></div></div>
+<div class="controls"><div class="group"><label><input id="cut" type="checkbox" checked>Vue en coupe</label><label><input id="route" type="checkbox" checked>Parcours</label><label><input id="show-labels" type="checkbox" checked>Noms des espaces</label><label><input id="robot" type="checkbox" checked>Gabarit AGV</label></div><div class="group"><button id="zoom-in" type="button" aria-label="Agrandir la maquette">Zoom +</button><button id="zoom-out" type="button" aria-label="Réduire la maquette">Zoom −</button></div></div>
+<div class="legend"><span class="key"><i class="swatch"></i>Trajet prévu</span><span class="key"><i class="swatch" style="background:#8f65bb"></i>Sortie vers l’attente</span><span class="key"><i class="swatch" style="background:#279e8d"></i>Passages de porte</span><span class="key"><i class="swatch" style="background:#9d8cc5"></i>Ascenseur</span></div>
+</section>
+<div class="note"><p class="muted"><strong>Volumes de travail</strong>Murs : 2,40 m. Portes : 2,10 m de haut et 1,20 m de large. Écart entre niveaux : 3,00 m. Ces valeurs restent provisoires. La coupe réduit uniquement la hauteur affichée des murs.</p><p class="muted"><strong>Prochaine intégration</strong>Le gabarit représente le coffre et quatre façades de tiroirs. La navigation, le déplacement de l’ascenseur, les sacs et leur transfert seront ajoutés à cette base.</p></div>
+<footer>Vue éclatée : séparation visuelle des niveaux, sans modifier leurs coordonnées dans les modèles. Maquette géométrique statique ; aucune navigation autonome n’est simulée ici.</footer>
+<script id="scene-data" type="application/json">__SCENE_DATA__</script>
+<script>
+(()=>{'use strict';
+const DATA=JSON.parse(document.getElementById('scene-data').textContent),canvas=document.getElementById('scene'),overlay=document.getElementById('labels'),ctx=overlay.getContext('2d');
+const upper=Number(DATA.meta.floor_elevation_m);
+const gl=canvas.getContext('webgl',{antialias:true,alpha:false,preserveDrawingBuffer:true});
+if(!gl){const e=document.getElementById('error');e.style.display='block';e.textContent='La vue 3D nécessite WebGL. Ouvre ce fichier dans une version récente de Chrome, Edge ou Firefox, avec l’accélération graphique activée.';return;}
+const vs=`attribute vec3 position;attribute vec3 normal;uniform mat4 model;uniform mat4 vp;varying vec3 lightNormal;void main(){lightNormal=normalize(mat3(model)*normal);gl_Position=vp*model*vec4(position,1.0);}`;
+const fs=`precision mediump float;varying vec3 lightNormal;uniform vec3 color;void main(){vec3 n=normalize(lightNormal);float l=.52+.36*max(dot(n,normalize(vec3(-.3,-.4,1.0))),0.0)+.12*max(dot(n,normalize(vec3(.7,.5,.3))),0.0);gl_FragColor=vec4(color*l,1.0);}`;
+function shader(type,src){const s=gl.createShader(type);gl.shaderSource(s,src);gl.compileShader(s);if(!gl.getShaderParameter(s,gl.COMPILE_STATUS))throw Error(gl.getShaderInfoLog(s));return s;}
+const program=gl.createProgram();gl.attachShader(program,shader(gl.VERTEX_SHADER,vs));gl.attachShader(program,shader(gl.FRAGMENT_SHADER,fs));gl.linkProgram(program);if(!gl.getProgramParameter(program,gl.LINK_STATUS))throw Error(gl.getProgramInfoLog(program));gl.useProgram(program);
+const loc={p:gl.getAttribLocation(program,'position'),n:gl.getAttribLocation(program,'normal'),model:gl.getUniformLocation(program,'model'),vp:gl.getUniformLocation(program,'vp'),color:gl.getUniformLocation(program,'color')};
+const meshes={};for(const [key,g] of Object.entries(DATA.meshes)){const b=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,b);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(g.positions),gl.STATIC_DRAW);const n=gl.createBuffer();gl.bindBuffer(gl.ARRAY_BUFFER,n);gl.bufferData(gl.ARRAY_BUFFER,new Float32Array(g.normals),gl.STATIC_DRAW);const ids=gl.createBuffer();gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,ids);gl.bufferData(gl.ELEMENT_ARRAY_BUFFER,new Uint16Array(g.indices),gl.STATIC_DRAW);meshes[key]={b,n,ids,count:g.indices.length};}
+const state={mode:'N1',cut:true,route:true,labels:true,robot:true,az:-.95,el:1.02,zoom:1};let width=1,height=1,dpr=1,VP=null,frame=0,lastVisible=[];
+const sub=(a,b)=>a.map((v,i)=>v-b[i]),dot=(a,b)=>a.reduce((s,v,i)=>s+v*b[i],0),cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]],norm=a=>{const l=Math.hypot(...a);return a.map(v=>v/l)};
+function multiply(a,b){const r=new Float32Array(16);for(let c=0;c<4;c++)for(let row=0;row<4;row++)for(let k=0;k<4;k++)r[c*4+row]+=a[k*4+row]*b[c*4+k];return r;}
+function lookAt(eye,target){const f=norm(sub(target,eye)),s=norm(cross(f,[0,0,1])),u=cross(s,f);return new Float32Array([s[0],u[0],-f[0],0,s[1],u[1],-f[1],0,s[2],u[2],-f[2],0,-dot(s,eye),-dot(u,eye),dot(f,eye),1]);}
+function ortho(l,r,b,t,n,f){return new Float32Array([2/(r-l),0,0,0,0,2/(t-b),0,0,0,0,-2/(f-n),0,-(r+l)/(r-l),-(t+b)/(t-b),-(f+n)/(f-n),1]);}
+function matrix(o){const c=Math.cos(o.yaw),s=Math.sin(o.yaw),[x,y,z]=o.center,[a,b,h]=o.size;return new Float32Array([c*a,s*a,0,0,-s*b,c*b,0,0,0,0,h,0,x,y,z,1]);}
+function visibleObjects(){const out=[];for(const src of DATA.objects){if(state.mode==='N1'&&!['N1','ROBOT'].includes(src.level))continue;if(state.mode==='RDC'&&src.level!=='RDC')continue;if(['both','exploded'].includes(state.mode)&&src.name.startsWith('RDC_cabine_'))continue;if(src.kind==='route'&&!state.route)continue;if(src.level==='ROBOT'&&!state.robot)continue;if(src.level==='COMMON'&&['N1','RDC'].includes(state.mode))continue;let o={...src,center:[...src.center],size:[...src.size]};
+if(state.cut&&['wall','shaft','cabinwall','doorframe','doorleaf','lintel'].includes(o.kind)){if(o.kind==='lintel'||o.level==='COMMON')continue;const base=o.level==='N1'?upper:0;o.size[2]=Math.min(o.size[2],.85);o.center[2]=base+o.size[2]/2;}
+if(state.mode==='exploded'&&['N1','ROBOT'].includes(o.level))o.center[2]+=4.5;
+if(state.mode==='exploded'&&o.level==='COMMON')continue;
+out.push(o);}return out;}
+function resize(){const r=canvas.parentElement.getBoundingClientRect();width=r.width;height=r.height;dpr=Math.min(devicePixelRatio||1,2);canvas.width=overlay.width=Math.round(width*dpr);canvas.height=overlay.height=Math.round(height*dpr);gl.viewport(0,0,canvas.width,canvas.height);ctx.setTransform(dpr,0,0,dpr,0,0);schedule();}
+function schedule(){if(!frame)frame=requestAnimationFrame(()=>{frame=0;render()});}
+function render(){lastVisible=visibleObjects();let min=[Infinity,Infinity,Infinity],max=[-Infinity,-Infinity,-Infinity];for(const o of lastVisible){if(o.kind==='route')continue;for(let k=0;k<3;k++){min[k]=Math.min(min[k],o.center[k]-o.size[k]/2);max[k]=Math.max(max[k],o.center[k]+o.size[k]/2);}}
+const target=min.map((v,i)=>(v+max[i])/2),dist=65;
+const direction=[Math.cos(state.el)*Math.cos(state.az),Math.cos(state.el)*Math.sin(state.az),Math.sin(state.el)],f=direction.map(v=>-v),right=norm(cross(f,[0,0,1])),up=cross(right,f);
+let xlo=Infinity,xhi=-Infinity,ylo=Infinity,yhi=-Infinity;
+for(const o of lastVisible){const c=Math.cos(o.yaw),s=Math.sin(o.yaw);for(const i of [-.5,.5])for(const j of [-.5,.5])for(const k of [-.5,.5]){const a=i*o.size[0],b=j*o.size[1],p=[o.center[0]+a*c-b*s-target[0],o.center[1]+a*s+b*c-target[1],o.center[2]+k*o.size[2]-target[2]],x=dot(p,right),y=dot(p,up);xlo=Math.min(xlo,x);xhi=Math.max(xhi,x);ylo=Math.min(ylo,y);yhi=Math.max(yhi,y);}}
+const cx=(xlo+xhi)/2,cy=(ylo+yhi)/2;for(let i=0;i<3;i++)target[i]+=right[i]*cx+up[i]*cy;
+const eye=target.map((v,i)=>v+dist*direction[i]),aspect=width/height;
+const span=(Math.max((xhi-xlo)/2/aspect,(yhi-ylo)/2)*1.12+.32)/state.zoom;
+VP=multiply(ortho(-span*aspect,span*aspect,-span,span,.1,160),lookAt(eye,target));
+gl.clearColor(.953,.971,.985,1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);gl.enable(gl.DEPTH_TEST);gl.depthFunc(gl.LEQUAL);gl.disable(gl.CULL_FACE);gl.uniformMatrix4fv(loc.vp,false,VP);
+for(const o of lastVisible){const g=meshes[o.mesh];gl.bindBuffer(gl.ARRAY_BUFFER,g.b);gl.enableVertexAttribArray(loc.p);gl.vertexAttribPointer(loc.p,3,gl.FLOAT,false,0,0);gl.bindBuffer(gl.ARRAY_BUFFER,g.n);gl.enableVertexAttribArray(loc.n);gl.vertexAttribPointer(loc.n,3,gl.FLOAT,false,0,0);gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER,g.ids);gl.uniformMatrix4fv(loc.model,false,matrix(o));gl.uniform3fv(loc.color,[1,3,5].map(i=>parseInt(o.color.slice(i,i+2),16)/255));gl.drawElements(gl.TRIANGLES,g.count,gl.UNSIGNED_SHORT,0);}
+drawLabels();window.__maquetteDiagnostics={mode:state.mode,objects:lastVisible.length,drawCalls:lastVisible.length,glError:gl.getError(),width,height,wallCut:state.cut,ready:true};}
+function project(p){const q=[0,0,0,0];for(let i=0;i<4;i++)q[i]=VP[i]*p[0]+VP[4+i]*p[1]+VP[8+i]*p[2]+VP[12+i];return [(q[0]/q[3]*.5+.5)*width,(-q[1]/q[3]*.5+.5)*height,q[2]/q[3]];}
+function drawLabels(){ctx.clearRect(0,0,width,height);if(!state.labels)return;const used=[];for(const l of DATA.labels){if(state.mode==='N1'&&l.level!=='N1')continue;if(state.mode==='RDC'&&l.level!=='RDC')continue;if(['both','exploded'].includes(state.mode)&&l.text.includes('ASCENSEUR')&&l.level==='RDC')continue;const p=[...l.p];if(state.mode==='exploded'&&l.level==='N1')p[2]+=4.5;const [x,y,z]=project(p);if(z<-1||z>1||x<25||x>width-25||y<45||y>height-25)continue;ctx.font='600 '+(width<600?10:11)+'px system-ui';const tw=ctx.measureText(l.text).width,b={x:x-tw/2-5,y:y-10,w:tw+10,h:19};if(b.x<4||b.x+b.w>width-4||used.some(a=>b.x<a.x+a.w&&b.x+b.w>a.x&&b.y<a.y+a.h&&b.y+b.h>a.y))continue;used.push(b);ctx.fillStyle='rgba(255,255,255,.91)';ctx.fillRect(b.x,b.y,b.w,b.h);ctx.fillStyle=l.color||'#32495e';ctx.textAlign='center';ctx.fillText(l.text,x,y+3);}}
+function setMode(mode){state.mode=mode;state.zoom=1;state.az=-.95;state.el=1.02;document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===mode)));const t={N1:'Niveau de départ · altitude proposée +'+upper.toFixed(2).replace('.',',')+' m',RDC:'Rez-de-chaussée · altitude 0,00 m',both:'Superposition réelle · écart proposé entre niveaux : '+upper.toFixed(2).replace('.',',')+' m',exploded:'Vue éclatée · séparation visuelle pour examiner les deux niveaux'};document.getElementById('view-note').textContent=t[mode];schedule();}
+document.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>setMode(b.dataset.mode)));
+for(const [id,k] of [['cut','cut'],['route','route'],['show-labels','labels'],['robot','robot']])document.getElementById(id).addEventListener('change',e=>{state[k]=e.target.checked;schedule()});
+document.getElementById('reset').addEventListener('click',()=>setMode(state.mode));document.getElementById('top').addEventListener('click',()=>{state.el=1.565;state.az=-Math.PI/2;schedule()});
+function zoom(f){state.zoom=Math.max(.55,Math.min(4,state.zoom*f));schedule();}
+document.getElementById('zoom-in').addEventListener('click',()=>zoom(1.15));document.getElementById('zoom-out').addEventListener('click',()=>zoom(1/1.15));
+canvas.addEventListener('wheel',e=>{e.preventDefault();zoom(Math.exp(-e.deltaY*.0012))},{passive:false});
+const pointers=new Map();let pinch=0;
+canvas.addEventListener('pointerdown',e=>{canvas.setPointerCapture(e.pointerId);pointers.set(e.pointerId,[e.clientX,e.clientY]);pinch=0});
+canvas.addEventListener('pointermove',e=>{if(!pointers.has(e.pointerId))return;const old=pointers.get(e.pointerId);pointers.set(e.pointerId,[e.clientX,e.clientY]);if(pointers.size===2){const a=[...pointers.values()],d=Math.hypot(a[0][0]-a[1][0],a[0][1]-a[1][1]);if(pinch)zoom(d/pinch);pinch=d;}else{state.az-=(e.clientX-old[0])*.007;state.el=Math.max(.35,Math.min(1.565,state.el+(e.clientY-old[1])*.005));schedule();}});
+for(const event of ['pointerup','pointercancel','lostpointercapture'])canvas.addEventListener(event,e=>{pointers.delete(e.pointerId);pinch=0});
+canvas.addEventListener('keydown',e=>{let handled=true;if(e.key==='ArrowLeft')state.az-=.12;else if(e.key==='ArrowRight')state.az+=.12;else if(e.key==='ArrowUp')state.el=Math.min(1.565,state.el+.1);else if(e.key==='ArrowDown')state.el=Math.max(.35,state.el-.1);else if(['+','='].includes(e.key))zoom(1.15);else if(e.key==='-')zoom(1/1.15);else handled=false;if(handled){e.preventDefault();schedule()}});
+setMode('N1');new ResizeObserver(resize).observe(canvas.parentElement);resize();
+})();
+</script></main></body></html>

@@ -1,0 +1,851 @@
+{
+  "project": "AGV bancaire - plan de principe",
+  "version": "0.1",
+  "date": "2026-10-20",
+  "units": "m",
+  "coordinate_system": {
+    "x": "est",
+    "y": "nord",
+    "z": "haut",
+    "origin": "angle intérieur sud-ouest de la collecte",
+    "floor_elevations": {
+      "RDC": 0,
+      "N?": 3.0
+    },
+    "upper_elevation_is_hypothesis": true
+  },
+  "dimension_status": {
+    "D": "donnée fournie dans le récit, non relevée sur site",
+    "H": "hypothèse de conception"
+  },
+  "robot": {
+    "cargo_enclosure_given_m": [
+      1,
+      0.5,
+      0.75
+    ],
+    "trial_footprint_hypothesis_m": [
+      1.1,
+      0.7
+    ],
+    "geometric_clearance_hypothesis_m": 0.1,
+    "conservative_control_envelope_m": [
+      1.3,
+      0.9
+    ],
+    "cargo_content_mass_kg": 160,
+    "cargo_mass_is_estimate": true
+  },
+  "lift": {
+    "center_xy": [
+      -5.12,
+      1
+    ],
+    "clear_inside_hypothesis_m": [
+      2.2,
+      2.2
+    ],
+    "clear_door_hypothesis_m": 1.2,
+    "south_single_door_is_hypothesis": true,
+    "turn_inside_before_exit_rdc": true
+  },
+  "levels": {
+    "N?": {
+      "walkable_rectangles": [
+        [
+          0,
+          0,
+          8,
+          6
+        ],
+        [
+          -6.22,
+          -2.1,
+          1.76,
+          -0.3
+        ],
+        [
+          0.28,
+          -0.3,
+          1.48,
+          0
+        ],
+        [
+          -5.72,
+          -0.3,
+          -4.52,
+          -0.1
+        ],
+        [
+          -6.22,
+          -0.1,
+          -4.02,
+          2.1
+        ]
+      ],
+      "wall_rectangles": [
+        {
+          "rect": [
+            -0.15,
+            -0.15,
+            0,
+            6.15
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            8,
+            -0.15,
+            8.15,
+            6.15
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            0,
+            6,
+            8,
+            6.15
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            0,
+            -0.15,
+            0.28,
+            0
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            1.48,
+            -0.15,
+            8,
+            0
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            1.76,
+            0,
+            1.88,
+            3.12
+          ],
+          "name": "pièce B ouest"
+        },
+        {
+          "rect": [
+            1.88,
+            3,
+            2.28,
+            3.12
+          ],
+          "name": "pièce B nord gauche"
+        },
+        {
+          "rect": [
+            3.48,
+            3,
+            8,
+            3.12
+          ],
+          "name": "pièces nord"
+        },
+        {
+          "rect": [
+            3.88,
+            0,
+            4,
+            1.4
+          ],
+          "name": "pièce A ouest bas"
+        },
+        {
+          "rect": [
+            3.88,
+            2.6,
+            4,
+            3
+          ],
+          "name": "pièce A ouest haut"
+        },
+        {
+          "rect": [
+            -6.37,
+            -2.25,
+            -6.22,
+            -0.3
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            -6.22,
+            -2.25,
+            1.91,
+            -2.1
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            1.76,
+            -2.1,
+            1.91,
+            -0.3
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            -6.22,
+            -0.3,
+            -5.72,
+            -0.15
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            -4.52,
+            -0.3,
+            0.28,
+            -0.15
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            1.48,
+            -0.3,
+            1.76,
+            -0.15
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            0.13,
+            -0.3,
+            0.28,
+            0
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            1.48,
+            -0.3,
+            1.63,
+            0
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            -6.37,
+            -0.25,
+            -6.22,
+            2.25
+          ],
+          "name": "ascenseur ouest"
+        },
+        {
+          "rect": [
+            -4.02,
+            -0.25,
+            -3.87,
+            2.25
+          ],
+          "name": "ascenseur est"
+        },
+        {
+          "rect": [
+            -6.22,
+            2.1,
+            -4.02,
+            2.25
+          ],
+          "name": "ascenseur nord"
+        },
+        {
+          "rect": [
+            -6.22,
+            -0.25,
+            -5.72,
+            -0.1
+          ],
+          "name": "ascenseur seuil gauche"
+        },
+        {
+          "rect": [
+            -4.52,
+            -0.25,
+            -4.02,
+            -0.1
+          ],
+          "name": "ascenseur seuil droite"
+        }
+      ],
+      "furniture_rectangles": [
+        {
+          "rect": [
+            3.1,
+            3.4,
+            4.5,
+            4
+          ],
+          "name": "bureau 1"
+        },
+        {
+          "rect": [
+            5.7,
+            3.4,
+            7.1,
+            4
+          ],
+          "name": "bureau 2"
+        },
+        {
+          "rect": [
+            3.4,
+            5.55,
+            7.6,
+            5.95
+          ],
+          "name": "comptoir personnel"
+        }
+      ],
+      "route_xy": [
+        [
+          5,
+          4.8
+        ],
+        [
+          5,
+          4.65
+        ],
+        [
+          0.88,
+          4.65
+        ],
+        [
+          0.88,
+          -1.2
+        ],
+        [
+          -5.12,
+          -1.2
+        ],
+        [
+          -5.12,
+          1
+        ]
+      ]
+    },
+    "RDC": {
+      "walkable_rectangles": [
+        [
+          -6.22,
+          -0.1,
+          -4.02,
+          2.1
+        ],
+        [
+          -5.72,
+          -0.3,
+          -4.52,
+          -0.1
+        ],
+        [
+          -6.22,
+          -2.1,
+          -2.22,
+          -0.3
+        ],
+        [
+          -3.87,
+          -0.3,
+          -2.37,
+          3.9
+        ],
+        [
+          -4.02,
+          3.9,
+          6.88,
+          5.7
+        ],
+        [
+          6.88,
+          3.3,
+          9.88,
+          13.54
+        ],
+        [
+          10,
+          3.3,
+          14,
+          6.3
+        ],
+        [
+          10,
+          6.42,
+          14,
+          9.42
+        ],
+        [
+          10,
+          9.54,
+          14,
+          13.54
+        ],
+        [
+          9.88,
+          4.2,
+          10,
+          5.4
+        ],
+        [
+          9.88,
+          7.32,
+          10,
+          8.52
+        ],
+        [
+          9.88,
+          10.94,
+          10,
+          12.14
+        ]
+      ],
+      "wall_rectangles": [
+        {
+          "rect": [
+            -6.37,
+            -0.25,
+            -6.22,
+            2.25
+          ],
+          "name": "ascenseur ouest"
+        },
+        {
+          "rect": [
+            -4.02,
+            -0.25,
+            -3.87,
+            2.25
+          ],
+          "name": "ascenseur est"
+        },
+        {
+          "rect": [
+            -6.22,
+            2.1,
+            -4.02,
+            2.25
+          ],
+          "name": "ascenseur nord"
+        },
+        {
+          "rect": [
+            -6.22,
+            -0.25,
+            -5.72,
+            -0.1
+          ],
+          "name": "ascenseur seuil gauche"
+        },
+        {
+          "rect": [
+            -4.52,
+            -0.25,
+            -4.02,
+            -0.1
+          ],
+          "name": "ascenseur seuil droite"
+        },
+        {
+          "rect": [
+            -6.37,
+            -2.25,
+            -6.22,
+            -0.3
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            -6.22,
+            -2.25,
+            -2.07,
+            -2.1
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            -2.22,
+            -2.1,
+            -2.07,
+            -0.3
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            -6.22,
+            -0.3,
+            -5.72,
+            -0.15
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            -4.52,
+            -0.3,
+            -3.87,
+            -0.15
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            -2.37,
+            -0.3,
+            -2.22,
+            -0.15
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            -4.02,
+            -0.3,
+            -3.87,
+            3.9
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            -2.37,
+            -0.3,
+            -2.22,
+            3.9
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            -4.17,
+            3.9,
+            -4.02,
+            5.85
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            -4.02,
+            5.7,
+            6.88,
+            5.85
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            -2.22,
+            3.75,
+            6.88,
+            3.9
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            6.73,
+            3.3,
+            6.88,
+            4.2
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            6.73,
+            5.4,
+            6.88,
+            13.69
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            6.88,
+            3.15,
+            14.15,
+            3.3
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            6.88,
+            13.54,
+            14.15,
+            13.69
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            14,
+            3.3,
+            14.15,
+            13.54
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            9.88,
+            3.3,
+            10,
+            4.2
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            9.88,
+            5.4,
+            10,
+            7.32
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            9.88,
+            8.52,
+            10,
+            10.94
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            9.88,
+            12.14,
+            10,
+            13.54
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            10,
+            6.3,
+            14,
+            6.42
+          ],
+          "name": "mur"
+        },
+        {
+          "rect": [
+            10,
+            9.42,
+            14,
+            9.54
+          ],
+          "name": "mur"
+        }
+      ],
+      "reception_rectangles": [
+        {
+          "rect": [
+            10.35,
+            12.64,
+            11.35,
+            13.39
+          ],
+          "name": "réception C1"
+        },
+        {
+          "rect": [
+            11.5,
+            12.64,
+            12.5,
+            13.39
+          ],
+          "name": "réception C2"
+        },
+        {
+          "rect": [
+            12.655,
+            12.64,
+            13.645,
+            13.39
+          ],
+          "name": "réception C3"
+        }
+      ],
+      "route_xy": [
+        [
+          -5.12,
+          1
+        ],
+        [
+          -5.12,
+          -1.2
+        ],
+        [
+          -3.12,
+          -1.2
+        ],
+        [
+          -3.12,
+          4.8
+        ],
+        [
+          6.88,
+          4.8
+        ],
+        [
+          8.8,
+          4.8
+        ],
+        [
+          8.8,
+          11.54
+        ],
+        [
+          10.85,
+          11.54
+        ],
+        [
+          10.85,
+          11.95
+        ]
+      ],
+      "exit_to_wait_route_xy": [
+        [
+          13.15,
+          11.54
+        ],
+        [
+          7.8,
+          11.54
+        ],
+        [
+          7.8,
+          10.4
+        ]
+      ],
+      "waiting_pose_xy_yaw": [
+        7.8,
+        10.4,
+        -1.5707963267948966
+      ]
+    }
+  },
+  "sorting": {
+    "is_hypothesis_all_categories_inside_depot_3": true,
+    "C1": [
+      100,
+      200,
+      500
+    ],
+    "C2": [
+      1000,
+      2000,
+      5000
+    ],
+    "C3": [
+      10000,
+      20000
+    ],
+    "priority_depot": 3,
+    "authorized_fallback_depot": 1,
+    "depot_2_role": null
+  },
+  "checks": {
+    "method": "Sampled oriented rectangular footprint against wall/furniture rectangles; sampled floor containment; doors modelled open. Translation step <= 0.025 m; angular step <= 2 degrees. Envelope 1.30 x 0.90 m includes a conservative 0.10 m margin around trial body.",
+    "limitations": "Geometry only; no braking, dynamics, bag transfer, moving people or localisation uncertainty simulation. Site dimensions remain unverified.",
+    "results": [
+      {
+        "name": "N? : collecte vers cabine",
+        "samples": 922,
+        "status": "PASS",
+        "first_failures": []
+      },
+      {
+        "name": "RDC : cabine vers dépôt 3 / C1",
+        "samples": 1540,
+        "status": "PASS",
+        "first_failures": []
+      },
+      {
+        "name": "RDC : retour du dépôt vers attente",
+        "samples": 354,
+        "status": "PASS",
+        "first_failures": []
+      },
+      {
+        "name": "Accostage C1",
+        "samples": 39,
+        "status": "PASS",
+        "first_failures": []
+      },
+      {
+        "name": "Recul après réception C1",
+        "samples": 39,
+        "status": "PASS",
+        "first_failures": []
+      },
+      {
+        "name": "Accostage C2",
+        "samples": 177,
+        "status": "PASS",
+        "first_failures": []
+      },
+      {
+        "name": "Recul après réception C2",
+        "samples": 39,
+        "status": "PASS",
+        "first_failures": []
+      },
+      {
+        "name": "Accostage C3",
+        "samples": 177,
+        "status": "PASS",
+        "first_failures": []
+      },
+      {
+        "name": "Recul après réception C3",
+        "samples": 20,
+        "status": "PASS",
+        "first_failures": []
+      },
+      {
+        "name": "RDC : repli dépôt 1",
+        "samples": 97,
+        "status": "PASS",
+        "first_failures": []
+      },
+      {
+        "name": "Demi-tour de 180° dans cabine",
+        "samples": 91,
+        "status": "PASS",
+        "first_failures": []
+      }
+    ]
+  }
+}

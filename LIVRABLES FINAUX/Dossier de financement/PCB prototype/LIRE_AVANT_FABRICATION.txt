@@ -1,0 +1,41 @@
+﻿KIT PCB AGV BFM V4 — PROTOTYPE DE BANC — RÉV. 0.1
+
+FICHIERS
+AGV_Banc.sch : schéma KiCad au format historique avec bibliothèque BFM.lib,
+bibliothèque de cache et table de symboles à conserver dans le même dossier.
+AGV_Banc.kicad_pcb : PCB traversant, double face, contour 105 × 68 mm.
+Gerber/ : cuivre avant/arrière, masques, contour et deux fichiers Excellon,
+pour trous métallisés (1 mm) et fixations non métallisées (3,2 mm).
+Nomenclature.csv : repères, fonctions et ordre de brochage.
+Verifier_et_exporter.cjs : contrôle géométrique et export cuivre par Node.js.
+
+ARCHITECTURE
+La version de banc utilise une NUCLEO-G474RE et un module CAN isolé externes
+reliés par faisceaux. Le module CAN doit accepter des entrées logiques 3,3 V,
+disposer de son alimentation isolée côté bus et exposer CAN_H et CAN_L sur
+sa propre sortie. Le PCB ne distribue que TX/RX et les alimentations logiques.
+Le convertisseur externe fournit 5 V régulé à J9. Raccorder J10 à la NUCLEO
+selon la révision ST et ses sélecteurs. Le 3,3 V provient de la NUCLEO.
+J11 fournit 5 V et 3,3 V pour couvrir les variantes du module : câbler
+seulement le rail requis et respecter les limites d'alimentation de la NUCLEO.
+
+Les entrées J1–J4 acceptent des signaux PNP en courant continu de polarité
+connue sur banc, hypothèse 18–30 V. La broche 1 reçoit le signal, la broche 2
+est le retour capteurs commun. Chaque voie utilise 2,7 kΩ / 0,5 W et un
+optocoupleur LTV-817C. À 30 V et Vf ≈ 1,2 V, la résistance dissipe environ
+0,31 W. Vérifier déclassement thermique, courant de fuite du capteur et
+variation de seuil avant usage. Les sorties J5–J8 sont actives à l'état bas.
+Le retour capteurs et le retour logique sont distincts sur le PCB. Vérifier
+la séparation effective dans le câblage du banc et les alimentations.
+Sur banc, utiliser une source limitée en courant et des voies auxiliaires.
+La branche 24 V, ses protections et la chaîne de sécurité sont externes.
+
+VALIDATION
+Contrôle géométrique automatisé : 64 pastilles et 79 segments, connectivité
+des réseaux et espacements cuivre inter-réseaux calculés à 0,20 mm minimum
+pour piste/piste et piste/pastille. Schéma et implantation à contrôler dans
+KiCad (ERC/DRC), puis vérifier le brochage réel, le diamètre des broches et
+les empreintes traversantes, notamment J10/J11 au pas proposé de 3,00 mm.
+Le jeu Gerber a été généré hors KiCad à partir de la géométrie du PCB.
+Statut : prototype pour revue. Soumettre à ERC/DRC et inspecter les Gerber
+et perçages avant toute commande.

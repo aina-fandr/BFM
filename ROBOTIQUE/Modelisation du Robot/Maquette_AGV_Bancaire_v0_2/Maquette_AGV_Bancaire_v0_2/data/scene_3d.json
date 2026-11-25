@@ -1,0 +1,8609 @@
+{
+  "meta": {
+    "version": "0.2",
+    "date": "2026-10-21",
+    "wall_height_m": 2.4,
+    "door_clear_height_m": 2.1,
+    "slab_thickness_m": 0.12,
+    "floor_elevation_m": 3.0,
+    "cargo_enclosure_m": [
+      1.0,
+      0.5,
+      0.75
+    ],
+    "trial_robot_footprint_m": [
+      1.1,
+      0.7
+    ],
+    "robot_total_height_hypothesis_m": 1.12,
+    "reception_height_hypothesis_m": 0.45,
+    "robot_payload_mass_kg": 160,
+    "robot_compartment_count": 4,
+    "robot_compartment_payload_kg": 40,
+    "robot_compartment_clear_m": [
+      0.46,
+      0.44,
+      0.3
+    ],
+    "robot_drawer_extension_hypothesis_m": 0.35,
+    "stage": "Avant-projet mécanique conceptuel. Quatre tiroirs indépendants, non validés.",
+    "hypotheses": "Dimensions des sacs, structure, roues, tiroirs, stabilité, motorisation et interfaces de transfert à valider. Le modèle montre quatre compartiments à 40 kg nominaux chacun; le déchargement assisté reste un concept."
+  },
+  "objects": [
+    {
+      "name": "N1_dalle_00",
+      "level": "N1",
+      "kind": "floor",
+      "center": [
+        4.0,
+        3.0,
+        2.94
+      ],
+      "size": [
+        8.0,
+        6.0,
+        0.12
+      ],
+      "color": "#EDF2F6",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "N1_dalle_01",
+      "level": "N1",
+      "kind": "floor",
+      "center": [
+        -2.23,
+        -1.2,
+        2.94
+      ],
+      "size": [
+        7.98,
+        1.8,
+        0.12
+      ],
+      "color": "#EDF2F6",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "N1_dalle_02",
+      "level": "N1",
+      "kind": "floor",
+      "center": [
+        0.88,
+        -0.15,
+        2.94
+      ],
+      "size": [
+        1.2,
+        0.3,
+        0.12
+      ],
+      "color": "#EDF2F6",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "N1_dalle_03",
+      "level": "N1",
+      "kind": "floor",
+      "center": [
+        -5.12,
+        -0.2,
+        2.94
+      ],
+      "size": [
+        1.2,
+        0.2,
+        0.12
+      ],
+      "color": "#EDF2F6",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "N1_mur_00",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        -0.075,
+        3.0,
+        4.2
+      ],
+      "size": [
+        0.15,
+        6.3,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_mur_01",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        8.075,
+        3.0,
+        4.2
+      ],
+      "size": [
+        0.15,
+        6.3,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_mur_02",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        4.0,
+        6.075,
+        4.2
+      ],
+      "size": [
+        8.0,
+        0.15,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_mur_03",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        0.14,
+        -0.075,
+        4.2
+      ],
+      "size": [
+        0.28,
+        0.15,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_mur_04",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        4.74,
+        -0.075,
+        4.2
+      ],
+      "size": [
+        6.52,
+        0.15,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_mur_05",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        1.82,
+        1.56,
+        4.2
+      ],
+      "size": [
+        0.12,
+        3.12,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_mur_06",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        2.08,
+        3.06,
+        4.2
+      ],
+      "size": [
+        0.4,
+        0.12,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_mur_07",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        5.74,
+        3.06,
+        4.2
+      ],
+      "size": [
+        4.52,
+        0.12,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_mur_08",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        3.94,
+        0.7,
+        4.2
+      ],
+      "size": [
+        0.12,
+        1.4,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_mur_09",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        3.94,
+        2.8,
+        4.2
+      ],
+      "size": [
+        0.12,
+        0.4,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_mur_10",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        -6.295,
+        -1.275,
+        4.2
+      ],
+      "size": [
+        0.15,
+        1.95,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_mur_11",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        -2.155,
+        -2.175,
+        4.2
+      ],
+      "size": [
+        8.13,
+        0.15,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_mur_12",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        1.835,
+        -1.2,
+        4.2
+      ],
+      "size": [
+        0.15,
+        1.8,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_mur_13",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        -5.97,
+        -0.225,
+        4.2
+      ],
+      "size": [
+        0.5,
+        0.15,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_mur_14",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        -2.12,
+        -0.225,
+        4.2
+      ],
+      "size": [
+        4.8,
+        0.15,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_mur_15",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        1.62,
+        -0.225,
+        4.2
+      ],
+      "size": [
+        0.28,
+        0.15,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_mur_16",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        0.205,
+        -0.15,
+        4.2
+      ],
+      "size": [
+        0.15,
+        0.3,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_mur_17",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        1.555,
+        -0.15,
+        4.2
+      ],
+      "size": [
+        0.15,
+        0.3,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_mur_18",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        -6.295,
+        1.0,
+        4.2
+      ],
+      "size": [
+        0.15,
+        2.5,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_mur_19",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        -3.945,
+        1.0,
+        4.2
+      ],
+      "size": [
+        0.15,
+        2.5,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_mur_20",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        -5.12,
+        2.175,
+        4.2
+      ],
+      "size": [
+        2.2,
+        0.15,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_mur_21",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        -5.97,
+        -0.175,
+        4.2
+      ],
+      "size": [
+        0.5,
+        0.15,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_mur_22",
+      "level": "N1",
+      "kind": "wall",
+      "center": [
+        -4.27,
+        -0.175,
+        4.2
+      ],
+      "size": [
+        0.5,
+        0.15,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_parcours_00",
+      "level": "N1",
+      "kind": "route",
+      "center": [
+        5.0,
+        4.725,
+        3.018
+      ],
+      "size": [
+        0.15,
+        0.055,
+        0.018
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": -1.5707963267948966,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "N1_parcours_01",
+      "level": "N1",
+      "kind": "route",
+      "center": [
+        2.94,
+        4.65,
+        3.018
+      ],
+      "size": [
+        4.12,
+        0.055,
+        0.018
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": 3.141592653589793,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "N1_parcours_01_fleche",
+      "level": "N1",
+      "kind": "route",
+      "center": [
+        2.6516,
+        4.65,
+        3.032
+      ],
+      "size": [
+        0.3,
+        0.18,
+        0.016
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": 3.141592653589793,
+      "mesh": "arrow",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "N1_parcours_02",
+      "level": "N1",
+      "kind": "route",
+      "center": [
+        0.88,
+        1.725,
+        3.018
+      ],
+      "size": [
+        5.85,
+        0.055,
+        0.018
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": -1.5707963267948966,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "N1_parcours_02_fleche",
+      "level": "N1",
+      "kind": "route",
+      "center": [
+        0.88,
+        1.3155,
+        3.032
+      ],
+      "size": [
+        0.3,
+        0.18,
+        0.016
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": -1.5707963267948966,
+      "mesh": "arrow",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "N1_parcours_03",
+      "level": "N1",
+      "kind": "route",
+      "center": [
+        -2.12,
+        -1.2,
+        3.018
+      ],
+      "size": [
+        6.0,
+        0.055,
+        0.018
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": 3.141592653589793,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "N1_parcours_03_fleche",
+      "level": "N1",
+      "kind": "route",
+      "center": [
+        -2.54,
+        -1.2,
+        3.032
+      ],
+      "size": [
+        0.3,
+        0.18,
+        0.016
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": 3.141592653589793,
+      "mesh": "arrow",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "N1_parcours_04",
+      "level": "N1",
+      "kind": "route",
+      "center": [
+        -5.12,
+        -0.1,
+        3.018
+      ],
+      "size": [
+        2.2,
+        0.055,
+        0.018
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": 1.5707963267948966,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "N1_parcours_04_fleche",
+      "level": "N1",
+      "kind": "route",
+      "center": [
+        -5.12,
+        0.054,
+        3.032
+      ],
+      "size": [
+        0.3,
+        0.18,
+        0.016
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": 1.5707963267948966,
+      "mesh": "arrow",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "N1_ascenseur_linteau",
+      "level": "N1",
+      "kind": "lintel",
+      "center": [
+        -5.12,
+        -0.175,
+        5.25
+      ],
+      "size": [
+        1.2,
+        0.15,
+        0.3
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_ascenseur_montant_-5.745",
+      "level": "N1",
+      "kind": "doorframe",
+      "center": [
+        -5.7325,
+        -0.175,
+        4.05
+      ],
+      "size": [
+        0.025,
+        0.15,
+        2.1
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_ascenseur_montant_-4.52",
+      "level": "N1",
+      "kind": "doorframe",
+      "center": [
+        -4.5075,
+        -0.175,
+        4.05
+      ],
+      "size": [
+        0.025,
+        0.15,
+        2.1
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_ascenseur_rail",
+      "level": "N1",
+      "kind": "doorframe",
+      "center": [
+        -5.12,
+        -0.175,
+        5.0825
+      ],
+      "size": [
+        1.2,
+        0.15,
+        0.035
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_ascenseur_vantail_ouvert_0",
+      "level": "N1",
+      "kind": "doorleaf",
+      "center": [
+        -6.04,
+        -0.175,
+        4.015
+      ],
+      "size": [
+        0.6,
+        0.036,
+        2.03
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_ascenseur_vantail_ouvert_1",
+      "level": "N1",
+      "kind": "doorleaf",
+      "center": [
+        -4.2,
+        -0.175,
+        4.015
+      ],
+      "size": [
+        0.6,
+        0.036,
+        2.03
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_cabine_plancher",
+      "level": "N1",
+      "kind": "cabin",
+      "center": [
+        -5.12,
+        1.0,
+        2.955
+      ],
+      "size": [
+        2.2,
+        2.2,
+        0.09
+      ],
+      "color": "#D6CEE8",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_cabine_paroi_0",
+      "level": "N1",
+      "kind": "cabinwall",
+      "center": [
+        -6.18,
+        1.0,
+        4.075
+      ],
+      "size": [
+        0.04,
+        2.16,
+        2.15
+      ],
+      "color": "#9D8CC5",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_cabine_paroi_1",
+      "level": "N1",
+      "kind": "cabinwall",
+      "center": [
+        -4.06,
+        1.0,
+        4.075
+      ],
+      "size": [
+        0.04,
+        2.16,
+        2.15
+      ],
+      "color": "#9D8CC5",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_cabine_paroi_2",
+      "level": "N1",
+      "kind": "cabinwall",
+      "center": [
+        -5.12,
+        2.06,
+        4.075
+      ],
+      "size": [
+        2.08,
+        0.04,
+        2.15
+      ],
+      "color": "#9D8CC5",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_dalle_01",
+      "level": "RDC",
+      "kind": "floor",
+      "center": [
+        -5.12,
+        -0.2,
+        -0.06
+      ],
+      "size": [
+        1.2,
+        0.2,
+        0.12
+      ],
+      "color": "#EDF2F6",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_dalle_02",
+      "level": "RDC",
+      "kind": "floor",
+      "center": [
+        -4.22,
+        -1.2,
+        -0.06
+      ],
+      "size": [
+        4.0,
+        1.8,
+        0.12
+      ],
+      "color": "#EDF2F6",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_dalle_03",
+      "level": "RDC",
+      "kind": "floor",
+      "center": [
+        -3.12,
+        1.8,
+        -0.06
+      ],
+      "size": [
+        1.5,
+        4.2,
+        0.12
+      ],
+      "color": "#EDF2F6",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_dalle_04",
+      "level": "RDC",
+      "kind": "floor",
+      "center": [
+        1.43,
+        4.8,
+        -0.06
+      ],
+      "size": [
+        10.9,
+        1.8,
+        0.12
+      ],
+      "color": "#EDF2F6",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_dalle_05",
+      "level": "RDC",
+      "kind": "floor",
+      "center": [
+        8.38,
+        8.42,
+        -0.06
+      ],
+      "size": [
+        3.0,
+        10.24,
+        0.12
+      ],
+      "color": "#EDF2F6",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_dalle_06",
+      "level": "RDC",
+      "kind": "floor",
+      "center": [
+        12.0,
+        4.8,
+        -0.06
+      ],
+      "size": [
+        4.0,
+        3.0,
+        0.12
+      ],
+      "color": "#EDF2F6",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_dalle_07",
+      "level": "RDC",
+      "kind": "floor",
+      "center": [
+        12.0,
+        7.92,
+        -0.06
+      ],
+      "size": [
+        4.0,
+        3.0,
+        0.12
+      ],
+      "color": "#EDF2F6",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_dalle_08",
+      "level": "RDC",
+      "kind": "floor",
+      "center": [
+        12.0,
+        11.54,
+        -0.06
+      ],
+      "size": [
+        4.0,
+        4.0,
+        0.12
+      ],
+      "color": "#EDF2F6",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_dalle_09",
+      "level": "RDC",
+      "kind": "floor",
+      "center": [
+        9.94,
+        4.8,
+        -0.06
+      ],
+      "size": [
+        0.12,
+        1.2,
+        0.12
+      ],
+      "color": "#EDF2F6",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_dalle_10",
+      "level": "RDC",
+      "kind": "floor",
+      "center": [
+        9.94,
+        7.92,
+        -0.06
+      ],
+      "size": [
+        0.12,
+        1.2,
+        0.12
+      ],
+      "color": "#EDF2F6",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_dalle_11",
+      "level": "RDC",
+      "kind": "floor",
+      "center": [
+        9.94,
+        11.54,
+        -0.06
+      ],
+      "size": [
+        0.12,
+        1.2,
+        0.12
+      ],
+      "color": "#EDF2F6",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_mur_00",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        -6.295,
+        1.0,
+        1.2
+      ],
+      "size": [
+        0.15,
+        2.5,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_01",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        -3.945,
+        1.0,
+        1.2
+      ],
+      "size": [
+        0.15,
+        2.5,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_02",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        -5.12,
+        2.175,
+        1.2
+      ],
+      "size": [
+        2.2,
+        0.15,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_03",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        -5.97,
+        -0.175,
+        1.2
+      ],
+      "size": [
+        0.5,
+        0.15,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_04",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        -4.27,
+        -0.175,
+        1.2
+      ],
+      "size": [
+        0.5,
+        0.15,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_05",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        -6.295,
+        -1.275,
+        1.2
+      ],
+      "size": [
+        0.15,
+        1.95,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_06",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        -4.145,
+        -2.175,
+        1.2
+      ],
+      "size": [
+        4.15,
+        0.15,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_07",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        -2.145,
+        -1.2,
+        1.2
+      ],
+      "size": [
+        0.15,
+        1.8,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_08",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        -5.97,
+        -0.225,
+        1.2
+      ],
+      "size": [
+        0.5,
+        0.15,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_09",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        -4.195,
+        -0.225,
+        1.2
+      ],
+      "size": [
+        0.65,
+        0.15,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_10",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        -2.295,
+        -0.225,
+        1.2
+      ],
+      "size": [
+        0.15,
+        0.15,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_11",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        -3.945,
+        1.8,
+        1.2
+      ],
+      "size": [
+        0.15,
+        4.2,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_12",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        -2.295,
+        1.8,
+        1.2
+      ],
+      "size": [
+        0.15,
+        4.2,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_13",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        -4.095,
+        4.875,
+        1.2
+      ],
+      "size": [
+        0.15,
+        1.95,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_14",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        1.43,
+        5.775,
+        1.2
+      ],
+      "size": [
+        10.9,
+        0.15,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_15",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        2.33,
+        3.825,
+        1.2
+      ],
+      "size": [
+        9.1,
+        0.15,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_16",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        6.805,
+        3.75,
+        1.2
+      ],
+      "size": [
+        0.15,
+        0.9,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_17",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        6.805,
+        9.545,
+        1.2
+      ],
+      "size": [
+        0.15,
+        8.29,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_18",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        10.515,
+        3.225,
+        1.2
+      ],
+      "size": [
+        7.27,
+        0.15,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_19",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        10.515,
+        13.615,
+        1.2
+      ],
+      "size": [
+        7.27,
+        0.15,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_20",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        14.075,
+        8.42,
+        1.2
+      ],
+      "size": [
+        0.15,
+        10.24,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_21",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        9.94,
+        3.75,
+        1.2
+      ],
+      "size": [
+        0.12,
+        0.9,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_22",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        9.94,
+        6.36,
+        1.2
+      ],
+      "size": [
+        0.12,
+        1.92,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_23",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        9.94,
+        9.73,
+        1.2
+      ],
+      "size": [
+        0.12,
+        2.42,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_24",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        9.94,
+        12.84,
+        1.2
+      ],
+      "size": [
+        0.12,
+        1.4,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_25",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        12.0,
+        6.36,
+        1.2
+      ],
+      "size": [
+        4.0,
+        0.12,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_mur_26",
+      "level": "RDC",
+      "kind": "wall",
+      "center": [
+        12.0,
+        9.48,
+        1.2
+      ],
+      "size": [
+        4.0,
+        0.12,
+        2.4
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_parcours_00",
+      "level": "RDC",
+      "kind": "route",
+      "center": [
+        -5.12,
+        -0.1,
+        0.018
+      ],
+      "size": [
+        2.2,
+        0.055,
+        0.018
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": -1.5707963267948966,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_parcours_00_fleche",
+      "level": "RDC",
+      "kind": "route",
+      "center": [
+        -5.12,
+        -0.254,
+        0.032
+      ],
+      "size": [
+        0.3,
+        0.18,
+        0.016
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": -1.5707963267948966,
+      "mesh": "arrow",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_parcours_01",
+      "level": "RDC",
+      "kind": "route",
+      "center": [
+        -4.12,
+        -1.2,
+        0.018
+      ],
+      "size": [
+        2.0,
+        0.055,
+        0.018
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": 0.0,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_parcours_01_fleche",
+      "level": "RDC",
+      "kind": "route",
+      "center": [
+        -3.98,
+        -1.2,
+        0.032
+      ],
+      "size": [
+        0.3,
+        0.18,
+        0.016
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": 0.0,
+      "mesh": "arrow",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_parcours_02",
+      "level": "RDC",
+      "kind": "route",
+      "center": [
+        -3.12,
+        1.8,
+        0.018
+      ],
+      "size": [
+        6.0,
+        0.055,
+        0.018
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": 1.5707963267948966,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_parcours_02_fleche",
+      "level": "RDC",
+      "kind": "route",
+      "center": [
+        -3.12,
+        2.22,
+        0.032
+      ],
+      "size": [
+        0.3,
+        0.18,
+        0.016
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": 1.5707963267948966,
+      "mesh": "arrow",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_parcours_03",
+      "level": "RDC",
+      "kind": "route",
+      "center": [
+        1.88,
+        4.8,
+        0.018
+      ],
+      "size": [
+        10.0,
+        0.055,
+        0.018
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": 0.0,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_parcours_03_fleche",
+      "level": "RDC",
+      "kind": "route",
+      "center": [
+        2.58,
+        4.8,
+        0.032
+      ],
+      "size": [
+        0.3,
+        0.18,
+        0.016
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": 0.0,
+      "mesh": "arrow",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_parcours_04",
+      "level": "RDC",
+      "kind": "route",
+      "center": [
+        7.84,
+        4.8,
+        0.018
+      ],
+      "size": [
+        1.92,
+        0.055,
+        0.018
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": 0.0,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_parcours_04_fleche",
+      "level": "RDC",
+      "kind": "route",
+      "center": [
+        7.9744,
+        4.8,
+        0.032
+      ],
+      "size": [
+        0.3,
+        0.18,
+        0.016
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": 0.0,
+      "mesh": "arrow",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_parcours_05",
+      "level": "RDC",
+      "kind": "route",
+      "center": [
+        8.8,
+        8.17,
+        0.018
+      ],
+      "size": [
+        6.74,
+        0.055,
+        0.018
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": 1.5707963267948966,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_parcours_05_fleche",
+      "level": "RDC",
+      "kind": "route",
+      "center": [
+        8.8,
+        8.6418,
+        0.032
+      ],
+      "size": [
+        0.3,
+        0.18,
+        0.016
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": 1.5707963267948966,
+      "mesh": "arrow",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_parcours_06",
+      "level": "RDC",
+      "kind": "route",
+      "center": [
+        9.825,
+        11.54,
+        0.018
+      ],
+      "size": [
+        2.05,
+        0.055,
+        0.018
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": 0.0,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_parcours_06_fleche",
+      "level": "RDC",
+      "kind": "route",
+      "center": [
+        9.9685,
+        11.54,
+        0.032
+      ],
+      "size": [
+        0.3,
+        0.18,
+        0.016
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": 0.0,
+      "mesh": "arrow",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_parcours_07",
+      "level": "RDC",
+      "kind": "route",
+      "center": [
+        10.85,
+        11.745,
+        0.018
+      ],
+      "size": [
+        0.41,
+        0.055,
+        0.018
+      ],
+      "color": "#216BDD",
+      "collision": false,
+      "yaw": 1.5707963267948966,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_ascenseur_linteau",
+      "level": "RDC",
+      "kind": "lintel",
+      "center": [
+        -5.12,
+        -0.175,
+        2.25
+      ],
+      "size": [
+        1.2,
+        0.15,
+        0.3
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_ascenseur_montant_-5.745",
+      "level": "RDC",
+      "kind": "doorframe",
+      "center": [
+        -5.7325,
+        -0.175,
+        1.05
+      ],
+      "size": [
+        0.025,
+        0.15,
+        2.1
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_ascenseur_montant_-4.52",
+      "level": "RDC",
+      "kind": "doorframe",
+      "center": [
+        -4.5075,
+        -0.175,
+        1.05
+      ],
+      "size": [
+        0.025,
+        0.15,
+        2.1
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_ascenseur_rail",
+      "level": "RDC",
+      "kind": "doorframe",
+      "center": [
+        -5.12,
+        -0.175,
+        2.0825
+      ],
+      "size": [
+        1.2,
+        0.15,
+        0.035
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_ascenseur_vantail_ouvert_0",
+      "level": "RDC",
+      "kind": "doorleaf",
+      "center": [
+        -6.04,
+        -0.175,
+        1.015
+      ],
+      "size": [
+        0.6,
+        0.036,
+        2.03
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_ascenseur_vantail_ouvert_1",
+      "level": "RDC",
+      "kind": "doorleaf",
+      "center": [
+        -4.2,
+        -0.175,
+        1.015
+      ],
+      "size": [
+        0.6,
+        0.036,
+        2.03
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_cabine_plancher",
+      "level": "RDC",
+      "kind": "cabin",
+      "center": [
+        -5.12,
+        1.0,
+        -0.045
+      ],
+      "size": [
+        2.2,
+        2.2,
+        0.09
+      ],
+      "color": "#D6CEE8",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_cabine_paroi_0",
+      "level": "RDC",
+      "kind": "cabinwall",
+      "center": [
+        -6.18,
+        1.0,
+        1.075
+      ],
+      "size": [
+        0.04,
+        2.16,
+        2.15
+      ],
+      "color": "#9D8CC5",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_cabine_paroi_1",
+      "level": "RDC",
+      "kind": "cabinwall",
+      "center": [
+        -4.06,
+        1.0,
+        1.075
+      ],
+      "size": [
+        0.04,
+        2.16,
+        2.15
+      ],
+      "color": "#9D8CC5",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_cabine_paroi_2",
+      "level": "RDC",
+      "kind": "cabinwall",
+      "center": [
+        -5.12,
+        2.06,
+        1.075
+      ],
+      "size": [
+        2.08,
+        0.04,
+        2.15
+      ],
+      "color": "#9D8CC5",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_bureau_1_plateau",
+      "level": "N1",
+      "kind": "furniture",
+      "center": [
+        3.8,
+        3.7,
+        3.75
+      ],
+      "size": [
+        1.4,
+        0.6,
+        0.06
+      ],
+      "color": "#B99B73",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_bureau_1_pied_0",
+      "level": "N1",
+      "kind": "furniture",
+      "center": [
+        3.19,
+        3.49,
+        3.36
+      ],
+      "size": [
+        0.06,
+        0.06,
+        0.72
+      ],
+      "color": "#586A7B",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_bureau_1_pied_1",
+      "level": "N1",
+      "kind": "furniture",
+      "center": [
+        4.41,
+        3.49,
+        3.36
+      ],
+      "size": [
+        0.06,
+        0.06,
+        0.72
+      ],
+      "color": "#586A7B",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_bureau_1_pied_2",
+      "level": "N1",
+      "kind": "furniture",
+      "center": [
+        3.19,
+        3.91,
+        3.36
+      ],
+      "size": [
+        0.06,
+        0.06,
+        0.72
+      ],
+      "color": "#586A7B",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_bureau_1_pied_3",
+      "level": "N1",
+      "kind": "furniture",
+      "center": [
+        4.41,
+        3.91,
+        3.36
+      ],
+      "size": [
+        0.06,
+        0.06,
+        0.72
+      ],
+      "color": "#586A7B",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_bureau_2_plateau",
+      "level": "N1",
+      "kind": "furniture",
+      "center": [
+        6.4,
+        3.7,
+        3.75
+      ],
+      "size": [
+        1.4,
+        0.6,
+        0.06
+      ],
+      "color": "#B99B73",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_bureau_2_pied_0",
+      "level": "N1",
+      "kind": "furniture",
+      "center": [
+        5.79,
+        3.49,
+        3.36
+      ],
+      "size": [
+        0.06,
+        0.06,
+        0.72
+      ],
+      "color": "#586A7B",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_bureau_2_pied_1",
+      "level": "N1",
+      "kind": "furniture",
+      "center": [
+        7.01,
+        3.49,
+        3.36
+      ],
+      "size": [
+        0.06,
+        0.06,
+        0.72
+      ],
+      "color": "#586A7B",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_bureau_2_pied_2",
+      "level": "N1",
+      "kind": "furniture",
+      "center": [
+        5.79,
+        3.91,
+        3.36
+      ],
+      "size": [
+        0.06,
+        0.06,
+        0.72
+      ],
+      "color": "#586A7B",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_bureau_2_pied_3",
+      "level": "N1",
+      "kind": "furniture",
+      "center": [
+        7.01,
+        3.91,
+        3.36
+      ],
+      "size": [
+        0.06,
+        0.06,
+        0.72
+      ],
+      "color": "#586A7B",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_comptoir_base",
+      "level": "N1",
+      "kind": "furniture",
+      "center": [
+        5.5,
+        5.75,
+        3.475
+      ],
+      "size": [
+        4.08,
+        0.34,
+        0.95
+      ],
+      "color": "#586A7B",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_comptoir_plateau",
+      "level": "N1",
+      "kind": "furniture",
+      "center": [
+        5.5,
+        5.75,
+        3.9775
+      ],
+      "size": [
+        4.2,
+        0.4,
+        0.055
+      ],
+      "color": "#B99B73",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_P0_sortie_linteau",
+      "level": "N1",
+      "kind": "lintel",
+      "center": [
+        0.88,
+        -0.075,
+        5.25
+      ],
+      "size": [
+        1.2,
+        0.15,
+        0.3
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_P0_sortie_montant_0.255",
+      "level": "N1",
+      "kind": "doorframe",
+      "center": [
+        0.2675,
+        -0.075,
+        4.05
+      ],
+      "size": [
+        0.025,
+        0.15,
+        2.1
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_P0_sortie_montant_1.48",
+      "level": "N1",
+      "kind": "doorframe",
+      "center": [
+        1.4925,
+        -0.075,
+        4.05
+      ],
+      "size": [
+        0.025,
+        0.15,
+        2.1
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_P0_sortie_rail",
+      "level": "N1",
+      "kind": "doorframe",
+      "center": [
+        0.88,
+        -0.075,
+        5.0825
+      ],
+      "size": [
+        1.2,
+        0.15,
+        0.035
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_P0_sortie_vantail_ouvert_0",
+      "level": "N1",
+      "kind": "doorleaf",
+      "center": [
+        -0.04,
+        -0.075,
+        4.015
+      ],
+      "size": [
+        0.6,
+        0.036,
+        2.03
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_P0_sortie_vantail_ouvert_1",
+      "level": "N1",
+      "kind": "doorleaf",
+      "center": [
+        1.8,
+        -0.075,
+        4.015
+      ],
+      "size": [
+        0.6,
+        0.036,
+        2.03
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_PB_piece_B_linteau",
+      "level": "N1",
+      "kind": "lintel",
+      "center": [
+        2.88,
+        3.06,
+        5.25
+      ],
+      "size": [
+        1.2,
+        0.12,
+        0.3
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_PB_piece_B_montant_2.255",
+      "level": "N1",
+      "kind": "doorframe",
+      "center": [
+        2.2675,
+        3.06,
+        4.05
+      ],
+      "size": [
+        0.025,
+        0.12,
+        2.1
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_PB_piece_B_montant_3.48",
+      "level": "N1",
+      "kind": "doorframe",
+      "center": [
+        3.4925,
+        3.06,
+        4.05
+      ],
+      "size": [
+        0.025,
+        0.12,
+        2.1
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_PB_piece_B_rail",
+      "level": "N1",
+      "kind": "doorframe",
+      "center": [
+        2.88,
+        3.06,
+        5.0825
+      ],
+      "size": [
+        1.2,
+        0.12,
+        0.035
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_PB_piece_B_vantail_ouvert_0",
+      "level": "N1",
+      "kind": "doorleaf",
+      "center": [
+        1.96,
+        3.06,
+        4.015
+      ],
+      "size": [
+        0.6,
+        0.036,
+        2.03
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_PB_piece_B_vantail_ouvert_1",
+      "level": "N1",
+      "kind": "doorleaf",
+      "center": [
+        3.8,
+        3.06,
+        4.015
+      ],
+      "size": [
+        0.6,
+        0.036,
+        2.03
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_PC_piece_A_linteau",
+      "level": "N1",
+      "kind": "lintel",
+      "center": [
+        3.94,
+        2.0,
+        5.25
+      ],
+      "size": [
+        0.12,
+        1.2,
+        0.3
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_PC_piece_A_montant_1.375",
+      "level": "N1",
+      "kind": "doorframe",
+      "center": [
+        3.94,
+        1.3875,
+        4.05
+      ],
+      "size": [
+        0.12,
+        0.025,
+        2.1
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_PC_piece_A_montant_2.6",
+      "level": "N1",
+      "kind": "doorframe",
+      "center": [
+        3.94,
+        2.6125,
+        4.05
+      ],
+      "size": [
+        0.12,
+        0.025,
+        2.1
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_PC_piece_A_rail",
+      "level": "N1",
+      "kind": "doorframe",
+      "center": [
+        3.94,
+        2.0,
+        5.0825
+      ],
+      "size": [
+        0.12,
+        1.2,
+        0.035
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_PC_piece_A_vantail_ouvert_0",
+      "level": "N1",
+      "kind": "doorleaf",
+      "center": [
+        3.94,
+        1.08,
+        4.015
+      ],
+      "size": [
+        0.036,
+        0.6,
+        2.03
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "N1_PC_piece_A_vantail_ouvert_1",
+      "level": "N1",
+      "kind": "doorleaf",
+      "center": [
+        3.94,
+        2.92,
+        4.015
+      ],
+      "size": [
+        0.036,
+        0.6,
+        2.03
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_P1_entree_hall_linteau",
+      "level": "RDC",
+      "kind": "lintel",
+      "center": [
+        6.805,
+        4.8,
+        2.25
+      ],
+      "size": [
+        0.15,
+        1.2,
+        0.3
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_P1_entree_hall_montant_4.175",
+      "level": "RDC",
+      "kind": "doorframe",
+      "center": [
+        6.805,
+        4.1875,
+        1.05
+      ],
+      "size": [
+        0.15,
+        0.025,
+        2.1
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_P1_entree_hall_montant_5.4",
+      "level": "RDC",
+      "kind": "doorframe",
+      "center": [
+        6.805,
+        5.4125,
+        1.05
+      ],
+      "size": [
+        0.15,
+        0.025,
+        2.1
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_P1_entree_hall_rail",
+      "level": "RDC",
+      "kind": "doorframe",
+      "center": [
+        6.805,
+        4.8,
+        2.0825
+      ],
+      "size": [
+        0.15,
+        1.2,
+        0.035
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_P1_entree_hall_vantail_ouvert_0",
+      "level": "RDC",
+      "kind": "doorleaf",
+      "center": [
+        6.805,
+        3.88,
+        1.015
+      ],
+      "size": [
+        0.036,
+        0.6,
+        2.03
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_P1_entree_hall_vantail_ouvert_1",
+      "level": "RDC",
+      "kind": "doorleaf",
+      "center": [
+        6.805,
+        5.72,
+        1.015
+      ],
+      "size": [
+        0.036,
+        0.6,
+        2.03
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_depot_1_linteau",
+      "level": "RDC",
+      "kind": "lintel",
+      "center": [
+        9.94,
+        4.8,
+        2.25
+      ],
+      "size": [
+        0.12,
+        1.2,
+        0.3
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_depot_1_montant_4.175",
+      "level": "RDC",
+      "kind": "doorframe",
+      "center": [
+        9.94,
+        4.1875,
+        1.05
+      ],
+      "size": [
+        0.12,
+        0.025,
+        2.1
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_depot_1_montant_5.3999999999999995",
+      "level": "RDC",
+      "kind": "doorframe",
+      "center": [
+        9.94,
+        5.4125,
+        1.05
+      ],
+      "size": [
+        0.12,
+        0.025,
+        2.1
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_depot_1_rail",
+      "level": "RDC",
+      "kind": "doorframe",
+      "center": [
+        9.94,
+        4.8,
+        2.0825
+      ],
+      "size": [
+        0.12,
+        1.2,
+        0.035
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_depot_1_vantail_ouvert_0",
+      "level": "RDC",
+      "kind": "doorleaf",
+      "center": [
+        9.94,
+        3.88,
+        1.015
+      ],
+      "size": [
+        0.036,
+        0.6,
+        2.03
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_depot_1_vantail_ouvert_1",
+      "level": "RDC",
+      "kind": "doorleaf",
+      "center": [
+        9.94,
+        5.72,
+        1.015
+      ],
+      "size": [
+        0.036,
+        0.6,
+        2.03
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_depot_2_linteau",
+      "level": "RDC",
+      "kind": "lintel",
+      "center": [
+        9.94,
+        7.92,
+        2.25
+      ],
+      "size": [
+        0.12,
+        1.2,
+        0.3
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_depot_2_montant_7.295",
+      "level": "RDC",
+      "kind": "doorframe",
+      "center": [
+        9.94,
+        7.3075,
+        1.05
+      ],
+      "size": [
+        0.12,
+        0.025,
+        2.1
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_depot_2_montant_8.52",
+      "level": "RDC",
+      "kind": "doorframe",
+      "center": [
+        9.94,
+        8.5325,
+        1.05
+      ],
+      "size": [
+        0.12,
+        0.025,
+        2.1
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_depot_2_rail",
+      "level": "RDC",
+      "kind": "doorframe",
+      "center": [
+        9.94,
+        7.92,
+        2.0825
+      ],
+      "size": [
+        0.12,
+        1.2,
+        0.035
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_depot_2_vantail_ouvert_0",
+      "level": "RDC",
+      "kind": "doorleaf",
+      "center": [
+        9.94,
+        7.0,
+        1.015
+      ],
+      "size": [
+        0.036,
+        0.6,
+        2.03
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_depot_2_vantail_ouvert_1",
+      "level": "RDC",
+      "kind": "doorleaf",
+      "center": [
+        9.94,
+        8.84,
+        1.015
+      ],
+      "size": [
+        0.036,
+        0.6,
+        2.03
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_depot_3_linteau",
+      "level": "RDC",
+      "kind": "lintel",
+      "center": [
+        9.94,
+        11.54,
+        2.25
+      ],
+      "size": [
+        0.12,
+        1.2,
+        0.3
+      ],
+      "color": "#CED9E4",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_depot_3_montant_10.915",
+      "level": "RDC",
+      "kind": "doorframe",
+      "center": [
+        9.94,
+        10.9275,
+        1.05
+      ],
+      "size": [
+        0.12,
+        0.025,
+        2.1
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_depot_3_montant_12.139999999999999",
+      "level": "RDC",
+      "kind": "doorframe",
+      "center": [
+        9.94,
+        12.1525,
+        1.05
+      ],
+      "size": [
+        0.12,
+        0.025,
+        2.1
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_depot_3_rail",
+      "level": "RDC",
+      "kind": "doorframe",
+      "center": [
+        9.94,
+        11.54,
+        2.0825
+      ],
+      "size": [
+        0.12,
+        1.2,
+        0.035
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_depot_3_vantail_ouvert_0",
+      "level": "RDC",
+      "kind": "doorleaf",
+      "center": [
+        9.94,
+        10.62,
+        1.015
+      ],
+      "size": [
+        0.036,
+        0.6,
+        2.03
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_depot_3_vantail_ouvert_1",
+      "level": "RDC",
+      "kind": "doorleaf",
+      "center": [
+        9.94,
+        12.46,
+        1.015
+      ],
+      "size": [
+        0.036,
+        0.6,
+        2.03
+      ],
+      "color": "#279E8D",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_reception_C1_base",
+      "level": "RDC",
+      "kind": "reception",
+      "center": [
+        10.85,
+        13.015,
+        0.225
+      ],
+      "size": [
+        1.0,
+        0.75,
+        0.45
+      ],
+      "color": "#57B88F",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_reception_C1_plateau",
+      "level": "RDC",
+      "kind": "reception",
+      "center": [
+        10.85,
+        13.015,
+        0.47
+      ],
+      "size": [
+        0.92,
+        0.67,
+        0.04
+      ],
+      "color": "#DCE6EC",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_reception_C2_base",
+      "level": "RDC",
+      "kind": "reception",
+      "center": [
+        12.0,
+        13.015,
+        0.225
+      ],
+      "size": [
+        1.0,
+        0.75,
+        0.45
+      ],
+      "color": "#5C91DE",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_reception_C2_plateau",
+      "level": "RDC",
+      "kind": "reception",
+      "center": [
+        12.0,
+        13.015,
+        0.47
+      ],
+      "size": [
+        0.92,
+        0.67,
+        0.04
+      ],
+      "color": "#DCE6EC",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_reception_C3_base",
+      "level": "RDC",
+      "kind": "reception",
+      "center": [
+        13.15,
+        13.015,
+        0.225
+      ],
+      "size": [
+        0.99,
+        0.75,
+        0.45
+      ],
+      "color": "#AC80CA",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_reception_C3_plateau",
+      "level": "RDC",
+      "kind": "reception",
+      "center": [
+        13.15,
+        13.015,
+        0.47
+      ],
+      "size": [
+        0.91,
+        0.67,
+        0.04
+      ],
+      "color": "#DCE6EC",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "RDC_retour_attente_0",
+      "level": "RDC",
+      "kind": "route",
+      "center": [
+        10.475,
+        11.54,
+        0.018
+      ],
+      "size": [
+        5.35,
+        0.055,
+        0.018
+      ],
+      "color": "#8F65BB",
+      "collision": false,
+      "yaw": 3.141592653589793,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_retour_attente_0_fleche",
+      "level": "RDC",
+      "kind": "route",
+      "center": [
+        10.1005,
+        11.54,
+        0.032
+      ],
+      "size": [
+        0.3,
+        0.18,
+        0.016
+      ],
+      "color": "#8F65BB",
+      "collision": false,
+      "yaw": 3.141592653589793,
+      "mesh": "arrow",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_retour_attente_1",
+      "level": "RDC",
+      "kind": "route",
+      "center": [
+        7.8,
+        10.97,
+        0.018
+      ],
+      "size": [
+        1.14,
+        0.055,
+        0.018
+      ],
+      "color": "#8F65BB",
+      "collision": false,
+      "yaw": -1.5707963267948966,
+      "mesh": "box",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_retour_attente_1_fleche",
+      "level": "RDC",
+      "kind": "route",
+      "center": [
+        7.8,
+        10.8902,
+        0.032
+      ],
+      "size": [
+        0.3,
+        0.18,
+        0.016
+      ],
+      "color": "#8F65BB",
+      "collision": false,
+      "yaw": -1.5707963267948966,
+      "mesh": "arrow",
+      "dimension_status": "D/H"
+    },
+    {
+      "name": "RDC_emplacement_attente",
+      "level": "RDC",
+      "kind": "marking",
+      "center": [
+        7.8,
+        10.4,
+        0.006
+      ],
+      "size": [
+        1.0,
+        1.4,
+        0.008
+      ],
+      "color": "#DFD1EC",
+      "collision": false,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "liaison_gaine_0",
+      "level": "COMMON",
+      "kind": "shaft",
+      "center": [
+        -6.295,
+        1.0,
+        2.7
+      ],
+      "size": [
+        0.15,
+        2.5,
+        0.6
+      ],
+      "color": "#9D8CC5",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "liaison_gaine_1",
+      "level": "COMMON",
+      "kind": "shaft",
+      "center": [
+        -3.945,
+        1.0,
+        2.7
+      ],
+      "size": [
+        0.15,
+        2.5,
+        0.6
+      ],
+      "color": "#9D8CC5",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "liaison_gaine_2",
+      "level": "COMMON",
+      "kind": "shaft",
+      "center": [
+        -5.12,
+        2.175,
+        2.7
+      ],
+      "size": [
+        2.2,
+        0.15,
+        0.6
+      ],
+      "color": "#9D8CC5",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "fond_gaine",
+      "level": "COMMON",
+      "kind": "shaft",
+      "center": [
+        -5.12,
+        1.0,
+        -0.12
+      ],
+      "size": [
+        2.2,
+        2.2,
+        0.06
+      ],
+      "color": "#A8BBCD",
+      "collision": true,
+      "yaw": 0,
+      "mesh": "box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_plaque_superieure_chassis",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.0,
+        4.8,
+        3.205
+      ],
+      "size": [
+        1.02,
+        0.62,
+        0.018
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_longeron_gauche",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.705,
+        4.8,
+        3.105
+      ],
+      "size": [
+        1.03,
+        0.055,
+        0.075
+      ],
+      "color": "#394348",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_longeron_droite",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.295,
+        4.8,
+        3.105
+      ],
+      "size": [
+        1.03,
+        0.055,
+        0.075
+      ],
+      "color": "#394348",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_traverse_chassis_1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.0,
+        5.28,
+        3.105
+      ],
+      "size": [
+        0.055,
+        0.58,
+        0.075
+      ],
+      "color": "#394348",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_traverse_chassis_2",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.0,
+        4.96,
+        3.105
+      ],
+      "size": [
+        0.055,
+        0.58,
+        0.075
+      ],
+      "color": "#394348",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_traverse_chassis_3",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.0,
+        4.64,
+        3.105
+      ],
+      "size": [
+        0.055,
+        0.58,
+        0.075
+      ],
+      "color": "#394348",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_traverse_chassis_4",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.0,
+        4.32,
+        3.105
+      ],
+      "size": [
+        0.055,
+        0.58,
+        0.075
+      ],
+      "color": "#394348",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_moteur_reducteur_gauche",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7804,
+        4.8,
+        3.11
+      ],
+      "size": [
+        0.16,
+        0.12,
+        0.12
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_roue_motrice_gauche",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.695,
+        4.8,
+        3.11
+      ],
+      "size": [
+        0.22,
+        0.075,
+        0.22
+      ],
+      "color": "#202427",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "tire",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_moyeu_moteur_gauche",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.695,
+        4.8,
+        3.11
+      ],
+      "size": [
+        0.105,
+        0.078,
+        0.105
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ecrou_roue_gauche_1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.652,
+        4.759,
+        3.11
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ecrou_roue_gauche_2",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.652,
+        4.7795,
+        3.145507
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ecrou_roue_gauche_3",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.652,
+        4.8205,
+        3.145507
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ecrou_roue_gauche_4",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.652,
+        4.841,
+        3.11
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ecrou_roue_gauche_5",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.652,
+        4.8205,
+        3.074493
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ecrou_roue_gauche_6",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.652,
+        4.7795,
+        3.074493
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_moteur_reducteur_droite",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.2196,
+        4.8,
+        3.11
+      ],
+      "size": [
+        0.16,
+        0.12,
+        0.12
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_roue_motrice_droite",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.305,
+        4.8,
+        3.11
+      ],
+      "size": [
+        0.22,
+        0.075,
+        0.22
+      ],
+      "color": "#202427",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "tire",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_moyeu_moteur_droite",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.305,
+        4.8,
+        3.11
+      ],
+      "size": [
+        0.105,
+        0.078,
+        0.105
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ecrou_roue_droite_1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.348,
+        4.759,
+        3.11
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ecrou_roue_droite_2",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.348,
+        4.7795,
+        3.145507
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ecrou_roue_droite_3",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.348,
+        4.8205,
+        3.145507
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ecrou_roue_droite_4",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.348,
+        4.841,
+        3.11
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ecrou_roue_droite_5",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.348,
+        4.8205,
+        3.074493
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ecrou_roue_droite_6",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.348,
+        4.7795,
+        3.074493
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_support_roulette_avant",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.0,
+        4.37,
+        3.17
+      ],
+      "size": [
+        0.105,
+        0.105,
+        0.08
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_roulette_pivotante_avant",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.0,
+        4.37,
+        3.075
+      ],
+      "size": [
+        0.14,
+        0.06,
+        0.14
+      ],
+      "color": "#202427",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "tire",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_axe_roulette_avant",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.0,
+        4.37,
+        3.075
+      ],
+      "size": [
+        0.05,
+        0.07,
+        0.05
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_fourche_roulette_avant_gauche",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.96,
+        4.382,
+        3.108
+      ],
+      "size": [
+        0.075,
+        0.012,
+        0.075
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_vis_axe_roulette_avant_gauche",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.954,
+        4.37,
+        3.075
+      ],
+      "size": [
+        0.018,
+        0.012,
+        0.018
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_fourche_roulette_avant_droite",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.04,
+        4.382,
+        3.108
+      ],
+      "size": [
+        0.075,
+        0.012,
+        0.075
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_vis_axe_roulette_avant_droite",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.046,
+        4.37,
+        3.075
+      ],
+      "size": [
+        0.018,
+        0.012,
+        0.018
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_support_roulette_arriere",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.0,
+        5.23,
+        3.17
+      ],
+      "size": [
+        0.105,
+        0.105,
+        0.08
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_roulette_pivotante_arriere",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.0,
+        5.23,
+        3.075
+      ],
+      "size": [
+        0.14,
+        0.06,
+        0.14
+      ],
+      "color": "#202427",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "tire",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_axe_roulette_arriere",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.0,
+        5.23,
+        3.075
+      ],
+      "size": [
+        0.05,
+        0.07,
+        0.05
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_fourche_roulette_arriere_gauche",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.96,
+        5.242,
+        3.108
+      ],
+      "size": [
+        0.075,
+        0.012,
+        0.075
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_vis_axe_roulette_arriere_gauche",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.954,
+        5.23,
+        3.075
+      ],
+      "size": [
+        0.018,
+        0.012,
+        0.018
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_fourche_roulette_arriere_droite",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.04,
+        5.242,
+        3.108
+      ],
+      "size": [
+        0.075,
+        0.012,
+        0.075
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_vis_axe_roulette_arriere_droite",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.046,
+        5.23,
+        3.075
+      ],
+      "size": [
+        0.018,
+        0.012,
+        0.018
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_pare_chocs_avant",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.655,
+        4.8,
+        3.14
+      ],
+      "size": [
+        0.96,
+        0.035,
+        0.075
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_pare_chocs_arriere",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.345,
+        4.8,
+        3.14
+      ],
+      "size": [
+        0.96,
+        0.035,
+        0.075
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_support_batterie",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.015,
+        4.8,
+        3.227
+      ],
+      "size": [
+        0.43,
+        0.31,
+        0.025
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_batterie_format_a_definir",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.015,
+        4.8,
+        3.27
+      ],
+      "size": [
+        0.36,
+        0.25,
+        0.07
+      ],
+      "color": "#394348",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_coffret_controleur_hypothese",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.17,
+        4.53,
+        3.255
+      ],
+      "size": [
+        0.17,
+        0.16,
+        0.075
+      ],
+      "color": "#394348",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_support_coffret_controleur",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.17,
+        4.53,
+        3.205
+      ],
+      "size": [
+        0.2,
+        0.19,
+        0.018
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_fond_coffre",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.0,
+        4.8,
+        3.33
+      ],
+      "size": [
+        0.96,
+        0.46,
+        0.02
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_paroi_arriere",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.24,
+        4.8,
+        3.695
+      ],
+      "size": [
+        1.0,
+        0.02,
+        0.75
+      ],
+      "color": "#394348",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_paroi_laterale_-0.49",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.0,
+        5.29,
+        3.695
+      ],
+      "size": [
+        0.02,
+        0.46,
+        0.75
+      ],
+      "color": "#394348",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_paroi_laterale_0.49",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.0,
+        4.31,
+        3.695
+      ],
+      "size": [
+        0.02,
+        0.46,
+        0.75
+      ],
+      "color": "#394348",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_toit_coffre",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.0,
+        4.8,
+        4.06
+      ],
+      "size": [
+        1.0,
+        0.5,
+        0.02
+      ],
+      "color": "#394348",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_separateur_horizontal",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.0,
+        4.8,
+        3.695
+      ],
+      "size": [
+        0.96,
+        0.46,
+        0.02
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_separateur_vertical",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.0,
+        4.8,
+        3.695
+      ],
+      "size": [
+        0.02,
+        0.46,
+        0.71
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_montant_face_-0.49",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.76,
+        5.29,
+        3.695
+      ],
+      "size": [
+        0.02,
+        0.02,
+        0.75
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_montant_face_0.00",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.76,
+        4.8,
+        3.695
+      ],
+      "size": [
+        0.02,
+        0.02,
+        0.75
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_montant_face_0.49",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.76,
+        4.31,
+        3.695
+      ],
+      "size": [
+        0.02,
+        0.02,
+        0.75
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_traverse_face_0.33",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.76,
+        4.8,
+        3.33
+      ],
+      "size": [
+        0.96,
+        0.02,
+        0.02
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_traverse_face_0.70",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.76,
+        4.8,
+        3.695
+      ],
+      "size": [
+        0.96,
+        0.02,
+        0.02
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_traverse_face_1.06",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.76,
+        4.8,
+        4.06
+      ],
+      "size": [
+        0.96,
+        0.02,
+        0.02
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_fond_tiroir",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.965,
+        5.05,
+        3.729
+      ],
+      "size": [
+        0.46,
+        0.42,
+        0.014
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_flanc_gauche",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.965,
+        5.273,
+        3.8775
+      ],
+      "size": [
+        0.014,
+        0.44,
+        0.2904
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_glissiere_fixe_gauche",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.015,
+        5.2991,
+        3.7464
+      ],
+      "size": [
+        0.018,
+        0.34,
+        0.024
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_glissiere_mobile_gauche",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.955,
+        5.238,
+        3.7464
+      ],
+      "size": [
+        0.014,
+        0.32,
+        0.018
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_flanc_droite",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.965,
+        4.827,
+        3.8775
+      ],
+      "size": [
+        0.014,
+        0.44,
+        0.2904
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_glissiere_fixe_droite",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.015,
+        4.8009,
+        3.7464
+      ],
+      "size": [
+        0.018,
+        0.34,
+        0.024
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_glissiere_mobile_droite",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.955,
+        4.862,
+        3.7464
+      ],
+      "size": [
+        0.014,
+        0.32,
+        0.018
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_fond_arriere",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.215,
+        5.05,
+        3.8775
+      ],
+      "size": [
+        0.45,
+        0.014,
+        0.2904
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_joint_peripherique",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.75,
+        5.05,
+        3.8775
+      ],
+      "size": [
+        0.474,
+        0.006,
+        0.337
+      ],
+      "color": "#252B2D",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_facade",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.74,
+        5.05,
+        3.8775
+      ],
+      "size": [
+        0.46,
+        0.016,
+        0.33
+      ],
+      "color": "#C2C9CA",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_poignee",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7272,
+        5.05,
+        3.9465
+      ],
+      "size": [
+        0.13,
+        0.022,
+        0.025
+      ],
+      "color": "#697276",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_support_poignee_-1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7298,
+        5.102,
+        3.9465
+      ],
+      "size": [
+        0.014,
+        0.013,
+        0.024
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_support_poignee_1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7298,
+        4.998,
+        3.9465
+      ],
+      "size": [
+        0.014,
+        0.013,
+        0.024
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_plaque_identification",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7272,
+        5.2004,
+        3.9603
+      ],
+      "size": [
+        0.078,
+        0.004,
+        0.045
+      ],
+      "color": "#30393D",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_marquage_0_a",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        5.2124,
+        3.9753
+      ],
+      "size": [
+        0.013,
+        0.002,
+        0.0022
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_marquage_0_f",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        5.2184,
+        3.9678
+      ],
+      "size": [
+        0.0022,
+        0.002,
+        0.013
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_marquage_0_g",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        5.2124,
+        3.9603
+      ],
+      "size": [
+        0.013,
+        0.002,
+        0.0022
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_marquage_0_c",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        5.2064,
+        3.9528
+      ],
+      "size": [
+        0.0022,
+        0.002,
+        0.013
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_marquage_0_d",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        5.2124,
+        3.9453
+      ],
+      "size": [
+        0.013,
+        0.002,
+        0.0022
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_marquage_1_b",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        5.1824,
+        3.9678
+      ],
+      "size": [
+        0.0022,
+        0.002,
+        0.013
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_marquage_1_c",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        5.1824,
+        3.9528
+      ],
+      "size": [
+        0.0022,
+        0.002,
+        0.013
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_loquet",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7276,
+        4.8996,
+        3.9465
+      ],
+      "size": [
+        0.032,
+        0.018,
+        0.032
+      ],
+      "color": "#168F90",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_actionneur_corps",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.13,
+        5.05,
+        3.78435
+      ],
+      "size": [
+        0.045,
+        0.2,
+        0.045
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_actionneur_tige",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.99,
+        5.05,
+        3.78435
+      ],
+      "size": [
+        0.018,
+        0.11,
+        0.018
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_butée_-0.429",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.205,
+        5.2286,
+        3.7464
+      ],
+      "size": [
+        0.025,
+        0.035,
+        0.045
+      ],
+      "color": "#E4B126",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_butée_-0.071",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.205,
+        4.8714,
+        3.7464
+      ],
+      "size": [
+        0.025,
+        0.035,
+        0.045
+      ],
+      "color": "#E4B126",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_vis_face_-1_-1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7316,
+        5.24,
+        3.75
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_vis_face_-1_1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7316,
+        5.24,
+        4.005
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_vis_face_1_-1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7316,
+        4.86,
+        3.75
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S1_vis_face_1_1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7316,
+        4.86,
+        4.005
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_fond_tiroir",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.965,
+        4.55,
+        3.729
+      ],
+      "size": [
+        0.46,
+        0.42,
+        0.014
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_flanc_gauche",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.965,
+        4.773,
+        3.8775
+      ],
+      "size": [
+        0.014,
+        0.44,
+        0.2904
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_glissiere_fixe_gauche",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.015,
+        4.7991,
+        3.7464
+      ],
+      "size": [
+        0.018,
+        0.34,
+        0.024
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_glissiere_mobile_gauche",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.955,
+        4.738,
+        3.7464
+      ],
+      "size": [
+        0.014,
+        0.32,
+        0.018
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_flanc_droite",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.965,
+        4.327,
+        3.8775
+      ],
+      "size": [
+        0.014,
+        0.44,
+        0.2904
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_glissiere_fixe_droite",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.015,
+        4.3009,
+        3.7464
+      ],
+      "size": [
+        0.018,
+        0.34,
+        0.024
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_glissiere_mobile_droite",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.955,
+        4.362,
+        3.7464
+      ],
+      "size": [
+        0.014,
+        0.32,
+        0.018
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_fond_arriere",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.215,
+        4.55,
+        3.8775
+      ],
+      "size": [
+        0.45,
+        0.014,
+        0.2904
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_joint_peripherique",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.75,
+        4.55,
+        3.8775
+      ],
+      "size": [
+        0.474,
+        0.006,
+        0.337
+      ],
+      "color": "#252B2D",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_facade",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.74,
+        4.55,
+        3.8775
+      ],
+      "size": [
+        0.46,
+        0.016,
+        0.33
+      ],
+      "color": "#C2C9CA",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_poignee",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7272,
+        4.55,
+        3.9465
+      ],
+      "size": [
+        0.13,
+        0.022,
+        0.025
+      ],
+      "color": "#697276",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_support_poignee_-1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7298,
+        4.602,
+        3.9465
+      ],
+      "size": [
+        0.014,
+        0.013,
+        0.024
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_support_poignee_1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7298,
+        4.498,
+        3.9465
+      ],
+      "size": [
+        0.014,
+        0.013,
+        0.024
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_plaque_identification",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7272,
+        4.7004,
+        3.9603
+      ],
+      "size": [
+        0.078,
+        0.004,
+        0.045
+      ],
+      "color": "#30393D",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_marquage_0_a",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        4.7124,
+        3.9753
+      ],
+      "size": [
+        0.013,
+        0.002,
+        0.0022
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_marquage_0_f",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        4.7184,
+        3.9678
+      ],
+      "size": [
+        0.0022,
+        0.002,
+        0.013
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_marquage_0_g",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        4.7124,
+        3.9603
+      ],
+      "size": [
+        0.013,
+        0.002,
+        0.0022
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_marquage_0_c",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        4.7064,
+        3.9528
+      ],
+      "size": [
+        0.0022,
+        0.002,
+        0.013
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_marquage_0_d",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        4.7124,
+        3.9453
+      ],
+      "size": [
+        0.013,
+        0.002,
+        0.0022
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_marquage_1_a",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        4.6884,
+        3.9753
+      ],
+      "size": [
+        0.013,
+        0.002,
+        0.0022
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_marquage_1_b",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        4.6824,
+        3.9678
+      ],
+      "size": [
+        0.0022,
+        0.002,
+        0.013
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_marquage_1_g",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        4.6884,
+        3.9603
+      ],
+      "size": [
+        0.013,
+        0.002,
+        0.0022
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_marquage_1_e",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        4.6944,
+        3.9528
+      ],
+      "size": [
+        0.0022,
+        0.002,
+        0.013
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_marquage_1_d",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        4.6884,
+        3.9453
+      ],
+      "size": [
+        0.013,
+        0.002,
+        0.0022
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_loquet",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7276,
+        4.3996,
+        3.9465
+      ],
+      "size": [
+        0.032,
+        0.018,
+        0.032
+      ],
+      "color": "#168F90",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_actionneur_corps",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.13,
+        4.55,
+        3.78435
+      ],
+      "size": [
+        0.045,
+        0.2,
+        0.045
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_actionneur_tige",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.99,
+        4.55,
+        3.78435
+      ],
+      "size": [
+        0.018,
+        0.11,
+        0.018
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_butée_0.071",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.205,
+        4.7286,
+        3.7464
+      ],
+      "size": [
+        0.025,
+        0.035,
+        0.045
+      ],
+      "color": "#E4B126",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_butée_0.429",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.205,
+        4.3714,
+        3.7464
+      ],
+      "size": [
+        0.025,
+        0.035,
+        0.045
+      ],
+      "color": "#E4B126",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_vis_face_-1_-1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7316,
+        4.74,
+        3.75
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_vis_face_-1_1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7316,
+        4.74,
+        4.005
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_vis_face_1_-1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7316,
+        4.36,
+        3.75
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S2_vis_face_1_1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7316,
+        4.36,
+        4.005
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_fond_tiroir",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.965,
+        5.05,
+        3.364
+      ],
+      "size": [
+        0.46,
+        0.42,
+        0.014
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_flanc_gauche",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.965,
+        5.273,
+        3.5125
+      ],
+      "size": [
+        0.014,
+        0.44,
+        0.2904
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_glissiere_fixe_gauche",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.015,
+        5.2991,
+        3.3814
+      ],
+      "size": [
+        0.018,
+        0.34,
+        0.024
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_glissiere_mobile_gauche",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.955,
+        5.238,
+        3.3814
+      ],
+      "size": [
+        0.014,
+        0.32,
+        0.018
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_flanc_droite",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.965,
+        4.827,
+        3.5125
+      ],
+      "size": [
+        0.014,
+        0.44,
+        0.2904
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_glissiere_fixe_droite",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.015,
+        4.8009,
+        3.3814
+      ],
+      "size": [
+        0.018,
+        0.34,
+        0.024
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_glissiere_mobile_droite",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.955,
+        4.862,
+        3.3814
+      ],
+      "size": [
+        0.014,
+        0.32,
+        0.018
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_fond_arriere",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.215,
+        5.05,
+        3.5125
+      ],
+      "size": [
+        0.45,
+        0.014,
+        0.2904
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_joint_peripherique",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.75,
+        5.05,
+        3.5125
+      ],
+      "size": [
+        0.474,
+        0.006,
+        0.337
+      ],
+      "color": "#252B2D",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_facade",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.74,
+        5.05,
+        3.5125
+      ],
+      "size": [
+        0.46,
+        0.016,
+        0.33
+      ],
+      "color": "#C2C9CA",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_poignee",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7272,
+        5.05,
+        3.5815
+      ],
+      "size": [
+        0.13,
+        0.022,
+        0.025
+      ],
+      "color": "#697276",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_support_poignee_-1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7298,
+        5.102,
+        3.5815
+      ],
+      "size": [
+        0.014,
+        0.013,
+        0.024
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_support_poignee_1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7298,
+        4.998,
+        3.5815
+      ],
+      "size": [
+        0.014,
+        0.013,
+        0.024
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_plaque_identification",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7272,
+        5.2004,
+        3.5953
+      ],
+      "size": [
+        0.078,
+        0.004,
+        0.045
+      ],
+      "color": "#30393D",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_marquage_0_a",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        5.2124,
+        3.6103
+      ],
+      "size": [
+        0.013,
+        0.002,
+        0.0022
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_marquage_0_f",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        5.2184,
+        3.6028
+      ],
+      "size": [
+        0.0022,
+        0.002,
+        0.013
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_marquage_0_g",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        5.2124,
+        3.5953
+      ],
+      "size": [
+        0.013,
+        0.002,
+        0.0022
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_marquage_0_c",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        5.2064,
+        3.5878
+      ],
+      "size": [
+        0.0022,
+        0.002,
+        0.013
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_marquage_0_d",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        5.2124,
+        3.5803
+      ],
+      "size": [
+        0.013,
+        0.002,
+        0.0022
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_marquage_1_a",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        5.1884,
+        3.6103
+      ],
+      "size": [
+        0.013,
+        0.002,
+        0.0022
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_marquage_1_b",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        5.1824,
+        3.6028
+      ],
+      "size": [
+        0.0022,
+        0.002,
+        0.013
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_marquage_1_g",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        5.1884,
+        3.5953
+      ],
+      "size": [
+        0.013,
+        0.002,
+        0.0022
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_marquage_1_c",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        5.1824,
+        3.5878
+      ],
+      "size": [
+        0.0022,
+        0.002,
+        0.013
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_marquage_1_d",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        5.1884,
+        3.5803
+      ],
+      "size": [
+        0.013,
+        0.002,
+        0.0022
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_loquet",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7276,
+        4.8996,
+        3.5815
+      ],
+      "size": [
+        0.032,
+        0.018,
+        0.032
+      ],
+      "color": "#168F90",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_actionneur_corps",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.13,
+        5.05,
+        3.41935
+      ],
+      "size": [
+        0.045,
+        0.2,
+        0.045
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_actionneur_tige",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.99,
+        5.05,
+        3.41935
+      ],
+      "size": [
+        0.018,
+        0.11,
+        0.018
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_butée_-0.429",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.205,
+        5.2286,
+        3.3814
+      ],
+      "size": [
+        0.025,
+        0.035,
+        0.045
+      ],
+      "color": "#E4B126",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_butée_-0.071",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.205,
+        4.8714,
+        3.3814
+      ],
+      "size": [
+        0.025,
+        0.035,
+        0.045
+      ],
+      "color": "#E4B126",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_vis_face_-1_-1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7316,
+        5.24,
+        3.385
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_vis_face_-1_1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7316,
+        5.24,
+        3.64
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_vis_face_1_-1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7316,
+        4.86,
+        3.385
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S3_vis_face_1_1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7316,
+        4.86,
+        3.64
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_fond_tiroir",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.965,
+        4.55,
+        3.364
+      ],
+      "size": [
+        0.46,
+        0.42,
+        0.014
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_flanc_gauche",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.965,
+        4.773,
+        3.5125
+      ],
+      "size": [
+        0.014,
+        0.44,
+        0.2904
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_glissiere_fixe_gauche",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.015,
+        4.7991,
+        3.3814
+      ],
+      "size": [
+        0.018,
+        0.34,
+        0.024
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_glissiere_mobile_gauche",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.955,
+        4.738,
+        3.3814
+      ],
+      "size": [
+        0.014,
+        0.32,
+        0.018
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_flanc_droite",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.965,
+        4.327,
+        3.5125
+      ],
+      "size": [
+        0.014,
+        0.44,
+        0.2904
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_glissiere_fixe_droite",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.015,
+        4.3009,
+        3.3814
+      ],
+      "size": [
+        0.018,
+        0.34,
+        0.024
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_glissiere_mobile_droite",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.955,
+        4.362,
+        3.3814
+      ],
+      "size": [
+        0.014,
+        0.32,
+        0.018
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_fond_arriere",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.215,
+        4.55,
+        3.5125
+      ],
+      "size": [
+        0.45,
+        0.014,
+        0.2904
+      ],
+      "color": "#596469",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_joint_peripherique",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.75,
+        4.55,
+        3.5125
+      ],
+      "size": [
+        0.474,
+        0.006,
+        0.337
+      ],
+      "color": "#252B2D",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_facade",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.74,
+        4.55,
+        3.5125
+      ],
+      "size": [
+        0.46,
+        0.016,
+        0.33
+      ],
+      "color": "#C2C9CA",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_poignee",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7272,
+        4.55,
+        3.5815
+      ],
+      "size": [
+        0.13,
+        0.022,
+        0.025
+      ],
+      "color": "#697276",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_support_poignee_-1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7298,
+        4.602,
+        3.5815
+      ],
+      "size": [
+        0.014,
+        0.013,
+        0.024
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_support_poignee_1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7298,
+        4.498,
+        3.5815
+      ],
+      "size": [
+        0.014,
+        0.013,
+        0.024
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_plaque_identification",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7272,
+        4.7004,
+        3.5953
+      ],
+      "size": [
+        0.078,
+        0.004,
+        0.045
+      ],
+      "color": "#30393D",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_marquage_0_a",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        4.7124,
+        3.6103
+      ],
+      "size": [
+        0.013,
+        0.002,
+        0.0022
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_marquage_0_f",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        4.7184,
+        3.6028
+      ],
+      "size": [
+        0.0022,
+        0.002,
+        0.013
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_marquage_0_g",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        4.7124,
+        3.5953
+      ],
+      "size": [
+        0.013,
+        0.002,
+        0.0022
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_marquage_0_c",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        4.7064,
+        3.5878
+      ],
+      "size": [
+        0.0022,
+        0.002,
+        0.013
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_marquage_0_d",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        4.7124,
+        3.5803
+      ],
+      "size": [
+        0.013,
+        0.002,
+        0.0022
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_marquage_1_f",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        4.6944,
+        3.6028
+      ],
+      "size": [
+        0.0022,
+        0.002,
+        0.013
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_marquage_1_g",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        4.6884,
+        3.5953
+      ],
+      "size": [
+        0.013,
+        0.002,
+        0.0022
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_marquage_1_b",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        4.6824,
+        3.6028
+      ],
+      "size": [
+        0.0022,
+        0.002,
+        0.013
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_marquage_1_c",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7242,
+        4.6824,
+        3.5878
+      ],
+      "size": [
+        0.0022,
+        0.002,
+        0.013
+      ],
+      "color": "#E9ECEB",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_loquet",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7276,
+        4.3996,
+        3.5815
+      ],
+      "size": [
+        0.032,
+        0.018,
+        0.032
+      ],
+      "color": "#168F90",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_actionneur_corps",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.13,
+        4.55,
+        3.41935
+      ],
+      "size": [
+        0.045,
+        0.2,
+        0.045
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_actionneur_tige",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.99,
+        4.55,
+        3.41935
+      ],
+      "size": [
+        0.018,
+        0.11,
+        0.018
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_butée_0.071",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.205,
+        4.7286,
+        3.3814
+      ],
+      "size": [
+        0.025,
+        0.035,
+        0.045
+      ],
+      "color": "#E4B126",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_butée_0.429",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.205,
+        4.3714,
+        3.3814
+      ],
+      "size": [
+        0.025,
+        0.035,
+        0.045
+      ],
+      "color": "#E4B126",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_vis_face_-1_-1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7316,
+        4.74,
+        3.385
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_vis_face_-1_1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7316,
+        4.74,
+        3.64
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_vis_face_1_-1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7316,
+        4.36,
+        3.385
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_S4_vis_face_1_1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.7316,
+        4.36,
+        3.64
+      ],
+      "size": [
+        0.012,
+        0.008,
+        0.012
+      ],
+      "color": "#A7B0B1",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_grille_ventilation_fond",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.055,
+        4.297,
+        3.695
+      ],
+      "size": [
+        0.008,
+        0.19,
+        0.2
+      ],
+      "color": "#4D585C",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ailette_grille_ventilation_1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.055,
+        4.292,
+        3.62
+      ],
+      "size": [
+        0.004,
+        0.155,
+        0.006
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ailette_grille_ventilation_2",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.055,
+        4.292,
+        3.645
+      ],
+      "size": [
+        0.004,
+        0.155,
+        0.006
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ailette_grille_ventilation_3",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.055,
+        4.292,
+        3.67
+      ],
+      "size": [
+        0.004,
+        0.155,
+        0.006
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ailette_grille_ventilation_4",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.055,
+        4.292,
+        3.695
+      ],
+      "size": [
+        0.004,
+        0.155,
+        0.006
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ailette_grille_ventilation_5",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.055,
+        4.292,
+        3.72
+      ],
+      "size": [
+        0.004,
+        0.155,
+        0.006
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ailette_grille_ventilation_6",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.055,
+        4.292,
+        3.745
+      ],
+      "size": [
+        0.004,
+        0.155,
+        0.006
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ailette_grille_ventilation_7",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.055,
+        4.292,
+        3.77
+      ],
+      "size": [
+        0.004,
+        0.155,
+        0.006
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_support_afficheur",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.88,
+        4.297,
+        3.71
+      ],
+      "size": [
+        0.018,
+        0.22,
+        0.14
+      ],
+      "color": "#4A5458",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ecran_commande",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.88,
+        4.286,
+        3.71
+      ],
+      "size": [
+        0.006,
+        0.17,
+        0.095
+      ],
+      "color": "#16383B",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ecran_indicateur_1",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.835,
+        4.282,
+        3.735
+      ],
+      "size": [
+        0.003,
+        0.058,
+        0.004
+      ],
+      "color": "#23A79C",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ecran_indicateur_2",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.835,
+        4.282,
+        3.71
+      ],
+      "size": [
+        0.003,
+        0.058,
+        0.004
+      ],
+      "color": "#23A79C",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_ecran_indicateur_3",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.835,
+        4.282,
+        3.685
+      ],
+      "size": [
+        0.003,
+        0.058,
+        0.004
+      ],
+      "color": "#23A79C",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_support_arret_urgence",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.08,
+        4.36,
+        4.08
+      ],
+      "size": [
+        0.075,
+        0.075,
+        0.02
+      ],
+      "color": "#E4B126",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_arret_urgence_rouge",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        5.08,
+        4.36,
+        4.1025
+      ],
+      "size": [
+        0.05,
+        0.05,
+        0.035
+      ],
+      "color": "#C72F26",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "cylinder_z",
+      "dimension_status": "H"
+    },
+    {
+      "name": "AGV_capteur_emplacement_avant",
+      "level": "ROBOT",
+      "kind": "robot",
+      "center": [
+        4.638,
+        4.8,
+        3.15
+      ],
+      "size": [
+        0.06,
+        0.025,
+        0.035
+      ],
+      "color": "#16383B",
+      "collision": true,
+      "yaw": -1.5707963267948966,
+      "mesh": "rounded_box",
+      "dimension_status": "H"
+    }
+  ],
+  "labels": [
+    {
+      "level": "N1",
+      "p": [
+        5.7,
+        4.55,
+        3.04
+      ],
+      "text": "COLLECTE · 8 × 6 m",
+      "color": "#1764D5"
+    },
+    {
+      "level": "N1",
+      "p": [
+        6,
+        1.55,
+        3.04
+      ],
+      "text": "PIÈCE A · 4 × 3 m"
+    },
+    {
+      "level": "N1",
+      "p": [
+        2.88,
+        1.55,
+        3.04
+      ],
+      "text": "PIÈCE B · H"
+    },
+    {
+      "level": "N1",
+      "p": [
+        -5.12,
+        1,
+        3.12
+      ],
+      "text": "ASCENSEUR A",
+      "color": "#7755B7"
+    },
+    {
+      "level": "RDC",
+      "p": [
+        12,
+        4.8,
+        0.04
+      ],
+      "text": "DÉPÔT 1 · REPLI"
+    },
+    {
+      "level": "RDC",
+      "p": [
+        12,
+        7.92,
+        0.04
+      ],
+      "text": "DÉPÔT 2"
+    },
+    {
+      "level": "RDC",
+      "p": [
+        12,
+        10.5,
+        0.04
+      ],
+      "text": "DÉPÔT 3 · PRIORITAIRE",
+      "color": "#1764D5"
+    },
+    {
+      "level": "RDC",
+      "p": [
+        -5.12,
+        1,
+        0.12
+      ],
+      "text": "ASCENSEUR A",
+      "color": "#7755B7"
+    },
+    {
+      "level": "RDC",
+      "p": [
+        7.8,
+        10.4,
+        0.035
+      ],
+      "text": "ATTENTE",
+      "color": "#7755B7"
+    },
+    {
+      "level": "RDC",
+      "p": [
+        10.85,
+        13.04,
+        0.53
+      ],
+      "text": "C1",
+      "color": "#1764D5"
+    },
+    {
+      "level": "RDC",
+      "p": [
+        12.0,
+        13.04,
+        0.53
+      ],
+      "text": "C2",
+      "color": "#1764D5"
+    },
+    {
+      "level": "RDC",
+      "p": [
+        13.149999999999999,
+        13.04,
+        0.53
+      ],
+      "text": "C3",
+      "color": "#1764D5"
+    }
+  ],
+  "plan": {
+    "project": "AGV bancaire - plan de principe",
+    "version": "0.1",
+    "date": "2026-10-20",
+    "units": "m",
+    "coordinate_system": {
+      "x": "est",
+      "y": "nord",
+      "z": "haut",
+      "origin": "angle intérieur sud-ouest de la collecte",
+      "floor_elevations": {
+        "RDC": 0,
+        "N?": 3.0
+      },
+      "upper_elevation_is_hypothesis": true
+    },
+    "dimension_status": {
+      "D": "donnée fournie dans le récit, non relevée sur site",
+      "H": "hypothèse de conception"
+    },
+    "robot": {
+      "cargo_enclosure_given_m": [
+        1,
+        0.5,
+        0.75
+      ],
+      "trial_footprint_hypothesis_m": [
+        1.1,
+        0.7
+      ],
+      "geometric_clearance_hypothesis_m": 0.1,
+      "conservative_control_envelope_m": [
+        1.3,
+        0.9
+      ],
+      "cargo_content_mass_kg": 160,
+      "cargo_mass_is_estimate": true
+    },
+    "lift": {
+      "center_xy": [
+        -5.12,
+        1
+      ],
+      "clear_inside_hypothesis_m": [
+        2.2,
+        2.2
+      ],
+      "clear_door_hypothesis_m": 1.2,
+      "south_single_door_is_hypothesis": true,
+      "turn_inside_before_exit_rdc": true
+    },
+    "levels": {
+      "N?": {
+        "walkable_rectangles": [
+          [
+            0,
+            0,
+            8,
+            6
+          ],
+          [
+            -6.22,
+            -2.1,
+            1.76,
+            -0.3
+          ],
+          [
+            0.28,
+            -0.3,
+            1.48,
+            0
+          ],
+          [
+            -5.72,
+            -0.3,
+            -4.52,
+            -0.1
+          ],
+          [
+            -6.22,
+            -0.1,
+            -4.02,
+            2.1
+          ]
+        ],
+        "wall_rectangles": [
+          {
+            "rect": [
+              -0.15,
+              -0.15,
+              0,
+              6.15
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              8,
+              -0.15,
+              8.15,
+              6.15
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              0,
+              6,
+              8,
+              6.15
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              0,
+              -0.15,
+              0.28,
+              0
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              1.48,
+              -0.15,
+              8,
+              0
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              1.76,
+              0,
+              1.88,
+              3.12
+            ],
+            "name": "pièce B ouest"
+          },
+          {
+            "rect": [
+              1.88,
+              3,
+              2.28,
+              3.12
+            ],
+            "name": "pièce B nord gauche"
+          },
+          {
+            "rect": [
+              3.48,
+              3,
+              8,
+              3.12
+            ],
+            "name": "pièces nord"
+          },
+          {
+            "rect": [
+              3.88,
+              0,
+              4,
+              1.4
+            ],
+            "name": "pièce A ouest bas"
+          },
+          {
+            "rect": [
+              3.88,
+              2.6,
+              4,
+              3
+            ],
+            "name": "pièce A ouest haut"
+          },
+          {
+            "rect": [
+              -6.37,
+              -2.25,
+              -6.22,
+              -0.3
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              -6.22,
+              -2.25,
+              1.91,
+              -2.1
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              1.76,
+              -2.1,
+              1.91,
+              -0.3
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              -6.22,
+              -0.3,
+              -5.72,
+              -0.15
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              -4.52,
+              -0.3,
+              0.28,
+              -0.15
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              1.48,
+              -0.3,
+              1.76,
+              -0.15
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              0.13,
+              -0.3,
+              0.28,
+              0
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              1.48,
+              -0.3,
+              1.63,
+              0
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              -6.37,
+              -0.25,
+              -6.22,
+              2.25
+            ],
+            "name": "ascenseur ouest"
+          },
+          {
+            "rect": [
+              -4.02,
+              -0.25,
+              -3.87,
+              2.25
+            ],
+            "name": "ascenseur est"
+          },
+          {
+            "rect": [
+              -6.22,
+              2.1,
+              -4.02,
+              2.25
+            ],
+            "name": "ascenseur nord"
+          },
+          {
+            "rect": [
+              -6.22,
+              -0.25,
+              -5.72,
+              -0.1
+            ],
+            "name": "ascenseur seuil gauche"
+          },
+          {
+            "rect": [
+              -4.52,
+              -0.25,
+              -4.02,
+              -0.1
+            ],
+            "name": "ascenseur seuil droite"
+          }
+        ],
+        "furniture_rectangles": [
+          {
+            "rect": [
+              3.1,
+              3.4,
+              4.5,
+              4
+            ],
+            "name": "bureau 1"
+          },
+          {
+            "rect": [
+              5.7,
+              3.4,
+              7.1,
+              4
+            ],
+            "name": "bureau 2"
+          },
+          {
+            "rect": [
+              3.4,
+              5.55,
+              7.6,
+              5.95
+            ],
+            "name": "comptoir personnel"
+          }
+        ],
+        "route_xy": [
+          [
+            5,
+            4.8
+          ],
+          [
+            5,
+            4.65
+          ],
+          [
+            0.88,
+            4.65
+          ],
+          [
+            0.88,
+            -1.2
+          ],
+          [
+            -5.12,
+            -1.2
+          ],
+          [
+            -5.12,
+            1
+          ]
+        ]
+      },
+      "RDC": {
+        "walkable_rectangles": [
+          [
+            -6.22,
+            -0.1,
+            -4.02,
+            2.1
+          ],
+          [
+            -5.72,
+            -0.3,
+            -4.52,
+            -0.1
+          ],
+          [
+            -6.22,
+            -2.1,
+            -2.22,
+            -0.3
+          ],
+          [
+            -3.87,
+            -0.3,
+            -2.37,
+            3.9
+          ],
+          [
+            -4.02,
+            3.9,
+            6.88,
+            5.7
+          ],
+          [
+            6.88,
+            3.3,
+            9.88,
+            13.54
+          ],
+          [
+            10,
+            3.3,
+            14,
+            6.3
+          ],
+          [
+            10,
+            6.42,
+            14,
+            9.42
+          ],
+          [
+            10,
+            9.54,
+            14,
+            13.54
+          ],
+          [
+            9.88,
+            4.2,
+            10,
+            5.4
+          ],
+          [
+            9.88,
+            7.32,
+            10,
+            8.52
+          ],
+          [
+            9.88,
+            10.94,
+            10,
+            12.14
+          ]
+        ],
+        "wall_rectangles": [
+          {
+            "rect": [
+              -6.37,
+              -0.25,
+              -6.22,
+              2.25
+            ],
+            "name": "ascenseur ouest"
+          },
+          {
+            "rect": [
+              -4.02,
+              -0.25,
+              -3.87,
+              2.25
+            ],
+            "name": "ascenseur est"
+          },
+          {
+            "rect": [
+              -6.22,
+              2.1,
+              -4.02,
+              2.25
+            ],
+            "name": "ascenseur nord"
+          },
+          {
+            "rect": [
+              -6.22,
+              -0.25,
+              -5.72,
+              -0.1
+            ],
+            "name": "ascenseur seuil gauche"
+          },
+          {
+            "rect": [
+              -4.52,
+              -0.25,
+              -4.02,
+              -0.1
+            ],
+            "name": "ascenseur seuil droite"
+          },
+          {
+            "rect": [
+              -6.37,
+              -2.25,
+              -6.22,
+              -0.3
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              -6.22,
+              -2.25,
+              -2.07,
+              -2.1
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              -2.22,
+              -2.1,
+              -2.07,
+              -0.3
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              -6.22,
+              -0.3,
+              -5.72,
+              -0.15
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              -4.52,
+              -0.3,
+              -3.87,
+              -0.15
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              -2.37,
+              -0.3,
+              -2.22,
+              -0.15
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              -4.02,
+              -0.3,
+              -3.87,
+              3.9
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              -2.37,
+              -0.3,
+              -2.22,
+              3.9
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              -4.17,
+              3.9,
+              -4.02,
+              5.85
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              -4.02,
+              5.7,
+              6.88,
+              5.85
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              -2.22,
+              3.75,
+              6.88,
+              3.9
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              6.73,
+              3.3,
+              6.88,
+              4.2
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              6.73,
+              5.4,
+              6.88,
+              13.69
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              6.88,
+              3.15,
+              14.15,
+              3.3
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              6.88,
+              13.54,
+              14.15,
+              13.69
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              14,
+              3.3,
+              14.15,
+              13.54
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              9.88,
+              3.3,
+              10,
+              4.2
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              9.88,
+              5.4,
+              10,
+              7.32
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              9.88,
+              8.52,
+              10,
+              10.94
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              9.88,
+              12.14,
+              10,
+              13.54
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              10,
+              6.3,
+              14,
+              6.42
+            ],
+            "name": "mur"
+          },
+          {
+            "rect": [
+              10,
+              9.42,
+              14,
+              9.54
+            ],
+            "name": "mur"
+          }
+        ],
+        "reception_rectangles": [
+          {
+            "rect": [
+              10.35,
+              12.64,
+              11.35,
+              13.39
+            ],
+            "name": "réception C1"
+          },
+          {
+            "rect": [
+              11.5,
+              12.64,
+              12.5,
+              13.39
+            ],
+            "name": "réception C2"
+          },
+          {
+            "rect": [
+              12.655,
+              12.64,
+              13.645,
+              13.39
+            ],
+            "name": "réception C3"
+          }
+        ],
+        "route_xy": [
+          [
+            -5.12,
+            1
+          ],
+          [
+            -5.12,
+            -1.2
+          ],
+          [
+            -3.12,
+            -1.2
+          ],
+          [
+            -3.12,
+            4.8
+          ],
+          [
+            6.88,
+            4.8
+          ],
+          [
+            8.8,
+            4.8
+          ],
+          [
+            8.8,
+            11.54
+          ],
+          [
+            10.85,
+            11.54
+          ],
+          [
+            10.85,
+            11.95
+          ]
+        ],
+        "exit_to_wait_route_xy": [
+          [
+            13.15,
+            11.54
+          ],
+          [
+            7.8,
+            11.54
+          ],
+          [
+            7.8,
+            10.4
+          ]
+        ],
+        "waiting_pose_xy_yaw": [
+          7.8,
+          10.4,
+          -1.5707963267948966
+        ]
+      }
+    },
+    "sorting": {
+      "is_hypothesis_all_categories_inside_depot_3": true,
+      "C1": [
+        100,
+        200,
+        500
+      ],
+      "C2": [
+        1000,
+        2000,
+        5000
+      ],
+      "C3": [
+        10000,
+        20000
+      ],
+      "priority_depot": 3,
+      "authorized_fallback_depot": 1,
+      "depot_2_role": null
+    },
+    "checks": {
+      "method": "Sampled oriented rectangular footprint against wall/furniture rectangles; sampled floor containment; doors modelled open. Translation step <= 0.025 m; angular step <= 2 degrees. Envelope 1.30 x 0.90 m includes a conservative 0.10 m margin around trial body.",
+      "limitations": "Geometry only; no braking, dynamics, bag transfer, moving people or localisation uncertainty simulation. Site dimensions remain unverified.",
+      "results": [
+        {
+          "name": "N? : collecte vers cabine",
+          "samples": 922,
+          "status": "PASS",
+          "first_failures": []
+        },
+        {
+          "name": "RDC : cabine vers dépôt 3 / C1",
+          "samples": 1540,
+          "status": "PASS",
+          "first_failures": []
+        },
+        {
+          "name": "RDC : retour du dépôt vers attente",
+          "samples": 354,
+          "status": "PASS",
+          "first_failures": []
+        },
+        {
+          "name": "Accostage C1",
+          "samples": 39,
+          "status": "PASS",
+          "first_failures": []
+        },
+        {
+          "name": "Recul après réception C1",
+          "samples": 39,
+          "status": "PASS",
+          "first_failures": []
+        },
+        {
+          "name": "Accostage C2",
+          "samples": 177,
+          "status": "PASS",
+          "first_failures": []
+        },
+        {
+          "name": "Recul après réception C2",
+          "samples": 39,
+          "status": "PASS",
+          "first_failures": []
+        },
+        {
+          "name": "Accostage C3",
+          "samples": 177,
+          "status": "PASS",
+          "first_failures": []
+        },
+        {
+          "name": "Recul après réception C3",
+          "samples": 20,
+          "status": "PASS",
+          "first_failures": []
+        },
+        {
+          "name": "RDC : repli dépôt 1",
+          "samples": 97,
+          "status": "PASS",
+          "first_failures": []
+        },
+        {
+          "name": "Demi-tour de 180° dans cabine",
+          "samples": 91,
+          "status": "PASS",
+          "first_failures": []
+        }
+      ]
+    }
+  },
+  "notes": [
+    "Le robot représente quatre tiroirs indépendants en disposition 2 × 2, à 40 kg nominaux par compartiment.",
+    "Les dimensions intérieures des tiroirs, la structure, les charges et les mécanismes sont des hypothèses à valider.",
+    "Les valeurs 2,40 m (murs), 2,10 m (portes) et +3,00 m (niveau de départ) sont des hypothèses.",
+    "Le modèle est statique : navigation, ascenseur motorisé et transfert des sacs seront intégrés ensuite."
+  ]
+}

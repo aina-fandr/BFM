@@ -1,0 +1,221 @@
+{
+  "title": "BFM AGV - CAO conceptuelle du module de roue motrice",
+  "units": "mm",
+  "wheel": {
+    "outer_diameter": 200,
+    "width": 55,
+    "track_between_wheel_centres": 515
+  },
+  "mass_targets": {
+    "empty_robot_max_kg": 70,
+    "payload_kg": 160,
+    "gross_robot_kg": 230,
+    "interpretation": "230 kg est la masse brute minimale avec 160 kg de charge et 70 kg a vide. La masse reelle peut etre superieure.",
+    "mass_budget_kg": {
+      "chassis_plancher_supports": 25,
+      "roues_motorisation": 18,
+      "roues_porteuses_suspension": 5,
+      "coffre_et_4_tiroirs": 15,
+      "batterie_electronique_cablage": 7
+    },
+    "mass_budget_status": "PROVISIONAL_NOT_MEASURED",
+    "frame_and_deck_geometry_estimate_kg": 19.48,
+    "remaining_mass_under_70kg_cap_kg": 50.52,
+    "mass_estimate_basis": "Steel S235 density 7850 kg/m3 applied to the generated solid volume; excludes supports, wheel modules, fasteners, cabinet, drawers, battery and electronics.",
+    "structural_validation": "NOT_DONE"
+  },
+  "parts": [
+    {
+      "name": "R01_pneu_bande_roulement",
+      "quantity_per_robot": 2,
+      "supply_type": "achete_a_remplacer_par_STEP_fabricant",
+      "role": "Pneu caoutchouc industriel; reference et charge a choisir.",
+      "material": "Elastomere"
+    },
+    {
+      "name": "R02_jante_avec_trous_M8_PCD80",
+      "quantity_per_robot": 2,
+      "supply_type": "fabrique_localement",
+      "role": "Piece usinee/soudee a partir des interfaces indiquees; tolerances a valider.",
+      "material": "Acier S235 ou aluminium a confirmer"
+    },
+    {
+      "name": "R03_moyeu_a_bride_et_rainure_clavette",
+      "quantity_per_robot": 2,
+      "supply_type": "fabrique_localement",
+      "role": "Piece usinee/soudee a partir des interfaces indiquees; tolerances a valider.",
+      "material": "Acier S235 ou aluminium a confirmer"
+    },
+    {
+      "name": "R04_roulement_6204_gabarit_20x47x14",
+      "quantity_per_robot": 4,
+      "supply_type": "achete_gabarit_standard",
+      "role": "Roulement 6204, dimensions normalisees 20x47x14; fabricant non selectionne.",
+      "material": "Acier de roulement"
+    },
+    {
+      "name": "R05_entretoise_axiale",
+      "quantity_per_robot": 2,
+      "supply_type": "fabrique_localement",
+      "role": "Piece usinee/soudee a partir des interfaces indiquees; tolerances a valider.",
+      "material": "Acier S235 ou aluminium a confirmer"
+    },
+    {
+      "name": "R06_arbre_D20_avec_rainure_clavette",
+      "quantity_per_robot": 2,
+      "supply_type": "fabrique_localement",
+      "role": "Piece usinee/soudee a partir des interfaces indiquees; tolerances a valider.",
+      "material": "Acier S235 ou aluminium a confirmer"
+    },
+    {
+      "name": "R07_rondelle_M8",
+      "quantity_per_robot": 20,
+      "supply_type": "achete_standard",
+      "role": "Visserie ISO representative; classe, longueur et protection a valider.",
+      "material": "Acier zingue a confirmer"
+    },
+    {
+      "name": "R08_clavette_6x6x30",
+      "quantity_per_robot": 2,
+      "supply_type": "fabrique_localement",
+      "role": "Piece usinee/soudee a partir des interfaces indiquees; tolerances a valider.",
+      "material": "Acier S235 ou aluminium a confirmer"
+    },
+    {
+      "name": "R09_support_double_paliers_siege_6204",
+      "quantity_per_robot": 2,
+      "supply_type": "fabrique_localement",
+      "role": "Piece usinee/soudee a partir des interfaces indiquees; tolerances a valider.",
+      "material": "Acier S235 ou aluminium a confirmer"
+    },
+    {
+      "name": "R10_collier_arret_arbre_D20",
+      "quantity_per_robot": 4,
+      "supply_type": "fabrique_localement",
+      "role": "Piece usinee/soudee a partir des interfaces indiquees; tolerances a valider.",
+      "material": "Acier S235 ou aluminium a confirmer"
+    },
+    {
+      "name": "M03_accouplement_flexible_20x16_gabarit",
+      "quantity_per_robot": 2,
+      "supply_type": "achete_gabarit_non_dimensionne",
+      "role": "Accouplement indicatif 20x16; type et couple admissible a valider.",
+      "material": "Aluminium/acier selon fabricant"
+    },
+    {
+      "name": "M04_vis_M5_accouplement",
+      "quantity_per_robot": 4,
+      "supply_type": "achete_standard",
+      "role": "Vis de serrage representative; filetage et classe a confirmer.",
+      "material": "Acier zingue a confirmer"
+    },
+    {
+      "name": "R11_vis_M6_collier_arret",
+      "quantity_per_robot": 4,
+      "supply_type": "achete_standard",
+      "role": "Vis de serrage representative; filetage et classe a confirmer.",
+      "material": "Acier zingue a confirmer"
+    },
+    {
+      "name": "M01_motor_reducteur_gabarit_128x94x70",
+      "quantity_per_robot": 2,
+      "supply_type": "achete_gabarit_non_dimensionne",
+      "role": "Enveloppe indicative du motor reducteur; modele, arbre et puissance a selectionner.",
+      "material": "Aluminium/acier selon fabricant"
+    },
+    {
+      "name": "M02_platine_moteur_percee_et_soudable",
+      "quantity_per_robot": 2,
+      "supply_type": "fabrique_localement",
+      "role": "Piece usinee/soudee a partir des interfaces indiquees; tolerances a valider.",
+      "material": "Acier S235 ou aluminium a confirmer"
+    },
+    {
+      "name": "C01_longeron_gauche_40x40x3",
+      "quantity_per_robot": 1,
+      "supply_type": "fabrique_localement",
+      "role": "Profil creux acier S235 40x40x3 ou tôle acier 3 mm; soudage/perçages a confirmer.",
+      "material": "Acier S235"
+    },
+    {
+      "name": "C02_longeron_droit_40x40x3",
+      "quantity_per_robot": 1,
+      "supply_type": "fabrique_localement",
+      "role": "Profil creux acier S235 40x40x3 ou tôle acier 3 mm; soudage/perçages a confirmer.",
+      "material": "Acier S235"
+    },
+    {
+      "name": "C03_traverse_avant_40x40x3",
+      "quantity_per_robot": 1,
+      "supply_type": "fabrique_localement",
+      "role": "Profil creux acier S235 40x40x3 ou tôle acier 3 mm; soudage/perçages a confirmer.",
+      "material": "Acier S235"
+    },
+    {
+      "name": "C04_traverse_central_40x40x3",
+      "quantity_per_robot": 1,
+      "supply_type": "fabrique_localement",
+      "role": "Profil creux acier S235 40x40x3 ou tôle acier 3 mm; soudage/perçages a confirmer.",
+      "material": "Acier S235"
+    },
+    {
+      "name": "C05_traverse_arriere_40x40x3",
+      "quantity_per_robot": 1,
+      "supply_type": "fabrique_localement",
+      "role": "Profil creux acier S235 40x40x3 ou tôle acier 3 mm; soudage/perçages a confirmer.",
+      "material": "Acier S235"
+    },
+    {
+      "name": "C06_plancher_3mm_perce_6xM6",
+      "quantity_per_robot": 1,
+      "supply_type": "fabrique_localement",
+      "role": "Profil creux acier S235 40x40x3 ou tôle acier 3 mm; soudage/perçages a confirmer.",
+      "material": "Acier S235"
+    },
+    {
+      "name": "F01_vis_M8x30_hexagonale",
+      "quantity_per_robot": 20,
+      "supply_type": "achete_standard",
+      "role": "Visserie ISO representative; classe, longueur et protection a valider.",
+      "material": "Acier zingue a confirmer"
+    },
+    {
+      "name": "F02_ecrou_M8",
+      "quantity_per_robot": 20,
+      "supply_type": "achete_standard",
+      "role": "Visserie ISO representative; classe, longueur et protection a valider.",
+      "material": "Acier zingue a confirmer"
+    },
+    {
+      "name": "F04_vis_M6x50_hexagonale",
+      "quantity_per_robot": 6,
+      "supply_type": "achete_standard",
+      "role": "Visserie ISO representative; classe, longueur et protection a valider.",
+      "material": "Acier zingue a confirmer"
+    },
+    {
+      "name": "F05_ecrou_M6",
+      "quantity_per_robot": 6,
+      "supply_type": "achete_standard",
+      "role": "Visserie ISO representative; classe, longueur et protection a valider.",
+      "material": "Acier zingue a confirmer"
+    },
+    {
+      "name": "F06_rondelle_plate_M6",
+      "quantity_per_robot": 6,
+      "supply_type": "achete_standard",
+      "role": "Visserie ISO representative; classe, longueur et protection a valider.",
+      "material": "Acier zingue a confirmer"
+    }
+  ],
+  "assemblies": [
+    "A01_roue_assemblee",
+    "A02_roue_eclatee",
+    "A03_roues_sur_chassis"
+  ],
+  "interfaces_file": "interfaces_assemblage.json",
+  "limitations": [
+    "Les references industrielles ne sont pas selectionnees; les gabarits ne sont pas des STEP fabricants.",
+    "La puissance moteur, les charges roulement/arbre, les soudures et le seuil de 70 kg restent a valider."
+  ]
+}
